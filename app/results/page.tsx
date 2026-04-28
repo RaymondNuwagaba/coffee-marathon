@@ -1,4 +1,5 @@
 import type { Metadata } from 'next'
+import Image from 'next/image'
 import { ExternalLink, Trophy } from 'lucide-react'
 import PageHero from '@/components/layout/PageHero'
 
@@ -56,6 +57,28 @@ export default function ResultsPage() {
                 </a>
               </div>
             ))}
+          </div>
+
+          {/* Podium photos */}
+          <div className="mt-12 grid grid-cols-1 sm:grid-cols-2 gap-4">
+            <div className="relative aspect-[4/3] rounded-2xl overflow-hidden">
+              <Image
+                src="/images/results-podium-women.jpg"
+                alt="Women's prize giving — Coffee Marathon Uganda 2025"
+                fill
+                className="object-cover object-center"
+                sizes="(max-width: 640px) 100vw, 50vw"
+              />
+            </div>
+            <div className="relative aspect-[4/3] rounded-2xl overflow-hidden">
+              <Image
+                src="/images/results-podium-men.jpg"
+                alt="Men's prize giving — Coffee Marathon Uganda 2025"
+                fill
+                className="object-cover object-center"
+                sizes="(max-width: 640px) 100vw, 50vw"
+              />
+            </div>
           </div>
 
           <div className="mt-10 bg-[var(--color-cream-dark)] rounded-xl p-6 text-center">

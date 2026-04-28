@@ -1,3 +1,4 @@
+import Image from 'next/image'
 import Link from 'next/link'
 import { Leaf, ArrowRight } from 'lucide-react'
 
@@ -49,17 +50,17 @@ export default function MissionSection({ missionText }: MissionSectionProps) {
             </Link>
           </div>
 
-          {/* Image placeholder */}
+          {/* Real photo */}
           <div className="relative">
-            <div className="aspect-[4/3] rounded-2xl bg-[var(--color-espresso-light)] overflow-hidden flex items-center justify-center">
-              <div className="text-center">
-                <div className="w-16 h-16 rounded-full bg-[var(--color-arabica)]/30 flex items-center justify-center mx-auto mb-3">
-                  <Leaf size={28} className="text-[var(--color-latte)]" />
-                </div>
-                <span className="font-body text-xs text-[var(--color-cream)]/30">
-                  Photography — women coffee farmers
-                </span>
-              </div>
+            <div className="aspect-[4/3] rounded-2xl overflow-hidden">
+              <Image
+                src="/images/about-women-runners.jpg"
+                alt="Women runners at The Coffee Marathon Uganda"
+                fill
+                className="object-cover object-center"
+                sizes="(max-width: 1024px) 100vw, 50vw"
+              />
+              <div className="absolute inset-0 bg-gradient-to-t from-[var(--color-espresso)]/40 to-transparent" />
             </div>
             <div className="absolute -bottom-4 -right-4 w-24 h-24 rounded-full bg-[var(--color-forest)]/20 blur-xl" />
           </div>

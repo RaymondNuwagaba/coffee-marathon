@@ -1,8 +1,7 @@
 import type { Metadata } from 'next'
+import Image from 'next/image'
 import { Mic2, Briefcase, Calendar, Users, Globe } from 'lucide-react'
 import PageHero from '@/components/layout/PageHero'
-import PinnketCTA from '@/components/ui/PinnketCTA'
-import { PINNKET } from '@/lib/pinnket'
 
 export const metadata: Metadata = {
   title: 'Activities — Conference & Business Forum',
@@ -71,10 +70,14 @@ export default function ActivitiesPage() {
               </div>
             </div>
 
-            <div className="aspect-[4/3] bg-[var(--color-seedling-light)] rounded-2xl flex items-center justify-center">
-              <span className="font-body text-xs text-[var(--color-forest-dark)]/40 text-center px-8">
-                Conference photography — to be added
-              </span>
+            <div className="relative aspect-[4/3] rounded-2xl overflow-hidden">
+              <Image
+                src="/images/concert-crowd-day.jpg"
+                alt="Inspire Women Conference — large crowd at Africa Coffee Park"
+                fill
+                className="object-cover object-center"
+                sizes="(max-width: 1024px) 100vw, 50vw"
+              />
             </div>
           </div>
         </div>
@@ -84,10 +87,14 @@ export default function ActivitiesPage() {
       <section id="business-forum" className="bg-[var(--color-espresso)] py-20">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
-            <div className="aspect-[4/3] bg-[var(--color-espresso-light)] rounded-2xl flex items-center justify-center order-2 lg:order-1">
-              <span className="font-body text-xs text-[var(--color-cream)]/30 text-center px-8">
-                Forum photography — to be added
-              </span>
+            <div className="relative aspect-[4/3] rounded-2xl overflow-hidden order-2 lg:order-1">
+              <Image
+                src="/images/concert-crowd-night.jpg"
+                alt="Africa Business Forum — night concert at Africa Coffee Park"
+                fill
+                className="object-cover object-center"
+                sizes="(max-width: 1024px) 100vw, 50vw"
+              />
             </div>
 
             <div className="order-1 lg:order-2">

@@ -1,3 +1,4 @@
+import Image from 'next/image'
 import { SanityImage as SanityImageComponent } from '@/components/ui/SanityImage'
 import type { GalleryImage } from '@/types/sanity'
 
@@ -6,13 +7,13 @@ interface GalleryGridProps {
   sanityImages?: GalleryImage[]
 }
 
-const placeholders = [
-  { aspect: 'aspect-[4/3]', label: 'Race start — 2025' },
-  { aspect: 'aspect-square', label: 'Coffee farm trail' },
-  { aspect: 'aspect-[4/3]', label: 'Finish line celebrations' },
-  { aspect: 'aspect-[3/4]', label: 'Women coffee farmers' },
-  { aspect: 'aspect-[4/3]', label: 'Award ceremony' },
-  { aspect: 'aspect-square', label: 'Sunrise run' },
+const localImages = [
+  { src: '/images/gallery-1.jpg', alt: 'Runners celebrating at the start — Coffee Marathon 2025', aspect: 'aspect-[4/3]' },
+  { src: '/images/gallery-2.jpg', alt: 'Energetic crowd at the race start', aspect: 'aspect-square' },
+  { src: '/images/gallery-3.jpg', alt: 'Thousands at Africa Coffee Park venue', aspect: 'aspect-[4/3]' },
+  { src: '/images/gallery-4.jpg', alt: 'Women runners — Coffee Marathon 2025', aspect: 'aspect-[3/4]' },
+  { src: '/images/gallery-5.jpg', alt: 'Prize giving ceremony', aspect: 'aspect-[4/3]' },
+  { src: '/images/gallery-6.jpg', alt: 'Concert night — Africa Coffee Park', aspect: 'aspect-square' },
 ]
 
 export default function GalleryGrid({ caption, sanityImages = [] }: GalleryGridProps) {
@@ -34,14 +35,15 @@ export default function GalleryGrid({ caption, sanityImages = [] }: GalleryGridP
                 />
               </div>
             ))
-          : placeholders.map((item, i) => (
-              <div
-                key={i}
-                className={`${item.aspect} bg-[var(--color-espresso)]/10 rounded-xl overflow-hidden flex items-center justify-center break-inside-avoid`}
-              >
-                <span className="font-body text-xs text-[var(--color-arabica)] opacity-50 text-center px-3">
-                  {item.label}
-                </span>
+          : localImages.map((img) => (
+              <div key={img.src} className={`${img.aspect} break-inside-avoid rounded-xl overflow-hidden relative`}>
+                <Image
+                  src={img.src}
+                  alt={img.alt}
+                  fill
+                  className="object-cover hover:scale-105 transition-transform duration-500"
+                  sizes="(max-width: 768px) 50vw, 33vw"
+                />
               </div>
             ))}
       </div>

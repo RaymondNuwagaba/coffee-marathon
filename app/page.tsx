@@ -342,7 +342,7 @@ export default async function HomePage() {
                   <AttractionCard key={a._id} name={a.name} description={a.description} tips={a.tips ?? ''} slug={a.slug.current} />
                 ))
               : staticAttractions.slice(0, 3).map((a) => (
-                  <AttractionCard key={a.slug} {...a} />
+                  <AttractionCard key={a.slug} name={a.name} description={a.description} tips={a.tips} slug={a.slug} localImage={a.localImage} />
                 ))}
           </div>
         </div>

@@ -54,27 +54,27 @@ export const races = [
 ]
 
 export const stats = [
-  { number: '5+', label: 'Years running' },
-  { number: '10+', label: 'Countries represented' },
   { number: '2,000+', label: 'Runners' },
+  { number: '10+', label: 'Countries' },
+  { number: '5+', label: 'Years of impact' },
   { number: '4', label: 'Race categories' },
 ]
 
 export const testimonials = [
   {
-    quote: 'Placeholder quote — to be replaced with real runner testimonial.',
-    name: 'Runner Name',
+    quote: 'I discovered my talent in Primary Four and won 50,000 shillings — the first money I ever earned through running. Today I run not only for myself but for other girls like me. Through the Ntungamo Marathon I won 1.5 million shillings. That opportunity changed my life.',
+    name: 'Chelangat Ariziki',
     category: '21 KM, 2025',
   },
   {
-    quote: 'Placeholder quote — to be replaced with real runner testimonial.',
-    name: 'Runner Name',
-    category: '42 KM, 2025',
+    quote: 'We traveled with a team of 50 athletes, the majority being women, and we performed very well, winning several awards. It was the first time for many of us to visit Ntungamo, and the experience changed our mindset after seeing the level of development there.',
+    name: 'Christine Muga',
+    category: 'CEO, Mount Elgon Women in Specialty Coffee',
   },
   {
-    quote: 'Placeholder quote — to be replaced with real runner testimonial.',
-    name: 'Runner Name',
-    category: '10 KM, 2024',
+    quote: 'Running became purpose-driven — each step symbolising solidarity with the communities whose stories inspired the event. We were not just competing for personal bests; we were running for livelihoods, for equity, and for impact.',
+    name: 'Coffee Marathon Runner',
+    category: '10 KM, 2025',
   },
 ]
 
@@ -112,80 +112,98 @@ export const timeline = [
 
 export const attractions = [
   {
-    name: 'Sana Gorilla Rafting',
-    description: 'Experience world-class white-water rafting on the Nile, just hours from Ntungamo.',
-    tips: 'Best season: June–August. All equipment provided. Suitable for beginners.',
+    name: 'Nile White-Water Rafting',
+    description: 'Experience world-class white-water rafting on the Nile at Bujagali Falls, just hours from Ntungamo. Grade 5 rapids make this one of the best rafting destinations in Africa.',
+    tips: 'Best season: June–August. All equipment provided. Suitable for beginners and experienced rafters.',
     slug: 'sana-gorilla-rafting',
+    localImage: '/images/attraction-nile-rafting.jpg',
   },
   {
     name: 'Kitagata Hot Springs',
-    description: 'Natural geothermal springs with healing mineral waters, set in lush Ugandan countryside.',
-    tips: 'Open daily. Entry fee applies. Located 45 min from Ntungamo town.',
+    description: 'Natural geothermal springs with healing mineral waters, set in lush Ugandan countryside. Locals and visitors alike soak in the warm therapeutic waters believed to cure various ailments.',
+    tips: 'Open daily. Entry fee applies. Located 45 min from Ntungamo town. Best visited in the morning.',
     slug: 'kitagata-hot-springs',
+    localImage: '/images/attraction-kitagata-hot-springs.jpg',
   },
   {
     name: 'Kisiizi Falls',
-    description: 'A dramatic waterfall cascading into a deep gorge, home to a historic mission hospital.',
-    tips: 'Guided tours available. 30-minute drive from Ntungamo.',
+    description: 'A dramatic waterfall cascading into a deep gorge, home to a historic mission hospital and one of Uganda\'s most beautiful natural landmarks. The falls plunge over 30 metres into a forested canyon.',
+    tips: 'Guided tours available. 30-minute drive from Ntungamo. Entry fee supports the local hospital.',
     slug: 'kisiizi-falls',
+    localImage: '/images/attraction-kisiizi-falls.jpg',
   },
   {
-    name: 'Lake Nyabihogo',
-    description: 'A serene crater lake surrounded by terraced hills — perfect for sunrise walks.',
-    tips: 'Best visited at dawn. Bring walking shoes and a camera.',
+    name: 'Lake Nyabihoko',
+    description: 'A serene lake surrounded by rolling green hills and terraced farmland — one of the most photogenic landscapes in southwestern Uganda. Perfect for sunrise walks and birdwatching.',
+    tips: 'Best visited at dawn. Bring walking shoes and a camera. No entry fee.',
     slug: 'lake-nyabihogo',
+    localImage: '/images/attraction-lake-nyabihoko.jpg',
   },
   {
     name: 'Karegyeya Rock',
-    description: 'A striking granite outcrop with panoramic views over Ntungamo and the surrounding highlands.',
-    tips: 'Easy hike. Great picnic spot. 20 minutes from the town centre.',
+    description: 'A striking balancing granite rock perched above the Ntungamo hillside, with panoramic views over the town and surrounding highlands. A local landmark with cultural significance.',
+    tips: 'Easy walk from town. Great picnic spot. 20 minutes from the town centre. Go at sunset for the best light.',
     slug: 'karegyeya-rock',
+    localImage: '/images/attraction-karegyeya-rock.jpg',
   },
 ]
 
 export const sponsorTiers = [
   {
-    name: 'Title Sponsor',
+    name: 'Platinum Partner',
+    price: 'USD 100,000',
     color: 'bg-[var(--color-latte)]',
     textColor: 'text-[var(--color-espresso)]',
     perks: [
-      'Logo on all materials',
-      'VIP tent at finish line',
-      'Social media campaign',
-      '20 complimentary entries',
-      'Speaking opportunity',
+      'Title naming rights across all event materials',
+      'VIP tent & hospitality at finish line',
+      'Full social media campaign partnership',
+      '20 complimentary race entries',
+      'Keynote speaking opportunity',
+      'Logo on race kits, banners & bibs',
+      'Dedicated press coverage',
     ],
   },
   {
-    name: 'Gold Sponsor',
+    name: 'Gold Partner',
+    price: 'USD 75,000',
     color: 'bg-[var(--color-espresso)]',
     textColor: 'text-[var(--color-cream)]',
     perks: [
-      'Logo on website and bibs',
-      '10 complimentary entries',
-      'Social media mention',
-      'Booth at event',
+      'Logo on website, bibs & key materials',
+      '10 complimentary race entries',
+      'Social media campaign mentions',
+      'Exhibition booth at event',
+      'Logo on finish line arch',
     ],
   },
   {
-    name: 'Silver Sponsor',
+    name: 'Silver Partner',
+    price: 'USD 30,000',
     color: 'bg-[var(--color-forest)]',
     textColor: 'text-[var(--color-cream)]',
     perks: [
-      'Logo on website',
-      '5 complimentary entries',
-      'Social media mention',
+      'Logo on website & event signage',
+      '5 complimentary race entries',
+      'Social media shout-outs',
+      'Brand presence at venue',
     ],
   },
   {
-    name: 'Bronze Sponsor',
+    name: 'Bronze Partner',
+    price: 'USD 10,000',
     color: 'bg-[var(--color-seedling)]',
     textColor: 'text-[var(--color-espresso)]',
-    perks: ['Logo on website', '2 complimentary entries'],
+    perks: [
+      'Logo on official website',
+      '2 complimentary race entries',
+      'Social media mention',
+    ],
   },
 ]
 
 export const navLinks = [
+  { label: 'Home', href: '/' },
   { label: 'About', href: '/about' },
   { label: 'Races', href: '/races' },
   { label: 'Shop', href: '/shop' },

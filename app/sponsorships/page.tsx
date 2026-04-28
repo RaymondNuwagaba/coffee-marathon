@@ -95,7 +95,7 @@ export default function SponsorshipsPage() {
             </a>
           </div>
           <p className="mt-4 font-body text-xs text-[var(--color-cream)]/30">
-            Sponsorship deck link is a placeholder — to be updated with actual PDF.
+            For enquiries: <a href="mailto:sponsor@coffeemarathonug.com" className="underline hover:text-[var(--color-cream)]/60">sponsor@coffeemarathonug.com</a>
           </p>
         </div>
       </section>

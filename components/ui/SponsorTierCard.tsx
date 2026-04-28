@@ -2,6 +2,7 @@ import { CheckCircle2 } from 'lucide-react'
 
 interface SponsorTierCardProps {
   name: string
+  price?: string
   color: string
   textColor: string
   perks: string[]
@@ -9,6 +10,7 @@ interface SponsorTierCardProps {
 
 export default function SponsorTierCard({
   name,
+  price,
   color,
   textColor,
   perks,
@@ -22,6 +24,9 @@ export default function SponsorTierCard({
           Sponsorship
         </span>
         <h3 className="font-display text-2xl font-bold">{name}</h3>
+        {price && (
+          <p className="font-display text-3xl font-bold mt-2 opacity-90">{price}</p>
+        )}
       </div>
       <ul className="space-y-3 flex-1">
         {perks.map((perk) => (

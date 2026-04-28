@@ -1,4 +1,5 @@
 import type { Metadata } from 'next'
+import Image from 'next/image'
 import { MapPin } from 'lucide-react'
 import PageHero from '@/components/layout/PageHero'
 import { SanityImage } from '@/components/ui/SanityImage'
@@ -14,10 +15,10 @@ export const metadata: Metadata = {
 export default async function AttractionsPage() {
   const sanityAttractions = await getAttractions()
 
-  const displayAttractions: { id: string; slug: string; name: string; description: string; tips?: string; image?: Attraction['image'] | null }[] =
+  const displayAttractions: { id: string; slug: string; name: string; description: string; tips?: string; image?: Attraction['image'] | null; localImage?: string }[] =
     sanityAttractions && sanityAttractions.length > 0
       ? sanityAttractions.map((a: Attraction) => ({ id: a._id, slug: a.slug.current, name: a.name, description: a.description, tips: a.tips, image: a.image }))
-      : staticAttractions.map((a) => ({ id: a.slug, slug: a.slug, name: a.name, description: a.description, tips: a.tips, image: null }))
+      : staticAttractions.map((a) => ({ id: a.slug, slug: a.slug, name: a.name, description: a.description, tips: a.tips, image: null, localImage: a.localImage }))
 
   return (
     <>
@@ -41,14 +42,17 @@ export default async function AttractionsPage() {
                 <div className="aspect-[4/3] bg-[var(--color-cream-dark)] rounded-2xl overflow-hidden relative">
                   {attraction.image ? (
                     <SanityImage image={attraction.image} alt={attraction.name} width={600} height={450} className="object-cover w-full h-full" fill />
+                  ) : attraction.localImage ? (
+                    <Image
+                      src={attraction.localImage}
+                      alt={attraction.name}
+                      fill
+                      className="object-cover hover:scale-105 transition-transform duration-700"
+                      sizes="(max-width: 1024px) 100vw, 50vw"
+                    />
                   ) : (
                     <div className="w-full h-full flex items-center justify-center">
-                      <div className="text-center">
-                        <MapPin size={28} className="text-[var(--color-arabica)] opacity-30 mx-auto mb-2" />
-                        <span className="font-body text-xs text-[var(--color-arabica)] opacity-40">
-                          Photography of {attraction.name} — to be added
-                        </span>
-                      </div>
+                      <MapPin size={28} className="text-[var(--color-arabica)] opacity-30 mx-auto" />
                     </div>
                   )}
                 </div>
