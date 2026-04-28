@@ -64,7 +64,7 @@ export function AmbassadorSection({ pinnketRegisterUrl }: AmbassadorSectionProps
           <div className="order-1 md:order-2 flex-shrink-0 w-64 md:w-80">
             <div className="relative w-full aspect-[3/4] rounded-2xl overflow-hidden border border-[var(--color-espresso-light)] bg-[var(--color-espresso-light)] flex items-center justify-center">
               <Image
-                src="/images/tyrese-gibson.jpg"
+                src="/images/tyrese-gibson-v2.jpg"
                 alt="Tyrese Gibson — celebrity ambassador, The Coffee Marathon Uganda 2026"
                 fill
                 className="object-cover object-top"

@@ -30,12 +30,13 @@ function pad(n: number) {
 
 export default function CountdownClock({ targetDate }: CountdownClockProps) {
   const target = new Date(targetDate)
-  const [timeLeft, setTimeLeft] = useState<TimeLeft>(calcTimeLeft(target))
+  const [timeLeft, setTimeLeft] = useState<TimeLeft>({ days: 0, hours: 0, minutes: 0, seconds: 0 })
 
   useEffect(() => {
+    setTimeLeft(calcTimeLeft(target))
     const id = setInterval(() => setTimeLeft(calcTimeLeft(target)), 1000)
     return () => clearInterval(id)
-  }, [target])
+  }, [targetDate])
 
   const units: { label: string; value: number }[] = [
     { label: 'Days', value: timeLeft.days },

@@ -156,7 +156,7 @@ export default async function HomePage() {
           {/* Right column — Tyrese Gibson photo */}
           <div className="relative hidden md:block">
             <Image
-              src="/images/tyrese-gibson.jpg"
+              src="/images/tyrese-gibson-v2.jpg"
               alt="Tyrese Gibson — featured celebrity, The Coffee Marathon Uganda 2026"
               fill
               className="object-cover object-top"
