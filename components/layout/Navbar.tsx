@@ -19,29 +19,34 @@ export default function Navbar() {
     return () => window.removeEventListener('scroll', onScroll)
   }, [])
 
-  useEffect(() => {
-    setOpen(false)
-  }, [pathname])
-
+  useEffect(() => { setOpen(false) }, [pathname])
   useEffect(() => {
     document.body.style.overflow = open ? 'hidden' : ''
     return () => { document.body.style.overflow = '' }
   }, [open])
 
-  const isHome = pathname === '/'
-  const solidBg = scrolled || !isHome
+  const solidBg = scrolled || !pathname.startsWith('/') || pathname !== '/'
 
   return (
     <>
+      <div className="fixed top-0 left-0 right-0 z-50">
+        {/* Announcement bar */}
+        <div className="bg-[#1A0A00] py-2 text-center px-4">
+          <p className="font-body text-xs font-semibold text-[#F5C842] tracking-wide">
+            🎤 Tyrese Gibson — Live at Coffee Marathon 2026 &nbsp;·&nbsp; 3 October &nbsp;·&nbsp; Africa Coffee Park
+          </p>
+        </div>
+
       <header
-        className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
+        className={`transition-all duration-300 ${
           solidBg
-            ? 'bg-[var(--color-espresso)] shadow-lg'
-            : 'bg-black/40 backdrop-blur-sm'
+            ? 'bg-white shadow-sm border-b border-[var(--color-border)]'
+            : 'bg-white/90 backdrop-blur-md'
         }`}
       >
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex items-center justify-between h-16 lg:h-20">
+
             {/* Logo */}
             <Link href="/" className="flex items-center gap-2 group">
               <Image
@@ -64,13 +69,13 @@ export default function Navbar() {
                     href={link.href}
                     className={`font-body text-sm font-medium transition-colors relative ${
                       active
-                        ? 'text-[var(--color-forest-light)]'
-                        : 'text-[var(--color-cream)]/80 hover:text-[var(--color-cream)]'
+                        ? 'text-[var(--color-amber)]'
+                        : 'text-[var(--color-text-dark)] hover:text-[var(--color-amber)]'
                     }`}
                   >
                     {link.label}
                     {active && (
-                      <span className="absolute -bottom-1 left-0 right-0 h-0.5 bg-[var(--color-forest-light)] rounded-full" />
+                      <span className="absolute -bottom-1 left-0 right-0 h-0.5 bg-[var(--color-amber)] rounded-full" />
                     )}
                   </Link>
                 )
@@ -81,13 +86,13 @@ export default function Navbar() {
             <div className="flex items-center gap-3">
               <Link
                 href={PINNKET.register10k}
-                className="hidden sm:inline-flex items-center bg-[var(--color-forest)] text-[var(--color-cream)] px-5 py-2 rounded-full font-body font-semibold text-sm hover:bg-[var(--color-forest-light)] transition-colors"
+                className="hidden sm:inline-flex items-center bg-[var(--color-amber)] text-white px-5 py-2 rounded-full font-body font-semibold text-sm hover:bg-[var(--color-amber-dark)] transition-colors shadow-sm"
               >
                 Register Now
               </Link>
               <button
                 onClick={() => setOpen(true)}
-                className="lg:hidden p-2 text-[var(--color-cream)] hover:text-[var(--color-latte)] transition-colors"
+                className="lg:hidden p-2 text-[var(--color-text-dark)] hover:text-[var(--color-amber)] transition-colors"
                 aria-label="Open menu"
               >
                 <Menu size={24} />
@@ -96,11 +101,12 @@ export default function Navbar() {
           </div>
         </div>
       </header>
+      </div>
 
       {/* Mobile overlay */}
       {open && (
-        <div className="fixed inset-0 z-[60] bg-[var(--color-espresso)] flex flex-col">
-          <div className="flex items-center justify-between px-4 h-16">
+        <div className="fixed inset-0 z-[60] bg-white flex flex-col">
+          <div className="flex items-center justify-between px-4 h-16 border-b border-[var(--color-border)]">
             <Link href="/" className="flex items-center gap-2">
               <Image
                 src="/images/logo.png"
@@ -112,7 +118,7 @@ export default function Navbar() {
             </Link>
             <button
               onClick={() => setOpen(false)}
-              className="p-2 text-[var(--color-cream)] hover:text-[var(--color-latte)] transition-colors"
+              className="p-2 text-[var(--color-text-dark)] hover:text-[var(--color-amber)] transition-colors"
               aria-label="Close menu"
             >
               <X size={24} />
@@ -128,8 +134,8 @@ export default function Navbar() {
                   href={link.href}
                   className={`font-display text-3xl font-semibold transition-colors ${
                     active
-                      ? 'text-[var(--color-forest-light)]'
-                      : 'text-[var(--color-cream)] hover:text-[var(--color-latte)]'
+                      ? 'text-[var(--color-amber)]'
+                      : 'text-[var(--color-text-dark)] hover:text-[var(--color-amber)]'
                   }`}
                 >
                   {link.label}
@@ -138,13 +144,13 @@ export default function Navbar() {
             })}
             <Link
               href={PINNKET.register10k}
-              className="mt-4 inline-flex items-center justify-center bg-[var(--color-forest)] text-[var(--color-cream)] px-8 py-3 rounded-full font-body font-semibold text-lg hover:bg-[var(--color-forest-light)] transition-colors"
+              className="mt-4 inline-flex items-center justify-center bg-[var(--color-amber)] text-white px-8 py-3 rounded-full font-body font-semibold text-lg hover:bg-[var(--color-amber-dark)] transition-colors"
             >
               Register Now
             </Link>
           </nav>
 
-          <p className="px-8 pb-8 font-body text-sm text-[var(--color-cream)]/40">
+          <p className="px-8 pb-8 font-body text-sm text-[var(--color-text-light)]">
             3 October 2026 · Africa Coffee Park, Ntungamo
           </p>
         </div>

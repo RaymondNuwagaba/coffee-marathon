@@ -46,19 +46,19 @@ export default function CountdownClock({ targetDate }: CountdownClockProps) {
   ]
 
   return (
-    <div className="flex items-center gap-3 justify-center flex-wrap">
+    <div className="flex items-center gap-3 flex-wrap">
       {units.map(({ label, value }, i) => (
         <div key={label} className="flex items-center gap-3">
-          <div className="bg-[var(--color-cream)]/10 backdrop-blur border border-[var(--color-cream)]/20 rounded-lg px-4 py-3 min-w-[72px] text-center">
-            <div className="font-display text-4xl text-[var(--color-cream)] font-bold tabular-nums">
+          <div className="bg-[var(--color-amber)]/10 border border-[var(--color-amber)]/30 rounded-xl px-4 py-3 min-w-[72px] text-center">
+            <div className="font-display text-4xl text-[var(--color-text-dark)] font-bold tabular-nums">
               {pad(value)}
             </div>
-            <div className="font-body text-xs text-[var(--color-cream)]/60 uppercase tracking-widest mt-1">
+            <div className="font-body text-xs text-[var(--color-text-light)] uppercase tracking-widest mt-1">
               {label}
             </div>
           </div>
           {i < units.length - 1 && (
-            <span className="font-display text-2xl text-[var(--color-cream)]/40 font-bold">
+            <span className="font-display text-2xl text-[var(--color-amber)] font-bold">
               :
             </span>
           )}

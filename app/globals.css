@@ -1,37 +1,53 @@
 @import "tailwindcss";
 
 @theme {
-  /* Fonts — mapped to CSS variables set by Next.js font loader */
+  /* Fonts */
   --font-display: var(--font-playfair), Georgia, serif;
   --font-body: var(--font-inter), system-ui, sans-serif;
 
-  /* Brand colours */
-  --color-espresso: #2C0F06;
-  --color-espresso-light: #4A2010;
-  --color-espresso-dark: #1A0A03;
+  /* ── NEW BRIGHT FESTIVAL PALETTE ── */
+  --color-bg: #FFFFFF;
+  --color-bg-warm: #FFF8F0;
+  --color-amber: #E8A020;
+  --color-amber-dark: #C07818;
+  --color-amber-light: #F5C842;
+  --color-orange: #D4501A;
+  --color-orange-dark: #A83A10;
+  --color-text-dark: #1A0A00;
+  --color-text-mid: #5C3317;
+  --color-text-light: #9A6B4B;
+  --color-border: #E8D4B0;
 
-  --color-arabica: #7A3A1E;
-  --color-arabica-light: #C07040;
+  /* Legacy aliases — keep so existing components don't break */
+  --color-espresso: #1A0A00;
+  --color-espresso-light: #3D1A0A;
+  --color-espresso-dark: #0D0500;
 
-  --color-latte: #C07040;
-  --color-latte-light: #E8A870;
+  --color-arabica: #5C3317;
+  --color-arabica-light: #E8A020;
 
-  --color-cream: #F5E8D0;
-  --color-cream-light: #FAF3E8;
-  --color-cream-dark: #E8D4B0;
+  --color-latte: #E8A020;
+  --color-latte-light: #F5C842;
+
+  --color-cream: #FFF8F0;
+  --color-cream-light: #FFFFFF;
+  --color-cream-dark: #FFE8D0;
 
   --color-forest: #1E7A2F;
   --color-forest-light: #2EA84A;
   --color-forest-dark: #0F4A1A;
 
-  --color-seedling: #A8D8B0;
-  --color-seedling-light: #EAF5EC;
+  --color-seedling: #A8D880;
+  --color-seedling-light: #F0FAF0;
 
+  /* Bright energetic green — used for alternating section accents, badges, icons */
+  --color-accent-green: #2DB37A;
+  --color-accent-green-light: #E8F8F0;
 }
 
 :root {
-  --background: var(--color-cream-light);
-  --foreground: var(--color-espresso);
+  --background: #FFFFFF;
+  --foreground: #1A0A00;
 }
 
 body {
