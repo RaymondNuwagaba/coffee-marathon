@@ -6,7 +6,6 @@ import CountdownClock from '@/components/ui/CountdownClock'
 import RaceCard from '@/components/ui/RaceCard'
 import MissionSection from '@/components/sections/MissionSection'
 import Highlights2025Section from '@/components/sections/Highlights2025Section'
-import ConcertSection from '@/components/sections/ConcertSection'
 import ColdBrewSection from '@/components/sections/ColdBrewSection'
 import { FacebookIcon, InstagramIcon, TwitterXIcon } from '@/components/ui/SocialIcons'
 import {
@@ -261,10 +260,7 @@ export default async function HomePage() {
       {/* ── 6. COLD BREW ────────────────────────────────────────────── */}
       <ColdBrewSection />
 
-      {/* ── 7. CONCERT — DARK SECTION ───────────────────────────────── */}
-      <ConcertSection />
-
-      {/* ── 8. SPONSORS ─────────────────────────────────────────────── */}
+      {/* ── 7. SPONSORS ─────────────────────────────────────────────── */}
       <section className="bg-[var(--color-bg-warm)] py-14 border-t border-[var(--color-border)]">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <h3 className="font-body text-xs uppercase tracking-widest text-[var(--color-text-light)] mb-8">
