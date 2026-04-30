@@ -2,58 +2,79 @@
 
 @theme {
   /* Fonts */
-  --font-display: var(--font-playfair), Georgia, serif;
-  --font-body: var(--font-inter), system-ui, sans-serif;
+  --font-display: var(--font-oswald), Impact, sans-serif;
+  --font-body: var(--font-barlow), system-ui, sans-serif;
+  --font-label: var(--font-barlow-condensed), sans-serif;
 
-  /* ── NEW BRIGHT FESTIVAL PALETTE ── */
-  --color-bg: #FFFFFF;
-  --color-bg-warm: #FFF8F0;
-  --color-amber: #E8A020;
-  --color-amber-dark: #C07818;
-  --color-amber-light: #F5C842;
-  --color-orange: #D4501A;
-  --color-orange-dark: #A83A10;
-  --color-text-dark: #1A0A00;
-  --color-text-mid: #5C3317;
-  --color-text-light: #9A6B4B;
-  --color-border: #E8D4B0;
+  /* Primary palette */
+  --color-brand-red: #D92B2B;
+  --color-brand-gold: #F5C518;
+  --color-brand-black: #1A1A1A;
+  --color-brand-orange: #E8651A;
+  --color-brand-green: #2E7D32;
+  --color-brand-cream: #FFF8EE;
+  --color-brand-warmwhite: #FFFDF7;
+  --color-brand-brown: #5C3317;
+  --color-logo-forest: #1E6B2E;
+  --color-logo-deep-brown: #3D1A0E;
+  --color-logo-warm-brown: #5C2A0E;
 
-  /* Legacy aliases — keep so existing components don't break */
-  --color-espresso: #1A0A00;
-  --color-espresso-light: #3D1A0A;
-  --color-espresso-dark: #0D0500;
+  /* Core theme tokens */
+  --color-bg: #FFF8EE;
+  --color-bg-warm: #FFFDF7;
+  --color-amber: #F5C518;
+  --color-amber-dark: #DDB015;
+  --color-amber-light: #F8D746;
+  --color-orange: #E8651A;
+  --color-orange-dark: #C95414;
+  --color-text-dark: #1E6B2E;
+  --color-text-mid: #3D1A0E;
+  --color-text-light: #5C2A0E;
+  --color-border: #DFCAB4;
 
-  --color-arabica: #5C3317;
-  --color-arabica-light: #E8A020;
-
-  --color-latte: #E8A020;
-  --color-latte-light: #F5C842;
-
-  --color-cream: #FFF8F0;
-  --color-cream-light: #FFFFFF;
-  --color-cream-dark: #FFE8D0;
-
-  --color-forest: #1E7A2F;
-  --color-forest-light: #2EA84A;
-  --color-forest-dark: #0F4A1A;
-
-  --color-seedling: #A8D880;
-  --color-seedling-light: #F0FAF0;
-
-  /* Bright energetic green — used for alternating section accents, badges, icons */
-  --color-accent-green: #2DB37A;
-  --color-accent-green-light: #E8F8F0;
+  /* Legacy aliases — preserved for existing components */
+  --color-espresso: #1A1A1A;
+  --color-espresso-light: #2A2A2A;
+  --color-espresso-dark: #111111;
+  --color-arabica: #3D1A0E;
+  --color-arabica-light: #5C2A0E;
+  --color-latte: #F5C518;
+  --color-latte-light: #F8D746;
+  --color-cream: #FFF8EE;
+  --color-cream-light: #FFFDF7;
+  --color-cream-dark: #F3E7D8;
+  --color-forest: #2E7D32;
+  --color-forest-light: #3C9C41;
+  --color-forest-dark: #1F5B24;
+  --color-seedling: #2E7D32;
+  --color-seedling-light: #E8F4E8;
+  --color-accent-green: #2E7D32;
+  --color-accent-green-light: #E8F4E8;
 }
 
 :root {
-  --background: #FFFFFF;
-  --foreground: #1A0A00;
+  --color-primary: #D92B2B;
+  --color-accent: #F5C518;
+  --color-dark: #1A1A1A;
+  --color-orange: #E8651A;
+  --color-green: #2E7D32;
+  --color-cream: #FFF8EE;
+  --color-warm-white: #FFFDF7;
+  --color-brown: #5C2A0E;
+  --color-text-main: #3D1A0E;
+  --color-text-muted: #5C2A0E;
+  --background: #FFF8EE;
+  --foreground: #1A1A1A;
 }
 
 body {
   background: var(--background);
   color: var(--foreground);
   font-family: var(--font-body);
+}
+
+.font-label {
+  font-family: var(--font-label);
 }
 
 html {

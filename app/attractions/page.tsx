@@ -28,7 +28,7 @@ export default async function AttractionsPage() {
         label="Local Attractions"
       />
 
-      <section className="bg-[var(--color-cream-light)] py-20">
+      <section className="bg-[var(--color-cream)] py-20">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="space-y-16">
             {displayAttractions.map((attraction, i) => (
@@ -59,13 +59,13 @@ export default async function AttractionsPage() {
 
                 <div>
                   <div className="flex items-center gap-2 mb-3">
-                    <MapPin size={14} className="text-[var(--color-forest)]" />
-                    <span className="font-body text-xs uppercase tracking-widest text-[var(--color-forest)] font-semibold">Attraction</span>
+                    <MapPin size={14} className="text-[var(--color-logo-warm-brown)]" />
+                    <span className="font-label text-xs uppercase tracking-[0.1em] text-[var(--color-logo-warm-brown)] font-bold">Attraction</span>
                   </div>
-                  <h2 className="font-display text-3xl font-semibold text-[var(--color-espresso)] mb-3">{attraction.name}</h2>
+                  <h2 className="font-display text-3xl font-semibold text-[var(--color-logo-forest)] mb-3">{attraction.name}</h2>
                   <p className="font-body text-base text-[var(--color-arabica)] leading-relaxed mb-4">{attraction.description}</p>
                   {attraction.tips && (
-                    <div className="bg-[var(--color-seedling-light)] rounded-xl px-4 py-3">
+                    <div className="bg-[var(--color-seedling-light)] rounded-xl px-4 py-3 border border-[var(--color-green)]/20">
                       <p className="font-body text-sm text-[var(--color-forest-dark)]">
                         <span className="font-semibold">Practical tips: </span>{attraction.tips}
                       </p>
@@ -78,9 +78,9 @@ export default async function AttractionsPage() {
         </div>
       </section>
 
-      <section className="bg-[var(--color-cream)] py-20">
+      <section className="bg-[var(--color-warm-white)] py-20">
         <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <h2 className="font-display text-3xl font-semibold text-[var(--color-espresso)] mb-6">Getting Around</h2>
+          <h2 className="font-display text-3xl font-semibold text-[var(--color-logo-forest)] mb-6">Getting Around</h2>
           <div className="aspect-video bg-[var(--color-cream-dark)] rounded-2xl flex items-center justify-center">
             <div className="text-center">
               <MapPin size={32} className="text-[var(--color-arabica)]/30 mx-auto mb-3" />

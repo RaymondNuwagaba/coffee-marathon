@@ -113,25 +113,25 @@ export default function BeyondTheMarathonPage() {
 
       {/* ── HERO BANNER ─────────────────────────────────────────────── */}
       {/* pt-32 accounts for announcement bar (≈32px) + navbar (80px) + 48px breathing room */}
-      <section className="relative bg-[var(--color-bg-warm)] pt-40 pb-20 overflow-hidden">
+      <section className="relative bg-[var(--color-cream)] pt-40 pb-20 overflow-hidden">
         <div className="absolute inset-0 pointer-events-none">
           <div className="absolute top-0 right-0 w-96 h-96 bg-[var(--color-amber)]/10 rounded-full blur-3xl -translate-y-1/2 translate-x-1/4" />
-          <div className="absolute bottom-0 left-0 w-80 h-80 bg-[var(--color-accent-green)]/8 rounded-full blur-3xl translate-y-1/3 -translate-x-1/4" />
+          <div className="absolute bottom-0 left-0 w-80 h-80 bg-[var(--color-green)]/10 rounded-full blur-3xl translate-y-1/3 -translate-x-1/4" />
         </div>
         {/* Amber + green top bar */}
-        <div className="absolute top-0 left-0 right-0 h-1 bg-gradient-to-r from-[var(--color-amber)] via-[var(--color-amber-light)] to-[var(--color-accent-green)]" />
+        <div className="absolute top-0 left-0 right-0 h-1 bg-gradient-to-r from-[var(--color-primary)] via-[var(--color-accent)] to-[var(--color-green)]" />
 
         <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="max-w-3xl">
             <div className="flex items-center gap-3 mb-5">
-              <span className="w-8 h-0.5 bg-[var(--color-amber)]" />
-              <span className="font-body text-xs uppercase tracking-widest text-[var(--color-amber)] font-semibold">
+              <span className="w-8 h-0.5 bg-[var(--color-logo-warm-brown)]" />
+              <span className="font-label text-xs uppercase tracking-[0.12em] text-[var(--color-logo-warm-brown)] font-bold">
                 Coffee Festival 2026
               </span>
             </div>
             <h1 className="font-display text-5xl md:text-7xl font-bold text-[var(--color-text-dark)] leading-tight mb-6">
               Beyond<br />
-              <span className="text-[var(--color-amber)]">the Marathon</span>
+              <span className="text-[var(--color-logo-forest)]">the Marathon</span>
             </h1>
             <p className="font-body text-xl text-[var(--color-text-mid)] leading-relaxed mb-8 max-w-2xl">
               The Coffee Marathon is not just a race — it is a full festival experience spanning two days of coffee, culture, commerce, and community at Africa Coffee Park, Ntungamo.
@@ -141,13 +141,13 @@ export default function BeyondTheMarathonPage() {
                 href={PINNKET.register10k}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="inline-flex items-center gap-2 bg-[var(--color-amber)] text-white px-6 py-3 rounded-full font-body font-semibold text-sm hover:bg-[var(--color-amber-dark)] transition-colors shadow-sm"
+                className="inline-flex items-center gap-2 bg-[var(--color-primary)] text-white px-6 py-3 rounded-full font-label font-bold uppercase tracking-[0.08em] text-sm hover:bg-[#B52222] transition-colors shadow-sm"
               >
                 Register to Run →
               </a>
               <a
                 href="mailto:info@inspireafricagroup.co.ug"
-                className="inline-flex items-center gap-2 px-6 py-3 rounded-full border-2 border-[var(--color-border)] text-[var(--color-text-dark)] font-body font-semibold text-sm hover:border-[var(--color-accent-green)] hover:text-[var(--color-accent-green)] transition-all"
+                className="inline-flex items-center gap-2 px-6 py-3 rounded-full border-2 border-[var(--color-logo-forest)] text-[var(--color-logo-forest)] font-label font-bold uppercase tracking-[0.08em] text-sm hover:bg-[var(--color-logo-forest)] hover:text-white transition-all"
               >
                 Partner With Us
               </a>
@@ -157,16 +157,16 @@ export default function BeyondTheMarathonPage() {
       </section>
 
       {/* ── 11 FESTIVAL ACTIVITIES ───────────────────────────────────── */}
-      <section className="bg-white py-20 md:py-28">
+      <section className="bg-[var(--color-warm-white)] py-20 md:py-28">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
 
           <div className="text-center max-w-3xl mx-auto mb-16">
             <div className="flex items-center justify-center gap-3 mb-4">
-              <span className="w-8 h-0.5 bg-[var(--color-amber)]" />
-              <span className="font-body text-xs uppercase tracking-widest text-[var(--color-amber)] font-semibold">
+              <span className="w-8 h-0.5 bg-[var(--color-logo-warm-brown)]" />
+              <span className="font-label text-xs uppercase tracking-[0.12em] text-[var(--color-logo-warm-brown)] font-bold">
                 Festival Programme
               </span>
-              <span className="w-8 h-0.5 bg-[var(--color-amber)]" />
+              <span className="w-8 h-0.5 bg-[var(--color-logo-warm-brown)]" />
             </div>
             <h2 className="font-display text-4xl md:text-5xl font-bold text-[var(--color-text-dark)] mb-4">
               11 Experiences.<br />One Epic Weekend.
@@ -180,12 +180,12 @@ export default function BeyondTheMarathonPage() {
             {activities.map((activity) => {
               const Icon = activity.icon
               const isGreen = activity.accent === 'green'
-              const accentColor = isGreen ? 'var(--color-accent-green)' : 'var(--color-amber)'
+              const accentColor = isGreen ? 'var(--color-green)' : 'var(--color-logo-deep-brown)'
               const accentBg = isGreen ? 'var(--color-accent-green-light)' : 'var(--color-bg-warm)'
               return (
                 <div
                   key={activity.number}
-                  className="bg-white rounded-2xl shadow-sm hover:shadow-md transition-all overflow-hidden"
+                  className="bg-[var(--color-warm-white)] rounded-2xl shadow-sm hover:shadow-md transition-all overflow-hidden border border-[var(--color-border)]"
                   style={{ borderLeft: `4px solid ${accentColor}` }}
                 >
                   <div className="p-6">
@@ -212,10 +212,10 @@ export default function BeyondTheMarathonPage() {
 
                     {/* Mutumo Island callout — green accent */}
                     {'mutumo' in activity && activity.mutumo && (
-                      <div className="mt-4 rounded-xl p-4 border" style={{ backgroundColor: 'var(--color-accent-green-light)', borderColor: 'rgba(45,179,122,0.3)' }}>
-                        <div className="flex items-center gap-2 mb-1">
-                          <MapPin size={12} style={{ color: 'var(--color-accent-green)' }} className="shrink-0" />
-                          <span className="font-body text-xs font-bold uppercase tracking-wide" style={{ color: 'var(--color-accent-green)' }}>
+                        <div className="mt-4 rounded-xl p-4 border" style={{ backgroundColor: 'var(--color-accent-green-light)', borderColor: 'rgba(46,125,50,0.3)' }}>
+                          <div className="flex items-center gap-2 mb-1">
+                          <MapPin size={12} style={{ color: 'var(--color-green)' }} className="shrink-0" />
+                          <span className="font-label text-xs font-bold uppercase tracking-[0.08em]" style={{ color: 'var(--color-green)' }}>
                             Featured Destination
                           </span>
                         </div>
@@ -237,33 +237,33 @@ export default function BeyondTheMarathonPage() {
       </section>
 
       {/* ── CONVENTION & EXPO FEATURE ────────────────────────────────── */}
-      <section className="bg-[var(--color-bg-warm)] py-20 md:py-28 overflow-hidden relative">
-        <div className="absolute top-0 right-0 w-72 h-72 bg-[#2A9D8F]/10 rounded-full blur-3xl -translate-y-1/2 translate-x-1/2 pointer-events-none" />
-        <div className="absolute bottom-0 left-0 w-72 h-72 bg-[#2A9D8F]/8 rounded-full blur-3xl translate-y-1/2 -translate-x-1/2 pointer-events-none" />
+      <section className="bg-[var(--color-cream)] py-20 md:py-28 overflow-hidden relative">
+        <div className="absolute top-0 right-0 w-72 h-72 bg-[var(--color-green)]/12 rounded-full blur-3xl -translate-y-1/2 translate-x-1/2 pointer-events-none" />
+        <div className="absolute bottom-0 left-0 w-72 h-72 bg-[var(--color-green)]/10 rounded-full blur-3xl translate-y-1/2 -translate-x-1/2 pointer-events-none" />
 
         <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
 
             <div>
               <div className="flex items-center gap-3 mb-6">
-                <div className="w-8 h-0.5 bg-[#2A9D8F]" />
-                <span className="font-body text-xs uppercase tracking-widest font-semibold" style={{ color: '#2A9D8F' }}>
+                <div className="w-8 h-0.5 bg-[var(--color-logo-warm-brown)]" />
+                <span className="font-label text-xs uppercase tracking-[0.12em] font-bold text-[var(--color-logo-warm-brown)]">
                   The Coffee Convention &amp; Expo
                 </span>
               </div>
               <h2 className="font-display text-4xl md:text-5xl font-bold text-[var(--color-text-dark)] leading-tight mb-4">
                 Where Coffee<br />
-                <span style={{ color: '#2A9D8F' }}>Meets Commerce</span>
+                <span className="text-[var(--color-logo-forest)]">Meets Commerce</span>
               </h2>
-              <p className="font-body text-sm italic border-l-2 pl-4 mb-6 leading-relaxed text-[var(--color-text-mid)]" style={{ borderColor: '#2A9D8F' }}>
+              <p className="font-body text-sm italic border-l-2 pl-4 mb-6 leading-relaxed text-[var(--color-text-mid)] border-[var(--color-green)]">
                 &ldquo;Accelerating Coffee Value Addition &amp; Coffee Tourism for Job Creation and Export Growth&rdquo;
               </p>
               <div className="flex flex-wrap gap-3 mb-6">
-                <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full border-2 font-body text-sm font-semibold" style={{ borderColor: '#2A9D8F', color: '#2A9D8F' }}>
+                <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full border-2 border-[var(--color-green)] text-[var(--color-green)] font-label text-sm font-bold uppercase tracking-[0.08em]">
                   <Calendar size={14} />
                   1st–2nd October 2026
                 </div>
-                <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full border-2 font-body text-sm font-semibold" style={{ borderColor: '#2A9D8F', color: '#2A9D8F' }}>
+                <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full border-2 border-[var(--color-green)] text-[var(--color-green)] font-label text-sm font-bold uppercase tracking-[0.08em]">
                   <MapPin size={14} />
                   Kampala, Uganda
                 </div>
@@ -273,8 +273,7 @@ export default function BeyondTheMarathonPage() {
               </p>
               <a
                 href="mailto:info@inspireafricagroup.co.ug"
-                className="inline-flex items-center gap-2 font-body font-semibold text-sm px-6 py-3 rounded-full text-white transition-colors"
-                style={{ backgroundColor: '#2A9D8F' }}
+                className="inline-flex items-center gap-2 font-label font-bold uppercase tracking-[0.08em] text-sm px-6 py-3 rounded-full text-white transition-colors bg-[var(--color-green)] hover:bg-[var(--color-forest-dark)]"
               >
                 Register Interest
                 <ExternalLink size={14} />
@@ -282,8 +281,8 @@ export default function BeyondTheMarathonPage() {
             </div>
 
             <div className="flex flex-col gap-6">
-              <div className="rounded-3xl p-8 text-white relative overflow-hidden" style={{ backgroundColor: '#2A9D8F' }}>
-                <div className="absolute -top-8 -right-8 w-40 h-40 rounded-full opacity-20" style={{ backgroundColor: '#1A7A6F' }} />
+              <div className="rounded-3xl p-8 text-white relative overflow-hidden bg-[var(--color-green)]">
+                <div className="absolute -top-8 -right-8 w-40 h-40 rounded-full opacity-20 bg-[var(--color-forest-dark)]" />
                 <div className="relative z-10">
                   <TrendingUp size={32} className="mb-4 text-white/70" />
                   <div className="flex items-end gap-2 mb-2">
@@ -331,7 +330,7 @@ export default function BeyondTheMarathonPage() {
       <section className="relative py-20 md:py-28 overflow-hidden">
         <div className="absolute inset-0">
           <Image src="/images/concert-crowd-night.jpg" alt="" fill className="object-cover object-center" sizes="100vw" aria-hidden />
-          <div className="absolute inset-0 bg-[#1A0A00]/90" />
+          <div className="absolute inset-0 bg-[var(--color-dark)]/90" />
         </div>
 
         <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -395,7 +394,7 @@ export default function BeyondTheMarathonPage() {
             <div className="flex flex-col gap-4">
               <div className="relative aspect-[3/4] rounded-2xl overflow-hidden">
                 <Image src="/images/tyrese-hero.jpg" alt="Tyrese Gibson — headline artist" fill className="object-cover object-top" sizes="(max-width: 1024px) 100vw, 50vw" priority />
-                <div className="absolute inset-0 bg-gradient-to-t from-[#1A0A00]/60 to-transparent" />
+                <div className="absolute inset-0 bg-gradient-to-t from-[var(--color-dark)]/60 to-transparent" />
                 <div className="absolute bottom-4 left-4">
                   <span className="font-body text-xs uppercase tracking-widest text-white/60 bg-black/40 px-3 py-1 rounded-full backdrop-blur-sm">Live · 3 October 2026</span>
                 </div>
@@ -454,7 +453,7 @@ export default function BeyondTheMarathonPage() {
               <span key={tag} className="font-body text-xs font-medium px-3 py-1.5 rounded-full bg-white/20 text-white border border-white/30">{tag}</span>
             ))}
           </div>
-          <Link href="/contact" className="inline-flex items-center gap-2 bg-white text-[var(--color-orange-dark)] px-8 py-4 rounded-full font-body font-bold text-base hover:bg-[var(--color-amber-light)] transition-colors shadow-xl">
+          <Link href="/contact" className="inline-flex items-center gap-2 bg-[var(--color-accent)] text-[var(--color-dark)] px-8 py-4 rounded-full font-label font-bold uppercase tracking-[0.08em] text-base hover:bg-[var(--color-amber-dark)] transition-colors shadow-xl">
             Save the Date
             <ArrowUpRight size={18} />
           </Link>

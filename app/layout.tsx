@@ -1,21 +1,29 @@
 import type { Metadata } from 'next'
-import { Playfair_Display, Inter } from 'next/font/google'
+import { Oswald, Barlow, Barlow_Condensed } from 'next/font/google'
 import { Analytics } from '@vercel/analytics/react'
 import Script from 'next/script'
 import Navbar from '@/components/layout/Navbar'
 import Footer from '@/components/layout/Footer'
 import './globals.css'
 
-const playfairDisplay = Playfair_Display({
+const oswald = Oswald({
   subsets: ['latin'],
-  variable: '--font-playfair',
+  variable: '--font-oswald',
   display: 'swap',
-  weight: ['400', '500', '600', '700', '800', '900'],
+  weight: ['600', '700'],
 })
 
-const inter = Inter({
+const barlow = Barlow({
   subsets: ['latin'],
-  variable: '--font-inter',
+  variable: '--font-barlow',
+  weight: ['400', '500', '600'],
+  display: 'swap',
+})
+
+const barlowCondensed = Barlow_Condensed({
+  subsets: ['latin'],
+  variable: '--font-barlow-condensed',
+  weight: ['700', '800'],
   display: 'swap',
 })
 
@@ -59,9 +67,9 @@ export default function RootLayout({
   return (
     <html
       lang="en"
-      className={`${playfairDisplay.variable} ${inter.variable} h-full`}
+      className={`${oswald.variable} ${barlow.variable} ${barlowCondensed.variable} h-full`}
     >
-      <body className="min-h-full flex flex-col antialiased bg-[var(--color-cream-light)] text-[var(--color-espresso)]">
+      <body className="min-h-full flex flex-col antialiased bg-[var(--color-cream)] text-[var(--color-espresso)]">
         <Navbar />
         <main className="flex-1">{children}</main>
         <Footer />

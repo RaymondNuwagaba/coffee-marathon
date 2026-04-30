@@ -15,17 +15,17 @@ interface ButtonProps {
 
 const variants: Record<ButtonVariant, string> = {
   primary:
-    'bg-[var(--color-espresso)] text-[var(--color-cream)] hover:bg-[var(--color-espresso-light)] shadow-sm',
+    'bg-[var(--color-primary)] text-white hover:bg-[#B52222] shadow-sm',
   secondary:
-    'bg-[var(--color-forest)] text-[var(--color-cream)] hover:bg-[var(--color-forest-light)] shadow-sm',
+    'bg-[var(--color-accent)] text-[var(--color-dark)] hover:bg-[var(--color-amber-dark)] shadow-sm',
   ghost:
-    'bg-transparent text-[var(--color-espresso)] hover:bg-[var(--color-cream-dark)]',
+    'bg-transparent text-[var(--color-dark)] hover:bg-[var(--color-cream-dark)]',
   outline:
-    'bg-transparent border-2 border-[var(--color-cream)] text-[var(--color-cream)] hover:bg-[var(--color-cream)]/10',
+    'bg-transparent border-2 border-[var(--color-primary)] text-[var(--color-primary)] hover:bg-[var(--color-primary)] hover:text-white',
 }
 
 const base =
-  'inline-flex items-center justify-center px-6 py-3 rounded-full font-body font-semibold text-sm transition-all duration-200 focus:outline-none focus-visible:ring-2 focus-visible:ring-[var(--color-forest)] focus-visible:ring-offset-2'
+  'inline-flex items-center justify-center px-6 py-3 rounded-full font-label font-bold uppercase tracking-[0.08em] text-sm transition-all duration-200 focus:outline-none focus-visible:ring-2 focus-visible:ring-[var(--color-primary)] focus-visible:ring-offset-2'
 
 export default function Button({
   href,

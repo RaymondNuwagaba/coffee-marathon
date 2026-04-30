@@ -11,6 +11,10 @@ interface PinnketCTAProps {
   className?: string
 }
 
+interface WindowWithGtag extends Window {
+  gtag?: (eventName: 'event', action: string, params: Record<string, string>) => void
+}
+
 export function PinnketCTA({
   href,
   label,
@@ -22,18 +26,19 @@ export function PinnketCTA({
 
   const btnClass =
     variant === 'primary'
-      ? 'bg-[var(--color-forest)] text-[var(--color-cream)] hover:bg-[var(--color-forest-light)]'
-      : 'bg-[var(--color-latte)] text-[var(--color-espresso)] hover:bg-[var(--color-latte-light)]'
+      ? 'bg-[var(--color-accent)] text-[var(--color-dark)] hover:bg-[var(--color-amber-dark)]'
+      : 'bg-[var(--color-primary)] text-white hover:bg-[#B52222]'
 
   return (
     <div className={`flex flex-col items-start gap-2 ${className}`}>
       <Link
         href={href}
         {...(isExternal ? { target: '_blank', rel: 'noopener noreferrer' } : {})}
-        className={`inline-flex items-center gap-2 px-6 py-3 rounded-full font-body font-semibold text-sm transition-all duration-200 shadow-sm ${btnClass}`}
+        className={`inline-flex items-center gap-2 px-6 py-3 rounded-full font-label font-bold uppercase tracking-[0.08em] text-sm transition-all duration-200 shadow-sm ${btnClass}`}
         onClick={() => {
-          if (typeof window !== 'undefined' && typeof (window as Window & { gtag?: Function }).gtag === 'function') {
-            ;(window as Window & { gtag?: Function }).gtag!('event', 'pinnket_click', {
+          const gtag = (window as WindowWithGtag).gtag
+          if (typeof gtag === 'function') {
+            gtag('event', 'pinnket_click', {
               label,
               page: window.location.pathname,
             })
@@ -44,7 +49,7 @@ export function PinnketCTA({
         {isExternal && <ExternalLink size={14} />}
       </Link>
       {showNote && (
-        <p className="font-body text-xs text-[var(--color-arabica)]">
+        <p className="font-body text-xs text-[var(--color-text-muted)]">
           Secure registration via Pinnket, our official ticketing partner.
         </p>
       )}

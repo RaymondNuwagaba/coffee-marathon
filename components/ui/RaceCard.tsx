@@ -1,6 +1,5 @@
 import { ArrowRight } from 'lucide-react'
 import { PINNKET } from '@/lib/pinnket'
-import PinnketCTA from './PinnketCTA'
 
 interface RaceCardProps {
   distance: string
@@ -20,10 +19,10 @@ interface RaceCardProps {
 }
 
 const distanceColors: Record<string, { color: string; textColor: string }> = {
-  '5 KM': { color: 'bg-[var(--color-seedling)]', textColor: 'text-[var(--color-forest-dark)]' },
-  '10 KM': { color: 'bg-[var(--color-forest)]/20', textColor: 'text-[var(--color-forest-dark)]' },
-  '21 KM': { color: 'bg-[var(--color-forest)]', textColor: 'text-[var(--color-cream)]' },
-  '42 KM': { color: 'bg-[var(--color-espresso)]', textColor: 'text-[var(--color-cream)]' },
+  '5 KM': { color: 'bg-[var(--color-green)]', textColor: 'text-white' },
+  '10 KM': { color: 'bg-[var(--color-orange)]', textColor: 'text-white' },
+  '21 KM': { color: 'bg-[var(--color-primary)]', textColor: 'text-white' },
+  '42 KM': { color: 'bg-[var(--color-dark)]', textColor: 'text-white' },
 }
 
 export default function RaceCard({
@@ -42,7 +41,7 @@ export default function RaceCard({
   included,
   startTime,
 }: RaceCardProps) {
-  const fallback = distanceColors[distance] ?? { color: 'bg-[var(--color-cream-dark)]', textColor: 'text-[var(--color-espresso)]' }
+  const fallback = distanceColors[distance] ?? { color: 'bg-[var(--color-dark)]', textColor: 'text-white' }
   const cardColor = color ?? fallback.color
   const cardText = textColor ?? fallback.textColor
   const displayText = desc ?? description ?? ''
@@ -53,7 +52,7 @@ export default function RaceCard({
       className={`${cardColor} ${cardText} rounded-2xl p-6 flex flex-col gap-4 hover:scale-[1.02] hover:shadow-xl transition-all duration-300`}
     >
       <div>
-        <span className="font-body text-xs font-semibold uppercase tracking-widest opacity-70">{label}</span>
+        <span className="font-label text-xs font-bold uppercase tracking-[0.1em] opacity-80">{label}</span>
         <div className="font-display text-5xl font-bold mt-1 leading-none">{distance}</div>
       </div>
 
@@ -96,15 +95,24 @@ export default function RaceCard({
       <div className="mt-auto flex items-center justify-between">
         <span className="font-display text-lg font-semibold">{price}</span>
         {expanded ? (
-          <PinnketCTA
+          <a
             href={href}
-            label={`Register for the ${distance}`}
-            variant={cardColor.includes('espresso') || cardColor.includes('forest') ? 'secondary' : 'primary'}
-            showNote
-          />
+            target="_blank"
+            rel="noopener noreferrer"
+            className="inline-flex items-center gap-2 px-4 py-2 rounded-full border border-white bg-white/15 font-label font-bold uppercase tracking-[0.08em] text-xs hover:bg-white/25 transition-colors"
+          >
+            Register for {distance}
+            <ArrowRight size={12} />
+          </a>
         ) : (
-          <a href={href} target="_blank" rel="noopener noreferrer" className="font-body text-sm font-semibold flex items-center gap-1 hover:gap-2 transition-all">
-            Register via Pinnket <ArrowRight size={14} />
+          <a
+            href={href}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="inline-flex items-center gap-2 px-4 py-2 rounded-full border border-white bg-white/15 font-label font-bold uppercase tracking-[0.08em] text-xs hover:bg-white/25 transition-colors"
+          >
+            Register
+            <ArrowRight size={12} />
           </a>
         )}
       </div>

@@ -3,7 +3,6 @@ import Image from 'next/image'
 import { Users, ArrowRight } from 'lucide-react'
 import PageHero from '@/components/layout/PageHero'
 import { timeline } from '@/lib/content'
-import Link from 'next/link'
 import { PINNKET } from '@/lib/pinnket'
 
 export const metadata: Metadata = {
@@ -29,13 +28,13 @@ export default function AboutPage() {
       />
 
       {/* ── Why We Started ── */}
-      <section className="bg-white py-20">
+      <section className="bg-[var(--color-cream)] py-20">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
             <div>
               <div className="flex items-center gap-3 mb-4">
-                <span className="w-8 h-0.5 bg-[var(--color-amber)]" />
-                <span className="font-body text-xs uppercase tracking-widest text-[var(--color-amber)] font-semibold">
+                <span className="w-8 h-0.5 bg-[var(--color-logo-warm-brown)]" />
+                <span className="font-label text-xs uppercase tracking-[0.12em] text-[var(--color-logo-warm-brown)] font-bold">
                   Why We Run
                 </span>
               </div>
@@ -82,8 +81,8 @@ export default function AboutPage() {
             </div>
             <div className="order-1 lg:order-2">
               <div className="flex items-center gap-3 mb-4">
-                <span className="w-8 h-0.5 bg-[var(--color-orange)]" />
-                <span className="font-body text-xs uppercase tracking-widest text-[var(--color-orange)] font-semibold">
+                <span className="w-8 h-0.5 bg-[var(--color-logo-warm-brown)]" />
+                <span className="font-label text-xs uppercase tracking-[0.12em] text-[var(--color-logo-warm-brown)] font-bold">
                   The Movement
                 </span>
               </div>
@@ -105,15 +104,15 @@ export default function AboutPage() {
       </section>
 
       {/* ── The IK Community — 2026 Focus ── */}
-      <section className="bg-white py-20">
+      <section className="bg-[var(--color-warm-white)] py-20">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-14">
             <div className="flex items-center justify-center gap-3 mb-4">
-              <span className="w-8 h-0.5 bg-[var(--color-amber)]" />
-              <span className="font-body text-xs uppercase tracking-widest text-[var(--color-amber)] font-semibold">
+              <span className="w-8 h-0.5 bg-[var(--color-logo-warm-brown)]" />
+              <span className="font-label text-xs uppercase tracking-[0.12em] text-[var(--color-logo-warm-brown)] font-bold">
                 2026 Theme
               </span>
-              <span className="w-8 h-0.5 bg-[var(--color-amber)]" />
+              <span className="w-8 h-0.5 bg-[var(--color-logo-warm-brown)]" />
             </div>
             <h2 className="font-display text-3xl md:text-4xl font-bold text-[var(--color-text-dark)] mb-4">
               Empowering the IK Community of Karamoja
@@ -125,7 +124,7 @@ export default function AboutPage() {
 
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-start">
             <div>
-              <h3 className="font-display text-2xl font-bold text-[var(--color-text-dark)] mb-4">
+              <h3 className="font-display text-2xl font-bold text-[var(--color-logo-deep-brown)] mb-4">
                 Who Are the Ik, and Why They Matter
               </h3>
               <p className="font-body text-base text-[var(--color-text-mid)] leading-relaxed mb-4">
@@ -134,7 +133,7 @@ export default function AboutPage() {
               <p className="font-body text-base text-[var(--color-text-mid)] leading-relaxed mb-6">
                 They matter because they represent both a moral responsibility and an opportunity for transformation. Empowering the Ik is not about charity — it is about restoring dignity, agency, and inclusion. Their resilience, deep connection to land, and communal values make them strong partners in sustainable development when given the right tools and opportunities.
               </p>
-              <h3 className="font-display text-2xl font-bold text-[var(--color-text-dark)] mb-4">
+              <h3 className="font-display text-2xl font-bold text-[var(--color-logo-deep-brown)] mb-4">
                 Why Coffee Farming Is the Path Out of Poverty
               </h3>
               <p className="font-body text-base text-[var(--color-text-mid)] leading-relaxed mb-4">
@@ -212,8 +211,8 @@ export default function AboutPage() {
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
             <div>
               <div className="flex items-center gap-3 mb-4">
-                <span className="w-8 h-0.5 bg-[var(--color-amber)]" />
-                <span className="font-body text-xs uppercase tracking-widest text-[var(--color-amber)] font-semibold">
+                <span className="w-8 h-0.5 bg-[var(--color-logo-warm-brown)]" />
+                <span className="font-label text-xs uppercase tracking-[0.12em] text-[var(--color-logo-warm-brown)] font-bold">
                   Coffee with a Cause
                 </span>
               </div>
@@ -233,7 +232,7 @@ export default function AboutPage() {
                 href={PINNKET.register10k}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="inline-flex items-center gap-2 bg-[var(--color-amber)] text-white px-6 py-3 rounded-full font-body font-semibold text-sm hover:bg-[var(--color-amber-dark)] transition-colors"
+                className="inline-flex items-center gap-2 bg-[var(--color-amber)] text-white px-6 py-3 rounded-full font-label font-bold uppercase tracking-[0.08em] text-sm hover:bg-[var(--color-amber-dark)] transition-colors"
               >
                 Run with a cause <ArrowRight size={16} />
               </a>
@@ -253,15 +252,15 @@ export default function AboutPage() {
       </section>
 
       {/* ── Timeline ── */}
-      <section className="bg-white py-20">
+      <section className="bg-[var(--color-cream)] py-20">
         <div className="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-12">
             <div className="flex items-center justify-center gap-3 mb-4">
-              <span className="w-8 h-0.5 bg-[var(--color-amber)]" />
-              <span className="font-body text-xs uppercase tracking-widest text-[var(--color-amber)] font-semibold">
+              <span className="w-8 h-0.5 bg-[var(--color-logo-warm-brown)]" />
+              <span className="font-label text-xs uppercase tracking-[0.12em] text-[var(--color-logo-warm-brown)] font-bold">
                 Our Journey
               </span>
-              <span className="w-8 h-0.5 bg-[var(--color-amber)]" />
+              <span className="w-8 h-0.5 bg-[var(--color-logo-warm-brown)]" />
             </div>
             <h2 className="font-display text-3xl md:text-4xl font-bold text-[var(--color-text-dark)]">
               Five Years of Impact
@@ -274,19 +273,19 @@ export default function AboutPage() {
                 <div key={item.year} className="flex items-start gap-6 relative">
                   <div className={`w-16 h-16 rounded-full flex items-center justify-center shrink-0 relative z-10 ${
                     i === timeline.length - 1
-                      ? 'bg-[var(--color-amber)]'
+                      ? 'bg-[var(--color-primary)]'
                       : 'bg-[var(--color-text-dark)]'
                   }`}>
                     <span className={`font-display text-sm font-bold ${
-                      i === timeline.length - 1 ? 'text-white' : 'text-[var(--color-amber)]'
+                      i === timeline.length - 1 ? 'text-white' : 'text-[var(--color-accent)]'
                     }`}>
                       {item.year}
                     </span>
                   </div>
                   <div className={`rounded-xl p-4 flex-1 border shadow-sm mt-2 ${
                     i === timeline.length - 1
-                      ? 'bg-[var(--color-amber-light)]/20 border-[var(--color-amber)]/40'
-                      : 'bg-white border-[var(--color-border)]'
+                      ? 'bg-[var(--color-accent)]/20 border-[var(--color-primary)]/40'
+                      : 'bg-[var(--color-warm-white)] border-[var(--color-border)]'
                   }`}>
                     <p className="font-body text-sm text-[var(--color-text-mid)]">{item.event}</p>
                   </div>
@@ -301,11 +300,11 @@ export default function AboutPage() {
       <section className="bg-[var(--color-bg-warm)] py-20">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <div className="flex items-center justify-center gap-3 mb-3">
-            <span className="w-8 h-0.5 bg-[var(--color-amber)]" />
-            <span className="font-body text-xs uppercase tracking-widest text-[var(--color-amber)] font-semibold">
+            <span className="w-8 h-0.5 bg-[var(--color-logo-warm-brown)]" />
+            <span className="font-label text-xs uppercase tracking-[0.12em] text-[var(--color-logo-warm-brown)] font-bold">
               Meet the Team
             </span>
-            <span className="w-8 h-0.5 bg-[var(--color-amber)]" />
+            <span className="w-8 h-0.5 bg-[var(--color-logo-warm-brown)]" />
           </div>
           <h2 className="font-display text-3xl font-bold text-[var(--color-text-dark)] mb-10">
             The people behind the race
@@ -317,7 +316,7 @@ export default function AboutPage() {
                   <Users size={28} className="text-[var(--color-text-light)]" />
                 </div>
                 <div>
-                  <p className="font-body font-semibold text-sm text-[var(--color-text-dark)]">{member.name}</p>
+                  <p className="font-body font-semibold text-sm text-[var(--color-logo-deep-brown)]">{member.name}</p>
                   <p className="font-body text-xs text-[var(--color-text-mid)]">{member.role}</p>
                 </div>
               </div>

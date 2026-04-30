@@ -111,14 +111,14 @@ const quotes = [
 
 export default function Highlights2025Section() {
   return (
-    <section id="highlights-2025" className="bg-white">
+    <section id="highlights-2025" className="bg-[var(--color-cream)]">
 
       {/* ── Gradient banner header ────────────────────────────────── */}
-      <div className="bg-gradient-to-r from-[var(--color-amber)] to-[var(--color-orange)] py-16 md:py-20">
+      <div className="bg-gradient-to-r from-[var(--color-primary)] to-[var(--color-orange)] py-16 md:py-20">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex flex-col md:flex-row items-start md:items-end justify-between gap-6">
             <div>
-              <p className="font-body text-xs uppercase tracking-widest text-white/70 font-semibold mb-3">
+              <p className="font-label text-xs uppercase tracking-[0.12em] text-white/75 font-bold mb-3">
                 Relive the magic
               </p>
               <h2 className="font-display text-4xl md:text-6xl font-bold text-white leading-tight">
@@ -139,18 +139,18 @@ export default function Highlights2025Section() {
       </div>
 
       {/* ── Stats bar ─────────────────────────────────────────────── */}
-      <div className="bg-[var(--color-text-dark)] py-6">
+      <div className="bg-[var(--color-primary)] py-6">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-6 gap-px">
             {stats.map(({ num, label, note }) => (
               <div key={label} className="text-center py-4 px-3">
-                <p className="font-display text-2xl md:text-3xl font-bold text-[var(--color-amber-light)] leading-tight">
+                <p className="font-display text-2xl md:text-3xl font-bold text-[var(--color-accent)] leading-tight">
                   {num}
                   {note === 'confirm' && (
                     <span className="text-white/30 text-sm font-normal align-super ml-0.5">*</span>
                   )}
                 </p>
-                <p className="font-body text-xs text-white/60 uppercase tracking-widest mt-1">{label}</p>
+                <p className="font-label text-xs text-white/75 uppercase tracking-[0.1em] mt-1">{label}</p>
                 {/* {note === 'confirm' && <!-- GENERATED: confirm --> } */}
               </div>
             ))}
@@ -166,8 +166,8 @@ export default function Highlights2025Section() {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
 
         <div className="flex items-center gap-3 mb-8">
-          <span className="w-8 h-0.5 bg-[var(--color-amber)]" />
-          <span className="font-body text-xs uppercase tracking-widest text-[var(--color-amber)] font-semibold">
+          <span className="w-8 h-0.5 bg-[var(--color-primary)]" />
+          <span className="font-label text-xs uppercase tracking-[0.1em] text-[var(--color-logo-warm-brown)] font-bold">
             Race Day Photos
           </span>
         </div>
@@ -356,18 +356,18 @@ export default function Highlights2025Section() {
       </div>
 
       {/* ── Results spotlight ─────────────────────────────────────── */}
-      <div className="bg-[var(--color-bg-warm)] py-16">
+      <div className="bg-[var(--color-warm-white)] py-16">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex items-center gap-3 mb-10">
-            <Trophy size={20} className="text-[var(--color-amber)]" />
+            <Trophy size={20} className="text-[var(--color-logo-forest)]" />
             <div>
               <div className="flex items-center gap-3 mb-1">
-                <span className="w-6 h-0.5 bg-[var(--color-amber)]" />
-                <span className="font-body text-xs uppercase tracking-widest text-[var(--color-amber)] font-semibold">
+                <span className="w-6 h-0.5 bg-[var(--color-primary)]" />
+                <span className="font-label text-xs uppercase tracking-[0.1em] text-[var(--color-logo-warm-brown)] font-bold">
                   2025 Results
                 </span>
               </div>
-              <h3 className="font-display text-3xl font-bold text-[var(--color-text-dark)]">
+              <h3 className="font-display text-3xl font-bold text-[var(--color-logo-forest)]">
                 Champions & Prize Giving
               </h3>
             </div>
@@ -395,7 +395,7 @@ export default function Highlights2025Section() {
 
               {/* Women's podium — from results-podium-women.jpg */}
               <div className="mb-6">
-                <p className="font-body text-xs uppercase tracking-widest text-[var(--color-amber)] font-semibold mb-3">
+                <p className="font-label text-xs uppercase tracking-[0.1em] text-[var(--color-logo-warm-brown)] font-bold mb-3">
                   Women&apos;s Category
                 </p>
                 <div className="space-y-3">
@@ -404,26 +404,28 @@ export default function Highlights2025Section() {
                     { place: '2nd', prize: 'UGX 7,500,000', medal: 'bg-[var(--color-border)]' },
                     { place: '3rd', prize: 'UGX 5,000,000', medal: 'bg-[var(--color-orange)]/30' },
                   ].map(({ place, prize, medal }) => (
-                    <div key={place} className="flex items-center gap-4 bg-white rounded-xl p-4 border border-[var(--color-border)] shadow-sm">
+                    <div key={place} className="flex items-center gap-4 bg-[var(--color-warm-white)] rounded-xl p-4 border border-[var(--color-border)] shadow-sm">
                       <div className={`w-10 h-10 rounded-full ${medal} flex items-center justify-center shrink-0`}>
-                        <span className="font-display font-bold text-sm text-[var(--color-text-dark)]">{place}</span>
+                        <span className="font-display font-bold text-sm text-[var(--color-logo-warm-brown)]">{place}</span>
                       </div>
                       <div className="flex-1">
                         {/* <!-- TODO: confirm winner names with client — not found in source files --> */}
-                        <p className="font-body font-semibold text-sm text-[var(--color-text-dark)]">
+                        <p className="font-body font-semibold text-sm text-[var(--color-logo-deep-brown)]">
                           Winner — {/* TODO: Add name */}
-                          <span className="font-normal text-[var(--color-text-light)]">Name to be confirmed</span>
+                          <span className="font-normal text-[var(--color-logo-warm-brown)]">Name to be confirmed</span>
                         </p>
                       </div>
-                      <p className="font-display font-bold text-[var(--color-amber)] text-sm shrink-0">{prize}</p>
+                      <p className="font-display font-bold text-[var(--color-logo-forest)] text-sm shrink-0">{prize}</p>
                     </div>
                   ))}
                 </div>
               </div>
 
-              <div className="bg-[var(--color-amber)]/10 border border-[var(--color-amber)]/30 rounded-xl p-5">
-                <p className="font-body text-sm text-[var(--color-text-mid)] leading-relaxed">
-                  <span className="font-semibold text-[var(--color-text-dark)]">Chelangat Ariziki</span> — 21 KM runner and 2025 prize-winner — used her earnings to build a home for her family. Her story, running to escape poverty and FGM, has become one of the Coffee Marathon&apos;s most powerful symbols of transformation.
+              <div className="bg-[var(--color-accent)]/18 border border-[var(--color-primary)]/30 rounded-xl p-5">
+                <p className="font-body text-sm text-[var(--color-logo-forest)] leading-relaxed">
+                  <span className="font-semibold text-[var(--color-logo-deep-brown)]">Chelangat Ariziki</span>
+                  <span className="text-[var(--color-logo-warm-brown)]"> — 21 KM runner and 2025 prize-winner — </span>
+                  used her earnings to build a home for her family. Her story, running to escape poverty and FGM, has become one of the Coffee Marathon&apos;s most powerful symbols of transformation.
                 </p>
               </div>
 
@@ -434,7 +436,7 @@ export default function Highlights2025Section() {
                   href="https://www.athlinks.com/event/395451/results/Event/1112891/Results"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="text-[var(--color-amber)] hover:underline"
+                  className="text-[var(--color-logo-forest)] hover:text-[var(--color-logo-deep-brown)] hover:underline"
                 >
                   View official results →
                 </a>
@@ -445,15 +447,15 @@ export default function Highlights2025Section() {
       </div>
 
       {/* ── Video recap teaser ───────────────────────────────────── */}
-      <div className="bg-white py-16">
+      <div className="bg-[var(--color-cream)] py-16">
         <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-8">
             <div className="flex items-center justify-center gap-3 mb-4">
-              <span className="w-8 h-0.5 bg-[var(--color-amber)]" />
-              <span className="font-body text-xs uppercase tracking-widest text-[var(--color-amber)] font-semibold">
+              <span className="w-8 h-0.5 bg-[var(--color-primary)]" />
+              <span className="font-label text-xs uppercase tracking-[0.1em] text-[var(--color-logo-warm-brown)] font-bold">
                 Highlight Reel
               </span>
-              <span className="w-8 h-0.5 bg-[var(--color-amber)]" />
+              <span className="w-8 h-0.5 bg-[var(--color-primary)]" />
             </div>
             <h3 className="font-display text-3xl font-bold text-[var(--color-text-dark)]">
               Watch the 2025 Highlights
@@ -475,7 +477,7 @@ export default function Highlights2025Section() {
               sizes="100vw"
             />
             <div className="absolute inset-0 flex flex-col items-center justify-center">
-              <div className="w-20 h-20 rounded-full bg-[var(--color-amber)] flex items-center justify-center shadow-2xl group-hover:scale-110 transition-transform duration-300 mb-4">
+              <div className="w-20 h-20 rounded-full bg-[var(--color-primary)] flex items-center justify-center shadow-2xl group-hover:scale-110 transition-transform duration-300 mb-4">
                 <Play size={32} className="text-white ml-1" fill="white" />
               </div>
               <p className="font-display text-xl font-bold text-white">Coffee Marathon 2025 — Official Highlights</p>
@@ -489,30 +491,30 @@ export default function Highlights2025Section() {
       </div>
 
       {/* ── Testimonial strip ────────────────────────────────────── */}
-      <div className="bg-gradient-to-r from-[var(--color-amber)]/10 to-[var(--color-orange)]/10 border-t border-b border-[var(--color-amber)]/20 py-16">
+      <div className="bg-gradient-to-r from-[var(--color-primary)]/10 to-[var(--color-orange)]/10 border-t border-b border-[var(--color-primary)]/20 py-16">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-10">
             <div className="flex items-center justify-center gap-3 mb-3">
-              <span className="w-8 h-0.5 bg-[var(--color-amber)]" />
-              <span className="font-body text-xs uppercase tracking-widest text-[var(--color-amber)] font-semibold">
+              <span className="w-8 h-0.5 bg-[var(--color-primary)]" />
+              <span className="font-label text-xs uppercase tracking-[0.1em] text-[var(--color-logo-warm-brown)] font-bold">
                 Voices from 2025
               </span>
-              <span className="w-8 h-0.5 bg-[var(--color-amber)]" />
+              <span className="w-8 h-0.5 bg-[var(--color-primary)]" />
             </div>
           </div>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
             {quotes.map(({ quote, name, role }) => (
               <div
                 key={name}
-                className="bg-white rounded-2xl p-6 shadow-sm border border-[var(--color-amber)]/20 flex flex-col"
+                className="bg-[var(--color-warm-white)] rounded-2xl p-6 shadow-sm border border-[var(--color-primary)]/20 flex flex-col"
               >
-                <Quote size={24} className="text-[var(--color-amber)] mb-4 shrink-0" />
-                <p className="font-body text-sm text-[var(--color-text-mid)] leading-relaxed flex-1 italic mb-5">
+                <Quote size={24} className="text-[var(--color-logo-forest)] mb-4 shrink-0" />
+                <p className="font-body text-sm text-[var(--color-logo-deep-brown)] leading-relaxed flex-1 italic mb-5">
                   &ldquo;{quote}&rdquo;
                 </p>
                 <div>
-                  <p className="font-body font-semibold text-sm text-[var(--color-text-dark)]">{name}</p>
-                  <p className="font-body text-xs text-[var(--color-text-light)]">{role}</p>
+                  <p className="font-body font-semibold text-sm text-[var(--color-logo-forest)]">{name}</p>
+                  <p className="font-body text-xs text-[var(--color-logo-warm-brown)]">{role}</p>
                 </div>
               </div>
             ))}
