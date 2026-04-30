@@ -36,24 +36,24 @@ export default function ColdBrewSection() {
           {/* Left — text */}
           <div>
             <div className="inline-flex items-center gap-2 bg-white/20 rounded-full px-4 py-1.5 mb-6">
-              <Zap size={14} className="text-white" fill="currentColor" />
-              <span className="font-body text-xs uppercase tracking-widest text-white font-semibold">
+              <Zap size={14} className="text-[var(--color-logo-deep-brown)]" fill="currentColor" />
+              <span className="font-body text-xs uppercase tracking-widest text-[var(--color-logo-deep-brown)] font-semibold">
                 IAC Cold Brew
               </span>
             </div>
 
             {/* <!-- GENERATED: review this --> */}
-            <h2 className="font-display text-5xl md:text-6xl lg:text-7xl font-bold text-white leading-tight mb-4">
+            <h2 className="font-display text-5xl md:text-6xl lg:text-7xl font-bold text-[var(--color-logo-forest)] leading-tight mb-4">
               Come<br />
               <span className="italic">Sip</span> &amp;<br />
               Run
             </h2>
 
-            <p className="font-body text-white/90 text-lg leading-relaxed mb-6 max-w-md">
+            <p className="font-body text-[var(--color-logo-deep-brown)] text-lg leading-relaxed mb-6 max-w-md">
               Fuel your race day with IAC Cold Brew — the official coffee drink of the Coffee Marathon. Smooth, energising, and crafted from Uganda&apos;s finest beans.
             </p>
 
-            <p className="font-body text-white/80 text-base leading-relaxed mb-8 max-w-md">
+            <p className="font-body text-[var(--color-logo-warm-brown)] text-base leading-relaxed mb-8 max-w-md">
               The target market is a young, urban, and highly expressive audience — socially active, digitally connected, and constantly on the move. It&apos;s a statement of energy, independence, and elevated taste.
             </p>
 
@@ -62,10 +62,10 @@ export default function ColdBrewSection() {
               {variants.map(({ name, desc, badge, badgeColor }) => (
                 <div key={name} className="bg-white/20 backdrop-blur-sm rounded-xl p-4 border border-white/30">
                   <div className="flex items-center justify-between mb-1">
-                    <p className="font-body font-semibold text-white">{name}</p>
+                    <p className="font-body font-semibold text-[var(--color-logo-deep-brown)]">{name}</p>
                     <span className={`font-body text-xs px-2 py-0.5 rounded-full font-semibold ${badgeColor}`}>{badge}</span>
                   </div>
-                  <p className="font-body text-sm text-white/80">{desc}</p>
+                  <p className="font-body text-sm text-[var(--color-logo-warm-brown)]">{desc}</p>
                 </div>
               ))}
             </div>

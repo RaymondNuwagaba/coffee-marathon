@@ -52,7 +52,7 @@ export default async function AttractionsPage() {
                     />
                   ) : (
                     <div className="w-full h-full flex items-center justify-center">
-                      <MapPin size={28} className="text-[var(--color-arabica)] opacity-30 mx-auto" />
+                      <MapPin size={28} className="text-[var(--color-logo-warm-brown)] opacity-40 mx-auto" />
                     </div>
                   )}
                 </div>
@@ -63,10 +63,10 @@ export default async function AttractionsPage() {
                     <span className="font-label text-xs uppercase tracking-[0.1em] text-[var(--color-logo-warm-brown)] font-bold">Attraction</span>
                   </div>
                   <h2 className="font-display text-3xl font-semibold text-[var(--color-logo-forest)] mb-3">{attraction.name}</h2>
-                  <p className="font-body text-base text-[var(--color-arabica)] leading-relaxed mb-4">{attraction.description}</p>
+                  <p className="font-body text-base text-[var(--color-logo-deep-brown)] leading-relaxed mb-4">{attraction.description}</p>
                   {attraction.tips && (
                     <div className="bg-[var(--color-seedling-light)] rounded-xl px-4 py-3 border border-[var(--color-green)]/20">
-                      <p className="font-body text-sm text-[var(--color-forest-dark)]">
+                      <p className="font-body text-sm text-[var(--color-logo-warm-brown)]">
                         <span className="font-semibold">Practical tips: </span>{attraction.tips}
                       </p>
                     </div>
@@ -83,11 +83,11 @@ export default async function AttractionsPage() {
           <h2 className="font-display text-3xl font-semibold text-[var(--color-logo-forest)] mb-6">Getting Around</h2>
           <div className="aspect-video bg-[var(--color-cream-dark)] rounded-2xl flex items-center justify-center">
             <div className="text-center">
-              <MapPin size={32} className="text-[var(--color-arabica)]/30 mx-auto mb-3" />
-              <p className="font-body text-sm text-[var(--color-arabica)]/50">Google Maps embed — to be added</p>
+              <MapPin size={32} className="text-[var(--color-logo-warm-brown)]/50 mx-auto mb-3" />
+              <p className="font-body text-sm text-[var(--color-logo-warm-brown)]">Google Maps embed — to be added</p>
             </div>
           </div>
-          <p className="mt-4 font-body text-xs text-[var(--color-arabica)]/50">
+          <p className="mt-4 font-body text-xs text-[var(--color-logo-warm-brown)]">
             Africa Coffee Park is located in Ntungamo, southwestern Uganda. Approx. 8 hours from Kampala by road.
           </p>
         </div>

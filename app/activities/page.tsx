@@ -180,7 +180,7 @@ export default function BeyondTheMarathonPage() {
             {activities.map((activity) => {
               const Icon = activity.icon
               const isGreen = activity.accent === 'green'
-              const accentColor = isGreen ? 'var(--color-green)' : 'var(--color-logo-deep-brown)'
+              const accentColor = isGreen ? 'var(--color-logo-forest)' : 'var(--color-logo-deep-brown)'
               const accentBg = isGreen ? 'var(--color-accent-green-light)' : 'var(--color-bg-warm)'
               return (
                 <div
@@ -214,8 +214,8 @@ export default function BeyondTheMarathonPage() {
                     {'mutumo' in activity && activity.mutumo && (
                         <div className="mt-4 rounded-xl p-4 border" style={{ backgroundColor: 'var(--color-accent-green-light)', borderColor: 'rgba(46,125,50,0.3)' }}>
                           <div className="flex items-center gap-2 mb-1">
-                          <MapPin size={12} style={{ color: 'var(--color-green)' }} className="shrink-0" />
-                          <span className="font-label text-xs font-bold uppercase tracking-[0.08em]" style={{ color: 'var(--color-green)' }}>
+                          <MapPin size={12} style={{ color: 'var(--color-logo-forest)' }} className="shrink-0" />
+                          <span className="font-label text-xs font-bold uppercase tracking-[0.08em]" style={{ color: 'var(--color-logo-forest)' }}>
                             Featured Destination
                           </span>
                         </div>
@@ -255,15 +255,15 @@ export default function BeyondTheMarathonPage() {
                 Where Coffee<br />
                 <span className="text-[var(--color-logo-forest)]">Meets Commerce</span>
               </h2>
-              <p className="font-body text-sm italic border-l-2 pl-4 mb-6 leading-relaxed text-[var(--color-text-mid)] border-[var(--color-green)]">
+              <p className="font-body text-sm italic border-l-2 pl-4 mb-6 leading-relaxed text-[var(--color-text-mid)] border-[var(--color-logo-forest)]">
                 &ldquo;Accelerating Coffee Value Addition &amp; Coffee Tourism for Job Creation and Export Growth&rdquo;
               </p>
               <div className="flex flex-wrap gap-3 mb-6">
-                <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full border-2 border-[var(--color-green)] text-[var(--color-green)] font-label text-sm font-bold uppercase tracking-[0.08em]">
+                <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full border-2 border-[var(--color-logo-forest)] text-[var(--color-logo-forest)] font-label text-sm font-bold uppercase tracking-[0.08em]">
                   <Calendar size={14} />
                   1st–2nd October 2026
                 </div>
-                <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full border-2 border-[var(--color-green)] text-[var(--color-green)] font-label text-sm font-bold uppercase tracking-[0.08em]">
+                <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full border-2 border-[var(--color-logo-forest)] text-[var(--color-logo-forest)] font-label text-sm font-bold uppercase tracking-[0.08em]">
                   <MapPin size={14} />
                   Kampala, Uganda
                 </div>

@@ -50,7 +50,7 @@ export default async function ShopPage() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-start">
             <div className="aspect-square bg-[var(--color-cream-dark)] rounded-2xl flex items-center justify-center">
-              <span className="font-body text-sm text-[var(--color-arabica)]/40 text-center px-8">
+              <span className="font-body text-sm text-[var(--color-logo-warm-brown)] text-center px-8">
                 Kit flat-lay photography — to be added by client
               </span>
             </div>
@@ -63,11 +63,11 @@ export default async function ShopPage() {
                 {kitContents.map(({ icon: Icon, label, desc }) => (
                   <div key={label} className="flex items-start gap-3 bg-[var(--color-warm-white)] rounded-xl p-4 border border-[var(--color-cream-dark)]">
                     <div className="w-9 h-9 rounded-full bg-[var(--color-seedling-light)] flex items-center justify-center shrink-0">
-                      <Icon size={16} className="text-[var(--color-forest)]" />
+                      <Icon size={16} className="text-[var(--color-logo-forest)]" />
                     </div>
                     <div>
                       <p className="font-body font-semibold text-sm text-[var(--color-logo-deep-brown)]">{label}</p>
-                      <p className="font-body text-xs text-[var(--color-arabica)]">{desc}</p>
+                      <p className="font-body text-xs text-[var(--color-logo-warm-brown)]">{desc}</p>
                     </div>
                   </div>
                 ))}
@@ -88,7 +88,7 @@ export default async function ShopPage() {
       <section className="bg-[var(--color-warm-white)] py-20">
         <div className="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8">
           <h2 className="font-display text-3xl font-semibold text-[var(--color-logo-forest)] mb-8 text-center">Size Guide</h2>
-          <p className="font-body text-xs text-[var(--color-arabica)]/70 mb-4 text-center">
+          <p className="font-body text-xs text-[var(--color-logo-warm-brown)] mb-4 text-center">
             All measurements in centimetres (cm). Placeholder data — to be confirmed.
           </p>
           <div className="overflow-x-auto">
@@ -104,9 +104,9 @@ export default async function ShopPage() {
                 {sizeGuide.map((row, i) => (
                   <tr key={row.size} className={i % 2 === 0 ? 'bg-[var(--color-warm-white)]' : 'bg-[var(--color-cream)]'}>
                     <td className="font-body font-semibold text-sm px-4 py-3 text-[var(--color-logo-deep-brown)]">{row.size}</td>
-                    <td className="font-body text-sm px-4 py-3 text-[var(--color-arabica)]">{row.chest}</td>
-                    <td className="font-body text-sm px-4 py-3 text-[var(--color-arabica)]">{row.waist}</td>
-                    <td className="font-body text-sm px-4 py-3 text-[var(--color-arabica)]">{row.hip}</td>
+                    <td className="font-body text-sm px-4 py-3 text-[var(--color-logo-deep-brown)]">{row.chest}</td>
+                    <td className="font-body text-sm px-4 py-3 text-[var(--color-logo-deep-brown)]">{row.waist}</td>
+                    <td className="font-body text-sm px-4 py-3 text-[var(--color-logo-deep-brown)]">{row.hip}</td>
                   </tr>
                 ))}
               </tbody>

@@ -171,6 +171,12 @@ export default function Highlights2025Section() {
             Race Day Photos
           </span>
         </div>
+        <h3 className="font-display text-3xl md:text-4xl font-bold text-[var(--color-logo-forest)] mb-3">
+          Coffee Marathon 2025 Highlights
+        </h3>
+        <p className="font-body text-[var(--color-logo-deep-brown)] leading-relaxed mb-8 max-w-3xl">
+          A visual recap of the runners, community, and race-day atmosphere that made 2025 unforgettable.
+        </p>
 
         {/*
          * TODO: Client to supply professional athlete photography for highlights gallery.

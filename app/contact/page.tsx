@@ -66,7 +66,7 @@ export default function ContactPage() {
                       <Icon size={16} className="text-[var(--color-logo-forest)]" />
                     </div>
                     <div>
-                      <p className="font-label text-xs uppercase tracking-[0.1em] text-[var(--color-arabica)]/60">
+                      <p className="font-label text-xs uppercase tracking-[0.1em] text-[var(--color-logo-warm-brown)]">
                         {label}
                       </p>
                       <p className="font-body text-sm font-semibold text-[var(--color-logo-deep-brown)] group-hover:text-[var(--color-logo-forest)] transition-colors">
@@ -80,7 +80,7 @@ export default function ContactPage() {
 
             {/* Socials */}
             <div>
-              <h3 className="font-label text-xs uppercase tracking-[0.1em] text-[var(--color-logo-warm-brown)]/75 mb-4">
+              <h3 className="font-label text-xs uppercase tracking-[0.1em] text-[var(--color-logo-warm-brown)] mb-4">
                 Follow Us
               </h3>
                 <div className="flex flex-wrap gap-3">
@@ -115,8 +115,8 @@ export default function ContactPage() {
               {/* Map placeholder */}
               <div className="aspect-video bg-[var(--color-cream-dark)] rounded-2xl flex items-center justify-center border border-[var(--color-border)]">
                 <div className="text-center">
-                  <MapPin size={24} className="text-[var(--color-arabica)]/30 mx-auto mb-2" />
-                  <p className="font-body text-xs text-[var(--color-arabica)]/40">
+                  <MapPin size={24} className="text-[var(--color-logo-warm-brown)]/50 mx-auto mb-2" />
+                  <p className="font-body text-xs text-[var(--color-logo-warm-brown)]">
                     Google Maps embed — to be added
                   </p>
                 </div>

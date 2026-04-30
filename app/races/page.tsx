@@ -65,37 +65,37 @@ export default async function RacesPage() {
                 <div className="p-8 grid grid-cols-1 md:grid-cols-2 gap-8">
                   <div className="space-y-5">
                     <div>
-                      <p className="font-label text-xs uppercase tracking-[0.1em] text-[var(--color-arabica)]/60 mb-1">Description</p>
-                      <p className="font-body text-sm text-[var(--color-arabica)] leading-relaxed">{race.description}</p>
+                      <p className="font-label text-xs uppercase tracking-[0.1em] text-[var(--color-logo-warm-brown)] mb-1">Description</p>
+                      <p className="font-body text-sm text-[var(--color-logo-deep-brown)] leading-relaxed">{race.description}</p>
                     </div>
                     <div>
-                      <p className="font-label text-xs uppercase tracking-[0.1em] text-[var(--color-arabica)]/60 mb-1 flex items-center gap-1.5">
+                      <p className="font-label text-xs uppercase tracking-[0.1em] text-[var(--color-logo-warm-brown)] mb-1 flex items-center gap-1.5">
                         <MapPin size={12} /> Terrain
                       </p>
-                      <p className="font-body text-sm text-[var(--color-arabica)]">{race.terrain}</p>
+                      <p className="font-body text-sm text-[var(--color-logo-deep-brown)]">{race.terrain}</p>
                     </div>
                     <div className="flex gap-6">
                       <div>
-                        <p className="font-label text-xs uppercase tracking-[0.1em] text-[var(--color-arabica)]/60 mb-1 flex items-center gap-1.5">
+                        <p className="font-label text-xs uppercase tracking-[0.1em] text-[var(--color-logo-warm-brown)] mb-1 flex items-center gap-1.5">
                           <Clock size={12} /> Start Time
                         </p>
-                        <p className="font-body text-sm text-[var(--color-arabica)]">{race.startTime}</p>
+                        <p className="font-body text-sm text-[var(--color-logo-deep-brown)]">{race.startTime}</p>
                       </div>
                       <div>
-                        <p className="font-label text-xs uppercase tracking-[0.1em] text-[var(--color-arabica)]/60 mb-1">Cut-off</p>
-                        <p className="font-body text-sm text-[var(--color-arabica)]">{race.cutoffTime}</p>
+                        <p className="font-label text-xs uppercase tracking-[0.1em] text-[var(--color-logo-warm-brown)] mb-1">Cut-off</p>
+                        <p className="font-body text-sm text-[var(--color-logo-deep-brown)]">{race.cutoffTime}</p>
                       </div>
                     </div>
                   </div>
 
                   <div className="space-y-5">
                     <div>
-                      <p className="font-label text-xs uppercase tracking-[0.1em] text-[var(--color-arabica)]/60 mb-2 flex items-center gap-1.5">
+                      <p className="font-label text-xs uppercase tracking-[0.1em] text-[var(--color-logo-warm-brown)] mb-2 flex items-center gap-1.5">
                         <CheckCircle2 size={12} /> What&apos;s Included
                       </p>
                       <ul className="space-y-1.5">
                         {(race.whatsIncluded ?? []).map((item) => (
-                          <li key={item} className="font-body text-sm text-[var(--color-arabica)] flex items-center gap-2">
+                          <li key={item} className="font-body text-sm text-[var(--color-logo-deep-brown)] flex items-center gap-2">
                             <span className="w-1.5 h-1.5 rounded-full bg-[var(--color-primary)] shrink-0" />
                             {item}
                           </li>
@@ -103,7 +103,7 @@ export default async function RacesPage() {
                       </ul>
                     </div>
                     <div className="aspect-video bg-[var(--color-cream-dark)] rounded-xl flex items-center justify-center">
-                      <p className="font-body text-xs text-[var(--color-arabica)]/40 text-center px-4">Route map coming soon</p>
+                      <p className="font-body text-xs text-[var(--color-logo-warm-brown)] text-center px-4">Route map coming soon</p>
                     </div>
                     <PinnketCTA href={race.pinnketUrl} label={`Register for the ${race.distance}`} showNote />
                   </div>
@@ -126,7 +126,7 @@ export default async function RacesPage() {
               'Medical support will be stationed at regular intervals along all routes.',
               'Timing chips are included in bibs — chip timing used for all official results.',
             ].map((rule, i) => (
-              <li key={i} className="flex items-start gap-3 font-body text-sm text-[var(--color-arabica)]">
+              <li key={i} className="flex items-start gap-3 font-body text-sm text-[var(--color-logo-deep-brown)]">
                 <span className="font-label font-bold text-[var(--color-logo-warm-brown)] shrink-0 mt-0.5">{i + 1}.</span>
                 {rule}
               </li>
