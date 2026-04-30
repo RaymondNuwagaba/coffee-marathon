@@ -277,7 +277,7 @@ export default function AboutPage() {
                       : 'bg-[var(--color-text-dark)]'
                   }`}>
                     <span className={`font-display text-sm font-bold ${
-                      i === timeline.length - 1 ? 'text-white' : 'text-[var(--color-accent)]'
+                      i === timeline.length - 1 ? 'text-white' : 'text-[var(--color-logo-forest)]'
                     }`}>
                       {item.year}
                     </span>

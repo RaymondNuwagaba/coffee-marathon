@@ -10,7 +10,7 @@ export default function BeyondTheRaceSection() {
         <div className="text-center max-w-3xl mx-auto mb-16">
           <div className="flex items-center justify-center gap-3 mb-4">
             <span className="w-8 h-0.5 bg-[var(--color-amber)]" />
-            <span className="font-body text-xs uppercase tracking-widest text-[var(--color-amber)] font-semibold">
+            <span className="font-body text-xs uppercase tracking-widest text-[var(--color-logo-forest)] font-semibold">
               Beyond the Race
             </span>
             <span className="w-8 h-0.5 bg-[var(--color-amber)]" />
@@ -29,7 +29,7 @@ export default function BeyondTheRaceSection() {
           {/* Coffee Excellence Award */}
           <div className="bg-white rounded-3xl p-8 shadow-sm border border-[var(--color-border)] hover:shadow-md transition-shadow">
             <div className="w-14 h-14 rounded-2xl bg-[var(--color-amber-light)]/30 flex items-center justify-center mb-6">
-              <Trophy size={28} className="text-[var(--color-amber)]" />
+              <Trophy size={28} className="text-[var(--color-logo-forest)]" />
             </div>
             <h3 className="font-display text-2xl font-bold text-[var(--color-text-dark)] mb-3">
               Africa Coffee Awards
@@ -127,7 +127,7 @@ export default function BeyondTheRaceSection() {
           </div>
           <div className="relative z-10 py-12 px-8 md:px-16 flex flex-col md:flex-row items-center justify-between gap-6">
             <div>
-              <p className="font-body text-xs uppercase tracking-widest text-[var(--color-amber)] font-semibold mb-2">High-Level Coffee Summit</p>
+              <p className="font-body text-xs uppercase tracking-widest text-[var(--color-logo-forest)] font-semibold mb-2">High-Level Coffee Summit</p>
               <h3 className="font-display text-3xl font-bold text-white mb-2">
                 Shaping the future of Africa&apos;s coffee sector
               </h3>
@@ -136,7 +136,7 @@ export default function BeyondTheRaceSection() {
               </p>
             </div>
             <div className="shrink-0 text-center">
-              <p className="font-display text-5xl font-bold text-[var(--color-amber)]">12</p>
+              <p className="font-display text-5xl font-bold text-[var(--color-logo-forest)]">12</p>
               <p className="font-body text-sm text-white/70">festival<br />experiences</p>
             </div>
           </div>

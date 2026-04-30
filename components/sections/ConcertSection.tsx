@@ -24,7 +24,7 @@ export default function ConcertSection() {
         {/* Section label */}
         <div className="flex items-center gap-3 mb-12">
           <div className="w-8 h-0.5 bg-[var(--color-amber)]" />
-          <span className="font-body text-xs uppercase tracking-widest text-[var(--color-amber)] font-semibold">
+          <span className="font-body text-xs uppercase tracking-widest text-[var(--color-logo-forest)] font-semibold">
             Coffee Marathon Concert 2026
           </span>
         </div>
@@ -34,19 +34,19 @@ export default function ConcertSection() {
           {/* Left — headline artist */}
           <div>
             <div className="inline-flex items-center gap-2 bg-[var(--color-amber)]/20 border border-[var(--color-amber)]/40 rounded-full px-4 py-1.5 mb-6">
-              <Star size={12} className="text-[var(--color-amber)]" fill="currentColor" />
-              <span className="font-body text-xs font-semibold text-[var(--color-amber)] uppercase tracking-widest">
+              <Star size={12} className="text-[var(--color-logo-forest)]" fill="currentColor" />
+              <span className="font-body text-xs font-semibold text-[var(--color-logo-forest)] uppercase tracking-widest">
                 Headline Artist · 2026
               </span>
             </div>
 
             <h2 className="font-display font-bold text-white leading-none mb-2">
               <span className="block text-lg text-white/50 font-normal tracking-widest uppercase mb-2">Featuring</span>
-              <span className="block text-7xl md:text-8xl lg:text-9xl text-[var(--color-amber)]">Tyrese</span>
+              <span className="block text-7xl md:text-8xl lg:text-9xl text-[var(--color-logo-forest)]">Tyrese</span>
               <span className="block text-7xl md:text-8xl lg:text-9xl text-white">Gibson</span>
             </h2>
 
-            <p className="font-display text-xl font-semibold text-[var(--color-amber-light)] italic mb-4">
+            <p className="font-display text-xl font-semibold text-[var(--color-logo-forest)] italic mb-4">
               The Most Anticipated Night of the Year
             </p>
 
@@ -56,7 +56,7 @@ export default function ConcertSection() {
 
             <p className="font-body text-sm text-white/50 italic mb-8">
               Theme:{' '}
-              <span className="text-[var(--color-amber-light)]">
+              <span className="text-[var(--color-logo-forest)]">
                 &ldquo;Empowering the IK Community of Karamoja through Coffee Farming to End Poverty&rdquo;
               </span>
             </p>
@@ -84,8 +84,8 @@ export default function ConcertSection() {
             {/* Diamond Platnumz 2025 callout */}
             <div className="mt-10 p-5 rounded-2xl bg-white/5 border border-white/10">
               <div className="flex items-center gap-3 mb-3">
-                <Music2 size={16} className="text-[var(--color-amber)]" />
-                <span className="font-body text-xs uppercase tracking-widest text-[var(--color-amber)] font-semibold">
+                <Music2 size={16} className="text-[var(--color-logo-forest)]" />
+                <span className="font-body text-xs uppercase tracking-widest text-[var(--color-logo-forest)] font-semibold">
                   2025 Headline Artist
                 </span>
               </div>
@@ -182,7 +182,7 @@ export default function ConcertSection() {
             { num: 'World-class', label: 'Entertainment' },
           ].map(({ num, label }) => (
             <div key={label} className="bg-white/5 py-6 px-6 text-center hover:bg-white/10 transition-colors">
-              <p className="font-display text-2xl font-bold text-[var(--color-amber)]">{num}</p>
+              <p className="font-display text-2xl font-bold text-[var(--color-logo-forest)]">{num}</p>
               <p className="font-body text-xs text-white/50 uppercase tracking-widest mt-1">{label}</p>
             </div>
           ))}

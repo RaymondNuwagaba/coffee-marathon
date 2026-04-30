@@ -88,12 +88,12 @@ export default async function HomePage() {
             <h1 className="leading-none mb-5">
               <span className="block font-display text-white/85 text-3xl">The</span>
               <span className="block font-display font-bold text-white text-7xl md:text-8xl">Coffee</span>
-              <span className="block font-display font-bold text-[var(--color-accent)] text-7xl md:text-8xl">Marathon</span>
+              <span className="block font-display font-bold text-[var(--color-logo-forest)] text-7xl md:text-8xl">Marathon</span>
             </h1>
 
             {/* Theme */}
             <div className="flex flex-col gap-1 bg-black/25 border border-white/20 rounded-xl px-4 py-3 mb-5 max-w-sm">
-              <span className="font-label text-xs font-bold text-[var(--color-accent)] uppercase tracking-[0.12em]">Theme 2026</span>
+              <span className="font-label text-xs font-bold text-[var(--color-logo-forest)] uppercase tracking-[0.12em]">Theme 2026</span>
               <p className="font-body text-sm font-semibold text-white leading-snug italic">
                 &ldquo;Empowering the IK Community of Karamoja through Coffee Farming to End Poverty&rdquo;
               </p>
@@ -101,7 +101,7 @@ export default async function HomePage() {
 
             {/* Location */}
             <div className="flex items-center gap-2 mb-5">
-              <MapPin size={14} className="text-[var(--color-accent)] shrink-0" />
+              <MapPin size={14} className="text-[var(--color-logo-forest)] shrink-0" />
               <span className="font-body text-sm text-white/80">
                 Africa Coffee Park, Ntungamo, Uganda
               </span>
@@ -173,7 +173,7 @@ export default async function HomePage() {
             {/* Date badge — top left (just inside the image) */}
             <div className="absolute top-8 left-24 bg-black/45 backdrop-blur-sm rounded-2xl px-5 py-3 text-right shadow-lg border border-white/20">
               <p className="font-label text-white/70 text-xs tracking-[0.1em] uppercase">Race Day</p>
-              <p className="font-display font-bold text-[var(--color-accent)] text-xl leading-none">3 OCT</p>
+              <p className="font-display font-bold text-[var(--color-logo-forest)] text-xl leading-none">3 OCT</p>
               <p className="font-display font-bold text-white text-4xl leading-none">2026</p>
             </div>
 
@@ -188,7 +188,7 @@ export default async function HomePage() {
 
         {/* Mobile: show date badge */}
         <div className="absolute top-[100px] right-4 bg-black/40 backdrop-blur-sm rounded-xl px-4 py-3 text-right shadow-lg border border-white/20 md:hidden">
-          <p className="font-display font-bold text-[var(--color-accent)] text-lg leading-none">3 OCT</p>
+          <p className="font-display font-bold text-[var(--color-logo-forest)] text-lg leading-none">3 OCT</p>
           <p className="font-display font-bold text-white text-3xl leading-none">2026</p>
         </div>
       </section>
@@ -199,7 +199,7 @@ export default async function HomePage() {
           <div className="grid grid-cols-2 lg:grid-cols-4 divide-x divide-white/20">
             {eventStats.map((stat: { number: string; label: string }) => (
               <div key={stat.label} className="text-center py-2 px-4">
-                <p className="font-display text-3xl font-bold text-[var(--color-accent)]">{stat.number}</p>
+                <p className="font-display text-3xl font-bold text-[var(--color-logo-forest)]">{stat.number}</p>
                 <p className="font-label text-xs text-white/75 uppercase tracking-[0.12em] mt-1">{stat.label}</p>
               </div>
             ))}

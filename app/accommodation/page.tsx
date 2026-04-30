@@ -61,7 +61,7 @@ export default async function AccommodationPage() {
           {/* Camping info */}
           <div className="bg-[var(--color-espresso)] rounded-2xl p-8 text-[var(--color-cream)]">
             <div className="flex items-center gap-3 mb-4">
-              <Tent size={22} className="text-[var(--color-latte)]" />
+              <Tent size={22} className="text-[var(--color-logo-forest)]" />
               <h3 className="font-display text-2xl font-semibold">Race Village Camping</h3>
             </div>
             <p className="font-body text-sm text-[var(--color-cream)]/70 leading-relaxed mb-4">

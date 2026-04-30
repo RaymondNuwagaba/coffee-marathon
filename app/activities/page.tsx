@@ -336,7 +336,7 @@ export default function BeyondTheMarathonPage() {
         <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex items-center gap-3 mb-12">
             <div className="w-8 h-0.5 bg-[var(--color-amber)]" />
-            <span className="font-body text-xs uppercase tracking-widest text-[var(--color-amber)] font-semibold">
+            <span className="font-body text-xs uppercase tracking-widest text-[var(--color-logo-forest)] font-semibold">
               The Coffee Concert 2026
             </span>
           </div>
@@ -346,17 +346,17 @@ export default function BeyondTheMarathonPage() {
             {/* Left */}
             <div>
               <div className="inline-flex items-center gap-2 bg-[var(--color-amber)]/20 border border-[var(--color-amber)]/40 rounded-full px-4 py-1.5 mb-6">
-                <Star size={12} className="text-[var(--color-amber)]" fill="currentColor" />
-                <span className="font-body text-xs font-semibold text-[var(--color-amber)] uppercase tracking-widest">
+                <Star size={12} className="text-[var(--color-logo-forest)]" fill="currentColor" />
+                <span className="font-body text-xs font-semibold text-[var(--color-logo-forest)] uppercase tracking-widest">
                   Headline Artist · 2026
                 </span>
               </div>
               <h2 className="font-display font-bold text-white leading-none mb-2">
                 <span className="block text-base text-white/50 font-normal tracking-widest uppercase mb-2">Featuring</span>
-                <span className="block text-7xl md:text-8xl text-[var(--color-amber)]">Tyrese</span>
+                <span className="block text-7xl md:text-8xl text-[var(--color-logo-forest)]">Tyrese</span>
                 <span className="block text-7xl md:text-8xl text-white">Gibson</span>
               </h2>
-              <p className="font-display text-lg font-semibold text-[var(--color-amber-light)] italic mb-4">
+              <p className="font-display text-lg font-semibold text-[var(--color-logo-forest)] italic mb-4">
                 The Most Anticipated Night of the Year
               </p>
               <p className="font-body text-white/70 text-base leading-relaxed max-w-md mb-8">
@@ -382,7 +382,7 @@ export default function BeyondTheMarathonPage() {
                 </a>
               </div>
               <div className="p-5 rounded-2xl bg-white/5 border border-white/10">
-                <p className="font-body text-xs uppercase tracking-widest text-[var(--color-amber)] font-semibold mb-1">2025 Headline Artist</p>
+                <p className="font-body text-xs uppercase tracking-widest text-[var(--color-logo-forest)] font-semibold mb-1">2025 Headline Artist</p>
                 <p className="font-display text-xl font-semibold text-white mb-1">Diamond Platnumz</p>
                 <p className="font-body text-sm text-white/60">
                   Tanzanian superstar Diamond Platnumz headlined the Coffee Marathon Concert 2025 — proof that this event attracts world-class talent.
@@ -413,7 +413,7 @@ export default function BeyondTheMarathonPage() {
           <div className="mt-16 grid grid-cols-2 md:grid-cols-4 gap-px bg-white/10 rounded-2xl overflow-hidden">
             {[{ num: '3 Oct', label: 'Concert Night' }, { num: 'Live', label: 'Performance' }, { num: '2026', label: 'Africa Coffee Park' }, { num: 'World-class', label: 'Entertainment' }].map(({ num, label }) => (
               <div key={label} className="bg-white/5 py-6 px-6 text-center hover:bg-white/10 transition-colors">
-                <p className="font-display text-2xl font-bold text-[var(--color-amber)]">{num}</p>
+                <p className="font-display text-2xl font-bold text-[var(--color-logo-forest)]">{num}</p>
                 <p className="font-body text-xs text-white/50 uppercase tracking-widest mt-1">{label}</p>
               </div>
             ))}

@@ -38,7 +38,7 @@ export default function Footer() {
 
           {/* Col 2: Quick links */}
           <div>
-            <h3 className="font-label text-xs font-bold uppercase tracking-[0.12em] text-[var(--color-accent)] mb-4">
+            <h3 className="font-label text-xs font-bold uppercase tracking-[0.12em] text-[var(--color-logo-forest)] mb-4">
               Quick Links
             </h3>
             <ul className="space-y-2">
@@ -46,27 +46,27 @@ export default function Footer() {
                 <li key={link.href}>
                   <Link
                     href={link.href}
-                    className="font-body text-sm text-white/50 hover:text-[var(--color-accent)] transition-colors"
+                    className="font-body text-sm text-white/50 hover:text-[var(--color-logo-forest)] transition-colors"
                   >
                     {link.label}
                   </Link>
                 </li>
               ))}
               <li>
-                <Link href="/sponsorships" className="font-body text-sm text-white/50 hover:text-[var(--color-accent)] transition-colors">Sponsorships</Link>
+                <Link href="/sponsorships" className="font-body text-sm text-white/50 hover:text-[var(--color-logo-forest)] transition-colors">Sponsorships</Link>
               </li>
               <li>
-                <Link href="/news" className="font-body text-sm text-white/50 hover:text-[var(--color-accent)] transition-colors">News</Link>
+                <Link href="/news" className="font-body text-sm text-white/50 hover:text-[var(--color-logo-forest)] transition-colors">News</Link>
               </li>
               <li>
-                <Link href="/results" className="font-body text-sm text-white/50 hover:text-[var(--color-accent)] transition-colors">Results</Link>
+                <Link href="/results" className="font-body text-sm text-white/50 hover:text-[var(--color-logo-forest)] transition-colors">Results</Link>
               </li>
             </ul>
           </div>
 
           {/* Col 3: Race info */}
           <div>
-            <h3 className="font-label text-xs font-bold uppercase tracking-[0.12em] text-[var(--color-accent)] mb-4">
+            <h3 className="font-label text-xs font-bold uppercase tracking-[0.12em] text-[var(--color-logo-forest)] mb-4">
               Race Info
             </h3>
             <p className="font-body text-sm text-white/50 mb-1">3 October 2026</p>
@@ -77,7 +77,7 @@ export default function Footer() {
               {['5K', '10K', '21K', '42K'].map((d) => (
                 <span
                   key={d}
-                  className="font-label text-xs font-bold uppercase tracking-[0.08em] px-2.5 py-1 rounded-full bg-white/10 text-[var(--color-accent)] border border-white/20"
+                  className="font-label text-xs font-bold uppercase tracking-[0.08em] px-2.5 py-1 rounded-full bg-white/10 text-[var(--color-logo-forest)] border border-white/20"
                 >
                   {d}
                 </span>
@@ -93,7 +93,7 @@ export default function Footer() {
 
           {/* Col 4: Connect */}
           <div>
-            <h3 className="font-label text-xs font-bold uppercase tracking-[0.12em] text-[var(--color-accent)] mb-4">
+            <h3 className="font-label text-xs font-bold uppercase tracking-[0.12em] text-[var(--color-logo-forest)] mb-4">
               Connect
             </h3>
             <div className="flex gap-3 mb-6">
@@ -114,10 +114,10 @@ export default function Footer() {
                 </a>
               ))}
             </div>
-            <Link href="/contact" className="font-body text-sm text-white/50 hover:text-[var(--color-accent)] transition-colors block mb-2">
+            <Link href="/contact" className="font-body text-sm text-white/50 hover:text-[var(--color-logo-forest)] transition-colors block mb-2">
               Contact Us
             </Link>
-            <Link href="/accommodation" className="font-body text-sm text-white/50 hover:text-[var(--color-accent)] transition-colors block">
+            <Link href="/accommodation" className="font-body text-sm text-white/50 hover:text-[var(--color-logo-forest)] transition-colors block">
               Accommodation
             </Link>
             <p className="mt-6 font-body text-xs text-white/30">
@@ -131,8 +131,8 @@ export default function Footer() {
       {/* Theme statement above copyright */}
       <div className="border-t border-white/10 bg-white/5">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-5 text-center">
-          <p className="font-label text-xs text-[var(--color-accent)]/70 uppercase tracking-[0.12em] mb-1">Theme 2026</p>
-          <p className="font-display text-base font-semibold text-[var(--color-accent)] italic leading-snug">
+          <p className="font-label text-xs text-[var(--color-logo-forest)]/70 uppercase tracking-[0.12em] mb-1">Theme 2026</p>
+          <p className="font-display text-base font-semibold text-[var(--color-logo-forest)] italic leading-snug">
             &ldquo;Empowering the IK Community of Karamoja through Coffee Farming to End Poverty&rdquo;
           </p>
         </div>

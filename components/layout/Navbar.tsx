@@ -58,7 +58,7 @@ export default function Navbar() {
               />
               <span className="hidden md:inline font-label text-sm font-bold uppercase tracking-[0.08em]">
                 <span className="text-white">The </span>
-                <span className="text-[var(--color-accent)]">Coffee</span>
+                <span className="text-[var(--color-logo-forest)]">Coffee</span>
                 <span className="text-white"> Marathon</span>
               </span>
             </Link>
@@ -74,8 +74,8 @@ export default function Navbar() {
                     onClick={() => setOpen(false)}
                     className={`font-label text-sm font-bold uppercase tracking-[0.08em] transition-colors relative ${
                       active
-                        ? 'text-[var(--color-amber)]'
-                        : 'text-white/75 hover:text-[var(--color-amber)]'
+                        ? 'text-[var(--color-logo-forest)]'
+                        : 'text-white/75 hover:text-[var(--color-logo-forest)]'
                     }`}
                   >
                     {link.label}
@@ -98,7 +98,7 @@ export default function Navbar() {
               </Link>
               <button
                 onClick={() => setOpen(true)}
-                className="lg:hidden p-2 text-white hover:text-[var(--color-amber)] transition-colors"
+                className="lg:hidden p-2 text-white hover:text-[var(--color-logo-forest)] transition-colors"
                 aria-label="Open menu"
               >
                 <Menu size={24} />
@@ -124,7 +124,7 @@ export default function Navbar() {
             </Link>
             <button
               onClick={() => setOpen(false)}
-              className="p-2 text-white hover:text-[var(--color-amber)] transition-colors"
+              className="p-2 text-white hover:text-[var(--color-logo-forest)] transition-colors"
               aria-label="Close menu"
             >
               <X size={24} />
@@ -141,8 +141,8 @@ export default function Navbar() {
                   onClick={() => setOpen(false)}
                   className={`font-display text-3xl font-semibold transition-colors ${
                     active
-                      ? 'text-[var(--color-amber)]'
-                      : 'text-white/75 hover:text-[var(--color-amber)]'
+                      ? 'text-[var(--color-logo-forest)]'
+                      : 'text-white/75 hover:text-[var(--color-logo-forest)]'
                   }`}
                 >
                   {link.label}

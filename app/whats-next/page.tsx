@@ -152,7 +152,7 @@ export default function WhatsNextPage() {
               href="/attractions"
               className="bg-[var(--color-espresso-light)] rounded-xl p-5 text-left hover:bg-[var(--color-arabica)]/30 transition-colors"
             >
-              <p className="font-body text-xs uppercase tracking-widest text-[var(--color-latte)] mb-1">
+              <p className="font-body text-xs uppercase tracking-widest text-[var(--color-logo-forest)] mb-1">
                 Explore
               </p>
               <p className="font-display text-xl font-semibold text-[var(--color-cream)]">
@@ -163,7 +163,7 @@ export default function WhatsNextPage() {
               href="/accommodation"
               className="bg-[var(--color-espresso-light)] rounded-xl p-5 text-left hover:bg-[var(--color-arabica)]/30 transition-colors"
             >
-              <p className="font-body text-xs uppercase tracking-widest text-[var(--color-latte)] mb-1">
+              <p className="font-body text-xs uppercase tracking-widest text-[var(--color-logo-forest)] mb-1">
                 Stay
               </p>
               <p className="font-display text-xl font-semibold text-[var(--color-cream)]">

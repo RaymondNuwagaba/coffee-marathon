@@ -89,7 +89,7 @@ export default function ColdBrewSection() {
               <div className="absolute -top-4 -right-4 w-20 h-20 bg-white rounded-full flex items-center justify-center shadow-lg">
                 <div className="text-center">
                   <p className="font-display text-xs font-bold text-[var(--color-text-dark)] leading-tight">Sip &</p>
-                  <p className="font-display text-xs font-bold text-[var(--color-amber)] leading-tight">Run</p>
+                  <p className="font-display text-xs font-bold text-[var(--color-logo-forest)] leading-tight">Run</p>
                 </div>
               </div>
 

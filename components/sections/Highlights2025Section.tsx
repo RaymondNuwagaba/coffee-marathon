@@ -144,7 +144,7 @@ export default function Highlights2025Section() {
           <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-6 gap-px">
             {stats.map(({ num, label, note }) => (
               <div key={label} className="text-center py-4 px-3">
-                <p className="font-display text-2xl md:text-3xl font-bold text-[var(--color-accent)] leading-tight">
+                <p className="font-display text-2xl md:text-3xl font-bold text-[var(--color-logo-forest)] leading-tight">
                   {num}
                   {note === 'confirm' && (
                     <span className="text-white/30 text-sm font-normal align-super ml-0.5">*</span>
@@ -200,7 +200,7 @@ export default function Highlights2025Section() {
             <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent" />
             <div className="absolute bottom-4 left-4 right-4 flex items-end justify-between">
               <p className="font-body text-sm font-semibold text-white">{gridImages[0].caption}</p>
-              <span className="shrink-0 font-body text-xs uppercase tracking-widest text-[var(--color-amber-light)] bg-black/40 px-2 py-1 rounded-full backdrop-blur-sm ml-2">
+              <span className="shrink-0 font-body text-xs uppercase tracking-widest text-[var(--color-logo-forest)] bg-black/40 px-2 py-1 rounded-full backdrop-blur-sm ml-2">
                 Athletic
               </span>
             </div>
@@ -237,7 +237,7 @@ export default function Highlights2025Section() {
               <div className="absolute bottom-3 left-3 right-3 flex items-end justify-between">
                 <p className="font-body text-xs font-semibold text-white leading-snug">{img.caption}</p>
                 {img.type === 'athletic' && (
-                  <span className="shrink-0 font-body text-xs uppercase tracking-widest text-[var(--color-amber-light)] bg-black/40 px-2 py-0.5 rounded-full backdrop-blur-sm ml-1">
+                  <span className="shrink-0 font-body text-xs uppercase tracking-widest text-[var(--color-logo-forest)] bg-black/40 px-2 py-0.5 rounded-full backdrop-blur-sm ml-1">
                     Athletic
                   </span>
                 )}
@@ -297,18 +297,18 @@ export default function Highlights2025Section() {
             <div>
               <div className="flex items-center gap-3 mb-6">
                 <div className="w-8 h-0.5 bg-[var(--color-amber)]" />
-                <span className="font-body text-xs uppercase tracking-widest text-[var(--color-amber)] font-semibold">
+                <span className="font-body text-xs uppercase tracking-widest text-[var(--color-logo-forest)] font-semibold">
                   2025 Concert Highlight
                 </span>
               </div>
               <div className="inline-flex items-center gap-2 bg-[var(--color-amber)]/20 border border-[var(--color-amber)]/40 rounded-full px-4 py-1.5 mb-5">
-                <Music2 size={12} className="text-[var(--color-amber)]" />
-                <span className="font-body text-xs font-semibold text-[var(--color-amber)] uppercase tracking-widest">
+                <Music2 size={12} className="text-[var(--color-logo-forest)]" />
+                <span className="font-body text-xs font-semibold text-[var(--color-logo-forest)] uppercase tracking-widest">
                   Headline Artist · 2025
                 </span>
               </div>
               <h3 className="font-display font-bold text-white leading-none mb-4">
-                <span className="block text-4xl md:text-5xl text-[var(--color-amber)]">Diamond</span>
+                <span className="block text-4xl md:text-5xl text-[var(--color-logo-forest)]">Diamond</span>
                 <span className="block text-4xl md:text-5xl text-white">Platnumz</span>
               </h3>
               <p className="font-body text-white/70 text-base leading-relaxed mb-6 max-w-md">

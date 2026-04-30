@@ -74,7 +74,7 @@ export default async function ShopPage() {
               </div>
 
               <div className="bg-[var(--color-dark)] rounded-xl p-6 mb-6">
-                <p className="font-label text-xs uppercase tracking-[0.1em] text-[var(--color-accent)] mb-1">Kit Price</p>
+                <p className="font-label text-xs uppercase tracking-[0.1em] text-[var(--color-logo-forest)] mb-1">Kit Price</p>
                 <p className="font-display text-3xl font-bold text-[var(--color-cream)]">UGX XX,XXX</p>
                 <p className="font-body text-xs text-[var(--color-cream)]/40 mt-1">Placeholder — price to be confirmed</p>
               </div>
