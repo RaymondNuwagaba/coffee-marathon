@@ -136,7 +136,7 @@ export default function BeyondTheRaceSection() {
               </p>
             </div>
             <div className="shrink-0 text-center">
-              <p className="font-display text-5xl font-bold text-[var(--color-logo-forest)]">12</p>
+              <p className="font-display text-5xl font-bold text-[var(--color-accent)]">12</p>
               <p className="font-body text-sm text-white/70">festival<br />experiences</p>
             </div>
           </div>

@@ -199,7 +199,7 @@ export default async function HomePage() {
           <div className="grid grid-cols-2 lg:grid-cols-4 divide-x divide-white/20">
             {eventStats.map((stat: { number: string; label: string }) => (
               <div key={stat.label} className="text-center py-2 px-4">
-                <p className="font-display text-3xl font-bold text-[var(--color-logo-forest)]">{stat.number}</p>
+                <p className="font-display text-3xl font-bold text-[var(--color-accent)]">{stat.number}</p>
                 <p className="font-label text-xs text-white/75 uppercase tracking-[0.12em] mt-1">{stat.label}</p>
               </div>
             ))}

@@ -40,7 +40,7 @@ export default function SponsorshipsPage() {
                 key={stat.label}
                 className="bg-white rounded-xl p-6 border border-[var(--color-cream-dark)]"
               >
-                <div className="font-display text-4xl font-bold text-[var(--color-forest)]">
+                <div className="font-display text-4xl font-bold text-[var(--color-accent)]">
                   {stat.number}
                 </div>
                 <p className="font-body text-sm text-[var(--color-arabica)] mt-1">{stat.label}</p>

@@ -93,7 +93,7 @@ export default function MissionSection() {
 
             {/* Floating stat */}
             <div className="absolute -bottom-6 -left-6 bg-[var(--color-warm-white)] rounded-2xl shadow-xl p-5 border border-[var(--color-border)]">
-              <p className="font-display text-3xl font-bold text-[var(--color-logo-forest)]">2,000+</p>
+              <p className="font-display text-3xl font-bold text-[var(--color-accent)]">2,000+</p>
               <p className="font-body text-sm text-[var(--color-logo-deep-brown)]">Runners from 10+ countries</p>
             </div>
 

@@ -144,7 +144,7 @@ export default function Highlights2025Section() {
           <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-6 gap-px">
             {stats.map(({ num, label, note }) => (
               <div key={label} className="text-center py-4 px-3">
-                <p className="font-display text-2xl md:text-3xl font-bold text-[var(--color-logo-forest)] leading-tight">
+                <p className="font-display text-2xl md:text-3xl font-bold text-[var(--color-accent)] leading-tight">
                   {num}
                   {note === 'confirm' && (
                     <span className="text-white/30 text-sm font-normal align-super ml-0.5">*</span>

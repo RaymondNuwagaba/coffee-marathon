@@ -413,7 +413,7 @@ export default function BeyondTheMarathonPage() {
           <div className="mt-16 grid grid-cols-2 md:grid-cols-4 gap-px bg-white/10 rounded-2xl overflow-hidden">
             {[{ num: '3 Oct', label: 'Concert Night' }, { num: 'Live', label: 'Performance' }, { num: '2026', label: 'Africa Coffee Park' }, { num: 'World-class', label: 'Entertainment' }].map(({ num, label }) => (
               <div key={label} className="bg-white/5 py-6 px-6 text-center hover:bg-white/10 transition-colors">
-                <p className="font-display text-2xl font-bold text-[var(--color-logo-forest)]">{num}</p>
+                <p className="font-display text-2xl font-bold text-[var(--color-accent)]">{num}</p>
                 <p className="font-body text-xs text-white/50 uppercase tracking-widest mt-1">{label}</p>
               </div>
             ))}
