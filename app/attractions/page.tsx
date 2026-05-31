@@ -28,7 +28,7 @@ export default async function AttractionsPage() {
         label="Local Attractions"
       />
 
-      <section className="bg-[var(--color-cream)] py-20">
+      <section className="py-20" style={{ backgroundColor: 'var(--green-mist)' }}>
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="space-y-16">
             {displayAttractions.map((attraction, i) => (
@@ -39,7 +39,10 @@ export default async function AttractionsPage() {
                   i % 2 === 1 ? 'lg:[&>*:first-child]:order-2 lg:[&>*:last-child]:order-1' : ''
                 }`}
               >
-                <div className="aspect-[4/3] bg-[var(--color-cream-dark)] rounded-2xl overflow-hidden relative">
+                <div
+                  className="aspect-[4/3] rounded-2xl overflow-hidden relative"
+                  style={{ backgroundColor: 'var(--green-pale)' }}
+                >
                   {attraction.image ? (
                     <SanityImage image={attraction.image} alt={attraction.name} width={600} height={450} className="object-cover w-full h-full" fill />
                   ) : attraction.localImage ? (
@@ -52,22 +55,35 @@ export default async function AttractionsPage() {
                     />
                   ) : (
                     <div className="w-full h-full flex items-center justify-center">
-                      <MapPin size={28} className="text-[var(--color-logo-warm-brown)] opacity-40 mx-auto" />
+                      <MapPin size={28} className="mx-auto" style={{ color: 'var(--green-mid)', opacity: 0.4 }} />
                     </div>
                   )}
                 </div>
 
                 <div>
+                  {/* Category badge */}
                   <div className="flex items-center gap-2 mb-3">
-                    <MapPin size={14} className="text-[var(--color-logo-warm-brown)]" />
-                    <span className="font-label text-xs uppercase tracking-[0.1em] text-[var(--color-logo-warm-brown)] font-bold">Attraction</span>
+                    <span
+                      className="font-label text-xs font-bold uppercase tracking-[0.08em] px-3 py-1 rounded-full"
+                      style={{ backgroundColor: 'var(--green-pale)', color: 'var(--green-deep)' }}
+                    >
+                      Attraction
+                    </span>
                   </div>
-                  <h2 className="font-display text-3xl font-semibold text-[var(--color-logo-forest)] mb-3">{attraction.name}</h2>
-                  <p className="font-body text-base text-[var(--color-logo-deep-brown)] leading-relaxed mb-4">{attraction.description}</p>
+                  <h2 className="font-display text-3xl font-semibold mb-3" style={{ color: 'var(--brown-heading)' }}>
+                    {attraction.name}
+                  </h2>
+                  <p className="font-body text-base leading-relaxed mb-4" style={{ color: 'var(--brown-dark)' }}>
+                    {attraction.description}
+                  </p>
                   {attraction.tips && (
-                    <div className="bg-[var(--color-seedling-light)] rounded-xl px-4 py-3 border border-[var(--color-green)]/20">
-                      <p className="font-body text-sm text-[var(--color-logo-warm-brown)]">
-                        <span className="font-semibold">Practical tips: </span>{attraction.tips}
+                    <div
+                      className="rounded-xl px-4 py-3 border"
+                      style={{ backgroundColor: 'var(--green-pale)', borderColor: 'rgba(26,107,58,0.2)' }}
+                    >
+                      <p className="font-body text-sm" style={{ color: 'var(--brown-dark)' }}>
+                        <span className="font-semibold" style={{ color: 'var(--green-deep)' }}>Practical tips: </span>
+                        {attraction.tips}
                       </p>
                     </div>
                   )}
@@ -78,16 +94,19 @@ export default async function AttractionsPage() {
         </div>
       </section>
 
-      <section className="bg-[var(--color-warm-white)] py-20">
+      <section className="py-20" style={{ backgroundColor: 'var(--cream)' }}>
         <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <h2 className="font-display text-3xl font-semibold text-[var(--color-logo-forest)] mb-6">Getting Around</h2>
-          <div className="aspect-video bg-[var(--color-cream-dark)] rounded-2xl flex items-center justify-center">
+          <h2 className="font-display text-3xl font-semibold mb-6" style={{ color: 'var(--brown-heading)' }}>Getting Around</h2>
+          <div
+            className="aspect-video rounded-2xl flex items-center justify-center border"
+            style={{ backgroundColor: 'var(--green-pale)', borderColor: 'rgba(26,107,58,0.2)' }}
+          >
             <div className="text-center">
-              <MapPin size={32} className="text-[var(--color-logo-warm-brown)]/50 mx-auto mb-3" />
-              <p className="font-body text-sm text-[var(--color-logo-warm-brown)]">Google Maps embed — to be added</p>
+              <MapPin size={32} className="mx-auto mb-3" style={{ color: 'var(--green-primary)', opacity: 0.4 }} />
+              <p className="font-body text-sm" style={{ color: 'var(--green-mid)' }}>Google Maps embed — to be added</p>
             </div>
           </div>
-          <p className="mt-4 font-body text-xs text-[var(--color-logo-warm-brown)]">
+          <p className="mt-4 font-body text-xs" style={{ color: 'var(--brown-dark)', opacity: 0.6 }}>
             Africa Coffee Park is located in Ntungamo, southwestern Uganda. Approx. 8 hours from Kampala by road.
           </p>
         </div>

@@ -6,65 +6,82 @@
   --font-body: var(--font-barlow), system-ui, sans-serif;
   --font-label: var(--font-barlow-condensed), sans-serif;
 
-  /* Primary palette */
-  --color-brand-red: #D92B2B;
-  --color-brand-gold: #F5C518;
-  --color-brand-black: #1A1A1A;
-  --color-brand-orange: #E8651A;
-  --color-brand-green: #2E7D32;
-  --color-brand-cream: #FFF8EE;
-  --color-brand-warmwhite: #FFFDF7;
-  --color-brand-brown: #5C3317;
-  --color-logo-forest: #1E6B2E;
-  --color-logo-deep-brown: #3D1A0E;
-  --color-logo-warm-brown: #5C2A0E;
+  /* Forest Green brand family */
+  --color-green-deep:    #0D3D22;
+  --color-green-primary: #1A6B3A;
+  --color-green-mid:     #2D8C52;
+  --color-green-light:   #5CB87A;
+  --color-green-pale:    #C2EDD2;
+  --color-green-mist:    #EAF7EF;
 
-  /* Core theme tokens */
-  --color-bg: #FFF8EE;
-  --color-bg-warm: #FFFDF7;
-  --color-amber: #F5C518;
-  --color-amber-dark: #DDB015;
-  --color-amber-light: #F8D746;
-  --color-orange: #E8651A;
-  --color-orange-dark: #C95414;
-  --color-text-dark: #1E6B2E;
-  --color-text-mid: #3D1A0E;
-  --color-text-light: #5C2A0E;
-  --color-border: #DFCAB4;
-
-  /* Legacy aliases — preserved for existing components */
-  --color-espresso: #1A1A1A;
-  --color-espresso-light: #2A2A2A;
-  --color-espresso-dark: #111111;
-  --color-arabica: #3D1A0E;
-  --color-arabica-light: #5C2A0E;
-  --color-latte: #F5C518;
-  --color-latte-light: #F8D746;
-  --color-cream: #FFF8EE;
-  --color-cream-light: #FFFDF7;
-  --color-cream-dark: #F3E7D8;
-  --color-forest: #2E7D32;
-  --color-forest-light: #3C9C41;
-  --color-forest-dark: #1F5B24;
-  --color-seedling: #2E7D32;
-  --color-seedling-light: #E8F4E8;
-  --color-accent-green: #2E7D32;
-  --color-accent-green-light: #E8F4E8;
+  /* Warm neutrals */
+  --color-brown-dark:    #3B1A0F;
+  --color-brown-heading: #6B2D1B;
+  --color-brown-mid:     #C4855A;
+  --color-cream:         #F5EDE0;
 }
 
 :root {
-  --color-primary: #D92B2B;
-  --color-accent: #F5C518;
-  --color-dark: #1A1A1A;
-  --color-orange: #E8651A;
-  --color-green: #2E7D32;
-  --color-cream: #FFF8EE;
-  --color-warm-white: #FFFDF7;
-  --color-brown: #5C2A0E;
-  --color-text-main: #3D1A0E;
-  --color-text-muted: #5C2A0E;
-  --background: #FFF8EE;
-  --foreground: #1A1A1A;
+  /* ── Primary design tokens ─────────────────────────────────────── */
+  --green-deep:     #0D3D22;
+  --green-primary:  #1A6B3A;
+  --green-mid:      #2D8C52;
+  --green-light:    #5CB87A;
+  --green-pale:     #C2EDD2;
+  --green-mist:     #EAF7EF;
+
+  --brown-dark:     #3B1A0F;
+  --brown-heading:  #6B2D1B;
+  --brown-mid:      #C4855A;
+  --cream:          #F5EDE0;
+
+  /* ── Legacy aliases → remapped to Forest Green palette ─────────── */
+  --color-primary:            #1A6B3A;   /* green-primary */
+  --color-accent:             #C4855A;   /* brown-mid */
+  --color-dark:               #0D3D22;   /* green-deep */
+  --color-orange:             #C4855A;   /* brown-mid */
+  --color-green:              #1A6B3A;
+  --color-forest:             #1A6B3A;
+  --color-forest-light:       #2D8C52;
+  --color-forest-dark:        #0D3D22;
+  --color-amber:              #C4855A;   /* brown-mid */
+  --color-amber-dark:         #A36A40;
+  --color-amber-light:        #C2EDD2;   /* green-pale */
+  --color-cream:              #F5EDE0;
+  --color-cream-dark:         #E8D8C8;
+  --color-cream-light:        #EAF7EF;   /* green-mist */
+  --color-warm-white:         #EAF7EF;   /* green-mist */
+  --color-bg:                 #EAF7EF;   /* green-mist */
+  --color-bg-warm:            #F5EDE0;   /* cream */
+  --color-border:             rgba(26,107,58,0.2);
+  --color-text-dark:          #1A6B3A;   /* green-primary */
+  --color-text-mid:           #3B1A0F;   /* brown-dark */
+  --color-text-light:         #6B2D1B;   /* brown-heading */
+  --color-logo-forest:        #1A6B3A;
+  --color-logo-deep-brown:    #3B1A0F;
+  --color-logo-warm-brown:    #6B2D1B;
+  --color-espresso:           #3B1A0F;   /* brown-dark */
+  --color-espresso-light:     #4A2210;
+  --color-espresso-dark:      #2A1008;
+  --color-arabica:            #3B1A0F;   /* brown-dark */
+  --color-arabica-light:      #6B2D1B;
+  --color-latte:              #C4855A;   /* brown-mid */
+  --color-latte-light:        #D9A07A;
+  --color-seedling:           #1A6B3A;
+  --color-seedling-light:     #C2EDD2;   /* green-pale */
+  --color-accent-green:       #1A6B3A;
+  --color-accent-green-light: #C2EDD2;   /* green-pale */
+  --color-orange-dark:        #A36A40;
+  --color-brand-red:          #1A6B3A;
+  --color-brand-gold:         #C4855A;
+  --color-brand-black:        #0D3D22;
+  --color-brand-orange:       #C4855A;
+  --color-brand-green:        #1A6B3A;
+  --color-brand-cream:        #F5EDE0;
+  --color-brand-warmwhite:    #EAF7EF;
+  --color-brand-brown:        #3B1A0F;
+  --background:               #EAF7EF;   /* green-mist */
+  --foreground:               #3B1A0F;   /* brown-dark */
 }
 
 body {

@@ -69,7 +69,7 @@ export default function RootLayout({
       lang="en"
       className={`${oswald.variable} ${barlow.variable} ${barlowCondensed.variable} h-full`}
     >
-      <body className="min-h-full flex flex-col antialiased bg-[var(--color-cream)] text-[var(--color-logo-deep-brown)]">
+      <body className="min-h-full flex flex-col antialiased bg-[var(--green-mist)] text-[var(--brown-dark)]">
         <Navbar />
         <main className="flex-1">{children}</main>
         <Footer />

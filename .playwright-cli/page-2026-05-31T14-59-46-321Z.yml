@@ -1,0 +1,232 @@
+- generic [active] [ref=e1]:
+  - generic [ref=e2]:
+    - paragraph [ref=e4]: Tyrese Gibson Live At Coffee Marathon 2026 · 3 October · Africa Coffee Park
+    - banner [ref=e5]:
+      - generic [ref=e7]:
+        - link "The Coffee Marathon Uganda The Coffee Marathon" [ref=e8] [cursor=pointer]:
+          - /url: /
+          - img "The Coffee Marathon Uganda" [ref=e9]
+          - generic [ref=e10]: The Coffee Marathon
+        - navigation [ref=e11]:
+          - link "Home" [ref=e12] [cursor=pointer]:
+            - /url: /
+          - link "About" [ref=e13] [cursor=pointer]:
+            - /url: /about
+          - link "Races" [ref=e14] [cursor=pointer]:
+            - /url: /races
+          - link "Shop" [ref=e15] [cursor=pointer]:
+            - /url: /shop
+          - link "Beyond the Marathon" [ref=e16] [cursor=pointer]:
+            - /url: /activities
+          - link "Attractions" [ref=e17] [cursor=pointer]:
+            - /url: /attractions
+          - link "Contact" [ref=e18] [cursor=pointer]:
+            - /url: /contact
+        - link "Register Now" [ref=e20] [cursor=pointer]:
+          - /url: "#pinnket-register-10k"
+  - main [ref=e21]:
+    - generic [ref=e23]:
+      - paragraph [ref=e24]: Sponsorships 2026
+      - heading "Partner With Us" [level=1] [ref=e25]
+      - paragraph [ref=e26]: Align your brand with Uganda's premier running event and celebrate the women who grow the world's finest coffee.
+    - generic [ref=e28]:
+      - paragraph [ref=e29]: Why Partner With Us
+      - heading "Why Sponsor the Coffee Marathon?" [level=2] [ref=e30]
+      - paragraph [ref=e31]: Reach 2,000+ runners and their networks across Uganda and 10+ countries. Associate your brand with purpose-driven sport, sustainability, and the empowerment of women coffee farmers.
+      - generic [ref=e32]:
+        - generic [ref=e33]:
+          - generic [ref=e34]: 2,000+
+          - paragraph [ref=e35]: Runners reached
+        - generic [ref=e36]:
+          - generic [ref=e37]: 10+
+          - paragraph [ref=e38]: Countries represented
+        - generic [ref=e39]:
+          - generic [ref=e40]: 5+
+          - paragraph [ref=e41]: Years of impact
+    - generic [ref=e43]:
+      - generic [ref=e44]:
+        - paragraph [ref=e45]: Available Packages
+        - heading "Sponsorship Packages" [level=2] [ref=e46]
+      - generic [ref=e47]:
+        - generic [ref=e48]:
+          - generic [ref=e49]:
+            - generic [ref=e50]: Sponsorship
+            - heading "Platinum Partner" [level=3] [ref=e51]
+            - paragraph [ref=e52]: USD 100,000
+          - list [ref=e53]:
+            - listitem [ref=e54]:
+              - img [ref=e55]
+              - text: Title naming rights across all event materials
+            - listitem [ref=e58]:
+              - img [ref=e59]
+              - text: VIP tent & hospitality at finish line
+            - listitem [ref=e62]:
+              - img [ref=e63]
+              - text: Full social media campaign partnership
+            - listitem [ref=e66]:
+              - img [ref=e67]
+              - text: 20 complimentary race entries
+            - listitem [ref=e70]:
+              - img [ref=e71]
+              - text: Keynote speaking opportunity
+            - listitem [ref=e74]:
+              - img [ref=e75]
+              - text: Logo on race kits, banners & bibs
+            - listitem [ref=e78]:
+              - img [ref=e79]
+              - text: Dedicated press coverage
+        - generic [ref=e82]:
+          - generic [ref=e83]:
+            - generic [ref=e84]: Sponsorship
+            - heading "Gold Partner" [level=3] [ref=e85]
+            - paragraph [ref=e86]: USD 75,000
+          - list [ref=e87]:
+            - listitem [ref=e88]:
+              - img [ref=e89]
+              - text: Logo on website, bibs & key materials
+            - listitem [ref=e92]:
+              - img [ref=e93]
+              - text: 10 complimentary race entries
+            - listitem [ref=e96]:
+              - img [ref=e97]
+              - text: Social media campaign mentions
+            - listitem [ref=e100]:
+              - img [ref=e101]
+              - text: Exhibition booth at event
+            - listitem [ref=e104]:
+              - img [ref=e105]
+              - text: Logo on finish line arch
+        - generic [ref=e108]:
+          - generic [ref=e109]:
+            - generic [ref=e110]: Sponsorship
+            - heading "Silver Partner" [level=3] [ref=e111]
+            - paragraph [ref=e112]: USD 30,000
+          - list [ref=e113]:
+            - listitem [ref=e114]:
+              - img [ref=e115]
+              - text: Logo on website & event signage
+            - listitem [ref=e118]:
+              - img [ref=e119]
+              - text: 5 complimentary race entries
+            - listitem [ref=e122]:
+              - img [ref=e123]
+              - text: Social media shout-outs
+            - listitem [ref=e126]:
+              - img [ref=e127]
+              - text: Brand presence at venue
+        - generic [ref=e130]:
+          - generic [ref=e131]:
+            - generic [ref=e132]: Sponsorship
+            - heading "Bronze Partner" [level=3] [ref=e133]
+            - paragraph [ref=e134]: USD 10,000
+          - list [ref=e135]:
+            - listitem [ref=e136]:
+              - img [ref=e137]
+              - text: Logo on official website
+            - listitem [ref=e140]:
+              - img [ref=e141]
+              - text: 2 complimentary race entries
+            - listitem [ref=e144]:
+              - img [ref=e145]
+              - text: Social media mention
+      - paragraph [ref=e148]: Custom packages available on request.
+    - generic [ref=e150]:
+      - heading "Ready to Partner?" [level=2] [ref=e151]
+      - paragraph [ref=e152]: Download our full sponsorship deck or get in touch to discuss your package.
+      - generic [ref=e153]:
+        - link "Download Sponsorship Deck" [ref=e154] [cursor=pointer]:
+          - /url: /sponsorship-deck.pdf
+          - img [ref=e155]
+          - text: Download Sponsorship Deck
+        - link "Email Us" [ref=e158] [cursor=pointer]:
+          - /url: mailto:sponsor@coffeemarathonug.com
+          - img [ref=e159]
+          - text: Email Us
+      - paragraph [ref=e162]:
+        - text: "For enquiries:"
+        - link "sponsor@coffeemarathonug.com" [ref=e163] [cursor=pointer]:
+          - /url: mailto:sponsor@coffeemarathonug.com
+  - contentinfo [ref=e164]:
+    - generic [ref=e166]:
+      - generic [ref=e167]:
+        - link "The Coffee Marathon Uganda" [ref=e168] [cursor=pointer]:
+          - /url: /
+          - img "The Coffee Marathon Uganda" [ref=e169]
+        - paragraph [ref=e170]: Empowering the IK Community of Karamoja through Coffee Farming to End Poverty.
+        - link "WhatsApp Us" [ref=e171] [cursor=pointer]:
+          - /url: https://wa.me/256750263333
+          - img [ref=e172]
+          - text: WhatsApp Us
+      - generic [ref=e174]:
+        - heading "Quick Links" [level=3] [ref=e175]
+        - list [ref=e176]:
+          - listitem [ref=e177]:
+            - link "Home" [ref=e178] [cursor=pointer]:
+              - /url: /
+          - listitem [ref=e179]:
+            - link "About" [ref=e180] [cursor=pointer]:
+              - /url: /about
+          - listitem [ref=e181]:
+            - link "Races" [ref=e182] [cursor=pointer]:
+              - /url: /races
+          - listitem [ref=e183]:
+            - link "Shop" [ref=e184] [cursor=pointer]:
+              - /url: /shop
+          - listitem [ref=e185]:
+            - link "Beyond the Marathon" [ref=e186] [cursor=pointer]:
+              - /url: /activities
+          - listitem [ref=e187]:
+            - link "Attractions" [ref=e188] [cursor=pointer]:
+              - /url: /attractions
+          - listitem [ref=e189]:
+            - link "Contact" [ref=e190] [cursor=pointer]:
+              - /url: /contact
+          - listitem [ref=e191]:
+            - link "Sponsorships" [ref=e192] [cursor=pointer]:
+              - /url: /sponsorships
+          - listitem [ref=e193]:
+            - link "News" [ref=e194] [cursor=pointer]:
+              - /url: /news
+          - listitem [ref=e195]:
+            - link "Results" [ref=e196] [cursor=pointer]:
+              - /url: /results
+      - generic [ref=e197]:
+        - heading "Race Info" [level=3] [ref=e198]
+        - paragraph [ref=e199]: 3 October 2026
+        - paragraph [ref=e200]:
+          - text: Africa Coffee Park
+          - text: Ntungamo, Uganda
+        - generic [ref=e201]:
+          - generic [ref=e202]: 5K
+          - generic [ref=e203]: 10K
+          - generic [ref=e204]: 21K
+          - generic [ref=e205]: 42K
+        - link "Register Now →" [ref=e206] [cursor=pointer]:
+          - /url: "#pinnket-register-10k"
+      - generic [ref=e207]:
+        - heading "Connect" [level=3] [ref=e208]
+        - generic [ref=e209]:
+          - link "Facebook" [ref=e210] [cursor=pointer]:
+            - /url: https://facebook.com
+            - img [ref=e211]
+          - link "Instagram" [ref=e213] [cursor=pointer]:
+            - /url: https://instagram.com
+            - img [ref=e214]
+          - link "X / Twitter" [ref=e217] [cursor=pointer]:
+            - /url: https://twitter.com
+            - img [ref=e218]
+        - link "Contact Us" [ref=e220] [cursor=pointer]:
+          - /url: /contact
+        - link "Accommodation" [ref=e221] [cursor=pointer]:
+          - /url: /accommodation
+        - paragraph [ref=e222]:
+          - text: info@coffeemarathonug.com
+          - text: +256 750 263 333
+    - generic [ref=e224]:
+      - paragraph [ref=e225]: Theme 2026
+      - paragraph [ref=e226]: “Empowering the IK Community of Karamoja through Coffee Farming to End Poverty”
+    - generic [ref=e228]:
+      - paragraph [ref=e229]: © 2026 The Coffee Marathon Uganda · Organised by Inspire Africa Group
+      - paragraph [ref=e230]: Africa Coffee Park, Ntungamo, Uganda
+  - button "Open Next.js Dev Tools" [ref=e236] [cursor=pointer]:
+    - img [ref=e237]

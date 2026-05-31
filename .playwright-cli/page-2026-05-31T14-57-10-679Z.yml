@@ -1,0 +1,309 @@
+- generic [active] [ref=e1]:
+  - generic [ref=e2]:
+    - paragraph [ref=e4]: Tyrese Gibson Live At Coffee Marathon 2026 · 3 October · Africa Coffee Park
+    - banner [ref=e5]:
+      - generic [ref=e7]:
+        - link "The Coffee Marathon Uganda The Coffee Marathon" [ref=e8] [cursor=pointer]:
+          - /url: /
+          - img "The Coffee Marathon Uganda" [ref=e9]
+          - generic [ref=e10]: The Coffee Marathon
+        - navigation [ref=e11]:
+          - link "Home" [ref=e12] [cursor=pointer]:
+            - /url: /
+          - link "About" [ref=e13] [cursor=pointer]:
+            - /url: /about
+          - link "Races" [ref=e14] [cursor=pointer]:
+            - /url: /races
+            - text: Races
+          - link "Shop" [ref=e16] [cursor=pointer]:
+            - /url: /shop
+          - link "Beyond the Marathon" [ref=e17] [cursor=pointer]:
+            - /url: /activities
+          - link "Attractions" [ref=e18] [cursor=pointer]:
+            - /url: /attractions
+          - link "Contact" [ref=e19] [cursor=pointer]:
+            - /url: /contact
+        - link "Register Now" [ref=e21] [cursor=pointer]:
+          - /url: "#pinnket-register-10k"
+  - main [ref=e22]:
+    - generic [ref=e24]:
+      - paragraph [ref=e25]: Race Information
+      - heading "Race Categories" [level=1] [ref=e26]
+      - paragraph [ref=e27]: Four distances. One incredible route. Africa Coffee Park, Ntungamo — 3 October 2026.
+    - generic [ref=e30]:
+      - generic [ref=e31]:
+        - generic [ref=e32]:
+          - generic [ref=e33]:
+            - text: Fun Run
+            - generic [ref=e34]: 5 KM
+          - generic [ref=e35]:
+            - text: UGX XX,XXX
+            - paragraph [ref=e36]: Registration fee
+        - generic [ref=e37]:
+          - generic [ref=e38]:
+            - generic [ref=e39]:
+              - paragraph [ref=e40]: Description
+              - paragraph [ref=e41]: Perfect for first-timers and families.
+            - generic [ref=e42]:
+              - paragraph [ref=e43]:
+                - img [ref=e44]
+                - text: Terrain
+              - paragraph [ref=e47]: Flat, family-friendly route through the coffee park grounds.
+            - generic [ref=e48]:
+              - generic [ref=e49]:
+                - paragraph [ref=e50]:
+                  - img [ref=e51]
+                  - text: Start Time
+                - paragraph [ref=e54]: Placeholder — to be confirmed
+              - generic [ref=e55]:
+                - paragraph [ref=e56]: Cut-off
+                - paragraph [ref=e57]: Placeholder — to be confirmed
+          - generic [ref=e58]:
+            - generic [ref=e59]:
+              - paragraph [ref=e60]:
+                - img [ref=e61]
+                - text: What's Included
+              - list [ref=e64]:
+                - listitem [ref=e65]: Race bib
+                - listitem [ref=e67]: Finisher medal
+                - listitem [ref=e69]: Refreshments
+            - paragraph [ref=e72]: Route map coming soon
+            - generic [ref=e73]:
+              - link "Register for the 5 KM" [ref=e74] [cursor=pointer]:
+                - /url: "#pinnket-register-5k"
+              - paragraph [ref=e75]: Secure registration via Pinnket, our official ticketing partner.
+      - generic [ref=e76]:
+        - generic [ref=e77]:
+          - generic [ref=e78]:
+            - text: Community
+            - generic [ref=e79]: 10 KM
+          - generic [ref=e80]:
+            - text: UGX XX,XXX
+            - paragraph [ref=e81]: Registration fee
+        - generic [ref=e82]:
+          - generic [ref=e83]:
+            - generic [ref=e84]:
+              - paragraph [ref=e85]: Description
+              - paragraph [ref=e86]: Test your pace through the coffee farms.
+            - generic [ref=e87]:
+              - paragraph [ref=e88]:
+                - img [ref=e89]
+                - text: Terrain
+              - paragraph [ref=e92]: Rolling hills and scenic coffee-farm trails.
+            - generic [ref=e93]:
+              - generic [ref=e94]:
+                - paragraph [ref=e95]:
+                  - img [ref=e96]
+                  - text: Start Time
+                - paragraph [ref=e99]: Placeholder — to be confirmed
+              - generic [ref=e100]:
+                - paragraph [ref=e101]: Cut-off
+                - paragraph [ref=e102]: Placeholder — to be confirmed
+          - generic [ref=e103]:
+            - generic [ref=e104]:
+              - paragraph [ref=e105]:
+                - img [ref=e106]
+                - text: What's Included
+              - list [ref=e109]:
+                - listitem [ref=e110]: Race bib
+                - listitem [ref=e112]: Finisher medal
+                - listitem [ref=e114]: T-shirt
+                - listitem [ref=e116]: Refreshments
+            - paragraph [ref=e119]: Route map coming soon
+            - generic [ref=e120]:
+              - link "Register for the 10 KM" [ref=e121] [cursor=pointer]:
+                - /url: "#pinnket-register-10k"
+              - paragraph [ref=e122]: Secure registration via Pinnket, our official ticketing partner.
+      - generic [ref=e123]:
+        - generic [ref=e124]:
+          - generic [ref=e125]:
+            - text: Half Marathon
+            - generic [ref=e126]: 21 KM
+          - generic [ref=e127]:
+            - text: UGX XX,XXX
+            - paragraph [ref=e128]: Registration fee
+        - generic [ref=e129]:
+          - generic [ref=e130]:
+            - generic [ref=e131]:
+              - paragraph [ref=e132]: Description
+              - paragraph [ref=e133]: A serious challenge with stunning views.
+            - generic [ref=e134]:
+              - paragraph [ref=e135]:
+                - img [ref=e136]
+                - text: Terrain
+              - paragraph [ref=e139]: Mixed terrain — farms, hills, and highland paths.
+            - generic [ref=e140]:
+              - generic [ref=e141]:
+                - paragraph [ref=e142]:
+                  - img [ref=e143]
+                  - text: Start Time
+                - paragraph [ref=e146]: Placeholder — to be confirmed
+              - generic [ref=e147]:
+                - paragraph [ref=e148]: Cut-off
+                - paragraph [ref=e149]: Placeholder — to be confirmed
+          - generic [ref=e150]:
+            - generic [ref=e151]:
+              - paragraph [ref=e152]:
+                - img [ref=e153]
+                - text: What's Included
+              - list [ref=e156]:
+                - listitem [ref=e157]: Race bib
+                - listitem [ref=e159]: Finisher medal
+                - listitem [ref=e161]: Race kit
+                - listitem [ref=e163]: Refreshments
+                - listitem [ref=e165]: Baggage storage
+            - paragraph [ref=e168]: Route map coming soon
+            - generic [ref=e169]:
+              - link "Register for the 21 KM" [ref=e170] [cursor=pointer]:
+                - /url: "#pinnket-register-21k"
+              - paragraph [ref=e171]: Secure registration via Pinnket, our official ticketing partner.
+      - generic [ref=e172]:
+        - generic [ref=e173]:
+          - generic [ref=e174]:
+            - text: Full Marathon
+            - generic [ref=e175]: 42 KM
+          - generic [ref=e176]:
+            - text: UGX XX,XXX
+            - paragraph [ref=e177]: Registration fee
+        - generic [ref=e178]:
+          - generic [ref=e179]:
+            - generic [ref=e180]:
+              - paragraph [ref=e181]: Description
+              - paragraph [ref=e182]: The ultimate test across Uganda's highlands.
+            - generic [ref=e183]:
+              - paragraph [ref=e184]:
+                - img [ref=e185]
+                - text: Terrain
+              - paragraph [ref=e188]: Challenging highland route — elevation and farm trails.
+            - generic [ref=e189]:
+              - generic [ref=e190]:
+                - paragraph [ref=e191]:
+                  - img [ref=e192]
+                  - text: Start Time
+                - paragraph [ref=e195]: Placeholder — to be confirmed
+              - generic [ref=e196]:
+                - paragraph [ref=e197]: Cut-off
+                - paragraph [ref=e198]: Placeholder — to be confirmed
+          - generic [ref=e199]:
+            - generic [ref=e200]:
+              - paragraph [ref=e201]:
+                - img [ref=e202]
+                - text: What's Included
+              - list [ref=e205]:
+                - listitem [ref=e206]: Race bib
+                - listitem [ref=e208]: Finisher medal
+                - listitem [ref=e210]: Race kit
+                - listitem [ref=e212]: Refreshments
+                - listitem [ref=e214]: Baggage storage
+                - listitem [ref=e216]: Post-race meal
+            - paragraph [ref=e219]: Route map coming soon
+            - generic [ref=e220]:
+              - link "Register for the 42 KM" [ref=e221] [cursor=pointer]:
+                - /url: "#pinnket-register-42k"
+              - paragraph [ref=e222]: Secure registration via Pinnket, our official ticketing partner.
+    - generic [ref=e224]:
+      - paragraph [ref=e225]: Race Rules
+      - heading "General Race Rules" [level=2] [ref=e226]
+      - list [ref=e227]:
+        - listitem [ref=e228]:
+          - generic [ref=e229]: "1"
+          - text: All runners must carry their official race bib during the event.
+        - listitem [ref=e230]:
+          - generic [ref=e231]: "2"
+          - text: Headphones are permitted but runners use them at their own risk.
+        - listitem [ref=e232]:
+          - generic [ref=e233]: "3"
+          - text: Runners must follow the marked course and marshal instructions at all times.
+        - listitem [ref=e234]:
+          - generic [ref=e235]: "4"
+          - text: All distances are measured and verified at [certifying body — placeholder].
+        - listitem [ref=e236]:
+          - generic [ref=e237]: "5"
+          - text: Medical support will be stationed at regular intervals along all routes.
+        - listitem [ref=e238]:
+          - generic [ref=e239]: "6"
+          - text: Timing chips are included in bibs — chip timing used for all official results.
+  - contentinfo [ref=e240]:
+    - generic [ref=e242]:
+      - generic [ref=e243]:
+        - link "The Coffee Marathon Uganda" [ref=e244] [cursor=pointer]:
+          - /url: /
+          - img "The Coffee Marathon Uganda" [ref=e245]
+        - paragraph [ref=e246]: Empowering the IK Community of Karamoja through Coffee Farming to End Poverty.
+        - link "WhatsApp Us" [ref=e247] [cursor=pointer]:
+          - /url: https://wa.me/256750263333
+          - img [ref=e248]
+          - text: WhatsApp Us
+      - generic [ref=e250]:
+        - heading "Quick Links" [level=3] [ref=e251]
+        - list [ref=e252]:
+          - listitem [ref=e253]:
+            - link "Home" [ref=e254] [cursor=pointer]:
+              - /url: /
+          - listitem [ref=e255]:
+            - link "About" [ref=e256] [cursor=pointer]:
+              - /url: /about
+          - listitem [ref=e257]:
+            - link "Races" [ref=e258] [cursor=pointer]:
+              - /url: /races
+          - listitem [ref=e259]:
+            - link "Shop" [ref=e260] [cursor=pointer]:
+              - /url: /shop
+          - listitem [ref=e261]:
+            - link "Beyond the Marathon" [ref=e262] [cursor=pointer]:
+              - /url: /activities
+          - listitem [ref=e263]:
+            - link "Attractions" [ref=e264] [cursor=pointer]:
+              - /url: /attractions
+          - listitem [ref=e265]:
+            - link "Contact" [ref=e266] [cursor=pointer]:
+              - /url: /contact
+          - listitem [ref=e267]:
+            - link "Sponsorships" [ref=e268] [cursor=pointer]:
+              - /url: /sponsorships
+          - listitem [ref=e269]:
+            - link "News" [ref=e270] [cursor=pointer]:
+              - /url: /news
+          - listitem [ref=e271]:
+            - link "Results" [ref=e272] [cursor=pointer]:
+              - /url: /results
+      - generic [ref=e273]:
+        - heading "Race Info" [level=3] [ref=e274]
+        - paragraph [ref=e275]: 3 October 2026
+        - paragraph [ref=e276]:
+          - text: Africa Coffee Park
+          - text: Ntungamo, Uganda
+        - generic [ref=e277]:
+          - generic [ref=e278]: 5K
+          - generic [ref=e279]: 10K
+          - generic [ref=e280]: 21K
+          - generic [ref=e281]: 42K
+        - link "Register Now →" [ref=e282] [cursor=pointer]:
+          - /url: "#pinnket-register-10k"
+      - generic [ref=e283]:
+        - heading "Connect" [level=3] [ref=e284]
+        - generic [ref=e285]:
+          - link "Facebook" [ref=e286] [cursor=pointer]:
+            - /url: https://facebook.com
+            - img [ref=e287]
+          - link "Instagram" [ref=e289] [cursor=pointer]:
+            - /url: https://instagram.com
+            - img [ref=e290]
+          - link "X / Twitter" [ref=e293] [cursor=pointer]:
+            - /url: https://twitter.com
+            - img [ref=e294]
+        - link "Contact Us" [ref=e296] [cursor=pointer]:
+          - /url: /contact
+        - link "Accommodation" [ref=e297] [cursor=pointer]:
+          - /url: /accommodation
+        - paragraph [ref=e298]:
+          - text: info@coffeemarathonug.com
+          - text: +256 750 263 333
+    - generic [ref=e300]:
+      - paragraph [ref=e301]: Theme 2026
+      - paragraph [ref=e302]: “Empowering the IK Community of Karamoja through Coffee Farming to End Poverty”
+    - generic [ref=e304]:
+      - paragraph [ref=e305]: © 2026 The Coffee Marathon Uganda · Organised by Inspire Africa Group
+      - paragraph [ref=e306]: Africa Coffee Park, Ntungamo, Uganda
+  - button "Open Next.js Dev Tools" [ref=e312] [cursor=pointer]:
+    - img [ref=e313]

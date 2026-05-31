@@ -15,12 +15,6 @@ export const metadata: Metadata = {
 export default async function RacesPage() {
   const sanityRaces = await getRaces()
   const races = sanityRaces ?? []
-  const raceHeaderThemes: Record<string, string> = {
-    '5 KM': 'bg-[var(--color-green)]',
-    '10 KM': 'bg-[var(--color-orange)]',
-    '21 KM': 'bg-[var(--color-primary)]',
-    '42 KM': 'bg-[var(--color-dark)]',
-  }
 
   return (
     <>
@@ -30,7 +24,7 @@ export default async function RacesPage() {
         label="Race Information"
       />
 
-      <section className="bg-[var(--color-cream)] py-20">
+      <section className="py-20" style={{ backgroundColor: 'var(--green-mist)' }}>
         <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="space-y-10">
             {(races.length > 0 ? races : staticRaces.map(r => ({
@@ -49,61 +43,84 @@ export default async function RacesPage() {
               <div
                 key={race._id}
                 id={race.distance.replace(' ', '').toLowerCase()}
-                className="bg-[var(--color-warm-white)] rounded-2xl overflow-hidden border border-[var(--color-cream-dark)] shadow-sm"
+                className="bg-white rounded-2xl overflow-hidden border shadow-sm"
+                style={{ borderColor: 'rgba(26,107,58,0.2)' }}
               >
-                <div className={`${raceHeaderThemes[race.distance] ?? 'bg-[var(--color-dark)]'} text-white px-8 py-6 flex flex-col sm:flex-row sm:items-center justify-between gap-4`}>
+                {/* Header — distance badge in green-pale */}
+                <div
+                  className="px-8 py-6 flex flex-col sm:flex-row sm:items-center justify-between gap-4"
+                  style={{ backgroundColor: 'var(--green-primary)' }}
+                >
                   <div>
-                    <span className="font-label text-xs uppercase tracking-[0.1em] opacity-75">{race.label}</span>
-                    <div className="font-display text-5xl font-bold leading-none mt-1">{race.distance}</div>
+                    <span
+                      className="font-label text-xs uppercase tracking-[0.1em] font-bold px-3 py-1 rounded-full"
+                      style={{ backgroundColor: 'var(--green-pale)', color: 'var(--green-deep)' }}
+                    >
+                      {race.label}
+                    </span>
+                    <div className="font-display text-5xl font-bold leading-none mt-3 text-white">
+                      {race.distance}
+                    </div>
                   </div>
                   <div className="text-right">
-                    <span className="font-display text-2xl font-semibold">{race.price}</span>
-                    <p className="font-body text-xs opacity-60 mt-1">Registration fee</p>
+                    <span
+                      className="font-display text-3xl font-bold"
+                      style={{ color: 'var(--brown-mid)' }}
+                    >
+                      {race.price}
+                    </span>
+                    <p className="font-body text-xs mt-1" style={{ color: 'rgba(255,255,255,0.6)' }}>Registration fee</p>
                   </div>
                 </div>
 
                 <div className="p-8 grid grid-cols-1 md:grid-cols-2 gap-8">
                   <div className="space-y-5">
                     <div>
-                      <p className="font-label text-xs uppercase tracking-[0.1em] text-[var(--color-logo-warm-brown)] mb-1">Description</p>
-                      <p className="font-body text-sm text-[var(--color-logo-deep-brown)] leading-relaxed">{race.description}</p>
+                      <p className="font-label text-xs uppercase tracking-[0.1em] font-bold mb-1" style={{ color: 'var(--green-mid)' }}>Description</p>
+                      <p className="font-body text-sm leading-relaxed" style={{ color: 'var(--brown-dark)' }}>{race.description}</p>
                     </div>
                     <div>
-                      <p className="font-label text-xs uppercase tracking-[0.1em] text-[var(--color-logo-warm-brown)] mb-1 flex items-center gap-1.5">
+                      <p className="font-label text-xs uppercase tracking-[0.1em] font-bold mb-1 flex items-center gap-1.5" style={{ color: 'var(--green-mid)' }}>
                         <MapPin size={12} /> Terrain
                       </p>
-                      <p className="font-body text-sm text-[var(--color-logo-deep-brown)]">{race.terrain}</p>
+                      <p className="font-body text-sm" style={{ color: 'var(--brown-dark)' }}>{race.terrain}</p>
                     </div>
                     <div className="flex gap-6">
                       <div>
-                        <p className="font-label text-xs uppercase tracking-[0.1em] text-[var(--color-logo-warm-brown)] mb-1 flex items-center gap-1.5">
+                        <p className="font-label text-xs uppercase tracking-[0.1em] font-bold mb-1 flex items-center gap-1.5" style={{ color: 'var(--green-mid)' }}>
                           <Clock size={12} /> Start Time
                         </p>
-                        <p className="font-body text-sm text-[var(--color-logo-deep-brown)]">{race.startTime}</p>
+                        <p className="font-body text-sm" style={{ color: 'var(--brown-dark)' }}>{race.startTime}</p>
                       </div>
                       <div>
-                        <p className="font-label text-xs uppercase tracking-[0.1em] text-[var(--color-logo-warm-brown)] mb-1">Cut-off</p>
-                        <p className="font-body text-sm text-[var(--color-logo-deep-brown)]">{race.cutoffTime}</p>
+                        <p className="font-label text-xs uppercase tracking-[0.1em] font-bold mb-1" style={{ color: 'var(--green-mid)' }}>Cut-off</p>
+                        <p className="font-body text-sm" style={{ color: 'var(--brown-dark)' }}>{race.cutoffTime}</p>
                       </div>
                     </div>
                   </div>
 
                   <div className="space-y-5">
                     <div>
-                      <p className="font-label text-xs uppercase tracking-[0.1em] text-[var(--color-logo-warm-brown)] mb-2 flex items-center gap-1.5">
+                      <p className="font-label text-xs uppercase tracking-[0.1em] font-bold mb-2 flex items-center gap-1.5" style={{ color: 'var(--green-mid)' }}>
                         <CheckCircle2 size={12} /> What&apos;s Included
                       </p>
                       <ul className="space-y-1.5">
                         {(race.whatsIncluded ?? []).map((item) => (
-                          <li key={item} className="font-body text-sm text-[var(--color-logo-deep-brown)] flex items-center gap-2">
-                            <span className="w-1.5 h-1.5 rounded-full bg-[var(--color-primary)] shrink-0" />
+                          <li key={item} className="font-body text-sm flex items-center gap-2" style={{ color: 'var(--brown-dark)' }}>
+                            <span
+                              className="w-1.5 h-1.5 rounded-full shrink-0"
+                              style={{ backgroundColor: 'var(--green-light)' }}
+                            />
                             {item}
                           </li>
                         ))}
                       </ul>
                     </div>
-                    <div className="aspect-video bg-[var(--color-cream-dark)] rounded-xl flex items-center justify-center">
-                      <p className="font-body text-xs text-[var(--color-logo-warm-brown)] text-center px-4">Route map coming soon</p>
+                    <div
+                      className="aspect-video rounded-xl flex items-center justify-center"
+                      style={{ backgroundColor: 'var(--green-mist)' }}
+                    >
+                      <p className="font-body text-xs text-center px-4" style={{ color: 'var(--green-mid)' }}>Route map coming soon</p>
                     </div>
                     <PinnketCTA href={race.pinnketUrl} label={`Register for the ${race.distance}`} showNote />
                   </div>
@@ -114,9 +131,15 @@ export default async function RacesPage() {
         </div>
       </section>
 
-      <section className="bg-[var(--color-warm-white)] py-20">
+      {/* General Race Rules */}
+      <section className="py-20" style={{ backgroundColor: 'var(--cream)' }}>
         <div className="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8">
-          <h2 className="font-display text-3xl font-semibold text-[var(--color-logo-forest)] mb-6 text-center">General Race Rules</h2>
+          <p className="font-label text-xs uppercase tracking-[0.12em] font-bold mb-3 text-center" style={{ color: 'var(--green-mid)' }}>
+            Race Rules
+          </p>
+          <h2 className="font-display text-3xl font-semibold mb-8 text-center" style={{ color: 'var(--brown-heading)' }}>
+            General Race Rules
+          </h2>
           <ul className="space-y-3">
             {[
               'All runners must carry their official race bib during the event.',
@@ -126,8 +149,13 @@ export default async function RacesPage() {
               'Medical support will be stationed at regular intervals along all routes.',
               'Timing chips are included in bibs — chip timing used for all official results.',
             ].map((rule, i) => (
-              <li key={i} className="flex items-start gap-3 font-body text-sm text-[var(--color-logo-deep-brown)]">
-                <span className="font-label font-bold text-[var(--color-logo-warm-brown)] shrink-0 mt-0.5">{i + 1}.</span>
+              <li key={i} className="flex items-start gap-3 font-body text-sm" style={{ color: 'var(--brown-dark)' }}>
+                <span
+                  className="font-label font-bold shrink-0 mt-0.5 w-6 h-6 rounded-full flex items-center justify-center text-xs"
+                  style={{ backgroundColor: 'var(--green-primary)', color: 'white' }}
+                >
+                  {i + 1}
+                </span>
                 {rule}
               </li>
             ))}

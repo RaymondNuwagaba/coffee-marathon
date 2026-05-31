@@ -1,4 +1,4 @@
-import { ArrowRight } from 'lucide-react'
+import { ArrowRight, CheckCircle2 } from 'lucide-react'
 import { PINNKET } from '@/lib/pinnket'
 
 interface RaceCardProps {
@@ -18,18 +18,9 @@ interface RaceCardProps {
   startTime?: string
 }
 
-const distanceColors: Record<string, { color: string; textColor: string }> = {
-  '5 KM': { color: 'bg-[var(--color-green)]', textColor: 'text-white' },
-  '10 KM': { color: 'bg-[var(--color-orange)]', textColor: 'text-white' },
-  '21 KM': { color: 'bg-[var(--color-primary)]', textColor: 'text-white' },
-  '42 KM': { color: 'bg-[var(--color-dark)]', textColor: 'text-white' },
-}
-
 export default function RaceCard({
   distance,
   label,
-  color,
-  textColor,
   price,
   desc,
   description,
@@ -41,80 +32,77 @@ export default function RaceCard({
   included,
   startTime,
 }: RaceCardProps) {
-  const fallback = distanceColors[distance] ?? { color: 'bg-[var(--color-dark)]', textColor: 'text-white' }
-  const cardColor = color ?? fallback.color
-  const cardText = textColor ?? fallback.textColor
   const displayText = desc ?? description ?? ''
   const href = pinnketUrl ?? (pinnketKey ? PINNKET[pinnketKey] : '#register')
 
   return (
-    <div
-      className={`${cardColor} ${cardText} rounded-2xl p-6 flex flex-col gap-4 hover:scale-[1.02] hover:shadow-xl transition-all duration-300`}
-    >
-      <div>
-        <span className="font-label text-xs font-bold uppercase tracking-[0.1em] opacity-80">{label}</span>
-        <div className="font-display text-5xl font-bold mt-1 leading-none">{distance}</div>
+    <div className="bg-white rounded-2xl overflow-hidden border hover:shadow-lg transition-all duration-300" style={{ borderColor: 'rgba(26,107,58,0.2)' }}>
+      {/* Header */}
+      <div className="px-6 pt-6 pb-4" style={{ backgroundColor: 'var(--green-pale)' }}>
+        <span
+          className="font-label text-xs font-bold uppercase tracking-[0.1em] px-2.5 py-1 rounded-full"
+          style={{ backgroundColor: 'var(--green-primary)', color: 'white' }}
+        >
+          {label}
+        </span>
+        <div
+          className="font-display text-5xl font-bold mt-2 leading-none"
+          style={{ color: 'var(--green-deep)' }}
+        >
+          {distance}
+        </div>
       </div>
 
-      <p className="font-body text-sm opacity-80 leading-relaxed">{displayText}</p>
+      <div className="p-6 flex flex-col gap-4">
+        <p className="font-body text-sm leading-relaxed" style={{ color: 'var(--brown-dark)' }}>{displayText}</p>
 
-      {expanded && terrain && (
-        <div className="space-y-3 border-t border-current/10 pt-4">
-          <div>
-            <span className="font-body text-xs uppercase tracking-wider opacity-60">Terrain</span>
-            <p className="font-body text-sm mt-0.5">{terrain}</p>
+        {expanded && terrain && (
+          <div className="space-y-3 border-t pt-4" style={{ borderColor: 'rgba(26,107,58,0.12)' }}>
+            <div>
+              <span className="font-body text-xs uppercase tracking-wider" style={{ color: 'var(--green-mid)' }}>Terrain</span>
+              <p className="font-body text-sm mt-0.5" style={{ color: 'var(--brown-dark)' }}>{terrain}</p>
+            </div>
+            {startTime && (
+              <div>
+                <span className="font-body text-xs uppercase tracking-wider" style={{ color: 'var(--green-mid)' }}>Start Time</span>
+                <p className="font-body text-sm mt-0.5" style={{ color: 'var(--brown-dark)' }}>{startTime}</p>
+              </div>
+            )}
+            {cutOff && (
+              <div>
+                <span className="font-body text-xs uppercase tracking-wider" style={{ color: 'var(--green-mid)' }}>Cut-off</span>
+                <p className="font-body text-sm mt-0.5" style={{ color: 'var(--brown-dark)' }}>{cutOff}</p>
+              </div>
+            )}
+            {included && included.length > 0 && (
+              <div>
+                <span className="font-body text-xs uppercase tracking-wider" style={{ color: 'var(--green-mid)' }}>Included</span>
+                <ul className="mt-1 space-y-1">
+                  {included.map((item) => (
+                    <li key={item} className="font-body text-sm flex items-center gap-2" style={{ color: 'var(--brown-dark)' }}>
+                      <CheckCircle2 size={12} style={{ color: 'var(--green-light)' }} className="shrink-0" />
+                      {item}
+                    </li>
+                  ))}
+                </ul>
+              </div>
+            )}
           </div>
-          {startTime && (
-            <div>
-              <span className="font-body text-xs uppercase tracking-wider opacity-60">Start Time</span>
-              <p className="font-body text-sm mt-0.5">{startTime}</p>
-            </div>
-          )}
-          {cutOff && (
-            <div>
-              <span className="font-body text-xs uppercase tracking-wider opacity-60">Cut-off</span>
-              <p className="font-body text-sm mt-0.5">{cutOff}</p>
-            </div>
-          )}
-          {included && included.length > 0 && (
-            <div>
-              <span className="font-body text-xs uppercase tracking-wider opacity-60">Included</span>
-              <ul className="mt-1 space-y-1">
-                {included.map((item) => (
-                  <li key={item} className="font-body text-sm flex items-center gap-2">
-                    <span className="w-1.5 h-1.5 rounded-full bg-current opacity-60 shrink-0" />
-                    {item}
-                  </li>
-                ))}
-              </ul>
-            </div>
-          )}
-        </div>
-      )}
+        )}
 
-      <div className="mt-auto flex items-center justify-between">
-        <span className="font-display text-lg font-semibold">{price}</span>
-        {expanded ? (
+        <div className="mt-auto flex items-center justify-between pt-2 border-t" style={{ borderColor: 'rgba(26,107,58,0.12)' }}>
+          <span className="font-display text-lg font-semibold" style={{ color: 'var(--brown-mid)' }}>{price}</span>
           <a
             href={href}
             target="_blank"
             rel="noopener noreferrer"
-            className="inline-flex items-center gap-2 px-4 py-2 rounded-full border border-white bg-white/15 font-label font-bold uppercase tracking-[0.08em] text-xs hover:bg-white/25 transition-colors"
-          >
-            Register for {distance}
-            <ArrowRight size={12} />
-          </a>
-        ) : (
-          <a
-            href={href}
-            target="_blank"
-            rel="noopener noreferrer"
-            className="inline-flex items-center gap-2 px-4 py-2 rounded-full border border-white bg-white/15 font-label font-bold uppercase tracking-[0.08em] text-xs hover:bg-white/25 transition-colors"
+            className="inline-flex items-center gap-2 px-4 py-2 rounded-full font-label font-bold uppercase tracking-[0.08em] text-xs transition-colors"
+            style={{ backgroundColor: 'var(--green-primary)', color: 'white' }}
           >
             Register
             <ArrowRight size={12} />
           </a>
-        )}
+        </div>
       </div>
     </div>
   )

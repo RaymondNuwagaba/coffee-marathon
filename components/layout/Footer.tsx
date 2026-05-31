@@ -7,7 +7,7 @@ import { PINNKET } from '@/lib/pinnket'
 
 export default function Footer() {
   return (
-    <footer className="bg-[#111111] text-white border-t-4 border-[var(--color-primary)]">
+    <footer style={{ backgroundColor: 'var(--green-deep)' }} className="text-white">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12">
 
@@ -22,14 +22,15 @@ export default function Footer() {
                 className="object-contain"
               />
             </Link>
-            <p className="font-body text-sm text-white/55 leading-relaxed">
+            <p className="font-body text-sm leading-relaxed" style={{ color: 'rgba(255,255,255,0.7)' }}>
               Empowering the IK Community of Karamoja through Coffee Farming to End Poverty.
             </p>
             <a
               href="https://wa.me/256750263333"
               target="_blank"
               rel="noopener noreferrer"
-              className="mt-6 inline-flex items-center gap-2 bg-[var(--color-forest)] text-white px-4 py-2 rounded-full font-label text-sm font-bold uppercase tracking-[0.08em] hover:bg-[var(--color-forest-light)] transition-colors"
+              className="mt-6 inline-flex items-center gap-2 px-4 py-2 rounded-full font-label text-sm font-bold uppercase tracking-[0.08em] transition-colors"
+              style={{ backgroundColor: 'var(--green-mid)', color: 'white' }}
             >
               <MessageCircle size={16} />
               WhatsApp Us
@@ -38,7 +39,7 @@ export default function Footer() {
 
           {/* Col 2: Quick links */}
           <div>
-            <h3 className="font-label text-xs font-bold uppercase tracking-[0.12em] text-[var(--color-logo-forest)] mb-4">
+            <h3 className="font-label text-xs font-bold uppercase tracking-[0.12em] mb-4" style={{ color: 'var(--green-pale)' }}>
               Quick Links
             </h3>
             <ul className="space-y-2">
@@ -46,38 +47,44 @@ export default function Footer() {
                 <li key={link.href}>
                   <Link
                     href={link.href}
-                    className="font-body text-sm text-white/50 hover:text-[var(--color-logo-forest)] transition-colors"
+                    className="font-body text-sm transition-colors hover:text-white"
+                    style={{ color: 'var(--green-pale)' }}
                   >
                     {link.label}
                   </Link>
                 </li>
               ))}
               <li>
-                <Link href="/sponsorships" className="font-body text-sm text-white/50 hover:text-[var(--color-logo-forest)] transition-colors">Sponsorships</Link>
+                <Link href="/sponsorships" className="font-body text-sm transition-colors hover:text-white" style={{ color: 'var(--green-pale)' }}>Sponsorships</Link>
               </li>
               <li>
-                <Link href="/news" className="font-body text-sm text-white/50 hover:text-[var(--color-logo-forest)] transition-colors">News</Link>
+                <Link href="/news" className="font-body text-sm transition-colors hover:text-white" style={{ color: 'var(--green-pale)' }}>News</Link>
               </li>
               <li>
-                <Link href="/results" className="font-body text-sm text-white/50 hover:text-[var(--color-logo-forest)] transition-colors">Results</Link>
+                <Link href="/results" className="font-body text-sm transition-colors hover:text-white" style={{ color: 'var(--green-pale)' }}>Results</Link>
               </li>
             </ul>
           </div>
 
           {/* Col 3: Race info */}
           <div>
-            <h3 className="font-label text-xs font-bold uppercase tracking-[0.12em] text-[var(--color-logo-forest)] mb-4">
+            <h3 className="font-label text-xs font-bold uppercase tracking-[0.12em] mb-4" style={{ color: 'var(--green-pale)' }}>
               Race Info
             </h3>
-            <p className="font-body text-sm text-white/50 mb-1">3 October 2026</p>
-            <p className="font-body text-sm text-white/50 mb-4">
+            <p className="font-body text-sm mb-1" style={{ color: 'rgba(255,255,255,0.7)' }}>3 October 2026</p>
+            <p className="font-body text-sm mb-4" style={{ color: 'rgba(255,255,255,0.7)' }}>
               Africa Coffee Park<br />Ntungamo, Uganda
             </p>
             <div className="flex flex-wrap gap-2 mb-5">
               {['5K', '10K', '21K', '42K'].map((d) => (
                 <span
                   key={d}
-                  className="font-label text-xs font-bold uppercase tracking-[0.08em] px-2.5 py-1 rounded-full bg-white/10 text-[var(--color-logo-forest)] border border-white/20"
+                  className="font-label text-xs font-bold uppercase tracking-[0.08em] px-2.5 py-1 rounded-full border"
+                  style={{
+                    backgroundColor: 'rgba(255,255,255,0.08)',
+                    color: 'var(--green-pale)',
+                    borderColor: 'rgba(255,255,255,0.15)',
+                  }}
                 >
                   {d}
                 </span>
@@ -85,7 +92,8 @@ export default function Footer() {
             </div>
             <Link
               href={PINNKET.register10k}
-              className="inline-flex items-center bg-[var(--color-accent)] text-[var(--color-dark)] px-4 py-2 rounded-full font-label text-sm font-bold uppercase tracking-[0.08em] hover:bg-[var(--color-amber-dark)] transition-colors"
+              className="inline-flex items-center px-4 py-2 rounded-full font-label text-sm font-bold uppercase tracking-[0.08em] transition-colors"
+              style={{ backgroundColor: 'var(--green-primary)', color: 'white' }}
             >
               Register Now →
             </Link>
@@ -93,7 +101,7 @@ export default function Footer() {
 
           {/* Col 4: Connect */}
           <div>
-            <h3 className="font-label text-xs font-bold uppercase tracking-[0.12em] text-[var(--color-logo-forest)] mb-4">
+            <h3 className="font-label text-xs font-bold uppercase tracking-[0.12em] mb-4" style={{ color: 'var(--green-pale)' }}>
               Connect
             </h3>
             <div className="flex gap-3 mb-6">
@@ -108,19 +116,23 @@ export default function Footer() {
                   target="_blank"
                   rel="noopener noreferrer"
                   aria-label={label}
-                  className="w-10 h-10 rounded-full bg-white/10 flex items-center justify-center text-white/55 hover:text-[#111111] hover:bg-[var(--color-accent)] transition-all"
+                  className="w-10 h-10 rounded-full flex items-center justify-center transition-all"
+                  style={{
+                    backgroundColor: 'rgba(255,255,255,0.08)',
+                    color: 'var(--green-pale)',
+                  }}
                 >
                   {icon}
                 </a>
               ))}
             </div>
-            <Link href="/contact" className="font-body text-sm text-white/50 hover:text-[var(--color-logo-forest)] transition-colors block mb-2">
+            <Link href="/contact" className="font-body text-sm transition-colors hover:text-white block mb-2" style={{ color: 'var(--green-pale)' }}>
               Contact Us
             </Link>
-            <Link href="/accommodation" className="font-body text-sm text-white/50 hover:text-[var(--color-logo-forest)] transition-colors block">
+            <Link href="/accommodation" className="font-body text-sm transition-colors hover:text-white block" style={{ color: 'var(--green-pale)' }}>
               Accommodation
             </Link>
-            <p className="mt-6 font-body text-xs text-white/30">
+            <p className="mt-6 font-body text-xs" style={{ color: 'rgba(255,255,255,0.35)' }}>
               info@coffeemarathonug.com<br />
               +256 750 263 333
             </p>
@@ -128,22 +140,22 @@ export default function Footer() {
         </div>
       </div>
 
-      {/* Theme statement above copyright */}
-      <div className="border-t border-white/10 bg-white/5">
+      {/* Theme statement */}
+      <div className="border-t" style={{ borderColor: 'rgba(255,255,255,0.1)', backgroundColor: 'rgba(255,255,255,0.03)' }}>
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-5 text-center">
-          <p className="font-label text-xs text-[var(--color-logo-forest)]/70 uppercase tracking-[0.12em] mb-1">Theme 2026</p>
-          <p className="font-display text-base font-semibold text-[var(--color-logo-forest)] italic leading-snug">
+          <p className="font-label text-xs uppercase tracking-[0.12em] mb-1" style={{ color: 'rgba(194,237,210,0.6)' }}>Theme 2026</p>
+          <p className="font-display text-base font-semibold italic leading-snug" style={{ color: 'var(--green-pale)' }}>
             &ldquo;Empowering the IK Community of Karamoja through Coffee Farming to End Poverty&rdquo;
           </p>
         </div>
       </div>
 
-      <div className="border-t border-white/10">
+      <div className="border-t" style={{ borderColor: 'rgba(255,255,255,0.1)' }}>
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-4 flex flex-col sm:flex-row items-center justify-between gap-2">
-          <p className="font-body text-xs text-white/40">
+          <p className="font-body text-xs" style={{ color: 'rgba(255,255,255,0.4)' }}>
             © 2026 The Coffee Marathon Uganda · Organised by Inspire Africa Group
           </p>
-          <p className="font-body text-xs text-white/30">
+          <p className="font-body text-xs" style={{ color: 'rgba(255,255,255,0.3)' }}>
             Africa Coffee Park, Ntungamo, Uganda
           </p>
         </div>

@@ -1,0 +1,219 @@
+- generic [active] [ref=e1]:
+  - generic [ref=e2]:
+    - paragraph [ref=e4]: Tyrese Gibson Live At Coffee Marathon 2026 · 3 October · Africa Coffee Park
+    - banner [ref=e5]:
+      - generic [ref=e7]:
+        - link "The Coffee Marathon Uganda The Coffee Marathon" [ref=e8] [cursor=pointer]:
+          - /url: /
+          - img "The Coffee Marathon Uganda" [ref=e9]
+          - generic [ref=e10]: The Coffee Marathon
+        - navigation [ref=e11]:
+          - link "Home" [ref=e12] [cursor=pointer]:
+            - /url: /
+          - link "About" [ref=e13] [cursor=pointer]:
+            - /url: /about
+            - text: About
+          - link "Races" [ref=e15] [cursor=pointer]:
+            - /url: /races
+          - link "Shop" [ref=e16] [cursor=pointer]:
+            - /url: /shop
+          - link "Beyond the Marathon" [ref=e17] [cursor=pointer]:
+            - /url: /activities
+          - link "Attractions" [ref=e18] [cursor=pointer]:
+            - /url: /attractions
+          - link "Contact" [ref=e19] [cursor=pointer]:
+            - /url: /contact
+        - link "Register Now" [ref=e21] [cursor=pointer]:
+          - /url: "#pinnket-register-10k"
+  - main [ref=e22]:
+    - generic [ref=e24]:
+      - paragraph [ref=e25]: About the Event
+      - heading "Our Story" [level=1] [ref=e26]
+      - paragraph [ref=e27]: Born from Uganda's coffee fields. Built to celebrate the women who make it possible — and to plant roots that last.
+    - generic [ref=e30]:
+      - generic [ref=e31]:
+        - paragraph [ref=e32]: Why We Run
+        - heading "Why We Started" [level=2] [ref=e33]
+        - paragraph [ref=e34]: We started running because we saw untapped potential in coffee-growing communities — especially among women — whose labour sustains the industry but whose voices and opportunities are often overlooked. Coffee farming in Uganda is more than an economic activity; it is a way of life passed down through generations.
+        - paragraph [ref=e35]: Yet many women remain locked out of decision-making, fair markets, and financial security. The Coffee Marathon was born as a bold response to uplift these communities, using visibility and collective action to create opportunity where it is most needed.
+        - paragraph [ref=e36]: At the same time, we wanted to spotlight Ugandan coffee on the global stage — not just as a high-quality product, but as a story of people, culture, and resilience.
+      - img "Athletes lined up at the start of The Coffee Marathon" [ref=e38]
+    - generic [ref=e41]:
+      - img "Female runner finishing — Coffee Marathon 2025" [ref=e43]
+      - generic [ref=e44]:
+        - paragraph [ref=e45]: The Movement
+        - heading "Why We Continue" [level=2] [ref=e46]
+        - paragraph [ref=e47]: Today, we continue to run because awareness alone is no longer enough. While visibility opened doors, real change requires deeper, sustained engagement. The Coffee Marathon has evolved from a moment of recognition into a movement for action — one that goes beyond telling stories to actively changing lives.
+        - paragraph [ref=e48]: Our focus now is on moving from visibility to sustainable empowerment. This means supporting initiatives that strengthen women's participation in coffee value chains, improve livelihoods, and build local capacity.
+        - paragraph [ref=e49]: Each race is a renewed commitment to measurable impact — connecting runners, partners, and communities in ways that create lasting economic and social value long after the finish line.
+    - generic [ref=e51]:
+      - generic [ref=e52]:
+        - paragraph [ref=e53]: 2026 Theme
+        - heading "Empowering the IK Community of Karamoja" [level=2] [ref=e54]
+        - paragraph [ref=e56]: “Empowering the IK Community of Karamoja through Coffee Farming to End Poverty”
+      - generic [ref=e57]:
+        - generic [ref=e58]:
+          - heading "Who Are the Ik, and Why They Matter" [level=3] [ref=e59]
+          - paragraph [ref=e60]: The Ik are one of Uganda's most marginalised and least understood indigenous communities, living in the remote mountainous region of Karamoja. For generations, they have faced extreme isolation, food insecurity, and limited access to land, education, and economic opportunity.
+          - paragraph [ref=e61]: They matter because they represent both a moral responsibility and an opportunity for transformation. Empowering the Ik is not about charity — it is about restoring dignity, agency, and inclusion.
+          - heading "Why Coffee Farming Is the Path Out of Poverty" [level=3] [ref=e62]
+          - paragraph [ref=e63]: Coffee farming offers a long-term, climate-resilient livelihood that can thrive in suitable highland conditions while generating consistent income over time. For the Ik community, coffee farming represents more than income — it creates opportunities for skills development, cooperative structures, and integration into national and global value chains.
+        - generic [ref=e64]:
+          - generic [ref=e68]:
+            - heading "Introduce & Scale Sustainable Coffee Farming" [level=4] [ref=e69]
+            - paragraph [ref=e70]: Identifying suitable land, promoting climate-smart practices, and building community-led systems that ensure coffee farming thrives across seasons and generations.
+          - generic [ref=e74]:
+            - heading "Equip Households with Skills, Seedlings & Market Access" [level=4] [ref=e75]
+            - paragraph [ref=e76]: Households receive high-quality coffee seedlings, hands-on training in sustainable farming, and links to reliable markets and cooperative structures.
+          - generic [ref=e80]:
+            - heading "Create Long-Term Income and Food Security" [level=4] [ref=e81]
+            - paragraph [ref=e82]: Coffee farming provides predictable income that allows households to plan — covering education, healthcare, and daily needs — while diversifying crops for food security.
+          - generic [ref=e86]:
+            - heading "Reduce Dependence and End Cycles of Poverty" [level=4] [ref=e87]
+            - paragraph [ref=e88]: By investing in productive assets rather than short-term aid, communities gain control over their own livelihoods. The goal is self-reliance and dignified economic participation.
+      - generic [ref=e90]:
+        - img "Inspire Africa Group — IK Community outreach" [ref=e91]
+        - paragraph [ref=e94]: Dr. Nelson Tugume, CEO of Inspire Africa Group, during one of the humanitarian outreaches in the IK community.
+    - generic [ref=e97]:
+      - generic [ref=e98]:
+        - paragraph [ref=e99]: Coffee with a Cause
+        - heading "More than a crop. A story." [level=2] [ref=e100]
+        - paragraph [ref=e101]: The true value of coffee goes far beyond its taste or price — it lies in its story. When coffee is deeply linked to its origin, its people, and a clear purpose, it becomes more than a commodity; it becomes a product with meaning.
+        - paragraph [ref=e102]: Ultimately, when people understand the journey of coffee — from soil to cup, from farmer to consumer — they value it more. And when coffee is valued more, farmers earn more, communities grow stronger, and Uganda's coffee earns its rightful place as a premium, ethical product on the global stage.
+        - link "Run with a cause" [ref=e103] [cursor=pointer]:
+          - /url: "#pinnket-register-10k"
+          - text: Run with a cause
+          - img [ref=e104]
+      - img "Thousands of runners and supporters at Africa Coffee Park" [ref=e107]
+    - generic [ref=e110]:
+      - generic [ref=e111]:
+        - paragraph [ref=e112]: Our Journey
+        - heading "Five Years of Impact" [level=2] [ref=e113]
+      - generic [ref=e116]:
+        - generic [ref=e117]:
+          - generic [ref=e119]: "2021"
+          - paragraph [ref=e121]: First Coffee Marathon — the movement begins
+        - generic [ref=e122]:
+          - generic [ref=e124]: "2022"
+          - paragraph [ref=e126]: Growing the community across East Africa
+        - generic [ref=e127]:
+          - generic [ref=e129]: "2023"
+          - paragraph [ref=e131]: Expanding impact — new categories and partners
+        - generic [ref=e132]:
+          - generic [ref=e134]: "2024"
+          - paragraph [ref=e136]: International runners join from 10+ countries
+        - generic [ref=e137]:
+          - generic [ref=e139]: "2025"
+          - paragraph [ref=e141]: Diamond Platnumz headlines the concert — record turnout
+        - generic [ref=e142]:
+          - generic [ref=e144]: "2026"
+          - paragraph [ref=e146]: Tyrese Gibson joins — biggest edition yet, 3 October, Africa Coffee Park
+    - generic [ref=e148]:
+      - paragraph [ref=e149]: Meet the Team
+      - heading "The people behind the race" [level=2] [ref=e150]
+      - generic [ref=e151]:
+        - generic [ref=e152]:
+          - img [ref=e154]
+          - generic [ref=e159]:
+            - paragraph [ref=e160]: Dr. Nelson Tugume
+            - paragraph [ref=e161]: CEO, Inspire Africa Group
+        - generic [ref=e162]:
+          - img [ref=e164]
+          - generic [ref=e169]:
+            - paragraph [ref=e170]: Team Member Name
+            - paragraph [ref=e171]: Race Director
+        - generic [ref=e172]:
+          - img [ref=e174]
+          - generic [ref=e179]:
+            - paragraph [ref=e180]: Team Member Name
+            - paragraph [ref=e181]: Event Coordinator
+        - generic [ref=e182]:
+          - img [ref=e184]
+          - generic [ref=e189]:
+            - paragraph [ref=e190]: Team Member Name
+            - paragraph [ref=e191]: Community Partnerships
+      - paragraph [ref=e192]: Additional team profiles to be added by client
+  - contentinfo [ref=e193]:
+    - generic [ref=e195]:
+      - generic [ref=e196]:
+        - link "The Coffee Marathon Uganda" [ref=e197] [cursor=pointer]:
+          - /url: /
+          - img "The Coffee Marathon Uganda" [ref=e198]
+        - paragraph [ref=e199]: Empowering the IK Community of Karamoja through Coffee Farming to End Poverty.
+        - link "WhatsApp Us" [ref=e200] [cursor=pointer]:
+          - /url: https://wa.me/256750263333
+          - img [ref=e201]
+          - text: WhatsApp Us
+      - generic [ref=e203]:
+        - heading "Quick Links" [level=3] [ref=e204]
+        - list [ref=e205]:
+          - listitem [ref=e206]:
+            - link "Home" [ref=e207] [cursor=pointer]:
+              - /url: /
+          - listitem [ref=e208]:
+            - link "About" [ref=e209] [cursor=pointer]:
+              - /url: /about
+          - listitem [ref=e210]:
+            - link "Races" [ref=e211] [cursor=pointer]:
+              - /url: /races
+          - listitem [ref=e212]:
+            - link "Shop" [ref=e213] [cursor=pointer]:
+              - /url: /shop
+          - listitem [ref=e214]:
+            - link "Beyond the Marathon" [ref=e215] [cursor=pointer]:
+              - /url: /activities
+          - listitem [ref=e216]:
+            - link "Attractions" [ref=e217] [cursor=pointer]:
+              - /url: /attractions
+          - listitem [ref=e218]:
+            - link "Contact" [ref=e219] [cursor=pointer]:
+              - /url: /contact
+          - listitem [ref=e220]:
+            - link "Sponsorships" [ref=e221] [cursor=pointer]:
+              - /url: /sponsorships
+          - listitem [ref=e222]:
+            - link "News" [ref=e223] [cursor=pointer]:
+              - /url: /news
+          - listitem [ref=e224]:
+            - link "Results" [ref=e225] [cursor=pointer]:
+              - /url: /results
+      - generic [ref=e226]:
+        - heading "Race Info" [level=3] [ref=e227]
+        - paragraph [ref=e228]: 3 October 2026
+        - paragraph [ref=e229]:
+          - text: Africa Coffee Park
+          - text: Ntungamo, Uganda
+        - generic [ref=e230]:
+          - generic [ref=e231]: 5K
+          - generic [ref=e232]: 10K
+          - generic [ref=e233]: 21K
+          - generic [ref=e234]: 42K
+        - link "Register Now →" [ref=e235] [cursor=pointer]:
+          - /url: "#pinnket-register-10k"
+      - generic [ref=e236]:
+        - heading "Connect" [level=3] [ref=e237]
+        - generic [ref=e238]:
+          - link "Facebook" [ref=e239] [cursor=pointer]:
+            - /url: https://facebook.com
+            - img [ref=e240]
+          - link "Instagram" [ref=e242] [cursor=pointer]:
+            - /url: https://instagram.com
+            - img [ref=e243]
+          - link "X / Twitter" [ref=e246] [cursor=pointer]:
+            - /url: https://twitter.com
+            - img [ref=e247]
+        - link "Contact Us" [ref=e249] [cursor=pointer]:
+          - /url: /contact
+        - link "Accommodation" [ref=e250] [cursor=pointer]:
+          - /url: /accommodation
+        - paragraph [ref=e251]:
+          - text: info@coffeemarathonug.com
+          - text: +256 750 263 333
+    - generic [ref=e253]:
+      - paragraph [ref=e254]: Theme 2026
+      - paragraph [ref=e255]: “Empowering the IK Community of Karamoja through Coffee Farming to End Poverty”
+    - generic [ref=e257]:
+      - paragraph [ref=e258]: © 2026 The Coffee Marathon Uganda · Organised by Inspire Africa Group
+      - paragraph [ref=e259]: Africa Coffee Park, Ntungamo, Uganda
+  - button "Open Next.js Dev Tools" [ref=e265] [cursor=pointer]:
+    - img [ref=e266]

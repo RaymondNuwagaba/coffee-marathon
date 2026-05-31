@@ -19,12 +19,12 @@ export default function ContactPage() {
         label="Get in Touch"
       />
 
-      <section className="bg-[var(--color-cream)] py-20">
+      <section className="py-20" style={{ backgroundColor: 'var(--green-mist)' }}>
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-16">
             {/* Contact form */}
-            <div>
-              <h2 className="font-display text-2xl font-semibold text-[var(--color-logo-forest)] mb-6">
+            <div className="bg-white rounded-2xl p-8 border" style={{ borderColor: 'rgba(26,107,58,0.15)' }}>
+              <h2 className="font-display text-2xl font-semibold mb-6" style={{ color: 'var(--brown-heading)' }}>
                 Send a Message
               </h2>
               <ContactForm />
@@ -33,7 +33,7 @@ export default function ContactPage() {
             {/* Contact details */}
             <div className="space-y-8">
               <div>
-                <h2 className="font-display text-2xl font-semibold text-[var(--color-logo-forest)] mb-6">
+                <h2 className="font-display text-2xl font-semibold mb-6" style={{ color: 'var(--brown-heading)' }}>
                   Other Ways to Reach Us
                 </h2>
                 <div className="space-y-4">
@@ -60,29 +60,33 @@ export default function ContactPage() {
                     <a
                       key={label}
                       href={href}
-                    className="flex items-start gap-4 p-4 bg-[var(--color-warm-white)] rounded-xl border border-[var(--color-cream-dark)] hover:border-[var(--color-logo-forest)] transition-colors group"
-                  >
-                    <div className="w-10 h-10 rounded-full bg-[var(--color-seedling-light)] flex items-center justify-center shrink-0">
-                      <Icon size={16} className="text-[var(--color-logo-forest)]" />
-                    </div>
-                    <div>
-                      <p className="font-label text-xs uppercase tracking-[0.1em] text-[var(--color-logo-warm-brown)]">
-                        {label}
-                      </p>
-                      <p className="font-body text-sm font-semibold text-[var(--color-logo-deep-brown)] group-hover:text-[var(--color-logo-forest)] transition-colors">
-                        {value}
-                      </p>
-                    </div>
-                  </a>
-                ))}
+                      className="flex items-start gap-4 p-4 rounded-xl border transition-colors group"
+                      style={{ backgroundColor: 'var(--green-pale)', borderColor: 'rgba(26,107,58,0.2)' }}
+                    >
+                      <div
+                        className="w-10 h-10 rounded-full flex items-center justify-center shrink-0"
+                        style={{ backgroundColor: 'var(--green-primary)' }}
+                      >
+                        <Icon size={16} className="text-white" />
+                      </div>
+                      <div>
+                        <p className="font-label text-xs uppercase tracking-[0.1em] font-bold" style={{ color: 'var(--green-mid)' }}>
+                          {label}
+                        </p>
+                        <p className="font-body text-sm font-semibold" style={{ color: 'var(--brown-dark)' }}>
+                          {value}
+                        </p>
+                      </div>
+                    </a>
+                  ))}
+                </div>
               </div>
-            </div>
 
-            {/* Socials */}
-            <div>
-              <h3 className="font-label text-xs uppercase tracking-[0.1em] text-[var(--color-logo-warm-brown)] mb-4">
-                Follow Us
-              </h3>
+              {/* Socials */}
+              <div>
+                <h3 className="font-label text-xs uppercase tracking-[0.1em] font-bold mb-4" style={{ color: 'var(--green-mid)' }}>
+                  Follow Us
+                </h3>
                 <div className="flex flex-wrap gap-3">
                   {[
                     { icon: FacebookIcon, href: 'https://facebook.com', label: 'Facebook' },
@@ -95,7 +99,8 @@ export default function ContactPage() {
                       target="_blank"
                       rel="noopener noreferrer"
                       aria-label={label}
-                      className="w-10 h-10 rounded-full bg-[var(--color-dark)] flex items-center justify-center text-[var(--color-cream)] hover:bg-[var(--color-accent)] hover:text-[var(--color-dark)] transition-colors"
+                      className="w-10 h-10 rounded-full flex items-center justify-center transition-colors"
+                      style={{ backgroundColor: 'var(--green-primary)', color: 'white' }}
                     >
                       <Icon size={16} />
                     </a>
@@ -113,10 +118,13 @@ export default function ContactPage() {
               </div>
 
               {/* Map placeholder */}
-              <div className="aspect-video bg-[var(--color-cream-dark)] rounded-2xl flex items-center justify-center border border-[var(--color-border)]">
+              <div
+                className="aspect-video rounded-2xl flex items-center justify-center border"
+                style={{ backgroundColor: 'var(--green-pale)', borderColor: 'rgba(26,107,58,0.2)' }}
+              >
                 <div className="text-center">
-                  <MapPin size={24} className="text-[var(--color-logo-warm-brown)]/50 mx-auto mb-2" />
-                  <p className="font-body text-xs text-[var(--color-logo-warm-brown)]">
+                  <MapPin size={24} className="mx-auto mb-2" style={{ color: 'var(--green-primary)', opacity: 0.5 }} />
+                  <p className="font-body text-xs" style={{ color: 'var(--green-mid)' }}>
                     Google Maps embed — to be added
                   </p>
                 </div>

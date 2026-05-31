@@ -1,40 +1,58 @@
 import type { Metadata } from 'next'
 import Image from 'next/image'
 import Link from 'next/link'
-import { ArrowRight, MapPin } from 'lucide-react'
+import { ArrowRight, Zap, Leaf, Users } from 'lucide-react'
 import CountdownClock from '@/components/ui/CountdownClock'
 import RaceCard from '@/components/ui/RaceCard'
-import MissionSection from '@/components/sections/MissionSection'
-import Highlights2025Section from '@/components/sections/Highlights2025Section'
 import ColdBrewSection from '@/components/sections/ColdBrewSection'
-import { FacebookIcon, InstagramIcon, TwitterXIcon } from '@/components/ui/SocialIcons'
 import {
   getRaces,
   getSiteSettings,
   getSponsors,
 } from '@/sanity/lib/fetch'
-import { races as staticRaces, stats as staticStats } from '@/lib/content'
+import { races as staticRaces } from '@/lib/content'
 import { PINNKET } from '@/lib/pinnket'
-import type { Race, Sponsor } from '@/types/sanity'
+import type { Race } from '@/types/sanity'
 
 export const metadata: Metadata = {
   title: 'The Coffee Marathon Uganda 2026 — Run Through Coffee Country',
 }
 
+const homepageStats = [
+  { num: '2,000+', label: 'Runners' },
+  { num: '10+', label: 'Countries' },
+  { num: 'UGX 10M', label: "Women's Top Prize" },
+  { num: '4', label: 'Race Categories' },
+  { num: '5,000+', label: 'Cups of Coffee' },
+  { num: '5+', label: 'Years of Impact' },
+]
+
+const coldBrewVariants = [
+  {
+    icon: Leaf,
+    name: 'Malt Coffee',
+    desc: 'Caffeine-free, made from roasted malted barley with creamy malted milk powder.',
+  },
+  {
+    icon: Zap,
+    name: 'Energy Drink',
+    desc: 'Cold brew with B-vitamins, guarana, and taurine — built for race day.',
+  },
+  {
+    icon: Users,
+    name: 'Iced Coffee',
+    desc: "Uganda's finest beans, brewed hot and immediately chilled.",
+  },
+]
+
 export default async function HomePage() {
-  const [sanityRaces, settings, sponsors] = await Promise.all([
+  const [sanityRaces, settings] = await Promise.all([
     getRaces(),
     getSiteSettings(),
-    getSponsors(),
   ])
 
   const races = sanityRaces ?? []
   const defaultPinnketUrl = races[0]?.pinnketUrl ?? PINNKET.register10k
-  const shopUrl = settings?.pinnketShopUrl ?? PINNKET.shop
-
-  const eventStats = settings?.eventStats?.length
-    ? settings.eventStats
-    : staticStats.map((s) => ({ number: s.number, label: s.label }))
 
   const eventSchema = {
     '@context': 'https://schema.org',
@@ -68,161 +86,90 @@ export default async function HomePage() {
       />
 
       {/* ── 1. HERO ─────────────────────────────────────────────────── */}
-      {/* pt-24/pt-28 = announcement bar (≈32px) + navbar (64px/80px) */}
-      <section className="relative min-h-screen flex items-stretch overflow-hidden bg-gradient-to-br from-[var(--color-dark)] via-[#241911] to-[#2C1810] pt-24 lg:pt-28">
-        <div className="absolute -left-20 top-28 h-20 w-[160%] -rotate-6 bg-[var(--color-primary)]/85 pointer-events-none" />
-        <div className="w-full grid grid-cols-1 md:grid-cols-2">
+      <section className="relative min-h-screen flex items-center overflow-hidden pt-24 lg:pt-28">
+        {/* Background image */}
+        <div className="absolute inset-0">
+          <Image
+            src="/images/hero-crowd.jpg"
+            alt="Coffee Marathon runners at Africa Coffee Park"
+            fill
+            className="object-cover object-center"
+            priority
+            sizes="100vw"
+          />
+          {/* Green-primary overlay at 60% */}
+          <div className="absolute inset-0" style={{ backgroundColor: 'var(--green-primary)', opacity: 0.65 }} />
+        </div>
 
-          {/* Left — event info */}
-          <div className="relative z-10 flex flex-col justify-center px-8 sm:px-12 lg:px-16 py-16">
+        <div className="relative z-10 w-full max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 py-20 text-center">
+          {/* Eyebrow */}
+          <p className="font-label text-xs font-bold uppercase tracking-[0.16em] mb-5" style={{ color: 'var(--green-pale)' }}>
+            Africa Coffee Park · Ntungamo, Uganda
+          </p>
 
-            {/* Eyebrow */}
-            <div className="flex items-center gap-2 mb-5">
-              <span className="w-2 h-2 rounded-full bg-[var(--color-accent)]" />
-              <span className="font-label text-xs uppercase tracking-[0.12em] text-white/75 font-bold">
-                Africa Coffee Park · Ntungamo, Uganda
-              </span>
-            </div>
+          {/* Headline */}
+          <h1 className="font-display font-bold text-white leading-tight mb-4">
+            <span className="block text-5xl md:text-7xl lg:text-8xl">Run Through</span>
+            <span className="block text-5xl md:text-7xl lg:text-8xl">Coffee Country</span>
+          </h1>
 
-            {/* H1 */}
-            <h1 className="leading-none mb-5">
-              <span className="block font-display text-white/85 text-3xl">The</span>
-              <span className="block font-display font-bold text-white text-7xl md:text-8xl">Coffee</span>
-              <span className="block font-display font-bold text-[var(--color-logo-forest)] text-7xl md:text-8xl">Marathon</span>
-            </h1>
+          {/* Date */}
+          <p className="font-body text-xl text-white/85 mb-6">
+            3 October 2026 · Africa Coffee Park, Ntungamo, Uganda
+          </p>
 
-            {/* Theme */}
-            <div className="flex flex-col gap-1 bg-black/25 border border-white/20 rounded-xl px-4 py-3 mb-5 max-w-sm">
-              <span className="font-label text-xs font-bold text-[var(--color-logo-forest)] uppercase tracking-[0.12em]">Theme 2026</span>
-              <p className="font-body text-sm font-semibold text-white leading-snug italic">
-                &ldquo;Empowering the IK Community of Karamoja through Coffee Farming to End Poverty&rdquo;
-              </p>
-            </div>
-
-            {/* Location */}
-            <div className="flex items-center gap-2 mb-5">
-              <MapPin size={14} className="text-[var(--color-logo-forest)] shrink-0" />
-              <span className="font-body text-sm text-white/80">
-                Africa Coffee Park, Ntungamo, Uganda
-              </span>
-            </div>
-
-            {/* Countdown */}
-            <div className="mb-6">
-              <CountdownClock
-                targetDate="2026-10-03T06:00:00+03:00"
-                ctaHref={defaultPinnketUrl}
-              />
-            </div>
-
-            {/* Featuring — text only on desktop (image is on the right) */}
-            <div className="flex items-center gap-3 mb-2">
-              <span className="font-label text-white/65 text-xs tracking-[0.12em] uppercase">Featuring</span>
-              <span className="w-12 h-px bg-white/35" />
-            </div>
-            <div className="flex items-center gap-3 mb-7">
-              <div className="inline-flex items-center gap-1.5 bg-[var(--color-accent)] rounded-full px-2.5 py-0.5">
-                <span className="font-label text-xs font-bold text-[var(--color-dark)] uppercase tracking-[0.08em]">Live in Concert</span>
-              </div>
-              <p className="font-display font-bold text-white text-3xl leading-tight">Tyrese Gibson</p>
-            </div>
-
-            {/* CTAs */}
-            <div className="flex flex-wrap gap-4">
-              <a
-                href={defaultPinnketUrl}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="inline-flex items-center bg-[var(--color-primary)] text-white px-6 py-3 rounded-full font-label font-bold uppercase tracking-[0.08em] text-sm hover:bg-[#B52222] transition-colors shadow-sm"
-              >
-                Register Now →
-              </a>
-              <a
-                href={shopUrl}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="inline-flex items-center gap-2 px-6 py-3 rounded-full border-2 border-white text-white font-label font-bold uppercase tracking-[0.08em] text-sm hover:bg-white hover:text-[var(--color-dark)] transition-all"
-              >
-                Get Your Kit
-              </a>
-            </div>
+          {/* Concert callout pill */}
+          <div className="inline-flex items-center gap-2 rounded-full px-4 py-2 mb-8 border border-white/20" style={{ backgroundColor: 'rgba(255,255,255,0.12)' }}>
+            <span className="text-base">🎤</span>
+            <span className="font-label text-sm font-bold text-white uppercase tracking-[0.08em]">
+              Tyrese Gibson Live in Concert
+            </span>
           </div>
 
-          {/* Right — Tyrese Gibson, full height */}
-          <div className="relative hidden md:block min-h-[600px]">
-            <Image
-              src="/images/tyrese-portrait.jpg"
-              alt="Tyrese Gibson — headline artist, Coffee Marathon Concert 2026"
-              fill
-              className="object-cover object-center"
-              priority
-              sizes="50vw"
+          {/* Countdown */}
+          <div className="mb-8">
+            <CountdownClock
+              targetDate="2026-10-03T06:00:00+03:00"
+              ctaHref={defaultPinnketUrl}
             />
-            {/* Bottom-up dark gradient for text legibility */}
-            <div className="absolute inset-0 bg-gradient-to-t from-[var(--color-dark)]/80 via-[var(--color-dark)]/10 to-transparent" />
-            {/* Left fade to white */}
-            <div className="absolute inset-y-0 left-0 w-20 bg-gradient-to-r from-[var(--color-dark)] to-transparent" />
-
-            {/* Headline badge — top right */}
-            <div className="absolute top-8 right-8">
-              <div className="inline-flex items-center gap-1.5 bg-[var(--color-accent)] rounded-full px-3 py-1.5 shadow-lg">
-                <span className="font-label text-xs font-bold text-[var(--color-dark)] uppercase tracking-[0.08em]">Headline Performer</span>
-              </div>
-            </div>
-
-            {/* Date badge — top left (just inside the image) */}
-            <div className="absolute top-8 left-24 bg-black/45 backdrop-blur-sm rounded-2xl px-5 py-3 text-right shadow-lg border border-white/20">
-              <p className="font-label text-white/70 text-xs tracking-[0.1em] uppercase">Race Day</p>
-              <p className="font-display font-bold text-[var(--color-logo-forest)] text-xl leading-none">3 OCT</p>
-              <p className="font-display font-bold text-white text-4xl leading-none">2026</p>
-            </div>
-
-            {/* Artist name overlay — bottom */}
-            <div className="absolute bottom-8 left-8 right-8">
-              <p className="font-label text-white/60 text-xs uppercase tracking-[0.1em] mb-1">Featuring</p>
-              <p className="font-display text-5xl font-bold text-white leading-tight">Tyrese Gibson</p>
-              <p className="font-body text-white/60 text-sm mt-1">Live in Concert · 3 October 2026 · Africa Coffee Park</p>
-            </div>
           </div>
-        </div>
 
-        {/* Mobile: show date badge */}
-        <div className="absolute top-[100px] right-4 bg-black/40 backdrop-blur-sm rounded-xl px-4 py-3 text-right shadow-lg border border-white/20 md:hidden">
-          <p className="font-display font-bold text-[var(--color-logo-forest)] text-lg leading-none">3 OCT</p>
-          <p className="font-display font-bold text-white text-3xl leading-none">2026</p>
-        </div>
-      </section>
-
-      {/* ── 2. STATS BAR ────────────────────────────────────────────── */}
-      <section className="bg-[var(--color-primary)] py-8">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="grid grid-cols-2 lg:grid-cols-4 divide-x divide-white/20">
-            {eventStats.map((stat: { number: string; label: string }) => (
-              <div key={stat.label} className="text-center py-2 px-4">
-                <p className="font-display text-3xl font-bold text-[var(--color-accent)]">{stat.number}</p>
-                <p className="font-label text-xs text-white/75 uppercase tracking-[0.12em] mt-1">{stat.label}</p>
-              </div>
-            ))}
+          {/* CTAs */}
+          <div className="flex flex-wrap items-center justify-center gap-4">
+            <a
+              href={defaultPinnketUrl}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-flex items-center px-8 py-4 rounded-full font-label font-bold uppercase tracking-[0.08em] text-base transition-colors shadow-lg"
+              style={{ backgroundColor: 'white', color: 'var(--green-primary)' }}
+            >
+              Register Now →
+            </a>
+            <Link
+              href="/races"
+              className="inline-flex items-center gap-2 px-8 py-4 rounded-full border-2 border-white text-white font-label font-bold uppercase tracking-[0.08em] text-base hover:bg-white/10 transition-all"
+            >
+              View Races
+            </Link>
           </div>
         </div>
       </section>
 
-      {/* ── 3. RACE CATEGORIES ──────────────────────────────────────── */}
-      <section className="bg-[var(--color-cream)] py-20">
+      {/* ── 2. RACE CATEGORIES ──────────────────────────────────────── */}
+      <section className="py-20" style={{ backgroundColor: 'var(--cream)' }}>
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-12">
-            <div className="flex items-center justify-center gap-3 mb-4">
-              <span className="w-8 h-0.5 bg-[var(--color-logo-warm-brown)]" />
-              <span className="font-label text-xs uppercase tracking-[0.12em] text-[var(--color-logo-warm-brown)] font-bold">Race Categories</span>
-              <span className="w-8 h-0.5 bg-[var(--color-logo-warm-brown)]" />
-            </div>
-            <h2 className="font-display text-4xl md:text-5xl font-bold text-[var(--color-logo-forest)]">
+            <p className="font-label text-xs font-bold uppercase tracking-[0.12em] mb-3" style={{ color: 'var(--green-mid)' }}>
+              Race Categories
+            </p>
+            <h2 className="font-display text-4xl md:text-5xl font-bold" style={{ color: 'var(--brown-heading)' }}>
               Choose Your Distance
             </h2>
-            <p className="mt-3 font-body text-base text-[var(--color-text-mid)] max-w-xl mx-auto">
+            <p className="mt-3 font-body text-base max-w-xl mx-auto" style={{ color: 'var(--brown-dark)' }}>
               Four distances across Africa Coffee Park&apos;s scenic highland terrain. Every step runs for impact.
             </p>
           </div>
+
           {races.length > 0 ? (
             <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-5">
               {races.map((race: Race) => (
@@ -247,71 +194,188 @@ export default async function HomePage() {
               ))}
             </div>
           )}
+
           <div className="text-center mt-10">
-            <Link href="/races" className="inline-flex items-center gap-2 font-label text-sm font-bold uppercase tracking-[0.08em] text-[var(--color-logo-forest)] hover:text-[var(--color-logo-deep-brown)] transition-colors group">
-              View full race details <ArrowRight size={14} className="group-hover:translate-x-1 transition-transform" />
+            <Link
+              href="/races"
+              className="inline-flex items-center gap-2 font-label text-sm font-bold uppercase tracking-[0.08em] transition-colors group"
+              style={{ color: 'var(--green-primary)' }}
+            >
+              Full race details <ArrowRight size={14} className="group-hover:translate-x-1 transition-transform" />
             </Link>
           </div>
         </div>
       </section>
 
-      {/* ── 4. MISSION ──────────────────────────────────────────────── */}
-      <MissionSection />
+      {/* ── 3. MISSION — 3 COLUMNS ──────────────────────────────────── */}
+      <section className="py-20" style={{ backgroundColor: 'var(--green-mist)' }}>
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="text-center mb-12">
+            <p className="font-label text-xs font-bold uppercase tracking-[0.12em] mb-3" style={{ color: 'var(--green-mid)' }}>
+              Coffee with a Cause
+            </p>
+            <h2 className="font-display text-4xl md:text-5xl font-bold" style={{ color: 'var(--brown-heading)' }}>
+              More than a race.
+            </h2>
+          </div>
 
-      {/* ── 5. HIGHLIGHTS 2025 ──────────────────────────────────────── */}
-      <Highlights2025Section />
-
-      {/* ── 6. COLD BREW ────────────────────────────────────────────── */}
-      <ColdBrewSection />
-
-      {/* ── 7. SPONSORS ─────────────────────────────────────────────── */}
-      <section className="bg-[var(--color-warm-white)] py-14 border-t border-[var(--color-border)]">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <h3 className="font-display text-3xl font-bold text-[var(--color-logo-forest)] mb-8">
-            Partners &amp; Sponsors
-          </h3>
-          <div className="flex flex-wrap justify-center items-center gap-6 mb-6">
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-10">
             {[
-              { label: 'The Coffee Marathon', logo: true },
-              { label: 'Inspire Africa Group' },
-              { label: 'Africa Coffee Park' },
-            ].map(({ label, logo }) => (
-              <div key={label} className="flex items-center gap-2 px-5 py-3 bg-[var(--color-warm-white)] rounded-xl border border-[var(--color-border)] shadow-sm">
-                {logo && <Image src="/images/logo.png" alt="The Coffee Marathon" width={32} height={32} className="object-contain" />}
-                <span className="font-body text-sm font-semibold text-[var(--color-logo-deep-brown)]">{label}</span>
-              </div>
-            ))}
-            {(sponsors ?? []).map((s: Sponsor) => (
-              <div key={s._id} className="px-5 py-3 bg-[var(--color-warm-white)] rounded-xl border border-[var(--color-border)] shadow-sm">
-                <span className="font-body text-sm font-semibold text-[var(--color-logo-deep-brown)]">{s.name}</span>
+              {
+                title: 'Why We Started',
+                body: 'We saw untapped potential in coffee-growing communities — especially among women — whose labour sustains the industry but whose voices are often overlooked. The Coffee Marathon was born to change that.',
+              },
+              {
+                title: 'Why We Continue',
+                body: 'Awareness alone is no longer enough. We have evolved from a moment of recognition into a movement for action — one that goes beyond stories to actively changing lives and livelihoods.',
+              },
+              {
+                title: 'Why It Matters',
+                body: 'Our long-term vision: create economic resilience through coffee farming — ensuring farmers can withstand market fluctuations, climate challenges, and generational poverty.',
+              },
+            ].map(({ title, body }) => (
+              <div
+                key={title}
+                className="bg-white rounded-xl p-6"
+                style={{
+                  border: '0.5px solid rgba(26,107,58,0.2)',
+                  borderLeft: '4px solid var(--green-primary)',
+                }}
+              >
+                <h3 className="font-display text-lg font-bold mb-3" style={{ color: 'var(--brown-heading)' }}>{title}</h3>
+                <p className="font-body text-sm leading-relaxed" style={{ color: 'var(--brown-dark)' }}>{body}</p>
               </div>
             ))}
           </div>
-          <Link href="/sponsorships" className="inline-flex items-center gap-2 font-label text-sm font-bold uppercase tracking-[0.08em] text-[var(--color-logo-forest)] hover:text-[var(--color-logo-deep-brown)] transition-colors">
-            Become a partner <ArrowRight size={14} />
-          </Link>
+
+          <div className="text-center">
+            <Link
+              href="/about"
+              className="inline-flex items-center gap-2 font-label text-sm font-bold uppercase tracking-[0.08em] group transition-colors"
+              style={{ color: 'var(--green-mid)' }}
+            >
+              Read our story <ArrowRight size={14} className="group-hover:translate-x-1 transition-transform" />
+            </Link>
+          </div>
         </div>
       </section>
 
-      {/* ── 9. FINAL CTA ────────────────────────────────────────────── */}
-      <section className="relative py-24 overflow-hidden">
-        <div className="absolute inset-0">
-          <Image src="/images/races-runner-nature.jpg" alt="" fill className="object-cover" sizes="100vw" aria-hidden />
-          <div className="absolute inset-0 bg-[var(--color-primary)]/80" />
+      {/* ── 4. 2025 IN NUMBERS ──────────────────────────────────────── */}
+      <section className="py-20" style={{ backgroundColor: 'var(--cream)' }}>
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="text-center mb-12">
+            <p className="font-label text-xs font-bold uppercase tracking-[0.12em] mb-3" style={{ color: 'var(--green-mid)' }}>
+              2025 Edition
+            </p>
+            <h2 className="font-display text-4xl md:text-5xl font-bold" style={{ color: 'var(--brown-heading)' }}>
+              A Year in Numbers
+            </h2>
+          </div>
+
+          <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-6 gap-4 mb-10">
+            {homepageStats.map(({ num, label }) => (
+              <div
+                key={label}
+                className="bg-white rounded-xl p-5 text-center border"
+                style={{ borderColor: 'rgba(26,107,58,0.15)' }}
+              >
+                <p className="font-display text-2xl md:text-3xl font-bold mb-1" style={{ color: 'var(--green-primary)' }}>
+                  {num}
+                </p>
+                <p className="font-label text-xs uppercase tracking-[0.08em]" style={{ color: 'var(--brown-dark)' }}>
+                  {label}
+                </p>
+              </div>
+            ))}
+          </div>
+
+          <div className="text-center">
+            <Link
+              href="/results"
+              className="inline-flex items-center gap-2 font-label text-sm font-bold uppercase tracking-[0.08em] group transition-colors"
+              style={{ color: 'var(--green-mid)' }}
+            >
+              See highlights <ArrowRight size={14} className="group-hover:translate-x-1 transition-transform" />
+            </Link>
+          </div>
         </div>
-        <div className="relative z-10 max-w-3xl mx-auto px-4 sm:px-6 text-center">
+      </section>
+
+      {/* ── 5. IAC COLD BREW ────────────────────────────────────────── */}
+      <section className="py-20" style={{ backgroundColor: 'var(--green-mist)' }}>
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
+            <div>
+              <p className="font-label text-xs font-bold uppercase tracking-[0.12em] mb-3" style={{ color: 'var(--green-mid)' }}>
+                IAC Cold Brew
+              </p>
+              <h2 className="font-display text-4xl md:text-5xl font-bold mb-4" style={{ color: 'var(--brown-heading)' }}>
+                Fuel your race day.
+              </h2>
+              <p className="font-body text-base leading-relaxed mb-8" style={{ color: 'var(--brown-dark)' }}>
+                IAC Cold Brew is the official coffee drink of the Coffee Marathon — smooth, energising, and crafted from Uganda&apos;s finest beans.
+              </p>
+              <div className="space-y-4">
+                {coldBrewVariants.map(({ icon: Icon, name, desc }) => (
+                  <div
+                    key={name}
+                    className="bg-white rounded-xl p-4 flex items-start gap-4 border"
+                    style={{ borderColor: 'rgba(26,107,58,0.15)' }}
+                  >
+                    <div
+                      className="w-10 h-10 rounded-xl flex items-center justify-center shrink-0"
+                      style={{ backgroundColor: 'var(--green-pale)' }}
+                    >
+                      <Icon size={18} style={{ color: 'var(--green-primary)' }} />
+                    </div>
+                    <div>
+                      <p className="font-body font-semibold text-sm mb-0.5" style={{ color: 'var(--brown-heading)' }}>{name}</p>
+                      <p className="font-body text-sm" style={{ color: 'var(--brown-dark)' }}>{desc}</p>
+                    </div>
+                  </div>
+                ))}
+              </div>
+            </div>
+
+            <div className="relative max-w-sm mx-auto lg:mx-0">
+              <div className="aspect-[3/4] rounded-3xl overflow-hidden relative shadow-xl">
+                <Image
+                  src="/images/cold-brew-product.jpg"
+                  alt="IAC Cold Brew — Inspire Africa Coffee"
+                  fill
+                  className="object-cover"
+                  sizes="(max-width: 1024px) 100vw, 50vw"
+                />
+              </div>
+              <div
+                className="absolute -bottom-4 left-4 right-4 rounded-xl shadow-lg p-3 text-center"
+                style={{ backgroundColor: 'white' }}
+              >
+                <p className="font-body text-xs font-semibold uppercase tracking-widest" style={{ color: 'var(--brown-dark)' }}>
+                  Official Drink of The Coffee Marathon
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* ── 6. CTA BANNER ───────────────────────────────────────────── */}
+      <section className="py-24 text-center" style={{ backgroundColor: 'var(--green-primary)' }}>
+        <div className="max-w-3xl mx-auto px-4 sm:px-6">
           <h2 className="font-display text-5xl md:text-6xl font-bold text-white mb-4 leading-tight">
             Run with a cause.<br />Run for impact.
           </h2>
-          <p className="font-body text-lg text-white/90 mb-8">
-            Join runners from across the world at Africa Coffee Park on 3 October 2026. Every step supports the IK Community of Karamoja.
+          <p className="font-body text-lg mb-8" style={{ color: 'rgba(255,255,255,0.85)' }}>
+            Join runners from across the world at Africa Coffee Park on 3 October 2026.
           </p>
           <div className="flex flex-wrap items-center justify-center gap-4">
             <a
               href={defaultPinnketUrl}
               target="_blank"
               rel="noopener noreferrer"
-              className="inline-flex items-center bg-[var(--color-accent)] text-[var(--color-dark)] px-8 py-4 rounded-full font-label font-bold uppercase tracking-[0.08em] text-base hover:bg-[var(--color-amber-dark)] transition-colors shadow-lg"
+              className="inline-flex items-center px-8 py-4 rounded-full font-label font-bold uppercase tracking-[0.08em] text-base transition-colors shadow-lg"
+              style={{ backgroundColor: 'white', color: 'var(--green-primary)' }}
             >
               Register Now →
             </a>
@@ -321,26 +385,6 @@ export default async function HomePage() {
             >
               View all races
             </Link>
-          </div>
-          <div className="mt-10 flex items-center justify-center gap-4">
-            {settings?.facebookUrl && (
-              <a href={settings.facebookUrl} target="_blank" rel="noopener noreferrer" aria-label="Facebook"
-                className="w-10 h-10 rounded-full bg-white/20 flex items-center justify-center text-white hover:bg-white/40 transition-colors">
-                <FacebookIcon size={16} />
-              </a>
-            )}
-            {settings?.instagramUrl && (
-              <a href={settings.instagramUrl} target="_blank" rel="noopener noreferrer" aria-label="Instagram"
-                className="w-10 h-10 rounded-full bg-white/20 flex items-center justify-center text-white hover:bg-white/40 transition-colors">
-                <InstagramIcon size={16} />
-              </a>
-            )}
-            {settings?.twitterUrl && (
-              <a href={settings.twitterUrl} target="_blank" rel="noopener noreferrer" aria-label="X / Twitter"
-                className="w-10 h-10 rounded-full bg-white/20 flex items-center justify-center text-white hover:bg-white/40 transition-colors">
-                <TwitterXIcon size={16} />
-              </a>
-            )}
           </div>
         </div>
       </section>

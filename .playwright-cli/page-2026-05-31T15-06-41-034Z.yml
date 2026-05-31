@@ -1,0 +1,274 @@
+- generic [active] [ref=e1]:
+  - generic [ref=e2]:
+    - paragraph [ref=e4]: Tyrese Gibson Live At Coffee Marathon 2026 · 3 October · Africa Coffee Park
+    - banner [ref=e5]:
+      - generic [ref=e7]:
+        - link "The Coffee Marathon Uganda" [ref=e8] [cursor=pointer]:
+          - /url: /
+          - img "The Coffee Marathon Uganda" [ref=e9]
+        - button "Open menu" [ref=e11]:
+          - img [ref=e12]
+  - main [ref=e13]:
+    - generic [ref=e14]:
+      - img "Coffee Marathon runners at Africa Coffee Park" [ref=e16]
+      - generic [ref=e18]:
+        - paragraph [ref=e19]: Africa Coffee Park · Ntungamo, Uganda
+        - heading "Run Through Coffee Country" [level=1] [ref=e20]:
+          - generic [ref=e21]: Run Through
+          - generic [ref=e22]: Coffee Country
+        - paragraph [ref=e23]: 3 October 2026 · Africa Coffee Park, Ntungamo, Uganda
+        - generic [ref=e24]:
+          - generic [ref=e25]: 🎤
+          - generic [ref=e26]: Tyrese Gibson Live in Concert
+        - generic [ref=e28]:
+          - paragraph [ref=e30]: Countdown to Race Day
+          - generic [ref=e31]:
+            - generic [ref=e32]:
+              - generic [ref=e33]:
+                - generic [ref=e34]: "124"
+                - generic [ref=e35]: Days
+              - generic [ref=e36]: ":"
+            - generic [ref=e37]:
+              - generic [ref=e38]:
+                - generic [ref=e39]: "11"
+                - generic [ref=e40]: Hours
+              - generic [ref=e41]: ":"
+            - generic [ref=e42]:
+              - generic [ref=e43]:
+                - generic [ref=e44]: "53"
+                - generic [ref=e45]: Minutes
+              - generic [ref=e46]: ":"
+            - generic [ref=e48]:
+              - generic [ref=e49]: "19"
+              - generic [ref=e50]: Seconds
+          - link "Register Now" [ref=e51] [cursor=pointer]:
+            - /url: "#pinnket-register-10k"
+        - generic [ref=e52]:
+          - link "Register Now →" [ref=e53] [cursor=pointer]:
+            - /url: "#pinnket-register-10k"
+          - link "View Races" [ref=e54] [cursor=pointer]:
+            - /url: /races
+    - generic [ref=e56]:
+      - generic [ref=e57]:
+        - paragraph [ref=e58]: Race Categories
+        - heading "Choose Your Distance" [level=2] [ref=e59]
+        - paragraph [ref=e60]: Four distances across Africa Coffee Park's scenic highland terrain. Every step runs for impact.
+      - generic [ref=e61]:
+        - generic [ref=e62]:
+          - generic [ref=e63]:
+            - text: Fun Run
+            - generic [ref=e64]: 5 KM
+          - generic [ref=e65]:
+            - paragraph [ref=e66]: Perfect for first-timers and families.
+            - generic [ref=e67]:
+              - generic [ref=e68]: UGX XX,XXX
+              - link "Register" [ref=e69] [cursor=pointer]:
+                - /url: "#pinnket-register-5k"
+                - text: Register
+                - img [ref=e70]
+        - generic [ref=e72]:
+          - generic [ref=e73]:
+            - text: Community
+            - generic [ref=e74]: 10 KM
+          - generic [ref=e75]:
+            - paragraph [ref=e76]: Test your pace through the coffee farms.
+            - generic [ref=e77]:
+              - generic [ref=e78]: UGX XX,XXX
+              - link "Register" [ref=e79] [cursor=pointer]:
+                - /url: "#pinnket-register-10k"
+                - text: Register
+                - img [ref=e80]
+        - generic [ref=e82]:
+          - generic [ref=e83]:
+            - text: Half Marathon
+            - generic [ref=e84]: 21 KM
+          - generic [ref=e85]:
+            - paragraph [ref=e86]: A serious challenge with stunning views.
+            - generic [ref=e87]:
+              - generic [ref=e88]: UGX XX,XXX
+              - link "Register" [ref=e89] [cursor=pointer]:
+                - /url: "#pinnket-register-21k"
+                - text: Register
+                - img [ref=e90]
+        - generic [ref=e92]:
+          - generic [ref=e93]:
+            - text: Full Marathon
+            - generic [ref=e94]: 42 KM
+          - generic [ref=e95]:
+            - paragraph [ref=e96]: The ultimate test across Uganda's highlands.
+            - generic [ref=e97]:
+              - generic [ref=e98]: UGX XX,XXX
+              - link "Register" [ref=e99] [cursor=pointer]:
+                - /url: "#pinnket-register-42k"
+                - text: Register
+                - img [ref=e100]
+      - link "Full race details" [ref=e103] [cursor=pointer]:
+        - /url: /races
+        - text: Full race details
+        - img [ref=e104]
+    - generic [ref=e107]:
+      - generic [ref=e108]:
+        - paragraph [ref=e109]: Coffee with a Cause
+        - heading "More than a race." [level=2] [ref=e110]
+      - generic [ref=e111]:
+        - generic [ref=e112]:
+          - heading "Why We Started" [level=3] [ref=e113]
+          - paragraph [ref=e114]: We saw untapped potential in coffee-growing communities — especially among women — whose labour sustains the industry but whose voices are often overlooked. The Coffee Marathon was born to change that.
+        - generic [ref=e115]:
+          - heading "Why We Continue" [level=3] [ref=e116]
+          - paragraph [ref=e117]: Awareness alone is no longer enough. We have evolved from a moment of recognition into a movement for action — one that goes beyond stories to actively changing lives and livelihoods.
+        - generic [ref=e118]:
+          - heading "Why It Matters" [level=3] [ref=e119]
+          - paragraph [ref=e120]: "Our long-term vision: create economic resilience through coffee farming — ensuring farmers can withstand market fluctuations, climate challenges, and generational poverty."
+      - link "Read our story" [ref=e122] [cursor=pointer]:
+        - /url: /about
+        - text: Read our story
+        - img [ref=e123]
+    - generic [ref=e126]:
+      - generic [ref=e127]:
+        - paragraph [ref=e128]: 2025 Edition
+        - heading "A Year in Numbers" [level=2] [ref=e129]
+      - generic [ref=e130]:
+        - generic [ref=e131]:
+          - paragraph [ref=e132]: 2,000+
+          - paragraph [ref=e133]: Runners
+        - generic [ref=e134]:
+          - paragraph [ref=e135]: 10+
+          - paragraph [ref=e136]: Countries
+        - generic [ref=e137]:
+          - paragraph [ref=e138]: UGX 10M
+          - paragraph [ref=e139]: Women's Top Prize
+        - generic [ref=e140]:
+          - paragraph [ref=e141]: "4"
+          - paragraph [ref=e142]: Race Categories
+        - generic [ref=e143]:
+          - paragraph [ref=e144]: 5,000+
+          - paragraph [ref=e145]: Cups of Coffee
+        - generic [ref=e146]:
+          - paragraph [ref=e147]: 5+
+          - paragraph [ref=e148]: Years of Impact
+      - link "See highlights" [ref=e150] [cursor=pointer]:
+        - /url: /results
+        - text: See highlights
+        - img [ref=e151]
+    - generic [ref=e155]:
+      - generic [ref=e156]:
+        - paragraph [ref=e157]: IAC Cold Brew
+        - heading "Fuel your race day." [level=2] [ref=e158]
+        - paragraph [ref=e159]: IAC Cold Brew is the official coffee drink of the Coffee Marathon — smooth, energising, and crafted from Uganda's finest beans.
+        - generic [ref=e160]:
+          - generic [ref=e161]:
+            - img [ref=e163]
+            - generic [ref=e166]:
+              - paragraph [ref=e167]: Malt Coffee
+              - paragraph [ref=e168]: Caffeine-free, made from roasted malted barley with creamy malted milk powder.
+          - generic [ref=e169]:
+            - img [ref=e171]
+            - generic [ref=e173]:
+              - paragraph [ref=e174]: Energy Drink
+              - paragraph [ref=e175]: Cold brew with B-vitamins, guarana, and taurine — built for race day.
+          - generic [ref=e176]:
+            - img [ref=e178]
+            - generic [ref=e183]:
+              - paragraph [ref=e184]: Iced Coffee
+              - paragraph [ref=e185]: Uganda's finest beans, brewed hot and immediately chilled.
+      - generic:
+        - generic:
+          - img "IAC Cold Brew — Inspire Africa Coffee"
+        - generic [ref=e186]:
+          - paragraph: Official Drink of The Coffee Marathon
+    - generic [ref=e188]:
+      - heading "Run with a cause. Run for impact." [level=2] [ref=e189]:
+        - text: Run with a cause.
+        - text: Run for impact.
+      - paragraph [ref=e190]: Join runners from across the world at Africa Coffee Park on 3 October 2026.
+      - generic [ref=e191]:
+        - link "Register Now →" [ref=e192] [cursor=pointer]:
+          - /url: "#pinnket-register-10k"
+        - link "View all races" [ref=e193] [cursor=pointer]:
+          - /url: /races
+  - contentinfo [ref=e194]:
+    - generic [ref=e196]:
+      - generic [ref=e197]:
+        - link "The Coffee Marathon Uganda" [ref=e198] [cursor=pointer]:
+          - /url: /
+          - img "The Coffee Marathon Uganda" [ref=e199]
+        - paragraph [ref=e200]: Empowering the IK Community of Karamoja through Coffee Farming to End Poverty.
+        - link "WhatsApp Us" [ref=e201] [cursor=pointer]:
+          - /url: https://wa.me/256750263333
+          - img [ref=e202]
+          - text: WhatsApp Us
+      - generic [ref=e204]:
+        - heading "Quick Links" [level=3] [ref=e205]
+        - list [ref=e206]:
+          - listitem [ref=e207]:
+            - link "Home" [ref=e208] [cursor=pointer]:
+              - /url: /
+          - listitem [ref=e209]:
+            - link "About" [ref=e210] [cursor=pointer]:
+              - /url: /about
+          - listitem [ref=e211]:
+            - link "Races" [ref=e212] [cursor=pointer]:
+              - /url: /races
+          - listitem [ref=e213]:
+            - link "Shop" [ref=e214] [cursor=pointer]:
+              - /url: /shop
+          - listitem [ref=e215]:
+            - link "Beyond the Marathon" [ref=e216] [cursor=pointer]:
+              - /url: /activities
+          - listitem [ref=e217]:
+            - link "Attractions" [ref=e218] [cursor=pointer]:
+              - /url: /attractions
+          - listitem [ref=e219]:
+            - link "Contact" [ref=e220] [cursor=pointer]:
+              - /url: /contact
+          - listitem [ref=e221]:
+            - link "Sponsorships" [ref=e222] [cursor=pointer]:
+              - /url: /sponsorships
+          - listitem [ref=e223]:
+            - link "News" [ref=e224] [cursor=pointer]:
+              - /url: /news
+          - listitem [ref=e225]:
+            - link "Results" [ref=e226] [cursor=pointer]:
+              - /url: /results
+      - generic [ref=e227]:
+        - heading "Race Info" [level=3] [ref=e228]
+        - paragraph [ref=e229]: 3 October 2026
+        - paragraph [ref=e230]:
+          - text: Africa Coffee Park
+          - text: Ntungamo, Uganda
+        - generic [ref=e231]:
+          - generic [ref=e232]: 5K
+          - generic [ref=e233]: 10K
+          - generic [ref=e234]: 21K
+          - generic [ref=e235]: 42K
+        - link "Register Now →" [ref=e236] [cursor=pointer]:
+          - /url: "#pinnket-register-10k"
+      - generic [ref=e237]:
+        - heading "Connect" [level=3] [ref=e238]
+        - generic [ref=e239]:
+          - link "Facebook" [ref=e240] [cursor=pointer]:
+            - /url: https://facebook.com
+            - img [ref=e241]
+          - link "Instagram" [ref=e243] [cursor=pointer]:
+            - /url: https://instagram.com
+            - img [ref=e244]
+          - link "X / Twitter" [ref=e247] [cursor=pointer]:
+            - /url: https://twitter.com
+            - img [ref=e248]
+        - link "Contact Us" [ref=e250] [cursor=pointer]:
+          - /url: /contact
+        - link "Accommodation" [ref=e251] [cursor=pointer]:
+          - /url: /accommodation
+        - paragraph [ref=e252]:
+          - text: info@coffeemarathonug.com
+          - text: +256 750 263 333
+    - generic [ref=e254]:
+      - paragraph [ref=e255]: Theme 2026
+      - paragraph [ref=e256]: “Empowering the IK Community of Karamoja through Coffee Farming to End Poverty”
+    - generic [ref=e258]:
+      - paragraph [ref=e259]: © 2026 The Coffee Marathon Uganda · Organised by Inspire Africa Group
+      - paragraph [ref=e260]: Africa Coffee Park, Ntungamo, Uganda
+  - button "Open Next.js Dev Tools" [ref=e266] [cursor=pointer]:
+    - img [ref=e267]
+  - alert [ref=e270]
