@@ -20,7 +20,7 @@ export default function Navbar() {
   return (
     <>
       <div className="fixed top-0 left-0 right-0 z-50">
-        {/* Announcement bar — brown-heading bg */}
+        {/* Announcement bar — unchanged */}
         <div className="py-2 text-center px-4" style={{ backgroundColor: 'var(--brown-heading)' }}>
           <p className="font-label text-xs font-bold text-white uppercase tracking-[0.14em]">
             <span style={{ color: 'var(--brown-mid)' }}>Tyrese Gibson</span>
@@ -28,26 +28,27 @@ export default function Navbar() {
           </p>
         </div>
 
-        {/* Navbar — green-primary bg */}
-        <header style={{ backgroundColor: 'var(--green-primary)' }} className="shadow-sm border-b border-white/10">
+        {/* Navbar — cream background */}
+        <header
+          className="border-b"
+          style={{
+            backgroundColor: '#F5EDE0',
+            borderBottomColor: 'rgba(26,107,58,0.15)',
+          }}
+        >
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="flex items-center justify-between h-16 lg:h-20">
 
-              {/* Logo */}
-              <Link href="/" className="flex items-center gap-2 group" onClick={() => setOpen(false)}>
+              {/* Logo — original colors on cream background, no filter */}
+              <Link href="/" className="flex items-center group" onClick={() => setOpen(false)}>
                 <Image
                   src="/images/logo.png"
                   alt="The Coffee Marathon Uganda"
-                  width={44}
-                  height={44}
-                  className="object-contain"
+                  width={80}
+                  height={80}
+                  className="object-contain group-hover:scale-105 transition-transform duration-200"
                   priority
                 />
-                <span className="hidden md:inline font-label text-sm font-bold uppercase tracking-[0.08em]">
-                  <span className="text-white">The </span>
-                  <span style={{ color: 'var(--green-pale)' }}>Coffee</span>
-                  <span className="text-white"> Marathon</span>
-                </span>
               </Link>
 
               {/* Desktop nav */}
@@ -60,15 +61,15 @@ export default function Navbar() {
                       href={link.href}
                       onClick={() => setOpen(false)}
                       className="font-label text-sm font-bold uppercase tracking-[0.08em] transition-colors relative"
-                      style={{
-                        color: active ? 'white' : 'rgba(255,255,255,0.75)',
-                      }}
+                      style={{ color: active ? '#1A6B3A' : '#1A6B3A' }}
+                      onMouseEnter={(e) => { e.currentTarget.style.color = '#2D8C52' }}
+                      onMouseLeave={(e) => { e.currentTarget.style.color = '#1A6B3A' }}
                     >
                       {link.label}
                       {active && (
                         <span
                           className="absolute -bottom-1 left-0 right-0 h-0.5 rounded-full"
-                          style={{ backgroundColor: 'var(--green-pale)' }}
+                          style={{ backgroundColor: '#2D8C52' }}
                         />
                       )}
                     </Link>
@@ -81,26 +82,20 @@ export default function Navbar() {
                 <Link
                   href={PINNKET.register10k}
                   onClick={() => setOpen(false)}
-                  className="hidden sm:inline-flex items-center px-5 py-2 rounded-full font-label font-bold uppercase tracking-[0.08em] text-sm transition-all border"
+                  className="hidden sm:inline-flex items-center px-5 py-2 rounded-full font-label font-bold uppercase tracking-[0.08em] text-sm transition-all"
                   style={{
+                    backgroundColor: '#1A6B3A',
                     color: 'white',
-                    borderColor: 'var(--green-mid)',
-                    backgroundColor: 'transparent',
                   }}
-                  onMouseEnter={(e) => {
-                    e.currentTarget.style.backgroundColor = 'white'
-                    e.currentTarget.style.color = 'var(--green-primary)'
-                  }}
-                  onMouseLeave={(e) => {
-                    e.currentTarget.style.backgroundColor = 'transparent'
-                    e.currentTarget.style.color = 'white'
-                  }}
+                  onMouseEnter={(e) => { e.currentTarget.style.backgroundColor = '#2D8C52' }}
+                  onMouseLeave={(e) => { e.currentTarget.style.backgroundColor = '#1A6B3A' }}
                 >
                   Register Now
                 </Link>
                 <button
                   onClick={() => setOpen(true)}
-                  className="lg:hidden p-2 text-white transition-colors"
+                  className="lg:hidden p-2 transition-colors"
+                  style={{ color: '#1A6B3A' }}
                   aria-label="Open menu"
                 >
                   <Menu size={24} />
@@ -111,22 +106,23 @@ export default function Navbar() {
         </header>
       </div>
 
-      {/* Mobile overlay */}
+      {/* Mobile overlay — keep dark for readability */}
       {open && (
-        <div className="fixed inset-0 z-[60] flex flex-col" style={{ backgroundColor: 'var(--green-primary)' }}>
-          <div className="flex items-center justify-between px-4 h-16 border-b border-white/10">
-            <Link href="/" className="flex items-center gap-2" onClick={() => setOpen(false)}>
+        <div className="fixed inset-0 z-[60] flex flex-col" style={{ backgroundColor: '#F5EDE0' }}>
+          <div className="flex items-center justify-between px-4 h-16 border-b" style={{ borderBottomColor: 'rgba(26,107,58,0.15)' }}>
+            <Link href="/" className="flex items-center" onClick={() => setOpen(false)}>
               <Image
                 src="/images/logo.png"
                 alt="The Coffee Marathon Uganda"
-                width={44}
-                height={44}
+                width={60}
+                height={60}
                 className="object-contain"
               />
             </Link>
             <button
               onClick={() => setOpen(false)}
-              className="p-2 text-white transition-colors"
+              className="p-2 transition-colors"
+              style={{ color: '#1A6B3A' }}
               aria-label="Close menu"
             >
               <X size={24} />
@@ -142,7 +138,7 @@ export default function Navbar() {
                   href={link.href}
                   onClick={() => setOpen(false)}
                   className="font-display text-3xl font-semibold transition-colors"
-                  style={{ color: active ? 'white' : 'rgba(255,255,255,0.75)' }}
+                  style={{ color: active ? '#1A6B3A' : '#6B2D1B' }}
                 >
                   {link.label}
                 </Link>
@@ -151,13 +147,14 @@ export default function Navbar() {
             <Link
               href={PINNKET.register10k}
               onClick={() => setOpen(false)}
-              className="mt-4 inline-flex items-center justify-center px-8 py-3 rounded-full font-label font-bold uppercase tracking-[0.08em] text-lg border border-white/50 text-white hover:bg-white/10 transition-colors"
+              className="mt-4 inline-flex items-center justify-center px-8 py-3 rounded-full font-label font-bold uppercase tracking-[0.08em] text-lg text-white transition-colors"
+              style={{ backgroundColor: '#1A6B3A' }}
             >
               Register Now
             </Link>
           </nav>
 
-          <p className="px-8 pb-8 font-body text-sm text-white/55">
+          <p className="px-8 pb-8 font-body text-sm" style={{ color: '#6B2D1B' }}>
             3 October 2026 · Africa Coffee Park, Ntungamo
           </p>
         </div>

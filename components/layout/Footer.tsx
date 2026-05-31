@@ -20,6 +20,7 @@ export default function Footer() {
                 width={120}
                 height={60}
                 className="object-contain"
+                style={{ filter: 'brightness(0) invert(1)' }}
               />
             </Link>
             <p className="font-body text-sm leading-relaxed" style={{ color: 'rgba(255,255,255,0.7)' }}>
