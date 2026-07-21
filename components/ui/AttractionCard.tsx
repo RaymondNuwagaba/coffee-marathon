@@ -43,7 +43,7 @@ export default function AttractionCard({
         )}
       </div>
       <div className="p-5">
-        <h3 className="font-display text-xl font-semibold text-[var(--color-espresso)] mb-2 group-hover:text-[var(--color-forest)] transition-colors">
+        <h3 className="font-heading text-xl font-semibold text-[var(--color-espresso)] mb-2 group-hover:text-[var(--color-forest)] transition-colors">
           {name}
         </h3>
         <p className="font-body text-sm text-[var(--color-arabica)] mb-3 leading-relaxed">

@@ -30,7 +30,7 @@ export default function SponsorTierCard({
         >
           Sponsorship
         </span>
-        <h3 className="font-display text-2xl font-bold mt-2" style={{ color: 'var(--brown-heading)' }}>{name}</h3>
+        <h3 className="font-heading text-2xl font-bold mt-2" style={{ color: 'var(--brown-heading)' }}>{name}</h3>
         {price && (
           <p className="font-display text-3xl font-bold mt-2" style={{ color: 'var(--green-primary)' }}>{price}</p>
         )}

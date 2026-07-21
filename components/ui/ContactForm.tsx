@@ -41,7 +41,7 @@ export default function ContactForm() {
     return (
       <div className="bg-[var(--color-seedling-light)] rounded-2xl p-8 text-center">
         <CheckCircle2 size={40} className="text-[var(--color-logo-forest)] mx-auto mb-3" />
-        <p className="font-display text-2xl font-semibold text-[var(--color-logo-forest)] mb-2">Message sent!</p>
+        <p className="font-heading text-2xl font-semibold text-[var(--color-logo-forest)] mb-2">Message sent!</p>
         <p className="font-body text-sm text-[var(--color-logo-deep-brown)]">
           Thank you for reaching out. We&apos;ll get back to you soon.
         </p>

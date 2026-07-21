@@ -242,7 +242,7 @@ export default async function HomePage() {
                   borderLeft: '4px solid var(--green-primary)',
                 }}
               >
-                <h3 className="font-display text-lg font-bold mb-3" style={{ color: 'var(--brown-heading)' }}>{title}</h3>
+                <h3 className="font-heading text-lg font-bold mb-3" style={{ color: 'var(--brown-heading)' }}>{title}</h3>
                 <p className="font-body text-sm leading-relaxed" style={{ color: 'var(--brown-dark)' }}>{body}</p>
               </div>
             ))}
@@ -279,7 +279,7 @@ export default async function HomePage() {
                 className="bg-white rounded-xl p-5 text-center border"
                 style={{ borderColor: 'rgba(26,107,58,0.15)' }}
               >
-                <p className="font-display text-2xl md:text-3xl font-bold mb-1" style={{ color: 'var(--green-primary)' }}>
+                <p className="font-heading text-2xl md:text-3xl font-bold mb-1" style={{ color: 'var(--green-primary)' }}>
                   {num}
                 </p>
                 <p className="font-label text-xs uppercase tracking-[0.08em]" style={{ color: 'var(--brown-dark)' }}>

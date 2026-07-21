@@ -53,7 +53,7 @@ export default async function AccommodationPage() {
 
           {/* Map placeholder */}
           <div className="mb-12">
-            <h2 className="font-display text-2xl font-semibold mb-6" style={{ color: 'var(--brown-heading)' }}>Location Map</h2>
+            <h2 className="font-heading text-2xl font-semibold mb-6" style={{ color: 'var(--brown-heading)' }}>Location Map</h2>
             <div
               className="aspect-video rounded-2xl flex items-center justify-center border"
               style={{ backgroundColor: 'var(--green-pale)', borderColor: 'rgba(26,107,58,0.2)' }}
@@ -69,7 +69,7 @@ export default async function AccommodationPage() {
           <div className="rounded-2xl p-8" style={{ backgroundColor: 'var(--green-deep)' }}>
             <div className="flex items-center gap-3 mb-4">
               <Tent size={22} style={{ color: 'var(--green-light)' }} />
-              <h3 className="font-display text-2xl font-semibold text-white">Race Village Camping</h3>
+              <h3 className="font-heading text-2xl font-semibold text-white">Race Village Camping</h3>
             </div>
             <p className="font-body text-sm leading-relaxed mb-4" style={{ color: 'rgba(255,255,255,0.75)' }}>
               On-site camping is available at Africa Coffee Park for runners who want to be right at the venue.

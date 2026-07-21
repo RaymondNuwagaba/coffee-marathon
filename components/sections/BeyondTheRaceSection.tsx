@@ -31,7 +31,7 @@ export default function BeyondTheRaceSection() {
             <div className="w-14 h-14 rounded-2xl bg-[var(--color-amber-light)]/30 flex items-center justify-center mb-6">
               <Trophy size={28} className="text-[var(--color-logo-forest)]" />
             </div>
-            <h3 className="font-display text-2xl font-bold text-[var(--color-text-dark)] mb-3">
+            <h3 className="font-heading text-2xl font-bold text-[var(--color-text-dark)] mb-3">
               Africa Coffee Awards
             </h3>
             <p className="font-body text-[var(--color-text-mid)] leading-relaxed text-sm mb-4">
@@ -69,7 +69,7 @@ export default function BeyondTheRaceSection() {
               <div className="inline-flex items-center gap-2 bg-white/20 rounded-full px-3 py-1 mb-4">
                 <span className="font-body text-xs font-semibold text-white">1–2 Oct 2026 · Kampala</span>
               </div>
-              <h3 className="font-display text-2xl font-bold text-white mb-3">
+              <h3 className="font-heading text-2xl font-bold text-white mb-3">
                 The Coffee Convention & Expo
               </h3>
               <p className="font-body text-white/90 leading-relaxed text-sm mb-4">
@@ -93,7 +93,7 @@ export default function BeyondTheRaceSection() {
             <div className="w-14 h-14 rounded-2xl bg-[var(--color-orange)]/10 flex items-center justify-center mb-6">
               <Star size={28} className="text-[var(--color-orange)]" />
             </div>
-            <h3 className="font-display text-2xl font-bold text-[var(--color-text-dark)] mb-3">
+            <h3 className="font-heading text-2xl font-bold text-[var(--color-text-dark)] mb-3">
               Inspire Africa Barista Championships
             </h3>
             <p className="font-body text-[var(--color-text-mid)] leading-relaxed text-sm mb-4">

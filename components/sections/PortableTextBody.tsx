@@ -25,7 +25,7 @@ const components: PortableTextComponents = {
       <h2 className="font-display text-3xl font-semibold text-[var(--color-espresso)] mt-8 mb-4">{children}</h2>
     ),
     h3: ({ children }) => (
-      <h3 className="font-display text-2xl font-semibold text-[var(--color-espresso)] mt-6 mb-3">{children}</h3>
+      <h3 className="font-heading text-2xl font-semibold text-[var(--color-espresso)] mt-6 mb-3">{children}</h3>
     ),
     normal: ({ children }) => (
       <p className="font-body text-base text-[var(--color-arabica)] leading-relaxed mb-4">{children}</p>

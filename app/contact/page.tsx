@@ -24,7 +24,7 @@ export default function ContactPage() {
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-16">
             {/* Contact form */}
             <div className="bg-white rounded-2xl p-8 border" style={{ borderColor: 'rgba(26,107,58,0.15)' }}>
-              <h2 className="font-display text-2xl font-semibold mb-6" style={{ color: 'var(--brown-heading)' }}>
+              <h2 className="font-heading text-2xl font-semibold mb-6" style={{ color: 'var(--brown-heading)' }}>
                 Send a Message
               </h2>
               <ContactForm />
@@ -33,7 +33,7 @@ export default function ContactPage() {
             {/* Contact details */}
             <div className="space-y-8">
               <div>
-                <h2 className="font-display text-2xl font-semibold mb-6" style={{ color: 'var(--brown-heading)' }}>
+                <h2 className="font-heading text-2xl font-semibold mb-6" style={{ color: 'var(--brown-heading)' }}>
                   Other Ways to Reach Us
                 </h2>
                 <div className="space-y-4">

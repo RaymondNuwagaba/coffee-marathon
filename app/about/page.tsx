@@ -115,7 +115,7 @@ export default function AboutPage() {
                 borderColor: 'rgba(26,107,58,0.2)',
               }}
             >
-              <p className="font-display text-lg font-semibold italic" style={{ color: 'var(--brown-heading)' }}>
+              <p className="font-heading text-lg font-semibold italic" style={{ color: 'var(--brown-heading)' }}>
                 &ldquo;Empowering the IK Community of Karamoja through Coffee Farming to End Poverty&rdquo;
               </p>
             </div>
@@ -123,7 +123,7 @@ export default function AboutPage() {
 
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-start">
             <div>
-              <h3 className="font-display text-2xl font-bold mb-4" style={{ color: 'var(--brown-heading)' }}>
+              <h3 className="font-heading text-2xl font-bold mb-4" style={{ color: 'var(--brown-heading)' }}>
                 Who Are the Ik, and Why They Matter
               </h3>
               <p className="font-body text-base leading-relaxed mb-4" style={{ color: 'var(--brown-dark)' }}>
@@ -132,7 +132,7 @@ export default function AboutPage() {
               <p className="font-body text-base leading-relaxed mb-6" style={{ color: 'var(--brown-dark)' }}>
                 They matter because they represent both a moral responsibility and an opportunity for transformation. Empowering the Ik is not about charity — it is about restoring dignity, agency, and inclusion.
               </p>
-              <h3 className="font-display text-2xl font-bold mb-4" style={{ color: 'var(--brown-heading)' }}>
+              <h3 className="font-heading text-2xl font-bold mb-4" style={{ color: 'var(--brown-heading)' }}>
                 Why Coffee Farming Is the Path Out of Poverty
               </h3>
               <p className="font-body text-base leading-relaxed" style={{ color: 'var(--brown-dark)' }}>
@@ -269,7 +269,7 @@ export default function AboutPage() {
                     className="w-16 h-16 rounded-full flex items-center justify-center shrink-0 relative z-10"
                     style={{ backgroundColor: i === timeline.length - 1 ? 'var(--green-primary)' : 'var(--green-deep)' }}
                   >
-                    <span className="font-display text-sm font-bold text-white">
+                    <span className="font-heading text-sm font-bold text-white">
                       {item.year}
                     </span>
                   </div>

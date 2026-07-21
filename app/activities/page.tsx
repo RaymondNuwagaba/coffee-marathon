@@ -110,7 +110,7 @@ export default function BeyondTheMarathonPage() {
                         {activity.number}
                       </span>
                     </div>
-                    <h3 className="font-display text-lg font-bold mb-2 leading-snug" style={{ color: 'var(--brown-heading)' }}>
+                    <h3 className="font-heading text-lg font-bold mb-2 leading-snug" style={{ color: 'var(--brown-heading)' }}>
                       {activity.name}
                     </h3>
                     <p className="font-body text-sm leading-relaxed" style={{ color: 'var(--brown-dark)' }}>
@@ -210,7 +210,7 @@ export default function BeyondTheMarathonPage() {
                       { num: '$5B', label: '2030 target' },
                     ].map(({ num, label }) => (
                       <div key={label}>
-                        <p className="font-display text-xl font-bold text-white">{num}</p>
+                        <p className="font-heading text-xl font-bold text-white">{num}</p>
                         <p className="font-body text-xs uppercase tracking-wide mt-0.5" style={{ color: 'rgba(255,255,255,0.6)' }}>{label}</p>
                       </div>
                     ))}
@@ -265,7 +265,7 @@ export default function BeyondTheMarathonPage() {
                 <span className="block text-7xl md:text-8xl" style={{ color: 'var(--green-light)' }}>Tyrese</span>
                 <span className="block text-7xl md:text-8xl text-white">Gibson</span>
               </h2>
-              <p className="font-display text-lg font-semibold italic mb-4" style={{ color: 'var(--green-pale)' }}>
+              <p className="font-heading text-lg font-semibold italic mb-4" style={{ color: 'var(--green-pale)' }}>
                 The Most Anticipated Night of the Year
               </p>
               <p className="font-body text-base leading-relaxed max-w-md mb-8" style={{ color: 'rgba(255,255,255,0.7)' }}>
@@ -293,7 +293,7 @@ export default function BeyondTheMarathonPage() {
               </div>
               <div className="p-5 rounded-2xl border" style={{ backgroundColor: 'rgba(255,255,255,0.05)', borderColor: 'rgba(255,255,255,0.1)' }}>
                 <p className="font-body text-xs uppercase tracking-widest font-semibold mb-1" style={{ color: 'var(--green-pale)' }}>2025 Headline Artist</p>
-                <p className="font-display text-xl font-semibold text-white mb-1">Diamond Platnumz</p>
+                <p className="font-heading text-xl font-semibold text-white mb-1">Diamond Platnumz</p>
                 <p className="font-body text-sm" style={{ color: 'rgba(255,255,255,0.6)' }}>
                   Tanzanian superstar Diamond Platnumz headlined the Coffee Marathon Concert 2025 — proof that this event attracts world-class talent.
                 </p>

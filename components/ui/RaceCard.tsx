@@ -91,7 +91,7 @@ export default function RaceCard({
         )}
 
         <div className="mt-auto flex items-center justify-between pt-2 border-t" style={{ borderColor: 'rgba(26,107,58,0.12)' }}>
-          <span className="font-display text-lg font-semibold" style={{ color: 'var(--brown-mid)' }}>{price}</span>
+          <span className="font-heading text-lg font-semibold" style={{ color: 'var(--brown-mid)' }}>{price}</span>
           <a
             href={href}
             target="_blank"

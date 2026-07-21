@@ -47,7 +47,7 @@ export function AccommodationCard({ accommodation: acc }: AccommodationCardProps
       </div>
 
       <div className="p-5">
-        <h3 className="font-display text-lg font-semibold mb-1" style={{ color: 'var(--brown-heading)' }}>{acc.name}</h3>
+        <h3 className="font-heading text-lg font-semibold mb-1" style={{ color: 'var(--brown-heading)' }}>{acc.name}</h3>
 
         {acc.distanceKm !== undefined && (
           <div className="flex items-center gap-1 mb-2">

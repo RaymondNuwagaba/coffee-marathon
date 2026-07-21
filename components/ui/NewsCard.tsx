@@ -31,7 +31,7 @@ export default function NewsCard({ slug, date, title, excerpt, featured, imageLa
           {date}
         </p>
         <h3
-          className="font-display text-xl font-semibold leading-snug mb-2 transition-colors"
+          className="font-heading text-xl font-semibold leading-snug mb-2 transition-colors"
           style={{ color: 'var(--brown-heading)' }}
         >
           {title}

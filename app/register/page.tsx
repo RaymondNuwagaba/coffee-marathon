@@ -54,7 +54,7 @@ export default function RegisterPage() {
                 key={item.time}
                 className="bg-white rounded-xl p-5 border border-[var(--color-cream-dark)] text-left"
               >
-                <div className="font-display text-2xl font-bold text-[var(--color-forest)]">
+                <div className="font-heading text-2xl font-bold text-[var(--color-forest)]">
                   {item.time}
                 </div>
                 <p className="font-body text-sm text-[var(--color-arabica)] mt-1">{item.label}</p>

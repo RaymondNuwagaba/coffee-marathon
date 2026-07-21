@@ -45,7 +45,7 @@ export default function MissionSection() {
               }}
             >
               <h3
-                className="font-display text-lg font-bold mb-3"
+                className="font-heading text-lg font-bold mb-3"
                 style={{ color: 'var(--brown-heading)' }}
               >
                 {title}

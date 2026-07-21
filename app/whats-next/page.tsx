@@ -90,7 +90,7 @@ export default function WhatsNextPage() {
                 <div className={`w-12 h-12 rounded-full ${color} flex items-center justify-center mb-4`}>
                   <Icon size={22} className={iconColor} />
                 </div>
-                <h3 className="font-display text-xl font-semibold text-[var(--color-espresso)] mb-3">
+                <h3 className="font-heading text-xl font-semibold text-[var(--color-espresso)] mb-3">
                   {title}
                 </h3>
                 <ul className="space-y-2 mb-3">
@@ -155,7 +155,7 @@ export default function WhatsNextPage() {
               <p className="font-body text-xs uppercase tracking-widest text-[var(--color-logo-forest)] mb-1">
                 Explore
               </p>
-              <p className="font-display text-xl font-semibold text-[var(--color-cream)]">
+              <p className="font-heading text-xl font-semibold text-[var(--color-cream)]">
                 Local Attractions →
               </p>
             </Link>
@@ -166,7 +166,7 @@ export default function WhatsNextPage() {
               <p className="font-body text-xs uppercase tracking-widest text-[var(--color-logo-forest)] mb-1">
                 Stay
               </p>
-              <p className="font-display text-xl font-semibold text-[var(--color-cream)]">
+              <p className="font-heading text-xl font-semibold text-[var(--color-cream)]">
                 Accommodation →
               </p>
             </Link>

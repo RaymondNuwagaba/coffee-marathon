@@ -62,7 +62,7 @@ export default function Highlights2025Section() {
           <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-6 gap-px">
             {stats.map(({ num, label }) => (
               <div key={label} className="text-center py-4 px-3">
-                <p className="font-display text-2xl md:text-3xl font-bold leading-tight" style={{ color: 'var(--green-light)' }}>
+                <p className="font-heading text-2xl md:text-3xl font-bold leading-tight" style={{ color: 'var(--green-light)' }}>
                   {num}
                 </p>
                 <p className="font-label text-xs uppercase tracking-[0.1em] mt-1" style={{ color: 'rgba(255,255,255,0.65)' }}>
@@ -192,14 +192,14 @@ export default function Highlights2025Section() {
                       className="w-10 h-10 rounded-full flex items-center justify-center shrink-0"
                       style={{ backgroundColor: bg }}
                     >
-                      <span className="font-display font-bold text-sm" style={{ color: text }}>{place}</span>
+                      <span className="font-heading font-bold text-sm" style={{ color: text }}>{place}</span>
                     </div>
                     <div className="flex-1">
                       <p className="font-body font-semibold text-sm" style={{ color: 'var(--brown-dark)' }}>
                         Winner — <span className="font-normal" style={{ color: 'var(--brown-heading)' }}>Name to be confirmed</span>
                       </p>
                     </div>
-                    <p className="font-display font-bold text-sm shrink-0" style={{ color: 'var(--green-primary)' }}>{prize}</p>
+                    <p className="font-heading font-bold text-sm shrink-0" style={{ color: 'var(--green-primary)' }}>{prize}</p>
                   </div>
                 ))}
               </div>

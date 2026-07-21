@@ -7,7 +7,7 @@ interface TestimonialCardProps {
 export default function TestimonialCard({ quote, name, category }: TestimonialCardProps) {
   return (
     <div className="bg-white rounded-xl p-6 border-l-4 border-[var(--color-espresso)] shadow-sm hover:shadow-md transition-shadow">
-      <blockquote className="font-display text-lg italic text-[var(--color-espresso)] leading-relaxed mb-4">
+      <blockquote className="font-heading text-lg italic text-[var(--color-espresso)] leading-relaxed mb-4">
         &ldquo;{quote}&rdquo;
       </blockquote>
       <div>

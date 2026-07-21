@@ -37,7 +37,7 @@ export function AmbassadorSection({ pinnketRegisterUrl }: AmbassadorSectionProps
             <p className="font-body text-[var(--color-cream)]/60 text-sm tracking-widest uppercase mb-2">
               Featuring
             </p>
-            <p className="font-display italic text-[var(--color-forest)] text-5xl md:text-6xl font-semibold leading-none mb-6">
+            <p className="font-heading italic text-[var(--color-forest)] text-5xl md:text-6xl font-semibold leading-none mb-6">
               Tyrese Gibson
             </p>
 
@@ -72,7 +72,7 @@ export function AmbassadorSection({ pinnketRegisterUrl }: AmbassadorSectionProps
               />
             </div>
             <div className="mt-3 text-center">
-              <p className="font-display italic text-[var(--color-forest)] text-2xl">Tyrese Gibson</p>
+              <p className="font-heading italic text-[var(--color-forest)] text-2xl">Tyrese Gibson</p>
               <p className="font-body text-[var(--color-cream)]/40 text-xs tracking-widest uppercase mt-1">
                 Featured celebrity · 2026
               </p>

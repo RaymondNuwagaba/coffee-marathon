@@ -46,7 +46,7 @@ export default function ConcertSection() {
               <span className="block text-7xl md:text-8xl lg:text-9xl text-white">Gibson</span>
             </h2>
 
-            <p className="font-display text-xl font-semibold text-[var(--color-logo-forest)] italic mb-4">
+            <p className="font-heading text-xl font-semibold text-[var(--color-logo-forest)] italic mb-4">
               The Most Anticipated Night of the Year
             </p>
 
@@ -89,7 +89,7 @@ export default function ConcertSection() {
                   2025 Headline Artist
                 </span>
               </div>
-              <p className="font-display text-xl font-semibold text-white mb-1">Diamond Platnumz</p>
+              <p className="font-heading text-xl font-semibold text-white mb-1">Diamond Platnumz</p>
               <p className="font-body text-sm text-white/60 mb-4">
                 Tanzanian superstar Diamond Platnumz performed at the Coffee Marathon Concert 2025 — a testament to the world-class calibre of artists this event attracts.
               </p>
@@ -182,7 +182,7 @@ export default function ConcertSection() {
             { num: 'World-class', label: 'Entertainment' },
           ].map(({ num, label }) => (
             <div key={label} className="bg-white/5 py-6 px-6 text-center hover:bg-white/10 transition-colors">
-              <p className="font-display text-2xl font-bold text-[var(--color-accent)]">{num}</p>
+              <p className="font-heading text-2xl font-bold text-[var(--color-accent)]">{num}</p>
               <p className="font-body text-xs text-white/50 uppercase tracking-widest mt-1">{label}</p>
             </div>
           ))}

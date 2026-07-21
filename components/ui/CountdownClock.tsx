@@ -66,7 +66,7 @@ export default function CountdownClock({ targetDate, ctaHref }: CountdownClockPr
               </div>
             </div>
             {i < units.length - 1 && (
-              <span className="font-display text-2xl text-[var(--color-dark)]/80 font-bold">
+              <span className="font-heading text-2xl text-[var(--color-dark)]/80 font-bold">
                 :
               </span>
             )}

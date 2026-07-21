@@ -28,7 +28,7 @@ export default function ResultsPage() {
         <div className="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex items-center gap-3 mb-10">
             <Trophy size={20} style={{ color: 'var(--green-primary)' }} />
-            <h2 className="font-display text-2xl font-semibold" style={{ color: 'var(--brown-heading)' }}>
+            <h2 className="font-heading text-2xl font-semibold" style={{ color: 'var(--brown-heading)' }}>
               Results by Year
             </h2>
           </div>
@@ -45,7 +45,7 @@ export default function ResultsPage() {
                 }}
               >
                 <div>
-                  <span className="font-display text-2xl font-bold mr-4" style={{ color: 'var(--green-primary)' }}>
+                  <span className="font-heading text-2xl font-bold mr-4" style={{ color: 'var(--green-primary)' }}>
                     {result.year}
                   </span>
                   <span className="font-body text-sm" style={{ color: 'var(--brown-dark)' }}>
