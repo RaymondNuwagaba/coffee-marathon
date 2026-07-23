@@ -1,4 +1,5 @@
 import type { Metadata } from 'next'
+import Image from 'next/image'
 import { Package, Shirt, ShoppingBag } from 'lucide-react'
 import PageHero from '@/components/layout/PageHero'
 import PinnketCTA from '@/components/ui/PinnketCTA'
@@ -6,8 +7,8 @@ import { getSiteSettings } from '@/sanity/lib/fetch'
 import { PINNKET } from '@/lib/pinnket'
 
 export const metadata: Metadata = {
-  title: 'Shop — Official Race Kit',
-  description: 'Order your official Coffee Marathon Uganda 2026 race kit. Race jersey, shorts, cap, and bag. Secure purchase via Pinnket.',
+  title: 'Shop - Official Race Kit',
+  description: 'Order your official Coffee Marathon Uganda 2027 race kit. Race jersey, shorts, cap, and bag. Secure purchase via Pinnket.',
 }
 
 const sizeGuide = [
@@ -30,34 +31,45 @@ export default async function ShopPage() {
   const shopUrl = settings?.pinnketShopUrl ?? PINNKET.shop
   const cutoffLabel = settings?.kitOrderCutoff
     ? new Intl.DateTimeFormat('en-UG', { dateStyle: 'long' }).format(new Date(settings.kitOrderCutoff))
-    : '[DATE — to be confirmed]'
+    : '[DATE - to be confirmed]'
 
   return (
     <>
       <PageHero
-        title="Official Race Kit 2026"
-        subtitle="Gear up for race day with the official Coffee Marathon Uganda kit — designed for Uganda's highland terrain."
-        label="Shop 2026"
+        title="Official Race Kit 2027"
+        subtitle="Gear up for race day with the official Coffee Marathon Uganda kit, designed for Uganda's highland terrain."
+        label="Shop 2027"
       />
 
       {/* Orders close banner */}
       <div className="py-3 text-center" style={{ backgroundColor: 'var(--brown-mid)' }}>
         <p className="font-label text-sm font-bold uppercase tracking-[0.08em] text-white">
-          Orders close {cutoffLabel} — collection on race day at Africa Coffee Park
+          Orders close {cutoffLabel}, collection on race day at Africa Coffee Park
         </p>
       </div>
 
       <section className="py-20" style={{ backgroundColor: 'var(--green-mist)' }}>
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-start">
-            {/* Product image placeholder */}
-            <div
-              className="aspect-square rounded-2xl flex items-center justify-center border"
-              style={{ backgroundColor: 'var(--green-pale)', borderColor: 'rgba(26,107,58,0.2)' }}
-            >
-              <span className="font-body text-sm text-center px-8" style={{ color: 'var(--green-mid)' }}>
-                Kit flat-lay photography — to be added by client
-              </span>
+            {/* Standing in for kit flat-lay photography until the client
+                supplies it, a shot from a previous edition. */}
+            <div>
+              <div
+                className="aspect-square rounded-2xl overflow-hidden relative border"
+                style={{ backgroundColor: 'var(--green-pale)', borderColor: 'rgba(26,107,58,0.2)' }}
+              >
+                <Image
+                  src="/images/races-runner-portrait.jpg"
+                  alt="A runner at a previous Coffee Marathon"
+                  fill
+                  className="object-cover"
+                  sizes="(max-width: 1024px) 100vw, 50vw"
+                  priority
+                />
+              </div>
+              <p className="mt-2 font-body text-xs" style={{ color: 'var(--green-mid)' }}>
+                From a previous edition. Official 2027 kit photography to follow.
+              </p>
             </div>
 
             <div>
@@ -92,7 +104,7 @@ export default async function ShopPage() {
               <div className="rounded-xl p-6 mb-6" style={{ backgroundColor: 'var(--green-primary)' }}>
                 <p className="font-label text-xs uppercase tracking-[0.1em] font-bold mb-1" style={{ color: 'var(--green-pale)' }}>Kit Price</p>
                 <p className="font-display text-3xl font-bold text-white">UGX XX,XXX</p>
-                <p className="font-body text-xs mt-1" style={{ color: 'rgba(255,255,255,0.4)' }}>Placeholder — price to be confirmed</p>
+                <p className="font-body text-xs mt-1" style={{ color: 'rgba(255,255,255,0.4)' }}>Placeholder - price to be confirmed</p>
               </div>
 
               <PinnketCTA href={shopUrl} label="Order Your Kit on Pinnket →" showNote />
@@ -111,7 +123,7 @@ export default async function ShopPage() {
             Size Guide
           </h2>
           <p className="font-body text-xs mb-6 text-center" style={{ color: 'var(--brown-dark)', opacity: 0.6 }}>
-            All measurements in centimetres (cm). Placeholder data — to be confirmed.
+            All measurements in centimetres (cm). Placeholder data - to be confirmed.
           </p>
           <div className="overflow-x-auto">
             <table className="w-full border-collapse rounded-xl overflow-hidden">

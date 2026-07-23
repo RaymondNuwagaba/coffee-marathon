@@ -1,5 +1,6 @@
 import type { Metadata } from 'next'
 import { Mail, Phone, MapPin, MessageCircle } from 'lucide-react'
+import VenueMap from '@/components/ui/VenueMap'
 import { FacebookIcon, InstagramIcon, TwitterXIcon } from '@/components/ui/SocialIcons'
 import PageHero from '@/components/layout/PageHero'
 import ContactForm from '@/components/ui/ContactForm'
@@ -117,18 +118,8 @@ export default function ContactPage() {
                 </div>
               </div>
 
-              {/* Map placeholder */}
-              <div
-                className="aspect-video rounded-2xl flex items-center justify-center border"
-                style={{ backgroundColor: 'var(--green-pale)', borderColor: 'rgba(26,107,58,0.2)' }}
-              >
-                <div className="text-center">
-                  <MapPin size={24} className="mx-auto mb-2" style={{ color: 'var(--green-primary)', opacity: 0.5 }} />
-                  <p className="font-body text-xs" style={{ color: 'var(--green-mid)' }}>
-                    Google Maps embed — to be added
-                  </p>
-                </div>
-              </div>
+              {/* Venue location */}
+              <VenueMap zoom={12} />
             </div>
           </div>
         </div>

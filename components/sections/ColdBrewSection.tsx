@@ -11,7 +11,7 @@ const variants = [
   {
     icon: Zap,
     name: 'Energy Drink',
-    desc: 'Cold brew with B-vitamins, guarana, and taurine — built for race day.',
+    desc: 'Cold brew with B-vitamins, guarana, and taurine, built for race day.',
     badge: 'High Energy',
   },
   {
@@ -28,7 +28,7 @@ export default function ColdBrewSection() {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
 
-          {/* Left — text */}
+          {/* Left, text */}
           <div>
             <p
               className="font-label text-xs font-bold uppercase tracking-[0.12em] mb-3"
@@ -46,7 +46,7 @@ export default function ColdBrewSection() {
               className="font-body text-base leading-relaxed mb-8"
               style={{ color: 'var(--brown-dark)' }}
             >
-              IAC Cold Brew is the official coffee drink of the Coffee Marathon — smooth, energising, and crafted from Uganda&apos;s finest beans.
+              IAC Cold Brew is the official coffee drink of the Coffee Marathon, smooth, energising, and crafted from Uganda&apos;s finest beans.
             </p>
 
             <div className="space-y-4">
@@ -79,13 +79,13 @@ export default function ColdBrewSection() {
             </div>
           </div>
 
-          {/* Right — product image */}
+          {/* Right, product image */}
           <div className="flex items-center justify-center">
             <div className="relative w-full max-w-sm">
               <div className="aspect-[3/4] rounded-3xl overflow-hidden relative shadow-xl">
                 <Image
                   src="/images/cold-brew-product.jpg"
-                  alt="IAC Cold Brew — Inspire Africa Coffee"
+                  alt="IAC Cold Brew - Inspire Africa Coffee"
                   fill
                   className="object-cover"
                   sizes="(max-width: 1024px) 100vw, 50vw"

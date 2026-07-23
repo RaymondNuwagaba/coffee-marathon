@@ -2,6 +2,7 @@ import type { Metadata } from 'next'
 import { MapPin, Clock, CheckCircle2 } from 'lucide-react'
 import PageHero from '@/components/layout/PageHero'
 import PinnketCTA from '@/components/ui/PinnketCTA'
+import VenueMap from '@/components/ui/VenueMap'
 import { getRaces } from '@/sanity/lib/fetch'
 import { races as staticRaces } from '@/lib/content'
 import { PINNKET } from '@/lib/pinnket'
@@ -9,7 +10,7 @@ import type { Race } from '@/types/sanity'
 
 export const metadata: Metadata = {
   title: 'Race Categories',
-  description: 'Full details for all four Coffee Marathon Uganda 2026 race categories: 5KM Fun Run, 10KM Community, 21KM Half Marathon, and 42KM Full Marathon.',
+  description: 'Full details for all four Coffee Marathon Uganda 2027 race categories: 5KM Fun Run, 10KM Community, 21KM Half Marathon, and 42KM Full Marathon.',
 }
 
 export default async function RacesPage() {
@@ -20,7 +21,7 @@ export default async function RacesPage() {
     <>
       <PageHero
         title="Race Categories"
-        subtitle="Four distances. One incredible route. Africa Coffee Park, Ntungamo — 3 October 2026."
+        subtitle="Four distances. One incredible route. Africa Coffee Park, Ntungamo, 13 February 2027."
         label="Race Information"
       />
 
@@ -46,7 +47,7 @@ export default async function RacesPage() {
                 className="bg-white rounded-2xl overflow-hidden border shadow-sm"
                 style={{ borderColor: 'rgba(26,107,58,0.2)' }}
               >
-                {/* Header — distance badge in green-pale */}
+                {/* Header, distance badge in green-pale */}
                 <div
                   className="px-8 py-6 flex flex-col sm:flex-row sm:items-center justify-between gap-4"
                   style={{ backgroundColor: 'var(--green-primary)' }}
@@ -116,11 +117,13 @@ export default async function RacesPage() {
                         ))}
                       </ul>
                     </div>
-                    <div
-                      className="aspect-video rounded-xl flex items-center justify-center"
-                      style={{ backgroundColor: 'var(--green-mist)' }}
-                    >
-                      <p className="font-body text-xs text-center px-4" style={{ color: 'var(--green-mid)' }}>Route map coming soon</p>
+                    {/* The detailed course is not published yet, so this shows
+                        the start and finish venue rather than an empty box. */}
+                    <div>
+                      <VenueMap zoom={13} aspect="aspect-video" showLink={false} />
+                      <p className="mt-2 font-body text-xs" style={{ color: 'var(--green-mid)' }}>
+                        Start and finish at Africa Coffee Park. Detailed route map published closer to race day.
+                      </p>
                     </div>
                     <PinnketCTA href={race.pinnketUrl} label={`Register for the ${race.distance}`} showNote />
                   </div>
@@ -145,9 +148,9 @@ export default async function RacesPage() {
               'All runners must carry their official race bib during the event.',
               'Headphones are permitted but runners use them at their own risk.',
               'Runners must follow the marked course and marshal instructions at all times.',
-              'All distances are measured and verified at [certifying body — placeholder].',
+              'All distances are measured and verified at [certifying body - placeholder].',
               'Medical support will be stationed at regular intervals along all routes.',
-              'Timing chips are included in bibs — chip timing used for all official results.',
+              'Timing chips are included in bibs, chip timing used for all official results.',
             ].map((rule, i) => (
               <li key={i} className="flex items-start gap-3 font-body text-sm" style={{ color: 'var(--brown-dark)' }}>
                 <span

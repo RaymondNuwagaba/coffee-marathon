@@ -8,9 +8,9 @@ export const races = [
     desc: 'Perfect for first-timers and families.',
     pinnketKey: 'register5k' as const,
     terrain: 'Flat, family-friendly route through the coffee park grounds.',
-    cutOff: 'Placeholder — to be confirmed',
+    cutOff: 'Placeholder - to be confirmed',
     included: ['Race bib', 'Finisher medal', 'Refreshments'],
-    startTime: 'Placeholder — to be confirmed',
+    startTime: 'Placeholder - to be confirmed',
   },
   {
     distance: '10 KM',
@@ -21,9 +21,9 @@ export const races = [
     desc: 'Test your pace through the coffee farms.',
     pinnketKey: 'register10k' as const,
     terrain: 'Rolling hills and scenic coffee-farm trails.',
-    cutOff: 'Placeholder — to be confirmed',
+    cutOff: 'Placeholder - to be confirmed',
     included: ['Race bib', 'Finisher medal', 'T-shirt', 'Refreshments'],
-    startTime: 'Placeholder — to be confirmed',
+    startTime: 'Placeholder - to be confirmed',
   },
   {
     distance: '21 KM',
@@ -33,10 +33,10 @@ export const races = [
     price: 'UGX XX,XXX',
     desc: 'A serious challenge with stunning views.',
     pinnketKey: 'register21k' as const,
-    terrain: 'Mixed terrain — farms, hills, and highland paths.',
-    cutOff: 'Placeholder — to be confirmed',
+    terrain: 'Mixed terrain, farms, hills, and highland paths.',
+    cutOff: 'Placeholder - to be confirmed',
     included: ['Race bib', 'Finisher medal', 'Race kit', 'Refreshments', 'Baggage storage'],
-    startTime: 'Placeholder — to be confirmed',
+    startTime: 'Placeholder - to be confirmed',
   },
   {
     distance: '42 KM',
@@ -46,10 +46,10 @@ export const races = [
     price: 'UGX XX,XXX',
     desc: "The ultimate test across Uganda's highlands.",
     pinnketKey: 'register42k' as const,
-    terrain: 'Challenging highland route — elevation and farm trails.',
-    cutOff: 'Placeholder — to be confirmed',
+    terrain: 'Challenging highland route, elevation and farm trails.',
+    cutOff: 'Placeholder - to be confirmed',
     included: ['Race bib', 'Finisher medal', 'Race kit', 'Refreshments', 'Baggage storage', 'Post-race meal'],
-    startTime: 'Placeholder — to be confirmed',
+    startTime: 'Placeholder - to be confirmed',
   },
 ]
 
@@ -62,7 +62,7 @@ export const stats = [
 
 export const testimonials = [
   {
-    quote: 'I discovered my talent in Primary Four and won 50,000 shillings — the first money I ever earned through running. Today I run not only for myself but for other girls like me. Through the Ntungamo Marathon I won 1.5 million shillings. That opportunity changed my life.',
+    quote: 'I discovered my talent in Primary Four and won 50,000 shillings, the first money I ever earned through running. Today I run not only for myself but for other girls like me. Through the Ntungamo Marathon I won 1.5 million shillings. That opportunity changed my life.',
     name: 'Chelangat Ariziki',
     category: '21 KM Runner',
   },
@@ -72,7 +72,7 @@ export const testimonials = [
     category: 'CEO, Mount Elgon Women in Specialty Coffee',
   },
   {
-    quote: 'Running became purpose-driven — each step symbolising solidarity with the communities whose stories inspired the event. We were not just competing for personal bests; we were running for livelihoods, for equity, and for impact.',
+    quote: 'Running became purpose-driven, each step symbolising solidarity with the communities whose stories inspired the event. We were not just competing for personal bests; we were running for livelihoods, for equity, and for impact.',
     name: 'Coffee Marathon Runner',
     category: '10 KM, 2025',
   },
@@ -81,33 +81,33 @@ export const testimonials = [
 export const faqs = [
   {
     q: 'What is included in the registration fee?',
-    a: 'Placeholder — to be confirmed by client.',
+    a: 'Placeholder - to be confirmed by client.',
   },
   {
     q: 'Where do I collect my race bib?',
-    a: 'Placeholder — to be confirmed by client.',
+    a: 'Placeholder - to be confirmed by client.',
   },
   {
     q: 'What are the cut-off times?',
-    a: 'Placeholder — to be confirmed by client.',
+    a: 'Placeholder - to be confirmed by client.',
   },
   {
     q: 'Can I transfer my registration to another person?',
-    a: 'Placeholder — to be confirmed by client.',
+    a: 'Placeholder - to be confirmed by client.',
   },
   {
     q: 'Is the 42 KM course certified?',
-    a: 'Placeholder — to be confirmed by client.',
+    a: 'Placeholder - to be confirmed by client.',
   },
 ]
 
 export const timeline = [
-  { year: '2021', event: 'First Coffee Marathon — the movement begins' },
+  { year: '2021', event: 'First Coffee Marathon, the movement begins' },
   { year: '2022', event: 'Growing the community across East Africa' },
-  { year: '2023', event: 'Expanding impact — new categories and partners' },
+  { year: '2023', event: 'Expanding impact, new categories and partners' },
   { year: '2024', event: 'International runners join from 10+ countries' },
-  { year: '2025', event: 'Diamond Platnumz headlines the concert — record turnout' },
-  { year: '2026', event: 'Tyrese Gibson joins — biggest edition yet, 3 October, Africa Coffee Park' },
+  { year: '2025', event: 'Diamond Platnumz headlines the concert, record turnout' },
+  { year: '2027', event: 'Biggest edition yet, 13 February, Africa Coffee Park' },
 ]
 
 export const attractions = [
@@ -134,7 +134,7 @@ export const attractions = [
   },
   {
     name: 'Lake Nyabihoko',
-    description: 'A serene lake surrounded by rolling green hills and terraced farmland — one of the most photogenic landscapes in southwestern Uganda. The marathon route passes through this area, aligning with the event\'s theme of uplifting rural coffee women.',
+    description: 'A serene lake surrounded by rolling green hills and terraced farmland, one of the most photogenic landscapes in southwestern Uganda. The marathon route passes through this area, aligning with the event\'s theme of uplifting rural coffee women.',
     tips: 'Best visited at dawn. Bring walking shoes and a camera. No entry fee.',
     slug: 'lake-nyabihoko',
     localImage: '/images/attraction-lake-nyabihoko.jpg',
@@ -209,7 +209,7 @@ export const sponsorTiers = [
   },
 ]
 
-// Source: WhatsApp Image — Activities document
+// Source: WhatsApp Image - Activities document
 export const eventActivities = [
   {
     icon: '🏃',
@@ -248,7 +248,7 @@ export const eventActivities = [
   },
   {
     icon: '🌱',
-    name: 'Farm Expeditions — Adopt a Tree',
+    name: 'Farm Expeditions, Adopt a Tree',
     description: 'Immersive visits to coffee farms where participants engage with farmers and adopt coffee trees. This fosters direct connection, sustainability, and long-term support for growers.',
   },
   {

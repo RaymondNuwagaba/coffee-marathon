@@ -72,7 +72,7 @@ export default function Footer() {
             <h3 className="font-label text-xs font-bold uppercase tracking-[0.12em] mb-4" style={{ color: 'var(--green-pale)' }}>
               Race Info
             </h3>
-            <p className="font-body text-sm mb-1" style={{ color: 'rgba(255,255,255,0.7)' }}>3 October 2026</p>
+            <p className="font-body text-sm mb-1" style={{ color: 'rgba(255,255,255,0.7)' }}>13 February 2027</p>
             <p className="font-body text-sm mb-4" style={{ color: 'rgba(255,255,255,0.7)' }}>
               Africa Coffee Park<br />Ntungamo, Uganda
             </p>
@@ -144,7 +144,7 @@ export default function Footer() {
       {/* Theme statement */}
       <div className="border-t" style={{ borderColor: 'rgba(255,255,255,0.1)', backgroundColor: 'rgba(255,255,255,0.03)' }}>
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-5 text-center">
-          <p className="font-label text-xs uppercase tracking-[0.12em] mb-1" style={{ color: 'rgba(194,237,210,0.6)' }}>Theme 2026</p>
+          <p className="font-label text-xs uppercase tracking-[0.12em] mb-1" style={{ color: 'rgba(194,237,210,0.6)' }}>Theme 2027</p>
           <p className="font-heading text-base font-semibold italic leading-snug" style={{ color: 'var(--green-pale)' }}>
             &ldquo;Empowering the IK Community of Karamoja through Coffee Farming to End Poverty&rdquo;
           </p>

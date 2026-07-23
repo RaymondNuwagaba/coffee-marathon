@@ -14,7 +14,7 @@ const stats = [
 const quotes = [
   {
     quote:
-      'I discovered my talent in Primary Four and won 50,000 shillings — the first money I ever earned through running. Through the Ntungamo Marathon I won 1.5 million shillings. That opportunity changed my life.',
+      'I discovered my talent in Primary Four and won 50,000 shillings, the first money I ever earned through running. Through the Ntungamo Marathon I won 1.5 million shillings. That opportunity changed my life.',
     name: 'Chelangat Ariziki',
     role: '21 KM Runner, 2025',
   },
@@ -26,7 +26,7 @@ const quotes = [
   },
   {
     quote:
-      'Running became purpose-driven — each step symbolising solidarity with the communities whose stories inspired the event. We were not just competing for personal bests; we were running for livelihoods, for equity, and for impact.',
+      'Running became purpose-driven, each step symbolising solidarity with the communities whose stories inspired the event. We were not just competing for personal bests; we were running for livelihoods, for equity, and for impact.',
     name: 'Coffee Marathon Runner',
     role: '10 KM, 2025',
   },
@@ -89,25 +89,25 @@ export default function Highlights2025Section() {
             <div className="md:col-span-2 relative aspect-[16/9] rounded-2xl overflow-hidden group">
               <Image
                 src="/images/races-runner-portrait.jpg"
-                alt="Elite runner mid-race — Coffee Marathon 2025"
+                alt="Elite runner mid-race - Coffee Marathon 2025"
                 fill className="object-cover group-hover:scale-105 transition-transform duration-700"
                 sizes="(max-width: 768px) 100vw, 66vw"
               />
               <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent" />
               <div className="absolute bottom-4 left-4">
-                <p className="font-body text-sm font-semibold text-white">Elite field pushing the pace — 21 KM</p>
+                <p className="font-body text-sm font-semibold text-white">Elite field pushing the pace, 21 KM</p>
               </div>
             </div>
             <div className="relative aspect-[4/3] md:aspect-auto rounded-2xl overflow-hidden group">
               <Image
                 src="/images/results-podium-women.jpg"
-                alt="Women's podium — Coffee Marathon 2025"
+                alt="Women's podium - Coffee Marathon 2025"
                 fill className="object-cover group-hover:scale-105 transition-transform duration-700"
                 sizes="(max-width: 768px) 100vw, 33vw"
               />
               <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent" />
               <div className="absolute bottom-4 left-4">
-                <p className="font-body text-sm font-semibold text-white">Women&apos;s podium — 1st place UGX 10M</p>
+                <p className="font-body text-sm font-semibold text-white">Women&apos;s podium, 1st place UGX 10M</p>
               </div>
             </div>
           </div>
@@ -117,7 +117,7 @@ export default function Highlights2025Section() {
             {[
               { src: '/images/races-runner-nature.jpg', alt: 'Runner on highland route', caption: 'Lone runner conquering the highland route' },
               { src: '/images/gallery-1.jpg', alt: 'Community runners', caption: 'The coffee community comes alive' },
-              { src: '/images/about-finish-line.jpg', alt: 'Female runner at finish', caption: 'Crossing the finish line — 21 KM women' },
+              { src: '/images/about-finish-line.jpg', alt: 'Female runner at finish', caption: 'Crossing the finish line - 21 KM women' },
             ].map((img) => (
               <div key={img.src} className="relative aspect-[4/3] rounded-2xl overflow-hidden group">
                 <Image src={img.src} alt={img.alt} fill className="object-cover group-hover:scale-105 transition-transform duration-700" sizes="(max-width: 640px) 100vw, 33vw" />
@@ -139,7 +139,7 @@ export default function Highlights2025Section() {
               </div>
             </div>
             <div className="relative aspect-[4/3] md:aspect-auto rounded-2xl overflow-hidden group">
-              <Image src="/images/hero-start.jpg" alt="Race start — Coffee Marathon 2025" fill className="object-cover group-hover:scale-105 transition-transform duration-700" sizes="(max-width: 768px) 100vw, 33vw" />
+              <Image src="/images/hero-start.jpg" alt="Race start - Coffee Marathon 2025" fill className="object-cover group-hover:scale-105 transition-transform duration-700" sizes="(max-width: 768px) 100vw, 33vw" />
               <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent" />
               <div className="absolute bottom-3 left-3">
                 <p className="font-body text-xs font-semibold text-white">The race begins at Africa Coffee Park</p>
@@ -166,12 +166,12 @@ export default function Highlights2025Section() {
 
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-10 items-start">
             <div className="relative aspect-[4/3] rounded-3xl overflow-hidden">
-              <Image src="/images/results-podium-full.jpg" alt="Prize-giving ceremony — Coffee Marathon 2025" fill className="object-cover" sizes="(max-width: 1024px) 100vw, 50vw" />
+              <Image src="/images/results-podium-full.jpg" alt="Prize-giving ceremony - Coffee Marathon 2025" fill className="object-cover" sizes="(max-width: 1024px) 100vw, 50vw" />
             </div>
 
             <div>
               <p className="font-body leading-relaxed mb-6" style={{ color: 'var(--brown-dark)' }}>
-                Prize money at the Coffee Marathon 2025 reached life-changing levels — with winners using their earnings to build homes, fund education, and extend water infrastructure to their communities.
+                Prize money at the Coffee Marathon 2025 reached life-changing levels, with winners using their earnings to build homes, fund education, and extend water infrastructure to their communities.
               </p>
 
               <p className="font-label text-xs uppercase tracking-[0.1em] font-bold mb-3" style={{ color: 'var(--green-mid)' }}>
@@ -196,7 +196,7 @@ export default function Highlights2025Section() {
                     </div>
                     <div className="flex-1">
                       <p className="font-body font-semibold text-sm" style={{ color: 'var(--brown-dark)' }}>
-                        Winner — <span className="font-normal" style={{ color: 'var(--brown-heading)' }}>Name to be confirmed</span>
+                        Winner, <span className="font-normal" style={{ color: 'var(--brown-heading)' }}>Name to be confirmed</span>
                       </p>
                     </div>
                     <p className="font-heading font-bold text-sm shrink-0" style={{ color: 'var(--green-primary)' }}>{prize}</p>
@@ -210,7 +210,7 @@ export default function Highlights2025Section() {
               >
                 <p className="font-body text-sm leading-relaxed" style={{ color: 'var(--brown-dark)' }}>
                   <span className="font-semibold" style={{ color: 'var(--brown-heading)' }}>Chelangat Ariziki</span>
-                  <span style={{ color: 'var(--brown-heading)' }}> — 21 KM runner and 2025 prize-winner — </span>
+                  <span style={{ color: 'var(--brown-heading)' }}>, 21 KM runner and 2025 prize-winner, </span>
                   used her earnings to build a home for her family. Her story has become one of the Coffee Marathon&apos;s most powerful symbols of transformation.
                 </p>
               </div>

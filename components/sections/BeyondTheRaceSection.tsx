@@ -19,7 +19,7 @@ export default function BeyondTheRaceSection() {
             More than a marathon
           </h2>
           <p className="font-body text-lg text-[var(--color-text-mid)]">
-            The Coffee Marathon weekend is a celebration of Uganda&apos;s coffee culture — featuring industry events, awards, and experiences that go far beyond the finish line.
+            The Coffee Marathon weekend is a celebration of Uganda&apos;s coffee culture, featuring industry events, awards, and experiences that go far beyond the finish line.
           </p>
         </div>
 
@@ -67,7 +67,7 @@ export default function BeyondTheRaceSection() {
                 <Building2 size={28} className="text-white" />
               </div>
               <div className="inline-flex items-center gap-2 bg-white/20 rounded-full px-3 py-1 mb-4">
-                <span className="font-body text-xs font-semibold text-white">1–2 Oct 2026 · Kampala</span>
+                <span className="font-body text-xs font-semibold text-white">11–12 Feb 2027 · Kampala</span>
               </div>
               <h3 className="font-heading text-2xl font-bold text-white mb-3">
                 The Coffee Convention & Expo

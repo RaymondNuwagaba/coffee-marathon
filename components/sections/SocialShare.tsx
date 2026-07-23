@@ -9,7 +9,7 @@ interface SocialShareProps {
 }
 
 const DEFAULT_MESSAGE =
-  "I'm running The Coffee Marathon Uganda on 3 October 2026! Join me → coffeemarathonug.com"
+  "I'm running The Coffee Marathon Uganda on 13 February 2027! Join me → coffeemarathonug.com"
 
 export default function SocialShare({ message = DEFAULT_MESSAGE, url }: SocialShareProps) {
   const [copied, setCopied] = useState(false)

@@ -1,13 +1,14 @@
 import type { Metadata } from 'next'
-import { MapPin, Tent } from 'lucide-react'
+import { Tent } from 'lucide-react'
 import PageHero from '@/components/layout/PageHero'
 import { AccommodationCard } from '@/components/ui/AccommodationCard'
+import VenueMap from '@/components/ui/VenueMap'
 import { getAccommodation } from '@/sanity/lib/fetch'
 import type { Accommodation } from '@/types/sanity'
 
 export const metadata: Metadata = {
   title: 'Accommodation',
-  description: 'Find places to stay near Africa Coffee Park, Ntungamo for The Coffee Marathon Uganda 2026.',
+  description: 'Find places to stay near Africa Coffee Park, Ntungamo for The Coffee Marathon Uganda 2027.',
 }
 
 export default async function AccommodationPage() {
@@ -18,7 +19,7 @@ export default async function AccommodationPage() {
     <>
       <PageHero
         title="Where to Stay"
-        subtitle="Accommodation options near Africa Coffee Park — from lodges to on-site camping."
+        subtitle="Accommodation options near Africa Coffee Park, from lodges to on-site camping."
         label="Accommodation Guide"
       />
 
@@ -51,18 +52,10 @@ export default async function AccommodationPage() {
             </>
           )}
 
-          {/* Map placeholder */}
+          {/* Venue location */}
           <div className="mb-12">
             <h2 className="font-heading text-2xl font-semibold mb-6" style={{ color: 'var(--brown-heading)' }}>Location Map</h2>
-            <div
-              className="aspect-video rounded-2xl flex items-center justify-center border"
-              style={{ backgroundColor: 'var(--green-pale)', borderColor: 'rgba(26,107,58,0.2)' }}
-            >
-              <div className="text-center">
-                <MapPin size={28} className="mx-auto mb-2" style={{ color: 'var(--green-primary)', opacity: 0.4 }} />
-                <p className="font-body text-sm" style={{ color: 'var(--green-mid)', opacity: 0.7 }}>Google Maps embed — to be added</p>
-              </div>
-            </div>
+            <VenueMap zoom={12} />
           </div>
 
           {/* Camping info */}
@@ -73,7 +66,7 @@ export default async function AccommodationPage() {
             </div>
             <p className="font-body text-sm leading-relaxed mb-4" style={{ color: 'rgba(255,255,255,0.75)' }}>
               On-site camping is available at Africa Coffee Park for runners who want to be right at the venue.
-              Full details — including pricing, check-in times, and what to bring — will be published closer to the event.
+              Full details, including pricing, check-in times, and what to bring, will be published closer to the event.
             </p>
             <a
               href="mailto:info@coffeemarathonug.com"

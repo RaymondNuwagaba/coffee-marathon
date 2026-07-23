@@ -7,7 +7,7 @@ import { races, faqs } from '@/lib/content'
 export const metadata: Metadata = {
   title: 'Register',
   description:
-    'Register for The Coffee Marathon Uganda 2026. Choose from 5KM, 10KM, 21KM, or 42KM. Secure registration via Pinnket.',
+    'Register for The Coffee Marathon Uganda 2027. Choose from 5KM, 10KM, 21KM, or 42KM. Secure registration via Pinnket.',
 }
 
 export default function RegisterPage() {
@@ -15,11 +15,11 @@ export default function RegisterPage() {
     <>
       <PageHero
         title="Register for the Race"
-        subtitle="Choose your distance and secure your place at Africa Coffee Park on 3 October 2026."
-        label="Registration 2026"
+        subtitle="Choose your distance and secure your place at Africa Coffee Park on 13 February 2027."
+        label="Registration 2027"
       />
 
-      {/* Race Cards — expanded */}
+      {/* Race Cards, expanded */}
       <section className="bg-[var(--color-cream-light)] py-20">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-12">
@@ -47,7 +47,7 @@ export default function RegisterPage() {
           <div className="grid grid-cols-1 sm:grid-cols-3 gap-6 mt-8">
             {[
               { time: '05:30', label: 'Athlete assembly & warm-up' },
-              { time: '06:00', label: 'Race start — all categories' },
+              { time: '06:00', label: 'Race start - all categories' },
               { time: '~14:00', label: 'Prize ceremony & celebrations' },
             ].map((item) => (
               <div
@@ -62,7 +62,7 @@ export default function RegisterPage() {
             ))}
           </div>
           <p className="mt-6 font-body text-xs text-[var(--color-arabica)]/60">
-            Times are indicative — confirmed schedule will be communicated closer to race day.
+            Times are indicative, confirmed schedule will be communicated closer to race day.
           </p>
         </div>
       </section>

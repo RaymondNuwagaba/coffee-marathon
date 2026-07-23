@@ -1,3 +1,4 @@
+import Image from 'next/image'
 import Link from 'next/link'
 import { ExternalLink, MapPin } from 'lucide-react'
 import { SanityImage } from '@/components/ui/SanityImage'
@@ -34,9 +35,15 @@ export function AccommodationCard({ accommodation: acc }: AccommodationCardProps
             fill
           />
         ) : (
-          <div className="w-full h-full flex items-center justify-center">
-            <span className="font-body text-xs" style={{ color: 'var(--green-mid)', opacity: 0.5 }}>Photo coming soon</span>
-          </div>
+          /* No photo supplied for this listing, so fall back to a local shot of
+             the area rather than an empty tile. */
+          <Image
+            src="/images/lake-nyabihoko-1.jpg"
+            alt={`Ntungamo area, near ${acc.name}`}
+            fill
+            className="object-cover"
+            sizes="(max-width: 768px) 100vw, 33vw"
+          />
         )}
         <span
           className="absolute top-3 left-3 font-body text-xs font-semibold px-2.5 py-1 rounded-full"

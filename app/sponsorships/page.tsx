@@ -7,7 +7,7 @@ import { sponsorTiers } from '@/lib/content'
 export const metadata: Metadata = {
   title: 'Sponsorships',
   description:
-    'Partner with The Coffee Marathon Uganda 2026. Sponsorship packages from Title Sponsor to Bronze. Download the sponsorship deck.',
+    'Partner with The Coffee Marathon Uganda 2027. Sponsorship packages from Title Sponsor to Bronze. Download the sponsorship deck.',
 }
 
 export default function SponsorshipsPage() {
@@ -16,7 +16,7 @@ export default function SponsorshipsPage() {
       <PageHero
         title="Partner With Us"
         subtitle="Align your brand with Uganda's premier running event and celebrate the women who grow the world's finest coffee."
-        label="Sponsorships 2026"
+        label="Sponsorships 2027"
       />
 
       {/* Why sponsor */}

@@ -25,15 +25,15 @@ export default function MissionSection() {
           {[
             {
               title: 'Why We Started',
-              body: 'We saw untapped potential in coffee-growing communities — especially among women — whose labour sustains the industry but whose voices are often overlooked. The Coffee Marathon was born to change that.',
+              body: 'We saw untapped potential in coffee-growing communities, especially among women, whose labour sustains the industry but whose voices are often overlooked. The Coffee Marathon was born to change that.',
             },
             {
               title: 'Why We Continue',
-              body: 'Awareness alone is no longer enough. We have evolved from a moment of recognition into a movement for action — one that goes beyond stories to actively changing lives and livelihoods.',
+              body: 'Awareness alone is no longer enough. We have evolved from a moment of recognition into a movement for action, one that goes beyond stories to actively changing lives and livelihoods.',
             },
             {
               title: 'Why It Matters',
-              body: 'Our long-term vision: create economic resilience through coffee farming — ensuring farmers can withstand market fluctuations, climate challenges, and generational poverty.',
+              body: 'Our long-term vision: create economic resilience through coffee farming, ensuring farmers can withstand market fluctuations, climate challenges, and generational poverty.',
             },
           ].map(({ title, body }) => (
             <div

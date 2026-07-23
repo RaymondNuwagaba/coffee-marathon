@@ -15,7 +15,7 @@ export const sponsor = defineType({
       options: { list: ['Title', 'Gold', 'Silver', 'Bronze', 'Partner'] },
       validation: r => r.required(),
     }),
-    defineField({ name: 'year', type: 'number', title: 'Year (e.g. 2026)' }),
+    defineField({ name: 'year', type: 'number', title: 'Year (e.g. 2027)' }),
     defineField({ name: 'order', type: 'number', title: 'Display order within tier' }),
   ],
 })

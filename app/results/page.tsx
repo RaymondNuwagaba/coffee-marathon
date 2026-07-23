@@ -74,17 +74,17 @@ export default function ResultsPage() {
               <div className="relative aspect-[4/3] rounded-2xl overflow-hidden border" style={{ borderColor: 'rgba(26,107,58,0.15)' }}>
                 <Image
                   src="/images/results-podium-women.jpg"
-                  alt="Women's prize giving — Coffee Marathon Uganda 2025"
+                  alt="Women's prize giving - Coffee Marathon Uganda 2025"
                   fill
                   className="object-cover object-center"
                   sizes="(max-width: 640px) 100vw, 50vw"
                 />
-                {/* 1st place badge — brown-mid */}
+                {/* 1st place badge, brown-mid */}
                 <div
                   className="absolute top-3 left-3 font-label text-xs font-bold px-2.5 py-1 rounded-full"
                   style={{ backgroundColor: 'var(--brown-mid)', color: 'white' }}
                 >
-                  1st — UGX 10,000,000
+                  1st, UGX 10,000,000
                 </div>
               </div>
             </div>
@@ -95,12 +95,12 @@ export default function ResultsPage() {
               <div className="relative aspect-[4/3] rounded-2xl overflow-hidden border" style={{ borderColor: 'rgba(26,107,58,0.15)' }}>
                 <Image
                   src="/images/results-podium-men.jpg"
-                  alt="Men's prize giving — Coffee Marathon Uganda 2025"
+                  alt="Men's prize giving - Coffee Marathon Uganda 2025"
                   fill
                   className="object-cover object-center"
                   sizes="(max-width: 640px) 100vw, 50vw"
                 />
-                {/* 2nd/3rd badge — green-pale */}
+                {/* 2nd/3rd badge, green-pale */}
                 <div
                   className="absolute top-3 left-3 font-label text-xs font-bold px-2.5 py-1 rounded-full"
                   style={{ backgroundColor: 'var(--green-pale)', color: 'var(--green-deep)' }}

@@ -9,9 +9,9 @@ import {
 import { PINNKET } from '@/lib/pinnket'
 
 export const metadata: Metadata = {
-  title: 'Beyond the Marathon — Coffee Festival Activities 2026',
+  title: 'Beyond the Marathon - Coffee Festival Activities 2027',
   description:
-    'The Coffee Marathon is more than a race. Explore 11 festival experiences: Barista Championships, Coffee Exhibitions, Convention & Expo, Tyrese Gibson Concert, and more.',
+    'The Coffee Marathon is more than a race. Explore 11 festival experiences: Barista Championships, Coffee Exhibitions, Convention & Expo, the Coffee Concert, and more.',
 }
 
 const activities = [
@@ -21,7 +21,7 @@ const activities = [
   { number: '04', icon: BookOpen, name: 'Coffee Workshops', description: 'Interactive learning sessions focused on coffee production, processing, and business development. They equip participants with practical skills and industry knowledge.' },
   { number: '05', icon: Droplets, name: 'Coffee Cupping', description: 'A guided tasting experience used to evaluate coffee quality, flavor, and aroma profiles. It helps participants appreciate the diversity and standards of specialty coffee.' },
   { number: '06', icon: Flame, name: 'The Roasters Parade', description: 'A showcase of coffee roasters demonstrating techniques, equipment, and roasting styles. It highlights craftsmanship and innovation in transforming beans into premium products.' },
-  { number: '07', icon: TreePine, name: 'Farm Expeditions — Adopt a Tree', description: 'Immersive visits to coffee farms where participants engage with farmers and adopt coffee trees. This fosters direct connection, sustainability, and long-term support for growers.', mutumo: true },
+  { number: '07', icon: TreePine, name: 'Farm Expeditions, Adopt a Tree', description: 'Immersive visits to coffee farms where participants engage with farmers and adopt coffee trees. This fosters direct connection, sustainability, and long-term support for growers.', mutumo: true },
   { number: '08', icon: Trophy, name: 'Africa Coffee Awards', description: "A prestigious platform that recognizes and celebrates excellence, innovation, and leadership across Africa's coffee value chain." },
   { number: '09', icon: Palette, name: 'Coffee Artistry', description: 'A creative expression of coffee through latte art, design, and visual storytelling. It celebrates talent while enhancing the aesthetic and experiential value of coffee.' },
   { number: '10', icon: Mic, name: 'Festival Podcast', description: "A media platform capturing conversations, insights, and stories from industry leaders and participants. It extends the festival's reach and shares knowledge with a wider audience." },
@@ -36,14 +36,14 @@ export default function BeyondTheMarathonPage() {
         <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="max-w-3xl">
             <p className="font-label text-xs uppercase tracking-[0.12em] font-bold mb-5" style={{ color: 'var(--green-pale)' }}>
-              Coffee Festival 2026
+              Coffee Festival 2027
             </p>
             <h1 className="font-display text-5xl md:text-7xl font-bold text-white leading-tight mb-6">
               Beyond<br />
               the Marathon
             </h1>
             <p className="font-body text-xl leading-relaxed mb-8 max-w-2xl" style={{ color: 'rgba(255,255,255,0.85)' }}>
-              The Coffee Marathon is not just a race — it is a full festival experience spanning two days of coffee, culture, commerce, and community at Africa Coffee Park, Ntungamo.
+              The Coffee Marathon is not just a race, it is a full festival experience spanning two days of coffee, culture, commerce, and community at Africa Coffee Park, Ntungamo.
             </p>
             <div className="flex flex-wrap gap-4">
               <a
@@ -132,7 +132,7 @@ export default function BeyondTheMarathonPage() {
                           Mutumo Island Resort on Lake Nyabihoko
                         </p>
                         <p className="font-body text-xs leading-relaxed" style={{ color: 'var(--brown-dark)' }}>
-                          A stunning island escape on the shores of Lake Nyabihoko — the perfect way to extend your Coffee Marathon weekend.
+                          A stunning island escape on the shores of Lake Nyabihoko, the perfect way to extend your Coffee Marathon weekend.
                         </p>
                       </div>
                     )}
@@ -165,7 +165,7 @@ export default function BeyondTheMarathonPage() {
                   style={{ borderColor: 'var(--green-primary)', color: 'var(--green-primary)' }}
                 >
                   <Calendar size={14} />
-                  1st–2nd October 2026
+                  11th–12th February 2027
                 </div>
                 <div
                   className="inline-flex items-center gap-2 px-4 py-2 rounded-full font-label text-sm font-bold uppercase tracking-[0.08em] border-2"
@@ -201,12 +201,12 @@ export default function BeyondTheMarathonPage() {
                     <span className="font-body text-xl mb-1" style={{ color: 'rgba(255,255,255,0.7)' }}>by 2030</span>
                   </div>
                   <p className="font-body text-base" style={{ color: 'rgba(255,255,255,0.8)' }}>
-                    Uganda&apos;s coffee revenue target — driven by value addition, the Africa Coffee Park, and a &ldquo;Made in Uganda&rdquo; global brand strategy.
+                    Uganda&apos;s coffee revenue target, driven by value addition, the Africa Coffee Park, and a &ldquo;Made in Uganda&rdquo; global brand strategy.
                   </p>
                   <div className="mt-4 pt-4 border-t border-white/20 grid grid-cols-3 gap-3 text-center">
                     {[
                       { num: '$900M', label: '2023' },
-                      { num: '$2.5B', label: '2026 target' },
+                      { num: '$2.5B', label: '2027 target' },
                       { num: '$5B', label: '2030 target' },
                     ].map(({ num, label }) => (
                       <div key={label}>
@@ -220,7 +220,7 @@ export default function BeyondTheMarathonPage() {
               <div className="relative aspect-[16/9] rounded-2xl overflow-hidden">
                 <Image
                   src="/images/convention-expo.jpg"
-                  alt="The Coffee Convention & Expo — Kampala, Uganda"
+                  alt="The Coffee Convention & Expo - Kampala, Uganda"
                   fill
                   className="object-cover"
                   sizes="(max-width: 1024px) 100vw, 50vw"
@@ -228,7 +228,7 @@ export default function BeyondTheMarathonPage() {
                 <div className="absolute inset-0 bg-gradient-to-t from-black/30 to-transparent" />
                 <div className="absolute bottom-3 left-4">
                   <span className="font-body text-xs text-white/80 bg-black/40 px-3 py-1 rounded-full backdrop-blur-sm">
-                    1st–2nd Oct 2026 · Kampala
+                    11th–12th Feb 2027 · Kampala
                   </span>
                 </div>
               </div>
@@ -237,7 +237,9 @@ export default function BeyondTheMarathonPage() {
         </div>
       </section>
 
-      {/* ── CONCERT — TYRESE GIBSON ──────────────────────────────────── */}
+      {/* ── CONCERT ─────────────────────────────────────────────────────
+          The 2027 headline artist is not announced, so this section leads on
+          the concert itself and the 2025 line-up as proof of scale.        */}
       <section className="relative py-20 md:py-28 overflow-hidden">
         <div className="absolute inset-0">
           <Image src="/images/concert-crowd-night.jpg" alt="" fill className="object-cover object-center" sizes="100vw" aria-hidden />
@@ -246,7 +248,7 @@ export default function BeyondTheMarathonPage() {
 
         <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <p className="font-label text-xs uppercase tracking-[0.12em] font-bold mb-8" style={{ color: 'var(--green-pale)' }}>
-            The Coffee Concert 2026
+            The Coffee Concert 2027
           </p>
 
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-start">
@@ -257,19 +259,19 @@ export default function BeyondTheMarathonPage() {
               >
                 <Star size={12} style={{ color: 'var(--green-pale)' }} fill="currentColor" />
                 <span className="font-body text-xs font-semibold uppercase tracking-widest" style={{ color: 'var(--green-pale)' }}>
-                  Headline Artist · 2026
+                  Headline Artist · To Be Announced
                 </span>
               </div>
               <h2 className="font-display font-bold text-white leading-none mb-2">
-                <span className="block text-base text-white/50 font-normal tracking-widest uppercase mb-2">Featuring</span>
-                <span className="block text-7xl md:text-8xl" style={{ color: 'var(--green-light)' }}>Tyrese</span>
-                <span className="block text-7xl md:text-8xl text-white">Gibson</span>
+                <span className="block text-base text-white/50 font-normal tracking-widest uppercase mb-2">Race Night</span>
+                <span className="block text-7xl md:text-8xl" style={{ color: 'var(--green-light)' }}>The Coffee</span>
+                <span className="block text-7xl md:text-8xl text-white">Concert</span>
               </h2>
               <p className="font-heading text-lg font-semibold italic mb-4" style={{ color: 'var(--green-pale)' }}>
                 The Most Anticipated Night of the Year
               </p>
               <p className="font-body text-base leading-relaxed max-w-md mb-8" style={{ color: 'rgba(255,255,255,0.7)' }}>
-                Hollywood actor, recording artist, and global advocate — joining us live at Africa Coffee Park on 3 October 2026 to champion the IK Community of Karamoja.
+                The race finishes and the stage takes over. Live at Africa Coffee Park on 13 February 2027, in support of the IK Community of Karamoja. The headline artist will be announced closer to the day.
               </p>
               <div className="flex flex-wrap gap-4 mb-10">
                 <a
@@ -295,25 +297,25 @@ export default function BeyondTheMarathonPage() {
                 <p className="font-body text-xs uppercase tracking-widest font-semibold mb-1" style={{ color: 'var(--green-pale)' }}>2025 Headline Artist</p>
                 <p className="font-heading text-xl font-semibold text-white mb-1">Diamond Platnumz</p>
                 <p className="font-body text-sm" style={{ color: 'rgba(255,255,255,0.6)' }}>
-                  Tanzanian superstar Diamond Platnumz headlined the Coffee Marathon Concert 2025 — proof that this event attracts world-class talent.
+                  Tanzanian superstar Diamond Platnumz headlined the Coffee Marathon Concert 2025, proof that this event attracts world-class talent.
                 </p>
               </div>
             </div>
 
             <div className="flex flex-col gap-4">
               <div className="relative aspect-[3/4] rounded-2xl overflow-hidden">
-                <Image src="/images/tyrese-hero.jpg" alt="Tyrese Gibson — headline artist" fill className="object-cover object-top" sizes="(max-width: 1024px) 100vw, 50vw" priority />
+                <Image src="/images/concert-crowd-day.jpg" alt="The crowd at the Coffee Marathon concert, Africa Coffee Park" fill className="object-cover object-center" sizes="(max-width: 1024px) 100vw, 50vw" priority />
                 <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent" />
                 <div className="absolute bottom-4 left-4">
-                  <span className="font-body text-xs uppercase tracking-widest text-white/60 bg-black/40 px-3 py-1 rounded-full backdrop-blur-sm">Live · 3 October 2026</span>
+                  <span className="font-body text-xs uppercase tracking-widest text-white/60 bg-black/40 px-3 py-1 rounded-full backdrop-blur-sm">Live · 13 February 2027</span>
                 </div>
               </div>
               <div className="grid grid-cols-2 gap-4">
                 <div className="aspect-[3/4] rounded-2xl overflow-hidden relative">
-                  <Image src="/images/tyrese-portrait.jpg" alt="Tyrese Gibson" fill className="object-cover object-top" sizes="25vw" />
+                  <Image src="/images/concert-crowd-night.jpg" alt="The crowd at a past Coffee Marathon concert" fill className="object-cover object-center" sizes="25vw" />
                 </div>
                 <div className="aspect-[3/4] rounded-2xl overflow-hidden relative">
-                  <Image src="/images/tyrese-seated.jpg" alt="Tyrese Gibson" fill className="object-cover object-top" sizes="25vw" />
+                  <Image src="/images/venue-crowd.jpg" alt="Festival-goers at Africa Coffee Park" fill className="object-cover object-center" sizes="25vw" />
                 </div>
               </div>
             </div>

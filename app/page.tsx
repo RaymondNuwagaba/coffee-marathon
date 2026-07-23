@@ -15,7 +15,7 @@ import { PINNKET } from '@/lib/pinnket'
 import type { Race } from '@/types/sanity'
 
 export const metadata: Metadata = {
-  title: 'The Coffee Marathon Uganda 2026 — Run Through Coffee Country',
+  title: 'The Coffee Marathon Uganda 2027 - Run Through Coffee Country',
 }
 
 const homepageStats = [
@@ -36,7 +36,7 @@ const coldBrewVariants = [
   {
     icon: Zap,
     name: 'Energy Drink',
-    desc: 'Cold brew with B-vitamins, guarana, and taurine — built for race day.',
+    desc: 'Cold brew with B-vitamins, guarana, and taurine, built for race day.',
   },
   {
     icon: Users,
@@ -57,9 +57,9 @@ export default async function HomePage() {
   const eventSchema = {
     '@context': 'https://schema.org',
     '@type': 'SportsEvent',
-    name: 'The Coffee Marathon Uganda 2026',
+    name: 'The Coffee Marathon Uganda 2027',
     description: 'Empowering the IK Community of Karamoja through Coffee Farming to End Poverty',
-    startDate: settings?.raceDate ?? '2026-10-03T06:00:00+03:00',
+    startDate: settings?.raceDate ?? '2027-02-13T06:00:00+03:00',
     location: {
       '@type': 'Place',
       name: settings?.venueName ?? 'Africa Coffee Park',
@@ -70,10 +70,9 @@ export default async function HomePage() {
       },
     },
     url: 'https://coffeemarathonug.com',
-    performer: { '@type': 'Person', name: 'Tyrese Gibson' },
     organizer: [
       { '@type': 'Organization', name: 'The Coffee Marathon Uganda', url: 'https://coffeemarathonug.com' },
-      { '@type': 'Organization', name: 'IAG — Inspire Africa Group' },
+      { '@type': 'Organization', name: 'IAG, Inspire Africa Group' },
       { '@type': 'Organization', name: 'Africa Coffee Park' },
     ],
   }
@@ -85,63 +84,73 @@ export default async function HomePage() {
         dangerouslySetInnerHTML={{ __html: JSON.stringify(eventSchema) }}
       />
 
-      {/* ── 1. HERO ─────────────────────────────────────────────────── */}
-      <section className="relative min-h-screen flex items-center overflow-hidden pt-24 lg:pt-28">
-        {/* Background image */}
-        <div className="absolute inset-0">
+      {/* ── 1. HERO ─────────────────────────────────────────────────────
+          The client's artwork, whole and uncropped. Below lg the portrait
+          poster, which is already designed for that shape. From lg up the
+          landscape screen banner at its natural 2000x1000, information bar
+          and sponsor strip included.                                     */}
+      <section className="relative w-full pt-[104px] lg:pt-[112px]" style={{ backgroundColor: 'var(--cream)' }}>
+
+        {/* Page heading, carried for SEO and screen readers */}
+        <h1 className="sr-only">
+          The 2027 Coffee Marathon, Sip &amp; Run, Fueling the Future. 13 February 2027 at Africa
+          Coffee Park, Ntungamo, Uganda.
+        </h1>
+
+        {/* Mobile and tablet, the poster as supplied */}
+        <div className="lg:hidden relative w-full aspect-[2/3]">
           <Image
-            src="/images/hero-crowd.jpg"
-            alt="Coffee Marathon runners at Africa Coffee Park"
+            src="/images/poster-2027.webp"
+            alt="The 2027 Coffee Marathon, Sip &amp; Run, Fueling the Future. 13th Feb at Africa Coffee Park. 5KM, 10KM, 21KM and 42KM."
             fill
             className="object-cover object-center"
             priority
             sizes="100vw"
           />
-          {/* Green-primary overlay at 60% */}
-          <div className="absolute inset-0" style={{ backgroundColor: 'var(--green-primary)', opacity: 0.65 }} />
         </div>
 
-        <div className="relative z-10 w-full max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 py-20 text-center">
-          {/* Eyebrow */}
-          <p className="font-label text-xs font-bold uppercase tracking-[0.16em] mb-5" style={{ color: 'var(--green-pale)' }}>
+        {/* Desktop, the landscape banner edge to edge at its own aspect ratio */}
+        <div className="hidden lg:block relative w-full aspect-[2/1]">
+          <Image
+            src="/images/hero-banner-2027-full.webp"
+            alt="The 2027 Coffee Marathon, Sip &amp; Run, Fueling the Future. 13th Feb at Africa Coffee Park. 5KM, 10KM, 21KM and 42KM."
+            fill
+            className="object-cover object-center"
+            priority
+            sizes="100vw"
+          />
+        </div>
+
+      </section>
+
+      {/* ── 1b. RACE-DAY BAND ────────────────────────────────────────────
+          Date, distances and taglines are already set in the artwork at both
+          breakpoints, so this band carries only what the image cannot, the
+          live countdown and the booking links.                            */}
+      <section className="py-10" style={{ backgroundColor: 'var(--green-deep)' }}>
+        <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+
+          <p
+            className="font-label text-xs font-bold uppercase tracking-[0.16em] text-center mb-6"
+            style={{ color: 'var(--green-pale)' }}
+          >
             Africa Coffee Park · Ntungamo, Uganda
           </p>
 
-          {/* Headline */}
-          <h1 className="font-display font-bold text-white leading-tight mb-4">
-            <span className="block text-5xl md:text-7xl lg:text-8xl">Run Through</span>
-            <span className="block text-5xl md:text-7xl lg:text-8xl">Coffee Country</span>
-          </h1>
-
-          {/* Date */}
-          <p className="font-body text-xl text-white/85 mb-6">
-            3 October 2026 · Africa Coffee Park, Ntungamo, Uganda
-          </p>
-
-          {/* Concert callout pill */}
-          <div className="inline-flex items-center gap-2 rounded-full px-4 py-2 mb-8 border border-white/20" style={{ backgroundColor: 'rgba(255,255,255,0.12)' }}>
-            <span className="text-base">🎤</span>
-            <span className="font-label text-sm font-bold text-white uppercase tracking-[0.08em]">
-              Tyrese Gibson Live in Concert
-            </span>
-          </div>
-
-          {/* Countdown */}
           <div className="mb-8">
             <CountdownClock
-              targetDate="2026-10-03T06:00:00+03:00"
+              targetDate="2027-02-13T06:00:00+03:00"
               ctaHref={defaultPinnketUrl}
             />
           </div>
 
-          {/* CTAs */}
           <div className="flex flex-wrap items-center justify-center gap-4">
             <a
               href={defaultPinnketUrl}
               target="_blank"
               rel="noopener noreferrer"
               className="inline-flex items-center px-8 py-4 rounded-full font-label font-bold uppercase tracking-[0.08em] text-base transition-colors shadow-lg"
-              style={{ backgroundColor: 'white', color: 'var(--green-primary)' }}
+              style={{ backgroundColor: '#F0C64E', color: 'var(--brown-dark)' }}
             >
               Register Now →
             </a>
@@ -207,7 +216,7 @@ export default async function HomePage() {
         </div>
       </section>
 
-      {/* ── 3. MISSION — 3 COLUMNS ──────────────────────────────────── */}
+      {/* ── 3. MISSION, 3 COLUMNS ──────────────────────────────────── */}
       <section className="py-20" style={{ backgroundColor: 'var(--green-mist)' }}>
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-12">
@@ -223,15 +232,15 @@ export default async function HomePage() {
             {[
               {
                 title: 'Why We Started',
-                body: 'We saw untapped potential in coffee-growing communities — especially among women — whose labour sustains the industry but whose voices are often overlooked. The Coffee Marathon was born to change that.',
+                body: 'We saw untapped potential in coffee-growing communities, especially among women, whose labour sustains the industry but whose voices are often overlooked. The Coffee Marathon was born to change that.',
               },
               {
                 title: 'Why We Continue',
-                body: 'Awareness alone is no longer enough. We have evolved from a moment of recognition into a movement for action — one that goes beyond stories to actively changing lives and livelihoods.',
+                body: 'Awareness alone is no longer enough. We have evolved from a moment of recognition into a movement for action, one that goes beyond stories to actively changing lives and livelihoods.',
               },
               {
                 title: 'Why It Matters',
-                body: 'Our long-term vision: create economic resilience through coffee farming — ensuring farmers can withstand market fluctuations, climate challenges, and generational poverty.',
+                body: 'Our long-term vision: create economic resilience through coffee farming, ensuring farmers can withstand market fluctuations, climate challenges, and generational poverty.',
               },
             ].map(({ title, body }) => (
               <div
@@ -313,7 +322,7 @@ export default async function HomePage() {
                 Fuel your race day.
               </h2>
               <p className="font-body text-base leading-relaxed mb-8" style={{ color: 'var(--brown-dark)' }}>
-                IAC Cold Brew is the official coffee drink of the Coffee Marathon — smooth, energising, and crafted from Uganda&apos;s finest beans.
+                IAC Cold Brew is the official coffee drink of the Coffee Marathon, smooth, energising, and crafted from Uganda&apos;s finest beans.
               </p>
               <div className="space-y-4">
                 {coldBrewVariants.map(({ icon: Icon, name, desc }) => (
@@ -338,13 +347,15 @@ export default async function HomePage() {
             </div>
 
             <div className="relative max-w-sm mx-auto lg:mx-0">
-              <div className="aspect-[3/4] rounded-3xl overflow-hidden relative shadow-xl">
+              {/* The render is shot on white, so the card carries a white
+                  ground rather than cropping into the product shot. */}
+              <div className="aspect-[3/4] rounded-3xl overflow-hidden relative shadow-xl bg-white">
                 <Image
-                  src="/images/cold-brew-product.jpg"
-                  alt="IAC Cold Brew — Inspire Africa Coffee"
+                  src="/images/cold-brew-cans.webp"
+                  alt="Three IAC Cold Brew cans, Malt Coffee, Energy Drink and Iced Coffee, 330ml each."
                   fill
                   className="object-cover"
-                  sizes="(max-width: 1024px) 100vw, 50vw"
+                  sizes="(max-width: 1024px) 100vw, 384px"
                 />
               </div>
               <div
@@ -367,7 +378,7 @@ export default async function HomePage() {
             Run with a cause.<br />Run for impact.
           </h2>
           <p className="font-body text-lg mb-8" style={{ color: 'rgba(255,255,255,0.85)' }}>
-            Join runners from across the world at Africa Coffee Park on 3 October 2026.
+            Join runners from across the world at Africa Coffee Park on 13 February 2027.
           </p>
           <div className="flex flex-wrap items-center justify-center gap-4">
             <a

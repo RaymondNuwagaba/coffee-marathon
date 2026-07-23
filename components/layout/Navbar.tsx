@@ -20,15 +20,15 @@ export default function Navbar() {
   return (
     <>
       <div className="fixed top-0 left-0 right-0 z-50">
-        {/* Announcement bar — unchanged */}
+        {/* Announcement bar, unchanged */}
         <div className="py-2 text-center px-4" style={{ backgroundColor: 'var(--brown-heading)' }}>
           <p className="font-label text-xs font-bold text-white uppercase tracking-[0.14em]">
-            <span style={{ color: 'var(--brown-mid)' }}>Tyrese Gibson</span>
-            {' '}Live At Coffee Marathon 2026 · 3 October · Africa Coffee Park
+            <span style={{ color: 'var(--brown-mid)' }}>The Coffee Marathon 2027</span>
+            {' '}· 13 February · Africa Coffee Park, Ntungamo
           </p>
         </div>
 
-        {/* Navbar — cream background */}
+        {/* Navbar, cream background */}
         <header
           className="border-b"
           style={{
@@ -39,7 +39,7 @@ export default function Navbar() {
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="flex items-center justify-between h-16 lg:h-20">
 
-              {/* Logo — original colors on cream background, no filter */}
+              {/* Logo, original colors on cream background, no filter */}
               <Link href="/" className="flex items-center group" onClick={() => setOpen(false)}>
                 <Image
                   src="/images/logo.png"
@@ -106,7 +106,7 @@ export default function Navbar() {
         </header>
       </div>
 
-      {/* Mobile overlay — keep dark for readability */}
+      {/* Mobile overlay, keep dark for readability */}
       {open && (
         <div className="fixed inset-0 z-[60] flex flex-col" style={{ backgroundColor: '#F5EDE0' }}>
           <div className="flex items-center justify-between px-4 h-16 border-b" style={{ borderBottomColor: 'rgba(26,107,58,0.15)' }}>
@@ -155,7 +155,7 @@ export default function Navbar() {
           </nav>
 
           <p className="px-8 pb-8 font-body text-sm" style={{ color: '#6B2D1B' }}>
-            3 October 2026 · Africa Coffee Park, Ntungamo
+            13 February 2027 · Africa Coffee Park, Ntungamo
           </p>
         </div>
       )}

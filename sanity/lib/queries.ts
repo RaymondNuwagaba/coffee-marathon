@@ -32,7 +32,7 @@ export const postBySlugQuery = groq`
 `
 
 export const sponsorsQuery = groq`
-  *[_type == "sponsor" && year == 2026] | order(order asc) {
+  *[_type == "sponsor" && year == 2027] | order(order asc) {
     _id, name, logo, website, tier
   }
 `

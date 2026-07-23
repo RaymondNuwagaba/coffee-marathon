@@ -3,12 +3,13 @@ import Image from 'next/image'
 import { MapPin } from 'lucide-react'
 import PageHero from '@/components/layout/PageHero'
 import { SanityImage } from '@/components/ui/SanityImage'
+import VenueMap from '@/components/ui/VenueMap'
 import { getAttractions } from '@/sanity/lib/fetch'
 import { attractions as staticAttractions } from '@/lib/content'
 import type { Attraction } from '@/types/sanity'
 
 export const metadata: Metadata = {
-  title: 'Attractions — Explore Ntungamo',
+  title: 'Attractions - Explore Ntungamo',
   description: "Make a week of it. Explore Ntungamo's gorilla rafting, hot springs, waterfalls and more around the Coffee Marathon weekend.",
 }
 
@@ -97,15 +98,7 @@ export default async function AttractionsPage() {
       <section className="py-20" style={{ backgroundColor: 'var(--cream)' }}>
         <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <h2 className="font-display text-3xl font-semibold mb-6" style={{ color: 'var(--brown-heading)' }}>Getting Around</h2>
-          <div
-            className="aspect-video rounded-2xl flex items-center justify-center border"
-            style={{ backgroundColor: 'var(--green-pale)', borderColor: 'rgba(26,107,58,0.2)' }}
-          >
-            <div className="text-center">
-              <MapPin size={32} className="mx-auto mb-3" style={{ color: 'var(--green-primary)', opacity: 0.4 }} />
-              <p className="font-body text-sm" style={{ color: 'var(--green-mid)' }}>Google Maps embed — to be added</p>
-            </div>
-          </div>
+          <VenueMap zoom={11} className="text-left" />
           <p className="mt-4 font-body text-xs" style={{ color: 'var(--brown-dark)', opacity: 0.6 }}>
             Africa Coffee Park is located in Ntungamo, southwestern Uganda. Approx. 8 hours from Kampala by road.
           </p>

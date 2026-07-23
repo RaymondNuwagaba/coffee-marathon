@@ -6,16 +6,16 @@ import type { Post } from '@/types/sanity'
 
 export const metadata: Metadata = {
   title: 'News & Announcements',
-  description: 'Latest news, race updates, and announcements from The Coffee Marathon Uganda 2026.',
+  description: 'Latest news, race updates, and announcements from The Coffee Marathon Uganda 2027.',
 }
 
 const staticPosts = [
-  { slug: 'course-announcement-2026', date: 'March 2026', title: 'Course Announcement: The 2026 Route Revealed', excerpt: 'Placeholder — to be replaced with actual news content.' },
-  { slug: 'registration-open', date: 'February 2026', title: 'Registration Now Open for All Categories', excerpt: 'Placeholder — to be replaced with actual news content.', featured: true },
-  { slug: 'inspire-women-conference', date: 'January 2026', title: 'Inspire Women Conference Speakers Announced', excerpt: 'Placeholder — to be replaced with actual news content.' },
-  { slug: 'kit-design-2026', date: 'December 2025', title: 'Official Race Kit Design Unveiled', excerpt: 'Placeholder — to be replaced with actual news content.' },
-  { slug: '2025-recap', date: 'October 2025', title: '2025 Race Recap: A Record Year', excerpt: 'Placeholder — to be replaced with actual news content.' },
-  { slug: 'date-announced-2026', date: 'September 2025', title: 'Save the Date: 3 October 2026', excerpt: 'Placeholder — to be replaced with actual news content.' },
+  { slug: 'course-announcement-2027', date: 'December 2026', title: 'Course Announcement: The 2027 Route Revealed', excerpt: 'Placeholder - to be replaced with actual news content.', image: '/images/races-runner-nature.jpg' },
+  { slug: 'registration-open', date: 'November 2026', title: 'Registration Now Open for All Categories', excerpt: 'Placeholder - to be replaced with actual news content.', featured: true, image: '/images/races-start-line.jpg' },
+  { slug: 'inspire-women-conference', date: 'October 2026', title: 'Inspire Women Conference Speakers Announced', excerpt: 'Placeholder - to be replaced with actual news content.', image: '/images/about-women-runners.jpg' },
+  { slug: 'kit-design-2027', date: 'September 2026', title: 'Official Race Kit Design Unveiled', excerpt: 'Placeholder - to be replaced with actual news content.', image: '/images/races-runner-portrait.jpg' },
+  { slug: '2025-recap', date: 'October 2025', title: '2025 Race Recap: A Record Year', excerpt: 'Placeholder - to be replaced with actual news content.', image: '/images/results-podium-full.jpg' },
+  { slug: 'date-announced-2027', date: 'August 2026', title: 'Save the Date: 13 February 2027', excerpt: 'Placeholder - to be replaced with actual news content.', image: '/images/venue-crowd.jpg' },
 ]
 
 export default async function NewsPage() {
@@ -25,7 +25,7 @@ export default async function NewsPage() {
     <>
       <PageHero
         title="News & Announcements"
-        subtitle="Stay up to date with everything happening at The Coffee Marathon Uganda 2026."
+        subtitle="Stay up to date with everything happening at The Coffee Marathon Uganda 2027."
         label="Latest News"
       />
 
@@ -40,6 +40,7 @@ export default async function NewsPage() {
                     date={new Intl.DateTimeFormat('en-UG', { dateStyle: 'medium' }).format(new Date(post.publishedAt))}
                     title={post.title}
                     excerpt={post.excerpt}
+                    coverImage={post.coverImage}
                   />
                 ))
               : staticPosts.map((p) => <NewsCard key={p.slug} {...p} />)}

@@ -6,7 +6,7 @@ import Navbar from '@/components/layout/Navbar'
 import Footer from '@/components/layout/Footer'
 import './globals.css'
 
-// Display font (hero + major section titles) — client-provided Luckiest Guy
+// Display font (hero + major section titles) - client-provided Luckiest Guy
 const luckiestGuy = localFont({
   src: './fonts/LuckiestGuy-Regular.woff2',
   variable: '--font-display-brand',
@@ -14,7 +14,7 @@ const luckiestGuy = localFont({
   display: 'swap',
 })
 
-// Body font — client-provided Barlow
+// Body font - client-provided Barlow
 const barlow = localFont({
   variable: '--font-barlow',
   display: 'swap',
@@ -29,7 +29,7 @@ const barlow = localFont({
   ],
 })
 
-// Label + secondary-heading font — client-provided Barlow Condensed
+// Label + secondary-heading font - client-provided Barlow Condensed
 const barlowCondensed = localFont({
   variable: '--font-barlow-condensed',
   display: 'swap',
@@ -42,17 +42,17 @@ const barlowCondensed = localFont({
 export const metadata: Metadata = {
   metadataBase: new URL('https://coffeemarathonug.com'),
   title: {
-    default: 'The Coffee Marathon Uganda 2026',
+    default: 'The Coffee Marathon Uganda 2027',
     template: '%s | Coffee Marathon Uganda',
   },
   description:
-    "Run through Uganda's coffee country on 3 October 2026 at Africa Coffee Park, Ntungamo. 5KM, 10KM, 21KM and 42KM categories.",
+    "Run through Uganda's coffee country on 13 February 2027 at Africa Coffee Park, Ntungamo. 5KM, 10KM, 21KM and 42KM categories.",
   keywords: [
     'Uganda marathon',
     'Coffee Marathon',
     'Ntungamo Uganda',
     'Africa Coffee Park',
-    'Uganda running event 2026',
+    'Uganda running event 2027',
   ],
   openGraph: {
     type: 'website',
@@ -64,7 +64,7 @@ export const metadata: Metadata = {
         url: '/og-image.jpg',
         width: 1200,
         height: 630,
-        alt: 'The Coffee Marathon Uganda 2026',
+        alt: 'The Coffee Marathon Uganda 2027',
       },
     ],
   },

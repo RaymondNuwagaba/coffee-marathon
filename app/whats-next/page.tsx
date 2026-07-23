@@ -4,9 +4,9 @@ import Link from 'next/link'
 import SocialShare from '@/components/sections/SocialShare'
 
 export const metadata: Metadata = {
-  title: "You're In! — What's Next",
+  title: "You're In! - What's Next",
   description:
-    "You've registered for The Coffee Marathon Uganda 2026. Here's everything you need to know for race day.",
+    "You've registered for The Coffee Marathon Uganda 2027. Here's everything you need to know for race day.",
 }
 
 const infoCards = [
@@ -16,11 +16,11 @@ const infoCards = [
     color: 'bg-[var(--color-seedling-light)]',
     iconColor: 'text-[var(--color-forest)]',
     items: [
-      '05:30 — Athlete assembly & warm-up',
-      '06:00 — Race start (all categories)',
-      '~14:00 — Prize ceremony & celebrations',
+      '05:30, Athlete assembly & warm-up',
+      '06:00, Race start (all categories)',
+      '~14:00, Prize ceremony & celebrations',
     ],
-    note: 'Times are indicative — confirmed schedule to be communicated.',
+    note: 'Times are indicative, confirmed schedule to be communicated.',
   },
   {
     icon: Package,
@@ -28,7 +28,7 @@ const infoCards = [
     color: 'bg-[var(--color-cream-dark)]',
     iconColor: 'text-[var(--color-arabica)]',
     items: [
-      'Collect your race bib at the expo — date TBC',
+      'Collect your race bib at the expo, date TBC',
       'Bring your registration confirmation email',
       'ID required for collection',
     ],
@@ -42,7 +42,7 @@ const infoCards = [
     items: [
       'Africa Coffee Park, Ntungamo, Uganda',
       'Approx. 8 hours from Kampala by road',
-      'Shuttle service from Ntungamo town — TBC',
+      'Shuttle service from Ntungamo town, TBC',
     ],
     note: 'Detailed travel guide to be added.',
   },
@@ -73,7 +73,7 @@ export default function WhatsNextPage() {
             You&apos;re in! 🎉
           </h1>
           <p className="font-body text-xl text-[var(--color-cream)]/80">
-            Here&apos;s everything you need for race day at Africa Coffee Park, 3 October 2026.
+            Here&apos;s everything you need for race day at Africa Coffee Park, 13 February 2027.
           </p>
         </div>
       </section>

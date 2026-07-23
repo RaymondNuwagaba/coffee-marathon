@@ -8,12 +8,12 @@ interface GalleryGridProps {
 }
 
 const localImages = [
-  { src: '/images/gallery-1.jpg', alt: 'Runners celebrating at the start — Coffee Marathon 2025', aspect: 'aspect-[4/3]' },
+  { src: '/images/gallery-1.jpg', alt: 'Runners celebrating at the start - Coffee Marathon 2025', aspect: 'aspect-[4/3]' },
   { src: '/images/gallery-2.jpg', alt: 'Energetic crowd at the race start', aspect: 'aspect-square' },
   { src: '/images/gallery-3.jpg', alt: 'Thousands at Africa Coffee Park venue', aspect: 'aspect-[4/3]' },
-  { src: '/images/gallery-4.jpg', alt: 'Women runners — Coffee Marathon 2025', aspect: 'aspect-[3/4]' },
+  { src: '/images/gallery-4.jpg', alt: 'Women runners - Coffee Marathon 2025', aspect: 'aspect-[3/4]' },
   { src: '/images/gallery-5.jpg', alt: 'Prize giving ceremony', aspect: 'aspect-[4/3]' },
-  { src: '/images/gallery-6.jpg', alt: 'Concert night — Africa Coffee Park', aspect: 'aspect-square' },
+  { src: '/images/venue-group.jpg', alt: 'Runners gathered at Africa Coffee Park', aspect: 'aspect-square' },
 ]
 
 export default function GalleryGrid({ caption, sanityImages = [] }: GalleryGridProps) {

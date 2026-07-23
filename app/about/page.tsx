@@ -6,9 +6,9 @@ import { timeline } from '@/lib/content'
 import { PINNKET } from '@/lib/pinnket'
 
 export const metadata: Metadata = {
-  title: 'About — The Coffee Marathon Uganda',
+  title: 'About - The Coffee Marathon Uganda',
   description:
-    "The story of The Coffee Marathon Uganda — celebrating the women who grow Uganda's finest coffee and empowering the IK Community of Karamoja.",
+    "The story of The Coffee Marathon Uganda, celebrating the women who grow Uganda's finest coffee and empowering the IK Community of Karamoja.",
 }
 
 const team = [
@@ -23,7 +23,7 @@ export default function AboutPage() {
     <>
       <PageHero
         title="Our Story"
-        subtitle="Born from Uganda's coffee fields. Built to celebrate the women who make it possible — and to plant roots that last."
+        subtitle="Born from Uganda's coffee fields. Built to celebrate the women who make it possible, and to plant roots that last."
         label="About the Event"
       />
 
@@ -39,13 +39,13 @@ export default function AboutPage() {
                 Why We Started
               </h2>
               <p className="font-body text-base leading-relaxed mb-4" style={{ color: 'var(--brown-dark)' }}>
-                We started running because we saw untapped potential in coffee-growing communities — especially among women — whose labour sustains the industry but whose voices and opportunities are often overlooked. Coffee farming in Uganda is more than an economic activity; it is a way of life passed down through generations.
+                We started running because we saw untapped potential in coffee-growing communities, especially among women, whose labour sustains the industry but whose voices and opportunities are often overlooked. Coffee farming in Uganda is more than an economic activity; it is a way of life passed down through generations.
               </p>
               <p className="font-body text-base leading-relaxed mb-4" style={{ color: 'var(--brown-dark)' }}>
                 Yet many women remain locked out of decision-making, fair markets, and financial security. The Coffee Marathon was born as a bold response to uplift these communities, using visibility and collective action to create opportunity where it is most needed.
               </p>
               <p className="font-body text-base leading-relaxed" style={{ color: 'var(--brown-dark)' }}>
-                At the same time, we wanted to spotlight Ugandan coffee on the global stage — not just as a high-quality product, but as a story of people, culture, and resilience.
+                At the same time, we wanted to spotlight Ugandan coffee on the global stage, not just as a high-quality product, but as a story of people, culture, and resilience.
               </p>
             </div>
             <div className="relative aspect-[4/3] rounded-3xl overflow-hidden">
@@ -68,7 +68,7 @@ export default function AboutPage() {
             <div className="relative aspect-[4/3] rounded-3xl overflow-hidden order-2 lg:order-1">
               <Image
                 src="/images/about-finish-line.jpg"
-                alt="Female runner finishing — Coffee Marathon 2025"
+                alt="Female runner finishing - Coffee Marathon 2025"
                 fill
                 className="object-cover"
                 sizes="(max-width: 1024px) 100vw, 50vw"
@@ -82,25 +82,25 @@ export default function AboutPage() {
                 Why We Continue
               </h2>
               <p className="font-body text-base leading-relaxed mb-4" style={{ color: 'var(--brown-dark)' }}>
-                Today, we continue to run because awareness alone is no longer enough. While visibility opened doors, real change requires deeper, sustained engagement. The Coffee Marathon has evolved from a moment of recognition into a movement for action — one that goes beyond telling stories to actively changing lives.
+                Today, we continue to run because awareness alone is no longer enough. While visibility opened doors, real change requires deeper, sustained engagement. The Coffee Marathon has evolved from a moment of recognition into a movement for action, one that goes beyond telling stories to actively changing lives.
               </p>
               <p className="font-body text-base leading-relaxed mb-4" style={{ color: 'var(--brown-dark)' }}>
                 Our focus now is on moving from visibility to sustainable empowerment. This means supporting initiatives that strengthen women&apos;s participation in coffee value chains, improve livelihoods, and build local capacity.
               </p>
               <p className="font-body text-base leading-relaxed" style={{ color: 'var(--brown-dark)' }}>
-                Each race is a renewed commitment to measurable impact — connecting runners, partners, and communities in ways that create lasting economic and social value long after the finish line.
+                Each race is a renewed commitment to measurable impact, connecting runners, partners, and communities in ways that create lasting economic and social value long after the finish line.
               </p>
             </div>
           </div>
         </div>
       </section>
 
-      {/* ── 2026 Theme — IK Community ── */}
+      {/* ── 2027 Theme, IK Community ── */}
       <section className="py-20" style={{ backgroundColor: 'var(--green-mist)' }}>
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-12">
             <p className="font-label text-xs uppercase tracking-[0.12em] font-bold mb-3" style={{ color: 'var(--green-mid)' }}>
-              2026 Theme
+              2027 Theme
             </p>
             <h2 className="font-display text-3xl md:text-4xl font-bold mb-4" style={{ color: 'var(--brown-heading)' }}>
               Empowering the IK Community of Karamoja
@@ -130,13 +130,13 @@ export default function AboutPage() {
                 The Ik are one of Uganda&apos;s most marginalised and least understood indigenous communities, living in the remote mountainous region of Karamoja. For generations, they have faced extreme isolation, food insecurity, and limited access to land, education, and economic opportunity.
               </p>
               <p className="font-body text-base leading-relaxed mb-6" style={{ color: 'var(--brown-dark)' }}>
-                They matter because they represent both a moral responsibility and an opportunity for transformation. Empowering the Ik is not about charity — it is about restoring dignity, agency, and inclusion.
+                They matter because they represent both a moral responsibility and an opportunity for transformation. Empowering the Ik is not about charity, it is about restoring dignity, agency, and inclusion.
               </p>
               <h3 className="font-heading text-2xl font-bold mb-4" style={{ color: 'var(--brown-heading)' }}>
                 Why Coffee Farming Is the Path Out of Poverty
               </h3>
               <p className="font-body text-base leading-relaxed" style={{ color: 'var(--brown-dark)' }}>
-                Coffee farming offers a long-term, climate-resilient livelihood that can thrive in suitable highland conditions while generating consistent income over time. For the Ik community, coffee farming represents more than income — it creates opportunities for skills development, cooperative structures, and integration into national and global value chains.
+                Coffee farming offers a long-term, climate-resilient livelihood that can thrive in suitable highland conditions while generating consistent income over time. For the Ik community, coffee farming represents more than income, it creates opportunities for skills development, cooperative structures, and integration into national and global value chains.
               </p>
             </div>
 
@@ -153,7 +153,7 @@ export default function AboutPage() {
                 },
                 {
                   title: 'Create Long-Term Income and Food Security',
-                  body: 'Coffee farming provides predictable income that allows households to plan — covering education, healthcare, and daily needs — while diversifying crops for food security.',
+                  body: 'Coffee farming provides predictable income that allows households to plan, covering education, healthcare, and daily needs, while diversifying crops for food security.',
                 },
                 {
                   title: 'Reduce Dependence and End Cycles of Poverty',
@@ -188,7 +188,7 @@ export default function AboutPage() {
             <div className="relative aspect-[21/9]">
               <Image
                 src="/images/venue-group.jpg"
-                alt="Inspire Africa Group — IK Community outreach"
+                alt="Inspire Africa Group - IK Community outreach"
                 fill
                 className="object-cover"
                 sizes="100vw"
@@ -204,7 +204,7 @@ export default function AboutPage() {
         </div>
       </section>
 
-      {/* ── More than a crop — full-width breakout ── */}
+      {/* ── More than a crop, full-width breakout ── */}
       <section className="py-20" style={{ backgroundColor: 'var(--green-primary)' }}>
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
@@ -216,10 +216,10 @@ export default function AboutPage() {
                 More than a crop. A story.
               </h2>
               <p className="font-body text-base leading-relaxed mb-4" style={{ color: 'rgba(255,255,255,0.85)' }}>
-                The true value of coffee goes far beyond its taste or price — it lies in its story. When coffee is deeply linked to its origin, its people, and a clear purpose, it becomes more than a commodity; it becomes a product with meaning.
+                The true value of coffee goes far beyond its taste or price, it lies in its story. When coffee is deeply linked to its origin, its people, and a clear purpose, it becomes more than a commodity; it becomes a product with meaning.
               </p>
               <p className="font-body text-base leading-relaxed mb-8" style={{ color: 'rgba(255,255,255,0.85)' }}>
-                Ultimately, when people understand the journey of coffee — from soil to cup, from farmer to consumer — they value it more. And when coffee is valued more, farmers earn more, communities grow stronger, and Uganda&apos;s coffee earns its rightful place as a premium, ethical product on the global stage.
+                Ultimately, when people understand the journey of coffee, from soil to cup, from farmer to consumer, they value it more. And when coffee is valued more, farmers earn more, communities grow stronger, and Uganda&apos;s coffee earns its rightful place as a premium, ethical product on the global stage.
               </p>
               <a
                 href={PINNKET.register10k}
