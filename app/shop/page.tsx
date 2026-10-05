@@ -51,25 +51,43 @@ export default async function ShopPage() {
       <section className="py-20" style={{ backgroundColor: 'var(--green-mist)' }}>
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-start">
-            {/* Standing in for kit flat-lay photography until the client
-                supplies it, a shot from a previous edition. */}
-            <div>
-              <div
-                className="aspect-square rounded-2xl overflow-hidden relative border"
-                style={{ backgroundColor: 'var(--green-pale)', borderColor: 'rgba(26,107,58,0.2)' }}
-              >
-                <Image
-                  src="/images/races-runner-portrait.jpg"
-                  alt="A runner at a previous Coffee Marathon"
-                  fill
-                  className="object-cover"
-                  sizes="(max-width: 1024px) 100vw, 50vw"
-                  priority
-                />
-              </div>
-              <p className="mt-2 font-body text-xs" style={{ color: 'var(--green-mid)' }}>
-                From a previous edition. Official 2027 kit photography to follow.
-              </p>
+            {/* Kit photos already in the project: jersey, bib, shirt, and cap. */}
+            <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
+              <figure>
+                <div
+                  className="aspect-[3/4] rounded-2xl overflow-hidden relative border"
+                  style={{ backgroundColor: 'var(--green-pale)', borderColor: 'rgba(26,107,58,0.2)' }}
+                >
+                  <Image
+                    src="/images/races-runner-portrait.jpg"
+                    alt="Coffee Marathon jersey and race bib"
+                    fill
+                    className="object-cover object-[center_20%]"
+                    sizes="(max-width: 1024px) 100vw, 25vw"
+                    priority
+                  />
+                </div>
+                <figcaption className="mt-2 font-body text-xs" style={{ color: 'var(--green-mid)' }}>
+                  Jersey and bib
+                </figcaption>
+              </figure>
+              <figure>
+                <div
+                  className="aspect-[3/4] rounded-2xl overflow-hidden relative border"
+                  style={{ backgroundColor: 'var(--green-pale)', borderColor: 'rgba(26,107,58,0.2)' }}
+                >
+                  <Image
+                    src="/images/gallery-1.jpg"
+                    alt="Runners wearing the Coffee Marathon shirt and cap"
+                    fill
+                    className="object-cover"
+                    sizes="(max-width: 1024px) 100vw, 25vw"
+                  />
+                </div>
+                <figcaption className="mt-2 font-body text-xs" style={{ color: 'var(--green-mid)' }}>
+                  Shirt, cap, and wristband
+                </figcaption>
+              </figure>
             </div>
 
             <div>

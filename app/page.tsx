@@ -89,38 +89,64 @@ export default async function HomePage() {
           poster, which is already designed for that shape. From lg up the
           landscape screen banner at its natural 2000x1000, information bar
           and sponsor strip included.                                     */}
-      <section className="relative w-full pt-[104px] lg:pt-[112px]" style={{ backgroundColor: 'var(--cream)' }}>
-
-        {/* Page heading, carried for SEO and screen readers */}
+      <section className="relative mt-[104px] lg:mt-[112px] h-[calc(100svh-104px)] lg:h-[calc(100svh-112px)] min-h-[560px] overflow-hidden bg-zinc-900 text-white">
         <h1 className="sr-only">
           The 2027 Coffee Marathon, Sip &amp; Run, Fueling the Future. 13 February 2027 at Africa
           Coffee Park, Ntungamo, Uganda.
         </h1>
-
-        {/* Mobile and tablet, the poster as supplied */}
-        <div className="lg:hidden relative w-full aspect-[2/3]">
+        <div className="absolute inset-0 z-0">
           <Image
-            src="/images/poster-2027.webp"
-            alt="The 2027 Coffee Marathon, Sip &amp; Run, Fueling the Future. 13th Feb at Africa Coffee Park. 5KM, 10KM, 21KM and 42KM."
+            src="/images/hero-crowd.jpg"
+            alt="Runners at the Coffee Marathon"
             fill
-            className="object-cover object-center"
             priority
+            className="object-cover"
             sizes="100vw"
           />
+          <div className="absolute inset-0 bg-black/25" />
+          <div className="absolute inset-y-0 left-0 w-full sm:w-2/3 bg-gradient-to-r from-black/80 via-black/35 to-transparent" />
         </div>
 
-        {/* Desktop, the landscape banner edge to edge at its own aspect ratio */}
-        <div className="hidden lg:block relative w-full aspect-[2/1]">
-          <Image
-            src="/images/hero-banner-2027-full.webp"
-            alt="The 2027 Coffee Marathon, Sip &amp; Run, Fueling the Future. 13th Feb at Africa Coffee Park. 5KM, 10KM, 21KM and 42KM."
-            fill
-            className="object-cover object-center"
-            priority
-            sizes="100vw"
-          />
+        <div className="absolute inset-x-0 top-0 z-30 flex flex-col justify-between p-5 pb-28 sm:p-8 lg:inset-y-0 lg:left-0 lg:right-auto lg:w-[42%] lg:p-12">
+          <div className="max-w-md">
+            <p className="text-[11px] font-bold uppercase tracking-[0.28em] text-[#E5A95C]">
+              Coffee Marathon
+            </p>
+            <p className="mt-3 text-3xl sm:text-5xl font-black uppercase leading-[0.95] tracking-tight">
+              Africa
+              <br />
+              Coffee Marathon
+            </p>
+            <p className="mt-4 max-w-xs text-[13px] leading-relaxed text-zinc-200">
+              42KM · 21KM · 10KM · 5KM. 13 February 2027 at Africa Coffee Park, Ntungamo.
+            </p>
+          </div>
+          <div className="mt-8 grid grid-cols-3 gap-3 lg:mt-0 lg:max-w-sm">
+            {[
+              ['14-27°c', 'Temperature'],
+              ['2:08:42', 'Fastest time'],
+              ['1,450 m', 'Elevation'],
+            ].map(([value, label]) => (
+              <div key={label} className="border-b border-white/30 pb-2">
+                <p className="text-lg sm:text-2xl font-light">{value}</p>
+                <p className="text-[10px] uppercase tracking-widest text-zinc-300">{label}</p>
+              </div>
+            ))}
+          </div>
         </div>
 
+        <div className="absolute inset-y-0 right-0 z-20 hidden lg:flex w-1/2 flex-col items-end justify-center overflow-hidden p-8 xl:p-12">
+          {['Nairobi', 'Kampala', 'Addis Ababa', 'Ntungamo', 'Kigali', 'Cape Town', 'Marrakech'].map((city) => (
+            <span
+              key={city}
+              className={`font-black uppercase leading-none tracking-tighter ${
+                city === 'Ntungamo' ? 'text-6xl xl:text-8xl text-white' : 'text-5xl xl:text-7xl text-white/10'
+              }`}
+            >
+              {city}
+            </span>
+          ))}
+        </div>
       </section>
 
       {/* ── 1b. RACE-DAY BAND ────────────────────────────────────────────
@@ -306,6 +332,53 @@ export default async function HomePage() {
             >
               See highlights <ArrowRight size={14} className="group-hover:translate-x-1 transition-transform" />
             </Link>
+          </div>
+        </div>
+      </section>
+
+      <section className="py-16" style={{ backgroundColor: 'var(--cream)' }}>
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="flex flex-col sm:flex-row sm:items-end sm:justify-between gap-3 mb-6">
+            <div>
+              <p className="font-label text-xs font-bold uppercase tracking-[0.12em]" style={{ color: 'var(--green-mid)' }}>
+                Official kit
+              </p>
+              <h2 className="font-display text-4xl md:text-5xl font-bold" style={{ color: 'var(--brown-heading)' }}>
+                The race kit
+              </h2>
+              <p className="mt-2 max-w-xl font-body text-base" style={{ color: 'var(--brown-dark)' }}>
+                Jersey, cap, and bib from a previous edition. The 2027 kit keeps the same mark.
+              </p>
+            </div>
+            <Link href="/shop" className="font-label text-sm font-bold uppercase tracking-[0.08em]" style={{ color: 'var(--green-primary)' }}>
+              Shop the kit
+            </Link>
+          </div>
+          <div className="grid md:grid-cols-5 gap-3">
+            <figure className="md:col-span-2">
+              <div className="relative h-72 sm:h-96 md:h-[460px]">
+                <Image
+                  src="/images/races-runner-portrait.jpg"
+                  alt="Coffee Marathon jersey and race bib"
+                  fill
+                  className="object-cover object-[center_20%]"
+                  sizes="(max-width: 768px) 100vw, 40vw"
+                />
+              </div>
+              <figcaption className="mt-2 font-body text-sm" style={{ color: 'var(--brown-dark)' }}>Jersey and bib</figcaption>
+            </figure>
+            <figure className="md:col-span-3">
+              <div className="relative h-72 sm:h-96 md:h-[460px]">
+                <Image
+                  src="/images/gallery-1.jpg"
+                  alt="Runners in the Coffee Marathon shirt, cap, and wristband"
+                  fill
+                  className="object-cover"
+                  sizes="(max-width: 768px) 100vw, 60vw"
+                />
+              </div>
+              <figcaption className="mt-2 font-body text-sm" style={{ color: 'var(--brown-dark)' }}>Shirt, cap, and wristband</figcaption>
+            </figure>
           </div>
         </div>
       </section>
