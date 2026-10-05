@@ -156,9 +156,16 @@ export default function Footer() {
           <p className="font-body text-xs" style={{ color: 'rgba(255,255,255,0.4)' }}>
             © 2026 The Coffee Marathon Uganda · Organised by Inspire Africa Group
           </p>
-          <p className="font-body text-xs" style={{ color: 'rgba(255,255,255,0.3)' }}>
+          <a
+            href="https://wa.me/256750263333"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="font-body text-xs inline-flex items-center gap-1.5 transition-colors hover:text-white"
+            style={{ color: 'rgba(255,255,255,0.3)' }}
+          >
+            <MessageCircle size={12} />
             Africa Coffee Park, Ntungamo, Uganda
-          </p>
+          </a>
         </div>
       </div>
     </footer>
