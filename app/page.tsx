@@ -2,9 +2,9 @@ import type { Metadata } from 'next'
 import Image from 'next/image'
 import Link from 'next/link'
 import { ArrowRight } from 'lucide-react'
-import CountdownClock from '@/components/ui/CountdownClock'
 import RaceCard from '@/components/ui/RaceCard'
 import Reveal from '@/components/ui/Reveal'
+import AnimatedHero from '@/components/sections/AnimatedHero'
 import {
   getRaces,
   getSiteSettings,
@@ -98,63 +98,10 @@ export default async function HomePage() {
         dangerouslySetInnerHTML={{ __html: JSON.stringify(eventSchema) }}
       />
 
-      <section className="relative min-h-[100svh] overflow-hidden bg-[var(--green-deep)] text-white">
-        <div className="absolute inset-0">
-          <Image
-            src="/images/races-start-line.jpg"
-            alt="Runners at the Coffee Marathon start line"
-            fill
-            priority
-            className="object-cover object-center hero-kenburns"
-            sizes="100vw"
-          />
-          <div
-            className="absolute inset-0"
-            style={{
-              background:
-                'linear-gradient(180deg, rgba(7,61,49,0.42) 0%, rgba(7,61,49,0.22) 40%, rgba(7,61,49,0.9) 100%), linear-gradient(90deg, rgba(7,61,49,0.5) 0%, rgba(7,61,49,0.12) 58%, rgba(7,61,49,0.28) 100%)',
-            }}
-          />
-        </div>
+      <div className="relative">
+        <AnimatedHero registerUrl={defaultPinnketUrl} />
 
-        <div className="relative z-10 flex min-h-[100svh] flex-col justify-end pb-[7.5rem] sm:pb-[8.75rem]">
-          <div className="site-container pt-28 pb-5 sm:pt-32 sm:pb-7">
-            <p className="animate-fade-up font-label text-[11px] font-bold uppercase tracking-[0.2em] text-[var(--yellow)] sm:text-xs">
-              13 February 2027 · Ntungamo, Uganda
-            </p>
-
-            <h1 className="animate-soft-rise delay-1 mt-3 max-w-4xl font-display text-[clamp(2.7rem,8.5vw,5.8rem)] leading-[0.92] tracking-tight">
-              <span className="block text-white">Coffee</span>
-              <span className="block text-[var(--yellow)]">Marathon ’27</span>
-            </h1>
-
-            <p className="animate-fade-up delay-2 mt-4 max-w-md font-body text-[15px] leading-relaxed text-white/82 sm:text-base">
-              Run through coffee country. Four distances, one cause.
-            </p>
-
-            <div className="animate-fade-up delay-3 mt-7 flex flex-col gap-6 border-t border-white/12 pt-6 sm:flex-row sm:items-end sm:justify-between">
-              <CountdownClock
-                targetDate="2027-02-13T06:00:00+03:00"
-                tone="dark"
-              />
-              <div className="flex flex-wrap items-center gap-2.5">
-                <a
-                  href={defaultPinnketUrl}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="btn-primary"
-                >
-                  Register Now
-                </a>
-                <Link href="/races" className="btn-secondary">
-                  View Races
-                </Link>
-              </div>
-            </div>
-          </div>
-        </div>
-
-        <div className="absolute inset-x-0 bottom-0 z-20 border-t border-black/5 bg-[var(--paper)] text-[var(--ink)] shadow-[0_-12px_40px_rgba(19,10,4,0.08)]">
+        <div className="relative z-20 border-t border-black/5 bg-[var(--paper)] text-[var(--ink)] shadow-[0_-12px_40px_rgba(19,10,4,0.08)]">
           <div className="site-container flex flex-col gap-4 py-5 sm:flex-row sm:items-center sm:justify-between sm:gap-8 sm:py-6">
             <div className="min-w-0">
               <p className="font-label text-xs font-bold uppercase tracking-[0.16em] text-[var(--coral)] sm:text-sm">
@@ -181,10 +128,10 @@ export default async function HomePage() {
                 </span>
               </p>
             </div>
-            <div className="flex shrink-0 flex-wrap items-center gap-3">
+            <div className="grid w-full shrink-0 grid-cols-2 gap-2.5 sm:flex sm:w-auto sm:flex-wrap sm:items-center sm:gap-3">
               <Link
                 href="/races"
-                className="inline-flex items-center justify-center rounded-full border border-[var(--line)] px-5 py-3.5 font-label text-sm font-bold uppercase tracking-[0.08em] text-[var(--ink)] transition-colors hover:bg-black/[0.04]"
+                className="inline-flex items-center justify-center rounded-full border border-[var(--line)] px-4 py-3.5 font-label text-xs font-bold uppercase tracking-[0.08em] text-[var(--ink)] transition-colors hover:bg-black/[0.04] sm:px-5 sm:text-sm"
               >
                 View Races
               </Link>
@@ -192,14 +139,14 @@ export default async function HomePage() {
                 href={defaultPinnketUrl}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="btn-primary !px-7 !py-3.5 !text-sm"
+                className="btn-primary !px-4 !py-3.5 !text-xs sm:!px-7 sm:!text-sm"
               >
                 Register Now
               </a>
             </div>
           </div>
         </div>
-      </section>
+      </div>
 
       <section className="section-pad bg-[var(--paper)]">
         <div className="site-container">

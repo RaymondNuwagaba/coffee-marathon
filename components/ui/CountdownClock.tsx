@@ -71,18 +71,18 @@ export default function CountdownClock({
         >
           Race begins in
         </p>
-        <div className="flex items-end gap-3.5 sm:gap-5" suppressHydrationWarning>
+        <div className="grid grid-cols-4 gap-2 sm:flex sm:items-end sm:gap-5" suppressHydrationWarning>
           {units.map(({ label, value }) => (
-            <div key={label} className="min-w-[3.1rem] sm:min-w-[3.75rem]">
+            <div key={label} className="min-w-0 sm:min-w-[3.75rem]">
               <div
-                className={`font-display text-[2rem] tabular-nums leading-none tracking-tight sm:text-4xl ${
+                className={`font-display text-[1.65rem] tabular-nums leading-none tracking-tight xs:text-[1.85rem] sm:text-4xl ${
                   isDark ? 'text-white' : 'text-[var(--ink)]'
                 } ${mounted ? 'opacity-100' : 'opacity-35'}`}
               >
                 {pad(value)}
               </div>
               <div
-                className={`mt-1.5 font-label text-[10px] uppercase tracking-[0.14em] ${
+                className={`mt-1.5 font-label text-[9px] uppercase tracking-[0.12em] sm:text-[10px] sm:tracking-[0.14em] ${
                   isDark ? 'text-white/45' : 'text-[rgba(26,15,8,0.5)]'
                 }`}
               >
