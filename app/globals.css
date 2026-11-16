@@ -1,94 +1,134 @@
 @import "tailwindcss";
 
 @theme {
-  /* Fonts */
   --font-display: var(--font-display-brand), Impact, sans-serif;
   --font-heading: var(--font-barlow-condensed), sans-serif;
   --font-body: var(--font-barlow), system-ui, sans-serif;
   --font-label: var(--font-barlow-condensed), sans-serif;
 
-  /* Forest Green brand family */
-  --color-green-deep:    #0D3D22;
-  --color-green-primary: #1A6B3A;
-  --color-green-mid:     #2D8C52;
-  --color-green-light:   #5CB87A;
-  --color-green-pale:    #C2EDD2;
-  --color-green-mist:    #EAF7EF;
+  --color-green-deep: #073d31;
+  --color-green-primary: #0d5b47;
+  --color-green-mid: #1e705b;
+  --color-green-light: #2f8f74;
+  --color-green-pale: #d7efe7;
+  --color-green-mist: #f3faf7;
 
-  /* Warm neutrals */
-  --color-brown-dark:    #3B1A0F;
-  --color-brown-heading: #6B2D1B;
-  --color-brown-mid:     #C4855A;
-  --color-cream:         #F5EDE0;
+  --color-brown-dark: #1a0f08;
+  --color-brown-heading: #3b1a0f;
+  --color-brown-mid: #c4855a;
+  --color-cream: #f6f1e8;
+  --color-paper: #fffdf8;
+  --color-yellow: #f4c43a;
+  --color-coral: #ec6841;
 }
 
 :root {
-  /* ── Primary design tokens ─────────────────────────────────────── */
-  --green-deep:     #0D3D22;
-  --green-primary:  #1A6B3A;
-  --green-mid:      #2D8C52;
-  --green-light:    #5CB87A;
-  --green-pale:     #C2EDD2;
-  --green-mist:     #EAF7EF;
+  --green-deep: #073d31;
+  --green-primary: #0d5b47;
+  --green-mid: #1e705b;
+  --green-light: #2f8f74;
+  --green-pale: #d7efe7;
+  --green-mist: #f3faf7;
 
-  --brown-dark:     #3B1A0F;
-  --brown-heading:  #6B2D1B;
-  --brown-mid:      #C4855A;
-  --cream:          #F5EDE0;
+  --brown-dark: #1a0f08;
+  --brown-heading: #3b1a0f;
+  --brown-mid: #c4855a;
+  --cream: #f6f1e8;
+  --paper: #fffdf8;
+  --yellow: #f4c43a;
+  --coral: #ec6841;
+  --ink: #1a0f08;
+  --line: rgba(26, 15, 8, 0.1);
+  --radius: 22px;
+  --shadow: 0 18px 50px rgba(19, 10, 4, 0.1);
+  --shadow-hover: 0 28px 70px rgba(19, 10, 4, 0.14);
+  --container: min(1120px, calc(100vw - 2.5rem));
+  --ease-out: cubic-bezier(0.22, 1, 0.36, 1);
 
-  /* ── Legacy aliases → remapped to Forest Green palette ─────────── */
-  --color-primary:            #1A6B3A;   /* green-primary */
-  --color-accent:             #C4855A;   /* brown-mid */
-  --color-dark:               #0D3D22;   /* green-deep */
-  --color-orange:             #C4855A;   /* brown-mid */
-  --color-green:              #1A6B3A;
-  --color-forest:             #1A6B3A;
-  --color-forest-light:       #2D8C52;
-  --color-forest-dark:        #0D3D22;
-  --color-amber:              #C4855A;   /* brown-mid */
-  --color-amber-dark:         #A36A40;
-  --color-amber-light:        #C2EDD2;   /* green-pale */
-  --color-cream:              #F5EDE0;
-  --color-cream-dark:         #E8D8C8;
-  --color-cream-light:        #EAF7EF;   /* green-mist */
-  --color-warm-white:         #EAF7EF;   /* green-mist */
-  --color-bg:                 #EAF7EF;   /* green-mist */
-  --color-bg-warm:            #F5EDE0;   /* cream */
-  --color-border:             rgba(26,107,58,0.2);
-  --color-text-dark:          #1A6B3A;   /* green-primary */
-  --color-text-mid:           #3B1A0F;   /* brown-dark */
-  --color-text-light:         #6B2D1B;   /* brown-heading */
-  --color-logo-forest:        #1A6B3A;
-  --color-logo-deep-brown:    #3B1A0F;
-  --color-logo-warm-brown:    #6B2D1B;
-  --color-espresso:           #3B1A0F;   /* brown-dark */
-  --color-espresso-light:     #4A2210;
-  --color-espresso-dark:      #2A1008;
-  --color-arabica:            #3B1A0F;   /* brown-dark */
-  --color-arabica-light:      #6B2D1B;
-  --color-latte:              #C4855A;   /* brown-mid */
-  --color-latte-light:        #D9A07A;
-  --color-seedling:           #1A6B3A;
-  --color-seedling-light:     #C2EDD2;   /* green-pale */
-  --color-accent-green:       #1A6B3A;
-  --color-accent-green-light: #C2EDD2;   /* green-pale */
-  --color-orange-dark:        #A36A40;
-  --color-brand-red:          #1A6B3A;
-  --color-brand-gold:         #C4855A;
-  --color-brand-black:        #0D3D22;
-  --color-brand-orange:       #C4855A;
-  --color-brand-green:        #1A6B3A;
-  --color-brand-cream:        #F5EDE0;
-  --color-brand-warmwhite:    #EAF7EF;
-  --color-brand-brown:        #3B1A0F;
-  --background:               #EAF7EF;   /* green-mist */
-  --foreground:               #3B1A0F;   /* brown-dark */
+  --color-primary: #0d5b47;
+  --color-accent: #f4c43a;
+  --color-dark: #073d31;
+  --color-orange: #ec6841;
+  --color-green: #0d5b47;
+  --color-forest: #0d5b47;
+  --color-forest-light: #1e705b;
+  --color-forest-dark: #073d31;
+  --color-amber: #f4c43a;
+  --color-amber-dark: #d4a82e;
+  --color-amber-light: #d7efe7;
+  --color-cream: #f6f1e8;
+  --color-cream-dark: #ebe4d8;
+  --color-cream-light: #f3faf7;
+  --color-warm-white: #fffdf8;
+  --color-bg: #fffdf8;
+  --color-bg-warm: #f6f1e8;
+  --color-border: rgba(26, 15, 8, 0.1);
+  --color-text-dark: #0d5b47;
+  --color-text-mid: #1a0f08;
+  --color-text-light: #3b1a0f;
+  --color-logo-forest: #0d5b47;
+  --color-logo-deep-brown: #1a0f08;
+  --color-logo-warm-brown: #3b1a0f;
+  --color-espresso: #1a0f08;
+  --color-espresso-light: #3b1a0f;
+  --color-espresso-dark: #120a05;
+  --color-arabica: #1a0f08;
+  --color-arabica-light: #3b1a0f;
+  --color-latte: #c4855a;
+  --color-latte-light: #d9a07a;
+  --color-seedling: #0d5b47;
+  --color-seedling-light: #d7efe7;
+  --color-accent-green: #0d5b47;
+  --color-accent-green-light: #d7efe7;
+  --color-orange-dark: #d45530;
+  --color-brand-red: #ec6841;
+  --color-brand-gold: #f4c43a;
+  --color-brand-black: #073d31;
+  --color-brand-orange: #ec6841;
+  --color-brand-green: #0d5b47;
+  --color-brand-cream: #f6f1e8;
+  --color-brand-warmwhite: #fffdf8;
+  --color-brand-brown: #1a0f08;
+  --background: #fffdf8;
+  --foreground: #1a0f08;
+}
+
+*,
+*::before,
+*::after {
+  border-color: var(--line);
+}
+
+html {
+  scroll-behavior: smooth;
 }
 
 body {
   background: var(--background);
   color: var(--foreground);
   font-family: var(--font-body);
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+}
+
+::selection {
+  background: rgba(13, 91, 71, 0.18);
+  color: var(--ink);
+}
+
+a,
+button {
+  transition: color 0.25s var(--ease-out), background-color 0.25s var(--ease-out),
+    border-color 0.25s var(--ease-out), transform 0.25s var(--ease-out),
+    box-shadow 0.25s var(--ease-out), opacity 0.25s var(--ease-out), gap 0.25s var(--ease-out);
+}
+
+img {
+  max-width: 100%;
+}
+
+.font-display {
+  font-family: var(--font-display);
 }
 
 .font-heading {
@@ -99,6 +139,208 @@ body {
   font-family: var(--font-label);
 }
 
-html {
-  scroll-behavior: smooth;
+.site-container {
+  width: var(--container);
+  margin-inline: auto;
+}
+
+.section-pad {
+  padding-block: clamp(4.25rem, 7.5vw, 6.5rem);
+}
+
+.eyebrow {
+  font-family: var(--font-label);
+  font-size: 0.72rem;
+  font-weight: 700;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  color: var(--green-mid);
+}
+
+.section-title {
+  font-family: var(--font-display);
+  font-size: clamp(2.35rem, 4.6vw, 3.5rem);
+  line-height: 0.96;
+  letter-spacing: -0.02em;
+  color: var(--ink);
+}
+
+.section-lede {
+  font-family: var(--font-body);
+  font-size: 1.05rem;
+  line-height: 1.7;
+  color: rgba(26, 15, 8, 0.68);
+  max-width: 34rem;
+}
+
+.btn-primary {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  padding: 0.85rem 1.4rem;
+  border-radius: 999px;
+  background: var(--yellow);
+  color: var(--ink);
+  font-family: var(--font-label);
+  font-size: 0.8125rem;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  box-shadow: 0 8px 24px rgba(244, 196, 58, 0.22);
+}
+
+.btn-primary:hover {
+  background: #ffd45a;
+  transform: translateY(-1px);
+  box-shadow: 0 12px 28px rgba(244, 196, 58, 0.3);
+}
+
+.btn-primary:active {
+  transform: translateY(0);
+}
+
+.btn-secondary {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  padding: 0.85rem 1.4rem;
+  border-radius: 999px;
+  border: 1.5px solid rgba(255, 255, 255, 0.45);
+  color: white;
+  font-family: var(--font-label);
+  font-size: 0.8125rem;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  backdrop-filter: blur(6px);
+}
+
+.btn-secondary:hover {
+  background: rgba(255, 255, 255, 0.12);
+  border-color: rgba(255, 255, 255, 0.85);
+}
+
+.btn-dark {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  padding: 0.8rem 1.3rem;
+  border-radius: 999px;
+  background: var(--green-primary);
+  color: white;
+  font-family: var(--font-label);
+  font-size: 0.8125rem;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+.btn-dark:hover {
+  background: var(--green-mid);
+  transform: translateY(-1px);
+}
+
+.btn-ghost {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+  font-family: var(--font-label);
+  font-size: 0.8125rem;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--green-primary);
+}
+
+.btn-ghost:hover {
+  gap: 0.65rem;
+  color: var(--green-mid);
+}
+
+.media-frame {
+  overflow: hidden;
+  border-radius: var(--radius);
+  background: rgba(26, 15, 8, 0.04);
+}
+
+.media-frame img,
+.media-zoom {
+  transition: transform 0.9s var(--ease-out);
+  will-change: transform;
+}
+
+.media-frame:hover img,
+.group:hover .media-zoom {
+  transform: scale(1.04);
+}
+
+.hero-kenburns {
+  animation: kenburns 18s var(--ease-out) infinite alternate;
+  will-change: transform;
+}
+
+@keyframes kenburns {
+  from {
+    transform: scale(1);
+  }
+  to {
+    transform: scale(1.08);
+  }
+}
+
+@keyframes fade-up {
+  from {
+    opacity: 0;
+    transform: translateY(16px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes soft-rise {
+  from {
+    opacity: 0;
+    transform: translateY(22px) scale(0.988);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+}
+
+.animate-fade-up {
+  animation: fade-up 0.75s var(--ease-out) both;
+}
+
+.animate-soft-rise {
+  animation: soft-rise 0.9s var(--ease-out) both;
+}
+
+.delay-1 { animation-delay: 0.08s; }
+.delay-2 { animation-delay: 0.16s; }
+.delay-3 { animation-delay: 0.24s; }
+.delay-4 { animation-delay: 0.32s; }
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+
+  .animate-fade-up,
+  .animate-soft-rise,
+  .hero-kenburns {
+    animation: none;
+  }
+
+  .media-frame img,
+  .media-zoom,
+  a,
+  button {
+    transition: none;
+  }
 }

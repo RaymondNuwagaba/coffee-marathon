@@ -278,7 +278,7 @@ export const navLinks = [
   { label: 'About', href: '/about' },
   { label: 'Races', href: '/races' },
   { label: 'Shop', href: '/shop' },
-  { label: 'Beyond the Marathon', href: '/activities' },
+  { label: 'Beyond', href: '/activities' },
   { label: 'Attractions', href: '/attractions' },
   { label: 'Contact', href: '/contact' },
 ]

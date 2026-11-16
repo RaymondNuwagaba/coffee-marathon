@@ -81,7 +81,7 @@ export default function RootLayout({
       lang="en"
       className={`${luckiestGuy.variable} ${barlow.variable} ${barlowCondensed.variable} h-full`}
     >
-      <body className="min-h-full flex flex-col antialiased bg-[var(--green-mist)] text-[var(--brown-dark)]">
+      <body className="min-h-full flex flex-col antialiased bg-[var(--paper)] text-[var(--ink)]">
         <Navbar />
         <main className="flex-1">{children}</main>
         <Footer />

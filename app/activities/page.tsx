@@ -32,13 +32,13 @@ export default function BeyondTheMarathonPage() {
   return (
     <>
       {/* ── HERO ─────────────────────────────────────────────────────── */}
-      <section className="relative pt-40 pb-20 overflow-hidden" style={{ backgroundColor: 'var(--green-primary)' }}>
-        <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <section className="relative overflow-hidden bg-[var(--green-deep)] pt-28 pb-16 sm:pt-32 sm:pb-20">
+        <div className="relative z-10 site-container">
           <div className="max-w-3xl">
-            <p className="font-label text-xs uppercase tracking-[0.12em] font-bold mb-5" style={{ color: 'var(--green-pale)' }}>
+            <p className="font-label text-xs uppercase tracking-[0.16em] font-bold mb-5 text-[var(--yellow)]">
               Coffee Festival 2027
             </p>
-            <h1 className="font-display text-5xl md:text-7xl font-bold text-white leading-tight mb-6">
+            <h1 className="font-display text-[clamp(2.75rem,7vw,4.75rem)] font-bold text-white leading-[0.95] tracking-tight mb-6">
               Beyond<br />
               the Marathon
             </h1>

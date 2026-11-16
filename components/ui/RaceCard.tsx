@@ -36,74 +36,74 @@ export default function RaceCard({
   const href = pinnketUrl ?? (pinnketKey ? PINNKET[pinnketKey] : '#register')
 
   return (
-    <div className="bg-white rounded-2xl overflow-hidden border hover:shadow-lg transition-all duration-300" style={{ borderColor: 'rgba(26,107,58,0.2)' }}>
-      {/* Header */}
-      <div className="px-6 pt-6 pb-4" style={{ backgroundColor: 'var(--green-pale)' }}>
-        <span
-          className="font-label text-xs font-bold uppercase tracking-[0.1em] px-2.5 py-1 rounded-full"
-          style={{ backgroundColor: 'var(--green-primary)', color: 'white' }}
-        >
+    <article className="group flex h-full flex-col rounded-[22px] border border-[var(--line)] bg-white/90 p-6 shadow-[0_1px_0_rgba(26,15,8,0.03)] transition-all duration-500 ease-[cubic-bezier(0.22,1,0.36,1)] hover:-translate-y-1.5 hover:border-[rgba(13,91,71,0.18)] hover:bg-white hover:shadow-[var(--shadow-hover)]">
+      <div className="mb-5">
+        <p className="font-label text-[11px] font-bold uppercase tracking-[0.14em] text-[var(--green-mid)]">
           {label}
-        </span>
-        <div
-          className="font-display text-5xl font-bold mt-2 leading-none"
-          style={{ color: 'var(--green-deep)' }}
-        >
+        </p>
+        <h3 className="mt-2 font-display text-[2.75rem] leading-none tracking-tight text-[var(--ink)] sm:text-5xl">
           {distance}
-        </div>
+        </h3>
       </div>
 
-      <div className="p-6 flex flex-col gap-4">
-        <p className="font-body text-sm leading-relaxed" style={{ color: 'var(--brown-dark)' }}>{displayText}</p>
+      <p className="font-body text-sm leading-relaxed text-[rgba(26,15,8,0.68)]">
+        {displayText}
+      </p>
 
-        {expanded && terrain && (
-          <div className="space-y-3 border-t pt-4" style={{ borderColor: 'rgba(26,107,58,0.12)' }}>
-            <div>
-              <span className="font-body text-xs uppercase tracking-wider" style={{ color: 'var(--green-mid)' }}>Terrain</span>
-              <p className="font-body text-sm mt-0.5" style={{ color: 'var(--brown-dark)' }}>{terrain}</p>
-            </div>
-            {startTime && (
-              <div>
-                <span className="font-body text-xs uppercase tracking-wider" style={{ color: 'var(--green-mid)' }}>Start Time</span>
-                <p className="font-body text-sm mt-0.5" style={{ color: 'var(--brown-dark)' }}>{startTime}</p>
-              </div>
-            )}
-            {cutOff && (
-              <div>
-                <span className="font-body text-xs uppercase tracking-wider" style={{ color: 'var(--green-mid)' }}>Cut-off</span>
-                <p className="font-body text-sm mt-0.5" style={{ color: 'var(--brown-dark)' }}>{cutOff}</p>
-              </div>
-            )}
-            {included && included.length > 0 && (
-              <div>
-                <span className="font-body text-xs uppercase tracking-wider" style={{ color: 'var(--green-mid)' }}>Included</span>
-                <ul className="mt-1 space-y-1">
-                  {included.map((item) => (
-                    <li key={item} className="font-body text-sm flex items-center gap-2" style={{ color: 'var(--brown-dark)' }}>
-                      <CheckCircle2 size={12} style={{ color: 'var(--green-light)' }} className="shrink-0" />
-                      {item}
-                    </li>
-                  ))}
-                </ul>
-              </div>
-            )}
+      {expanded && terrain && (
+        <div className="mt-5 space-y-3 border-t border-[var(--line)] pt-4">
+          <div>
+            <span className="font-label text-[11px] uppercase tracking-[0.12em] text-[var(--green-mid)]">
+              Terrain
+            </span>
+            <p className="mt-1 font-body text-sm text-[var(--ink)]">{terrain}</p>
           </div>
-        )}
-
-        <div className="mt-auto flex items-center justify-between pt-2 border-t" style={{ borderColor: 'rgba(26,107,58,0.12)' }}>
-          <span className="font-heading text-lg font-semibold" style={{ color: 'var(--brown-mid)' }}>{price}</span>
-          <a
-            href={href}
-            target="_blank"
-            rel="noopener noreferrer"
-            className="inline-flex items-center gap-2 px-4 py-2 rounded-full font-label font-bold uppercase tracking-[0.08em] text-xs transition-colors"
-            style={{ backgroundColor: 'var(--green-primary)', color: 'white' }}
-          >
-            Register
-            <ArrowRight size={12} />
-          </a>
+          {startTime && (
+            <div>
+              <span className="font-label text-[11px] uppercase tracking-[0.12em] text-[var(--green-mid)]">
+                Start Time
+              </span>
+              <p className="mt-1 font-body text-sm text-[var(--ink)]">{startTime}</p>
+            </div>
+          )}
+          {cutOff && (
+            <div>
+              <span className="font-label text-[11px] uppercase tracking-[0.12em] text-[var(--green-mid)]">
+                Cut-off
+              </span>
+              <p className="mt-1 font-body text-sm text-[var(--ink)]">{cutOff}</p>
+            </div>
+          )}
+          {included && included.length > 0 && (
+            <div>
+              <span className="font-label text-[11px] uppercase tracking-[0.12em] text-[var(--green-mid)]">
+                Included
+              </span>
+              <ul className="mt-2 space-y-1.5">
+                {included.map((item) => (
+                  <li key={item} className="flex items-center gap-2 font-body text-sm text-[var(--ink)]">
+                    <CheckCircle2 size={14} className="shrink-0 text-[var(--green-light)]" />
+                    {item}
+                  </li>
+                ))}
+              </ul>
+            </div>
+          )}
         </div>
+      )}
+
+      <div className="mt-auto flex items-center justify-between gap-3 border-t border-[var(--line)] pt-5">
+        <span className="font-heading text-lg font-bold text-[var(--ink)]">{price}</span>
+        <a
+          href={href}
+          target="_blank"
+          rel="noopener noreferrer"
+          className="inline-flex items-center gap-1.5 font-label text-xs font-bold uppercase tracking-[0.1em] text-[var(--green-primary)]"
+        >
+          Register
+          <ArrowRight size={14} className="transition-transform duration-300 group-hover:translate-x-0.5" />
+        </a>
       </div>
-    </div>
+    </article>
   )
 }

@@ -10,126 +10,115 @@ import { PINNKET } from '@/lib/pinnket'
 
 export default function Navbar() {
   const [open, setOpen] = useState(false)
+  const [scrolled, setScrolled] = useState(false)
   const pathname = usePathname()
+  const isHome = pathname === '/'
 
   useEffect(() => {
     document.body.style.overflow = open ? 'hidden' : ''
     return () => { document.body.style.overflow = '' }
   }, [open])
 
+  useEffect(() => {
+    const onScroll = () => setScrolled(window.scrollY > 16)
+    onScroll()
+    window.addEventListener('scroll', onScroll, { passive: true })
+    return () => window.removeEventListener('scroll', onScroll)
+  }, [])
+
+  const solid = !isHome || scrolled || open
+
   return (
     <>
-      <div className="fixed top-0 left-0 right-0 z-50">
-        {/* Announcement bar, unchanged */}
-        <div className="py-2 text-center px-4" style={{ backgroundColor: 'var(--brown-heading)' }}>
-          <p className="font-label text-xs font-bold text-white uppercase tracking-[0.14em]">
-            <span style={{ color: 'var(--brown-mid)' }}>The Coffee Marathon 2027</span>
-            {' '}· 13 February · Africa Coffee Park, Ntungamo
-          </p>
-        </div>
-
-        {/* Navbar, cream background */}
-        <header
-          className="border-b"
-          style={{
-            backgroundColor: '#F5EDE0',
-            borderBottomColor: 'rgba(26,107,58,0.15)',
-          }}
-        >
-          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div className="flex items-center justify-between h-16 lg:h-20">
-
-              {/* Logo, original colors on cream background, no filter */}
-              <Link href="/" className="flex items-center group" onClick={() => setOpen(false)}>
-                <Image
-                  src="/images/logo.png"
-                  alt="The Coffee Marathon Uganda"
-                  width={80}
-                  height={80}
-                  className="object-contain group-hover:scale-105 transition-transform duration-200"
-                  priority
-                />
-              </Link>
-
-              {/* Desktop nav */}
-              <nav className="hidden lg:flex items-center gap-8">
-                {navLinks.map((link) => {
-                  const active = pathname === link.href
-                  return (
-                    <Link
-                      key={link.href}
-                      href={link.href}
-                      onClick={() => setOpen(false)}
-                      className="font-label text-sm font-bold uppercase tracking-[0.08em] transition-colors relative"
-                      style={{ color: active ? '#1A6B3A' : '#1A6B3A' }}
-                      onMouseEnter={(e) => { e.currentTarget.style.color = '#2D8C52' }}
-                      onMouseLeave={(e) => { e.currentTarget.style.color = '#1A6B3A' }}
-                    >
-                      {link.label}
-                      {active && (
-                        <span
-                          className="absolute -bottom-1 left-0 right-0 h-0.5 rounded-full"
-                          style={{ backgroundColor: '#2D8C52' }}
-                        />
-                      )}
-                    </Link>
-                  )
-                })}
-              </nav>
-
-              {/* CTA + hamburger */}
-              <div className="flex items-center gap-3">
-                <Link
-                  href={PINNKET.register10k}
-                  onClick={() => setOpen(false)}
-                  className="hidden sm:inline-flex items-center px-5 py-2 rounded-full font-label font-bold uppercase tracking-[0.08em] text-sm transition-all"
-                  style={{
-                    backgroundColor: '#1A6B3A',
-                    color: 'white',
-                  }}
-                  onMouseEnter={(e) => { e.currentTarget.style.backgroundColor = '#2D8C52' }}
-                  onMouseLeave={(e) => { e.currentTarget.style.backgroundColor = '#1A6B3A' }}
-                >
-                  Register Now
-                </Link>
-                <button
-                  onClick={() => setOpen(true)}
-                  className="lg:hidden p-2 transition-colors"
-                  style={{ color: '#1A6B3A' }}
-                  aria-label="Open menu"
-                >
-                  <Menu size={24} />
-                </button>
-              </div>
-            </div>
-          </div>
-        </header>
-      </div>
-
-      {/* Mobile overlay, keep dark for readability */}
-      {open && (
-        <div className="fixed inset-0 z-[60] flex flex-col" style={{ backgroundColor: '#F5EDE0' }}>
-          <div className="flex items-center justify-between px-4 h-16 border-b" style={{ borderBottomColor: 'rgba(26,107,58,0.15)' }}>
-            <Link href="/" className="flex items-center" onClick={() => setOpen(false)}>
+      <header
+        className={`fixed top-0 left-0 right-0 z-50 transition-[background-color,border-color,box-shadow,backdrop-filter] duration-400 ease-[cubic-bezier(0.22,1,0.36,1)] ${
+          solid
+            ? 'border-b border-white/10 bg-[var(--green-deep)]/92 shadow-[0_12px_40px_rgba(7,61,49,0.22)] backdrop-blur-xl'
+            : 'border-b border-transparent bg-transparent'
+        }`}
+      >
+        <div className="site-container">
+          <div className="flex h-[68px] items-center justify-between lg:h-[76px]">
+            <Link
+              href="/"
+              className="flex items-center rounded-full bg-white px-2 py-1 shadow-sm transition-transform duration-300 hover:scale-[1.02]"
+              onClick={() => setOpen(false)}
+            >
               <Image
                 src="/images/logo.png"
                 alt="The Coffee Marathon Uganda"
-                width={60}
-                height={60}
-                className="object-contain"
+                width={56}
+                height={56}
+                className="h-9 w-9 object-contain lg:h-11 lg:w-11"
+                priority
+              />
+            </Link>
+
+            <nav className="hidden items-center gap-6 lg:flex xl:gap-7">
+              {navLinks.map((link) => {
+                const active = pathname === link.href
+                return (
+                  <Link
+                    key={link.href}
+                    href={link.href}
+                    className={`relative font-label text-[12px] font-bold uppercase tracking-[0.11em] xl:text-[13px] ${
+                      active ? 'text-[var(--yellow)]' : 'text-white/80 hover:text-white'
+                    }`}
+                  >
+                    {link.label}
+                    <span
+                      className={`absolute -bottom-1 left-0 h-px bg-[var(--yellow)] transition-all duration-300 ${
+                        active ? 'w-full' : 'w-0'
+                      }`}
+                    />
+                  </Link>
+                )
+              })}
+            </nav>
+
+            <div className="flex items-center gap-2.5">
+              <a
+                href={PINNKET.register10k}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="btn-primary hidden !px-4 !py-2 !text-[11px] sm:inline-flex"
+              >
+                Register
+              </a>
+              <button
+                onClick={() => setOpen(true)}
+                className="inline-flex h-10 w-10 items-center justify-center rounded-full border border-white/20 bg-black/15 text-white lg:hidden"
+                aria-label="Open menu"
+              >
+                <Menu size={18} />
+              </button>
+            </div>
+          </div>
+        </div>
+      </header>
+
+      {open && (
+        <div className="fixed inset-0 z-[60] flex animate-[fade-up_0.35s_ease] flex-col bg-[var(--green-deep)] text-white">
+          <div className="flex h-[68px] items-center justify-between border-b border-white/10 px-5">
+            <Link href="/" className="rounded-full bg-white px-2 py-1" onClick={() => setOpen(false)}>
+              <Image
+                src="/images/logo.png"
+                alt="The Coffee Marathon Uganda"
+                width={48}
+                height={48}
+                className="h-9 w-9 object-contain"
               />
             </Link>
             <button
               onClick={() => setOpen(false)}
-              className="p-2 transition-colors"
-              style={{ color: '#1A6B3A' }}
+              className="inline-flex h-10 w-10 items-center justify-center rounded-full border border-white/20"
               aria-label="Close menu"
             >
-              <X size={24} />
+              <X size={20} />
             </button>
           </div>
 
-          <nav className="flex-1 flex flex-col justify-center px-8 gap-6">
+          <nav className="flex flex-1 flex-col justify-center gap-4 px-8">
             {navLinks.map((link) => {
               const active = pathname === link.href
               return (
@@ -137,24 +126,26 @@ export default function Navbar() {
                   key={link.href}
                   href={link.href}
                   onClick={() => setOpen(false)}
-                  className="font-display text-3xl font-semibold transition-colors"
-                  style={{ color: active ? '#1A6B3A' : '#6B2D1B' }}
+                  className={`font-display text-[2.5rem] leading-none ${
+                    active ? 'text-[var(--yellow)]' : 'text-white'
+                  }`}
                 >
                   {link.label}
                 </Link>
               )
             })}
-            <Link
+            <a
               href={PINNKET.register10k}
+              target="_blank"
+              rel="noopener noreferrer"
               onClick={() => setOpen(false)}
-              className="mt-4 inline-flex items-center justify-center px-8 py-3 rounded-full font-label font-bold uppercase tracking-[0.08em] text-lg text-white transition-colors"
-              style={{ backgroundColor: '#1A6B3A' }}
+              className="btn-primary mt-6 w-fit"
             >
               Register Now
-            </Link>
+            </a>
           </nav>
 
-          <p className="px-8 pb-8 font-body text-sm" style={{ color: '#6B2D1B' }}>
+          <p className="px-8 pb-8 font-body text-sm text-white/50">
             13 February 2027 · Africa Coffee Park, Ntungamo
           </p>
         </div>

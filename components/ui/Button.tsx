@@ -14,18 +14,15 @@ interface ButtonProps {
 }
 
 const variants: Record<ButtonVariant, string> = {
-  primary:
-    'bg-[var(--color-primary)] text-white hover:bg-[#B52222] shadow-sm',
-  secondary:
-    'bg-[var(--color-accent)] text-[var(--color-dark)] hover:bg-[var(--color-amber-dark)] shadow-sm',
-  ghost:
-    'bg-transparent text-[var(--color-dark)] hover:bg-[var(--color-cream-dark)]',
+  primary: 'btn-primary',
+  secondary: 'bg-[var(--yellow)] text-[var(--ink)] hover:bg-[#ffd45a]',
+  ghost: 'bg-transparent text-[var(--ink)] hover:bg-black/5',
   outline:
-    'bg-transparent border-2 border-[var(--color-primary)] text-[var(--color-primary)] hover:bg-[var(--color-primary)] hover:text-white',
+    'bg-transparent border-[1.5px] border-[var(--green-primary)] text-[var(--green-primary)] hover:bg-[var(--green-primary)] hover:text-white',
 }
 
 const base =
-  'inline-flex items-center justify-center px-6 py-3 rounded-full font-label font-bold uppercase tracking-[0.08em] text-sm transition-all duration-200 focus:outline-none focus-visible:ring-2 focus-visible:ring-[var(--color-primary)] focus-visible:ring-offset-2'
+  'inline-flex items-center justify-center gap-2 px-6 py-3 rounded-full font-label font-bold uppercase tracking-[0.08em] text-sm transition-all duration-200 focus:outline-none focus-visible:ring-2 focus-visible:ring-[var(--green-primary)] focus-visible:ring-offset-2'
 
 export default function Button({
   href,
@@ -37,7 +34,7 @@ export default function Button({
   type = 'button',
   disabled = false,
 }: ButtonProps) {
-  const classes = `${base} ${variants[variant]} ${disabled ? 'opacity-50 cursor-not-allowed' : ''} ${className}`
+  const classes = `${variant === 'primary' ? variants.primary : `${base} ${variants[variant]}`} ${disabled ? 'opacity-50 cursor-not-allowed' : ''} ${className}`
 
   if (href) {
     return (

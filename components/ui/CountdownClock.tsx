@@ -5,6 +5,7 @@ import { useState, useEffect } from 'react'
 interface CountdownClockProps {
   targetDate: string
   ctaHref?: string
+  tone?: 'light' | 'dark'
 }
 
 interface TimeLeft {
@@ -29,56 +30,75 @@ function pad(n: number) {
   return String(n).padStart(2, '0')
 }
 
-export default function CountdownClock({ targetDate, ctaHref }: CountdownClockProps) {
+export default function CountdownClock({
+  targetDate,
+  ctaHref,
+  tone = 'light',
+}: CountdownClockProps) {
   const targetTimestamp = new Date(targetDate).getTime()
-  const [now, setNow] = useState<number>(() => Date.now())
+  const [timeLeft, setTimeLeft] = useState<TimeLeft>({
+    days: 0,
+    hours: 0,
+    minutes: 0,
+    seconds: 0,
+  })
+  const [mounted, setMounted] = useState(false)
 
   useEffect(() => {
-    const id = setInterval(() => setNow(Date.now()), 1000)
+    setMounted(true)
+    const tick = () => setTimeLeft(calcTimeLeft(targetTimestamp, Date.now()))
+    tick()
+    const id = setInterval(tick, 1000)
     return () => clearInterval(id)
-  }, [targetDate])
-
-  const timeLeft = calcTimeLeft(targetTimestamp, now)
+  }, [targetTimestamp])
 
   const units: { label: string; value: number }[] = [
     { label: 'Days', value: timeLeft.days },
     { label: 'Hours', value: timeLeft.hours },
-    { label: 'Minutes', value: timeLeft.minutes },
-    { label: 'Seconds', value: timeLeft.seconds },
+    { label: 'Mins', value: timeLeft.minutes },
+    { label: 'Secs', value: timeLeft.seconds },
   ]
 
+  const isDark = tone === 'dark'
+
   return (
-    <div className="rounded-2xl bg-[var(--color-accent)] p-4 md:p-5 flex flex-wrap items-center justify-between gap-4">
-      <div className="basis-full">
-        <p className="font-label text-xs uppercase tracking-[0.1em] text-[var(--color-logo-deep-brown)] font-bold">
-          Countdown to Race Day
+    <div className="flex flex-col gap-5 sm:flex-row sm:items-end sm:justify-between sm:gap-8">
+      <div>
+        <p
+          className={`mb-3 font-label text-[10px] font-bold uppercase tracking-[0.16em] sm:text-[11px] ${
+            isDark ? 'text-white/50' : 'text-[var(--green-mid)]'
+          }`}
+        >
+          Race begins in
         </p>
-      </div>
-      <div className="flex items-center gap-3 flex-wrap">
-        {units.map(({ label, value }, i) => (
-          <div key={label} className="flex items-center gap-3">
-            <div className="bg-black/10 rounded-xl px-4 py-3 min-w-[72px] text-center">
-              <div className="font-display text-4xl text-[var(--color-dark)] font-bold tabular-nums">
+        <div className="flex items-end gap-3.5 sm:gap-5" suppressHydrationWarning>
+          {units.map(({ label, value }) => (
+            <div key={label} className="min-w-[3.1rem] sm:min-w-[3.75rem]">
+              <div
+                className={`font-display text-[2rem] tabular-nums leading-none tracking-tight sm:text-4xl ${
+                  isDark ? 'text-white' : 'text-[var(--ink)]'
+                } ${mounted ? 'opacity-100' : 'opacity-35'}`}
+              >
                 {pad(value)}
               </div>
-              <div className="font-label text-xs text-[var(--color-logo-warm-brown)] uppercase tracking-[0.08em] mt-1">
+              <div
+                className={`mt-1.5 font-label text-[10px] uppercase tracking-[0.14em] ${
+                  isDark ? 'text-white/45' : 'text-[rgba(26,15,8,0.5)]'
+                }`}
+              >
                 {label}
               </div>
             </div>
-            {i < units.length - 1 && (
-              <span className="font-heading text-2xl text-[var(--color-dark)]/80 font-bold">
-                :
-              </span>
-            )}
-          </div>
-        ))}
+          ))}
+        </div>
       </div>
+
       {ctaHref && (
         <a
           href={ctaHref}
           target="_blank"
           rel="noopener noreferrer"
-          className="inline-flex items-center bg-[var(--color-primary)] text-white px-5 py-3 rounded-full font-label font-bold uppercase tracking-[0.08em] text-sm hover:bg-[#B52222] transition-colors shadow-sm"
+          className={isDark ? 'btn-primary' : 'btn-dark'}
         >
           Register Now
         </a>
